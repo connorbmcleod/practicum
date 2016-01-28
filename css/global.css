@@ -1,0 +1,9 @@
+/* -----Global Stylesheet----- */
+
+html { 
+  background: url(https://images.unsplash.com/photo-1436377734980-0ee004df570b?crop=entropy&fit=crop&fm=jpg&h=1275&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1325) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
