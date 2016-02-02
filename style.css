@@ -27,12 +27,26 @@ li a{
 	box-shadow: none;
 }
 
+.button:hover{
+	background-color: #3E7CD8;
+	border: #3E7CD8 thin solid;
+	color:white;
+}
+
 .pure-menu-link{
 	color:black;
 }
 
+.pure-menu-link:hover{
+	color: #3E7CD8;
+	background-color: transparent;
+}
+
 .header{
 	height: 20vh;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 5vh;
 }
 
 .logo{
@@ -43,6 +57,7 @@ li a{
 .nav{
 	display: inline-block;
 	margin-left:30vw;
+	margin-top: 5vh;
 }
 
 .pure-menu-list{
@@ -51,6 +66,7 @@ li a{
 
 #title{
 	display: inline-block;
+	vertical-align: top;
 }
 
 .login input{
@@ -66,8 +82,8 @@ li a{
 #signup{
 	border-radius: 5px;
 	padding: 5px 10px;
-	background-color: transparent;
-	border: green solid thin;
+	background-color: #9EB6BF;
+	border: #9EB6BF solid thin;
 }
 
 
@@ -78,6 +94,7 @@ li a{
 		bottom: 0px;
 		position: absolute;
 		width: 100vw;
+		height: 20vh;
 		font-family: 'Carme', sans-serif;
 
 	}
@@ -90,14 +107,13 @@ li a{
 	}
 
 	.footer li{
-		margin: 10px 20px;
+/*		margin: 10px 20px;*/
 
 	}
 
 
 	#social-media li{
 		display: inline-block;
-		margin: 10px 10px;
 	}
 
 	#social-media{
