@@ -28,28 +28,10 @@
 
 </head>
 <body>
-
-<?php 
-
-    require("common.php"); 
-     
-    
-    if(empty($_SESSION['user'])) 
-    { 
-        header("Location: index.php"); 
-         
-        die("Redirecting to index.php"); 
-    } 
-      
-?> 
-
 <div class="container">
-
-<p id="hello">Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?></p>
-
-    <img src="profilePic.png" width="200px">
-      BIO: 
-    </div>
+  <div class="row">
+    <div class="three column"><img src="profilePic.jpg"></div>
+    <div class="nine columns">Eleven</div>
   </div>
 
 </body>
