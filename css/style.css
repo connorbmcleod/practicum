@@ -6,9 +6,8 @@ body{
 
 }
 
-h1, h2, h3, h4, h5{
-	font-family: 'Roboto', sans-serif;
-	font-size: 1.5em;
+h1, h2, h3{
+	font-family: 'Work Sans', sans-serif;
 }
 
 .pure-g{
@@ -96,19 +95,6 @@ li a{
 	border: #9EB6BF solid thin;
 }
 
-.page-bar{
-	width: 100vw;
-	height: 100px;
-	background-color: #9EB6BF;
-	text-align: center;
-}
-
-#page-bar-title{
-	color:white;
-    position: relative;
-    top: 25%;
-}
-
 
 
 /*footer*/
@@ -182,13 +168,13 @@ li a{
     top: 25%;
     left: 30%;
 	width: 500px;
-	font-size: 2em;
+	font-size: 2.2em;
 	text-align: center;
 
 }
 
 #index-search{
-	color: yellow;
+	color: #CCCC00;
 	font-size: 1.2em;
     position: relative;
     top: 25%;
@@ -205,7 +191,6 @@ li a{
 	vertical-align: top;
 }
 
-<<<<<<< HEAD:css/style.css
 #registerFormWrapper {
 	background-color: white;
 	padding: 25px;
@@ -215,32 +200,5 @@ li a{
     -webkit-transform: translate3d(-50%, -50%, 0);
     -moz-transform: translate3d(-50%, -50%, 0);
     transform: translate3d(-50%, -50%, 0);
-=======
-#index-search h5{
-	margin-bottom: 20px;
-}
-
-.pure-u-md-1-3{
-	text-align: center;
-	margin:10px 20px;
-	width: 300px;
-	margin: 0 auto;
-}
-
-.pure-u-md-1-2{
-	text-align: center;
-	margin:10px 20px;
-	width: 350px;
-	margin: 0 auto;
-}
-
-#logged-in{
-	margin: 0px 30px;
->>>>>>> origin/master:css/style.css
 }
 /*index page*/
-
-
-/*Register*/
-
-/*Register*/

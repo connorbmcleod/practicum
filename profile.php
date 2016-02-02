@@ -45,11 +45,7 @@
 
 <div class="container">
 
-<<<<<<< HEAD
 <p id="hello">Hello <?php echo htmlentities($_SESSION['user']['firstname'], ENT_QUOTES, 'UTF-8'); ?></p>
-=======
-<p id="hello">Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?></p>
->>>>>>> origin/master
 
     <img src="profilePic.png" width="200px">
       BIO: 
