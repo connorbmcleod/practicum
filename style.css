@@ -1,0 +1,129 @@
+/*font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;*/
+
+body{
+	margin: 0px;
+	font-family: 'Carme', sans-serif;
+
+}
+
+.pure-g{
+	font-family: 'Carme', sans-serif;
+}
+
+ul{
+	text-decoration: none;
+	list-style: none;
+}
+
+li a{
+	color: black;
+	text-decoration: none;
+}
+
+.button{
+	border-radius: 5px;
+	background-color: transparent;
+	border: black solid thin;
+	box-shadow: none;
+}
+
+.pure-menu-link{
+	color:black;
+}
+
+.header{
+	height: 20vh;
+}
+
+.logo{
+	display: inline-block;
+	margin-top: 0px;
+}
+
+.nav{
+	display: inline-block;
+	margin-left:30vw;
+}
+
+.pure-menu-list{
+	margin-top: 20px;
+}
+
+#title{
+	display: inline-block;
+}
+
+.login input{
+	padding: 5px 0px;
+}
+
+#login{
+	border-radius: 5px;
+	padding: 5px 10px;
+	background-color:  
+}
+
+#signup{
+	border-radius: 5px;
+	padding: 5px 10px;
+	background-color: transparent;
+	border: green solid thin;
+}
+
+
+
+/*footer*/
+	.footer{
+		background-color: #9EB6BF;
+		bottom: 0px;
+		position: absolute;
+		width: 100vw;
+		font-family: 'Carme', sans-serif;
+
+	}
+
+	.footer-col{
+		display: inline-block;
+		width: 33vw;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.footer li{
+		margin: 10px 20px;
+
+	}
+
+
+	#social-media li{
+		display: inline-block;
+		margin: 10px 10px;
+	}
+
+	#social-media{
+		margin-right: 30px;
+	}
+
+	#footer-one ul{
+		display: inline-block;
+	}
+
+	#footer-two{
+		text-align: center;
+	}
+
+	#footer-buttons{
+		text-align: center;
+		margin-right: 5vw;
+		margin-left: 5vw;
+	}
+	
+	#browse-courses, #request-courses{
+		margin: 5px 0px;
+		padding: 5px 30px;
+		background-color: #F0F0F2;
+		border: #F0F0F2 solid thin;
+	}
+
+
+/*footer*/
