@@ -1,10 +1,12 @@
 <html>
 <head>
-	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300' rel='stylesheet' type='text/css'>
-	<title></title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300|Roboto:400,700,300,700italic,300italic' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/global.js"></script>
+    <title></title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -146,5 +148,38 @@
     </div>
 
 
+<!-- CONTENT -->
+<div class="content" id="index-content">
+    <div class="pure-g" id="not-logged">
+        <div class="pure-u-1 pure-u-md-1-3"> 
+            <img src="logo.png" width="300px">
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-3">
+            <img src="logo.png" width="300px">
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-3">
+            <img src="logo.png" width="300px">
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        </div>
+    </div>
+
+
+
+    <div class="pure-g" id="logged-in">
+        <div class="pure-u-1 pure-u-md-1-2"> 
+            <img src="logo.png" width="300px">
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2">
+            <img src="logo.png" width="300px">
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- CONTENT -->
 </body>
 </html>
