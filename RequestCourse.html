@@ -1,0 +1,95 @@
+<html>
+<head>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300|Roboto:400,700,300,700italic,300italic' rel='stylesheet' type='text/css'>
+	<title></title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="header">
+		<div class="logo"><img src="logo.png" width="150px"></div>
+		<div id="title"><h1>weLearn</h1></div>
+	</div><!-- header end-->
+
+
+		<div class="nav">
+			<div class="login">
+				<input id="username" name="username" type="text" placeholder=
+				" Username">
+				<input id="password" name="password" type="password" placeholder=" Password">
+				<button  class="button" id="login" name="login">Login</button>
+				<button class="button" id="signup" name="signup">Sign up</button>
+			</div>
+
+
+	<div class="pure-menu pure-menu-horizontal">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link"> Home</a></li>
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a href="#" id="menuLink1" class="pure-menu-link">Courses</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Browse courses</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Request a course</a></li>
+            </ul>
+        </li>
+          <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a href="#" id="menuLink1" class="pure-menu-link">About us</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Who are we</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Our educators</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Our learners</a></li>
+            </ul>
+        </li>
+         <li class="pure-menu-item"><a href="#" class="pure-menu-link"> Contact us</a></li>
+    </ul>
+	</div> <!-- pure-menu end-->
+</div><!-- Nav end-->
+
+<div class="page-bar">
+	<div id="page-bar-title"><h2>Request A Course</h2></div>
+</div>
+
+
+
+
+<!-- form begins -->
+
+<form class="pure-form">
+    <fieldset class="pure-group">
+    	<div class="form-section"><h4>Personal Info</h4></div>
+        <input type="text" class="pure-input-1-2" placeholder="Full Name">
+        <input type="text" class="pure-input-1-2" placeholder="Email">
+        <input type="email" class="pure-input-1-2" placeholder="Phone Number">
+    </fieldset>
+
+
+    <fieldset class="pure-group">
+	    <div class="form-section"><h4>Course Info</h4></div>
+	    <input type="text" class="pure-input-1-2" placeholder="Course Subject">
+	                <div class="pure-u-1 pure-u-md-1-3">
+                <label for="state">State</label>
+                <select id="state" class="pure-input-1-2">
+                    <option>AL</option>
+                    <option>CA</option>
+                    <option>IL</option>
+                </select>
+            </div>
+
+	    <input type="email" class="pure-input-1-2" placeholder="Phone Number">
+    </fieldset>
+
+
+    <fieldset class="pure-group">
+        <input type="text" class="pure-input-1-2" placeholder="A title">
+        <textarea class="pure-input-1-2" placeholder="Textareas WORK too"></textarea>
+    </fieldset>
+
+    <button type="submit" class="pure-button pure-input-1-2 pure-button-primary"> SIGN IN</button>
+</form>
+
+<!-- form ends -->
+
+</body>
+</html>
