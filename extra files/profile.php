@@ -29,10 +29,9 @@
 </head>
 <body>
 <div class="container">
-
-    <img src="profilePic.png" width="200px">
-      BIO: 
-    </div>
+  <div class="row">
+    <div class="three column"><img src="profilePic.jpg"></div>
+    <div class="nine columns">Eleven</div>
   </div>
 
 </body>
