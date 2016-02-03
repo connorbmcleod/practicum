@@ -6,8 +6,9 @@ body{
 
 }
 
-h1, h2, h3{
-	font-family: 'Work Sans', sans-serif;
+h1, h2, h3, h4, h5{
+	font-family: 'Roboto', sans-serif;
+	font-size: 2em;
 }
 
 .pure-g{
@@ -22,6 +23,10 @@ ul{
 li a{
 	color: black;
 	text-decoration: none;
+}
+
+textarea:focus, input:focus{
+    outline: none;
 }
 
 .button{
@@ -95,15 +100,39 @@ li a{
 	border: #9EB6BF solid thin;
 }
 
+#signup a:hover{
+	color: black;
+}
 
+#signup a{
+	text-decoration: none;
+	color:white;
+}
+
+.page-header{
+	background-color: #110E3F;
+	text-align: center;
+	width: 100vw;
+	height: 100px;
+}
+
+.page-title{
+	color:white;
+    position: relative;
+    top: 25%;
+}
+
+.form{
+	display: inline-block;
+}
 
 /*footer*/
 	.footer{
-		background-color: #9EB6BF;
+		background-color: #110E3F;
+		color: white;
 		bottom: 0px;
 		position: absolute;
 		width: 100vw;
-		height: 20vh;
 		font-family: 'Carme', sans-serif;
 
 	}
@@ -137,6 +166,10 @@ li a{
 		text-align: center;
 	}
 
+	#footer-two h4{
+		margin: 0px;
+	}
+
 	#footer-buttons{
 		text-align: center;
 		margin-right: 5vw;
@@ -145,7 +178,7 @@ li a{
 	
 	#browse-courses, #request-courses{
 		margin: 5px 0px;
-		padding: 5px 30px;
+		padding: 0px 25px;
 		background-color: #F0F0F2;
 		border: #F0F0F2 solid thin;
 	}
@@ -202,3 +235,49 @@ li a{
     transform: translate3d(-50%, -50%, 0);
 }
 /*index page*/
+
+
+/*register*/
+.register-div{
+/*	width: 90vw;
+	margin: 0 auto;
+	border: grey thin solid;*/
+	margin-top: 20px;
+}
+
+#registerFormWrapper1,
+#registerFormWrapper2,
+#registerFormWrapper3
+{
+	margin: 40px;
+	text-align: center;
+	width: 90vw;
+	margin: 0 auto;
+/*	border: grey thin solid;*/
+	margin-top: 20px;
+}
+
+#innerForm input{
+	width: 60vw;
+	padding: 10px 0px;
+
+}
+
+.form-field{
+	border-top:none;
+	border-left:none;
+	border-right:none;
+}
+
+#register1, #register2{
+	border:thin grey solid;
+	border-radius: 5px;
+	margin-top: 10px;
+}
+/*register*/
+
+
+
+
+
+

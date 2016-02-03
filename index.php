@@ -84,19 +84,19 @@
 ?>
 
 	<div class="header">
-		<div class="logo"><img src="logo.png" width="150px"></div>
+		<div class="logo"><img src="images/logo.png" width="150px"></div>
 		<div id="title"><h1>weLearn</h1></div>
 	</div><!-- header end-->
 
 
 		<div class="nav">
 			<div class="login">
-				<form action="index.php" method="post" class="">
+				<form action="index.php" method="post" class="form">
 					<input id="email" name="email" type="text" placeholder="Email" value="<?php echo $submitted_email; ?>"/>
 					<input id="password" name="password" type="password" placeholder="Password" value="">
 					<button type="submit" value="Login" class="button" id="login" name="login">Login</button>
 				</form>
-			<button class="button" id="signup" name="signup">Sign up</button>
+			<button class="button" id="signup" name="signup"><a href="registerPage.php">Sign up</a></button>
 			</div>
 
 
@@ -181,5 +181,36 @@
 
 
 <!-- CONTENT -->
+
+<!-- footer -->
+    <div class="footer">
+            <div class="footer-col" id="footer-one">
+                 <ul id="social-media">
+                    <li><a href="#"><img src="images/facebook-square.png" width="30px"></a></li>
+                    <li><a href="#"><img src="images/instagram.png" width="30px"></a></li>
+                    <li><a href="#"><img src="images/twitter.png" width="30px"></a></li>
+                    <li><a href="#"><img src="images/googleplus-square.png" width="30px"></a></li>
+                </ul>
+
+       <!--      <div id="footer-buttons">
+                    <button class="button" id="browse-courses">Browse courses</button>
+                    <button class="button" id="request-courses">Request a course</button>
+                </div> -->
+                
+            </div>
+
+             <div class="footer-col" id="footer-two">
+                <p>#555 Seymour st. | 604.1234567 | info@welearn.ca</p>
+                <p>Copyright | 2016 | Design by BCIT</p>
+             </div>
+
+             <div class="footer-col" id="footer-three">
+            </div>
+
+        </div>
+
+    </div>
+
+<!-- footer -->
 </body>
 </html>
