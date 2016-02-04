@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('logged-in').hide();
+	$('#logged-in').hide();
 	$('#registerFormWrapper2').hide();
 	$('#registerFormWrapper3').hide();
 })

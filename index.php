@@ -83,25 +83,7 @@
     } 
      
 ?>
-
-	<div class="header">
-		<div class="logo"><img src="images/logo.png" width="150px"></div>
-		<div id="title"><h1>weLearn</h1></div>
-	</div><!-- header end-->
-
-
-		<div class="nav">
-			<div class="login">
-				<form action="index.php" method="post" class="form">
-					<input id="email" name="email" type="text" placeholder="Email" value="<?php echo $submitted_email; ?>"/>
-					<input id="password" name="password" type="password" placeholder="Password" value="">
-					<button type="submit" value="Login" class="button" id="login" name="login">Login</button>
-				</form>
-			<button class="button" id="signup" name="signup"><a href="registerPage.php">Sign up</a></button>
-			</div>
-
-
-        	<div class="pure-menu pure-menu-horizontal">
+            <div class="pure-menu pure-menu-horizontal" id="menu">
                 <ul class="pure-menu-list">
                     <li class="pure-menu-item"><a href="#" class="pure-menu-link"> Home</a></li>
                     <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
@@ -121,7 +103,24 @@
                     </li>
                      <li class="pure-menu-item"><a href="#" class="pure-menu-link"> Contact us</a></li>
                 </ul>
-        	</div> <!-- pure-menu end-->
+            </div> <!-- pure-menu end-->
+
+            
+	<div class="header">
+		<div class="logo"><img src="images/logo.png" width="150px"></div>
+		<div id="title"><h1>weLearn</h1></div>
+	</div><!-- header end-->
+
+
+		<div class="nav">
+			<div class="login">
+				<form action="index.php" method="post" class="form">
+					<input id="email" name="email" type="text" placeholder="Email" value="<?php echo $submitted_email; ?>"/>
+					<input id="password" name="password" type="password" placeholder="Password" value="">
+					<button type="submit" value="Login" class="button" id="login" name="login">Login</button>
+				</form>
+			<button class="button" id="signup" name="signup"><a href="registerPage.php">Sign up</a></button>
+			</div>
         </div><!-- Nav end-->
 
 
