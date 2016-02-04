@@ -26,8 +26,9 @@
                 lastname,  
                 password, 
                 salt, 
-                email 
-            FROM users2 
+                email,
+                usertype 
+            FROM users 
             WHERE 
                 email = :email 
         "; 
@@ -131,21 +132,6 @@
 		<input type="search" placeholder=" Search.." id="search"><img src="images/search.png" width="30px"></input>
 	</div>
 </div>
-
-   <div id="registerFormWrapper">
-        <div id="innerForm">
-            <h1>Register</h1> 
-            <form action="register.php" method="post" id="registerForm"> 
-                <input type="text" name="username" value="" placeholder="Username"/> 
-                <br /><br /> 
-                <input type="text" name="email" value="" placeholder="Email"/> 
-                <br /><br /> 
-                <input type="password" name="password" value="" placeholder="Password"/> 
-                <br /><br /> 
-                <input type="submit" value="Register" /> 
-            </form>
-        </div>
-    </div>
 
 
 <!-- CONTENT -->

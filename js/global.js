@@ -8,6 +8,7 @@ $(document).ready(function(){
 // register form
 
 $('#register1').click(function(){
+	console.log("whapp");
 	$('#registerFormWrapper1').fadeOut();
 	$('#registerFormWrapper2').fadeIn();
 });

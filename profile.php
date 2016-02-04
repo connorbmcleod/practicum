@@ -47,6 +47,15 @@
 
 <p id="hello">Hello <?php echo htmlentities($_SESSION['user']['firstname'], ENT_QUOTES, 'UTF-8'); ?></p>
 
+
+
+<?php if($_SESSION['user']['usertype'] == "1"){
+  echo "Student";
+}
+else {
+  echo "Teacher";
+}; ?>
+
     <img src="profilePic.png" width="200px">
       BIO: 
     </div>

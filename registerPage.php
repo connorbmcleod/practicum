@@ -4,8 +4,7 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300|Roboto:400,700,300,700italic,300italic' rel='stylesheet' type='text/css'>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/global.js"></script>
+    
     <title></title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -21,7 +20,7 @@
 		<div class="nav">
 			<div class="login">
 				<form action="index.php" method="post" class="form">
-					<input id="email" name="email" type="text" placeholder="Email" value="<?php echo $submitted_email; ?>"/>
+					<input id="email" name="email" type="text" placeholder="Email" value=""/>
 					<input id="password" name="password" type="password" placeholder="Password" value="">
 					<button type="submit" value="Login" class="button" id="login" name="login">Login</button>
 				</form>
@@ -57,41 +56,29 @@
 </div>
 
 
-        <div id="registerFormWrapper1">
-            <div id="innerForm">
-                <form action="register.php" method="post" id="registerForm1"> 
-                    <input type="text" name="firstName" value="" class="form-field" placeholder=" First Name"/> 
-                    <br /><br /> 
-                    <input type="text" name="lastName" value="" class="form-field" placeholder=" Last Name"/> 
-                    <br /><br /> 
-                    <input type="password" name="" value="" class="form-field" placeholder=" Password"/> 
-                    <br /><br /> 
-                    <input type="submit" value="Next" class="button" id="register1"/> 
+
+                <form action="register.php" method="post" id="registerForm1">
+                    <div id="registerFormWrapper1">
+                        <input type="text" name="firstname" value="" class="form-field" placeholder=" First Name"/> 
+                        <br /><br /> 
+                        <input type="text" name="lastname" value="" class="form-field" placeholder=" Last Name"/> 
+                        <br /><br /> 
+                        <input type="button" value="Next" class="button" id="register1"/>
+                    </div> 
+
+                    <div id="registerFormWrapper2">
+                        <input type="text" name="email" value="" class="form-field" placeholder=" Email"/> 
+                        <br /><br /> 
+                        <input type="password" name="password" value="" class="form-field" placeholder=" Password"/> 
+                        <br /><br /> 
+                        <input type="submit" value="Register" class="button" id="register2"/>
+                    </div>
                 </form>
-            </div>
-        </div>
 
+                <div id="registerFormWrapper3">
+                	<h4>Go to my profile</h4>
+                </div>
 
-<div class="register-div">
-	    <div id="registerFormWrapper2">
-            <div id="innerForm">
-                <form action="register.php" method="post" id="registerForm"> 
-                    <input type="text" name="username" value="" class="form-field" placeholder=" Username"/> 
-                    <br /><br /> 
-                    <input type="text" name="email" value="" class="form-field" placeholder=" Email"/> 
-                    <br /><br /> 
-                    <input type="password" name="password" value="" class="form-field" placeholder=" Password"/> 
-                    <br /><br /> 
-                    <input type="submit" value="Register" class="button" id="register2"/> 
-                </form>
-            </div>
-        </div>
-
-
-        <div id="registerFormWrapper3">
-        	<h4>Go to my profile</h4>
-        </div>
-</div>
 
 
 <!-- footer -->
@@ -124,5 +111,7 @@
     </div>
 
 <!-- footer -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/global.js"></script>
 </body>
 </html>
