@@ -64,9 +64,9 @@
             die("Failed to run query: " . $ex->getMessage()); 
         } 
          
-        header("Location: private.php"); 
+        header("Location: profile.php"); 
          
-        die("Redirecting to private.php"); 
+        die("Redirecting to registercourse.php"); 
     } 
      
 ?> 
