@@ -83,6 +83,11 @@
     } 
      
 ?>
+
+    <div class="header">
+        <div class="logo"><a href="index.php"><img src="images/logo.gif" width="70px"></a></div>
+
+
             <div class="pure-menu pure-menu-horizontal" id="menu">
                 <ul class="pure-menu-list">
                     <li class="pure-menu-item"><a href="#" class="pure-menu-link"> Home</a></li>
@@ -103,13 +108,10 @@
                     </li>
                      <li class="pure-menu-item"><a href="#" class="pure-menu-link"> Contact us</a></li>
                 </ul>
-            </div> <!-- pure-menu end-->
+
 
             
-	<div class="header">
-		<div class="logo"><a href="index.php"><img src="images/logo.gif" width="100px"></a></div>
-<!-- 		<div id="title"><h1>weLearn</h1></div> -->
-	</div><!-- header end-->
+<!-- header end-->
 
 
 		<div class="nav">
@@ -131,8 +133,8 @@
 		<input type="search" placeholder=" Search.." id="search"><img src="images/search.png" width="30px"></input>
 	</div>
 </div>
-
-
+    </div>
+            </div> <!-- pure-menu end-->
 <!-- CONTENT -->
 <div class="content" id="index-content">
     <div class="pure-g" id="not-logged">
