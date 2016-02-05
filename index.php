@@ -107,8 +107,8 @@
 
             
 	<div class="header">
-		<div class="logo"><img src="images/logo.png" width="150px"></div>
-		<div id="title"><h1>weLearn</h1></div>
+		<div class="logo"><a href="index.php"><img src="images/logo.gif" width="100px"></a></div>
+<!-- 		<div id="title"><h1>weLearn</h1></div> -->
 	</div><!-- header end-->
 
 
@@ -136,15 +136,15 @@
 <!-- CONTENT -->
 <div class="content" id="index-content">
     <div class="pure-g" id="not-logged">
-        <div class="pure-u-1 pure-u-md-1-3"> 
+        <div class="pure-u-1 pure-u-md-1-3" id="index-col-1"> 
             <img src="logo.png" width="300px">
             <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
         </div>
-        <div class="pure-u-1 pure-u-md-1-3">
+        <div class="pure-u-1 pure-u-md-1-3" id="index-col-2">
             <img src="logo.png" width="300px">
             <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
         </div>
-        <div class="pure-u-1 pure-u-md-1-3">
+        <div class="pure-u-1 pure-u-md-1-3" id="index-col-3">
             <img src="logo.png" width="300px">
             <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
         </div>
@@ -168,7 +168,7 @@
 <!-- CONTENT -->
 
 <!-- footer -->
-    <div class="footer">
+    <div id="index-footer">
             <div class="footer-col" id="footer-one">
                  <ul id="social-media">
                     <li><a href="#"><img src="images/facebook-square.png" width="30px"></a></li>

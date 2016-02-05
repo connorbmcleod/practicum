@@ -52,39 +52,41 @@
 
         </div><!-- Nav end-->
 </div> <!-- header stripe end -->
+
+
+
+<!-- content -->
+
 <div class="page-header">
-	<div class="page-title"><h2>Register</h2></div>	
+    <div class="page-title"><h2>Create Course</h2></div> 
 </div>
 
 
+                <form action="#" method="post" id="createCourse">
+                    <div id="wrapper1">
+                        <input type="text" name="coursename" value="" class="form-field" placeholder=" Course Name"/> 
+                        <br /><br /> 
+                        <input type="text" name="where" value="" class="form-field" placeholder=" Location"/> 
+                        <br /><br /> 
+                        <input type="text" name="when" value="" class="form-field" placeholder=" Time"/> 
+                        <br /><br /> 
+                        <input type="text" name="number" value="" class="form-field" placeholder=" Number of people needed"/> 
+                        <br /><br /> 
 
-                <form action="register.php" method="post" id="registerForm1">
-                    <div id="registerFormWrapper1">
-                        <input type="text" name="firstname" value="" class="form-field" placeholder=" First Name"/> 
-                        <br /><br /> 
-                        <input type="text" name="lastname" value="" class="form-field" placeholder=" Last Name"/> 
-                        <br /><br /> 
-                    </div> 
-
-                    <div id="registerFormWrapper2">
-                        <input type="text" name="email" value="" class="form-field" placeholder=" Email"/> 
-                        <br /><br /> 
-                        <input type="password" name="password" value="" class="form-field" placeholder=" Password"/> 
-                        <br /><br /> 
-                        <input type="submit" value="Register" class="button" id="register2"/>
                     </div>
+                    <div id="wrapper2">
+                    <textarea cols="50" rows="15" type="text" name="courseDesc" value="" placeholder=" Course Description"></textarea>
+                    </div>
+                    <br />
+                     <input type="submit" value="Register" class="button" class="button" id="createCourseBtn"/>
                 </form>
 
-                <div id="registerFormWrapper3">
-                	<h4>Go to my profile</h4>
-                </div>
-
-
+<!-- content -->
 
 <!-- footer -->
     <div class="footer">
             <div class="footer-col" id="footer-one">
-  				 <ul id="social-media">
+                 <ul id="social-media">
                     <li><a href="#"><img src="images/facebook-square.png" width="30px"></a></li>
                     <li><a href="#"><img src="images/instagram.png" width="30px"></a></li>
                     <li><a href="#"><img src="images/twitter.png" width="30px"></a></li>

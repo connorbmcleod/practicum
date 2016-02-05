@@ -1,16 +1,16 @@
 $(document).ready(function(){
 	$('#logged-in').hide();
-	$('#registerFormWrapper2').hide();
 	$('#registerFormWrapper3').hide();
 })
 
 
 // register form
 
-$('#register1').click(function(){
+$('#register2').click(function(){
 	console.log("whapp");
-	$('#registerFormWrapper1').fadeOut();
-	$('#registerFormWrapper2').fadeIn();
+	// $('#registerFormWrapper1').delay( 500 ).slideUp( 800 );
+	$('#registerFormWrapper3').slideDown(800);
+	$('#register1').css('visibility', 'hidden');
 });
 
 

@@ -10,6 +10,7 @@ body{
 h1, h2, h3, h4, h5{
 	font-family: 'Roboto', sans-serif;
 	font-size: 2em;
+	font-weight: 100;
 }
 
 .content{
@@ -52,7 +53,7 @@ textarea:focus, input:focus{
 }
 
 .pure-menu-children{
-
+	margin-top:5px;
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -64,37 +65,45 @@ textarea:focus, input:focus{
 }
 
 .button:hover{
-	background-color: #3E7CD8;
-	border: #3E7CD8 thin solid;
+	background-color: #110E3F;
+	border: #110E3F thin solid;
 	color:white;
 }
 
 .pure-menu-link{
-	color:black;
+	color:white;
 }
 
 .pure-menu-link:hover{
-	color: white;
+	color: #110E3F;
 	background-color: transparent;
 }
 
 .header{
-	height: 20vh;
+/*	height: 20vh;*/
 	display: inline-block;
 	vertical-align: top;
-	margin-top: 5vh;
+/*	margin-top: 5vh;*/
+
+}
+
+#header-stripe{
+/*	background-color: rgba(0, 0, 0, 0.7);*/
 }
 
 .logo{
 	display: inline-block;
-	margin-top: 0px;
+	margin-top: 10px;
 	vertical-align: top;
+	margin-left: 10px;
 }
 
 .nav{
 	display: inline-block;
-	margin-left:30vw;
-	margin-top: 5vh;
+	margin-right:20px;
+	margin-top: 50px;
+	float: right;
+
 }
 
 .pure-menu-list{
@@ -137,16 +146,20 @@ textarea:focus, input:focus{
 }
 
 .page-header{
-	background-color: #110E3F;
+/*	background-color: #110E3F;*/
 	text-align: center;
 	width: 100vw;
 	height: 100px;
 }
 
 .page-title{
-	color:white;
+	color:black;
     position: relative;
-    top: 25%;
+    top: 15%;
+    position: absolute;
+    left: 10%;
+    font-size: 30px;
+
 }
 
 .form{
@@ -157,7 +170,18 @@ textarea:focus, input:focus{
 	.footer{
 		background-color: #110E3F;
 		color: white;
-		/*bottom: 0;
+		bottom: 0;
+		position: absolute;
+		width: 100vw;
+		font-family: 'Carme', sans-serif;
+		height: 100px;
+
+	}
+
+	#index-footer{
+		background-color: #110E3F;
+		color: white;
+/*		bottom: 0;
 		position: absolute;*/
 		width: 100vw;
 		font-family: 'Carme', sans-serif;
@@ -218,9 +242,10 @@ textarea:focus, input:focus{
 
 /*index page*/
 .hero{
-	background: url('../images/bag-and-hands-resize.jpg') center center no-repeat;
+	background: url('../images/bag-and-hands.jpg') center center no-repeat;
 	width: 100vw;
 	height: 60vh;
+	background-size: cover;
 }
 
 .hero-title{
@@ -229,7 +254,7 @@ textarea:focus, input:focus{
     top: 25%;
     left: 38%;
 	width: 25vw;
-	font-size: 2.2em;
+	font-size: 2.5vh;
 	text-align: center;
 
 }
@@ -262,6 +287,10 @@ textarea:focus, input:focus{
     -moz-transform: translate3d(-50%, -50%, 0);
     transform: translate3d(-50%, -50%, 0);
 }
+
+#index-col-1, #index-col-2, #index-col-3{
+
+}
 /*index page*/
 
 
@@ -273,16 +302,16 @@ textarea:focus, input:focus{
 	margin-top: 20px;
 }
 
-#registerFormWrapper1,
-#registerFormWrapper2,
+#registerForm1,
+#registerFormW2,
 #registerFormWrapper3
 {
-	margin: 40px;
+
 	text-align: center;
 	width: 90vw;
 	margin: 0 auto;
 /*	border: grey thin solid;*/
-	margin-top: 20px;
+	margin-top: 10vh;
 }
 
 #innerForm input{
@@ -295,6 +324,7 @@ textarea:focus, input:focus{
 	border-top:none;
 	border-left:none;
 	border-right:none;
+	width: 50vw;
 }
 
 #register1, #register2{
@@ -306,6 +336,32 @@ textarea:focus, input:focus{
 
 
 
+/*create course*/
+#createCourse{
+	margin: 0 auto;
+	text-align: center;
 
+}
 
+#createCourse input{
+	margin: 10px 0px;
+	width: 30vw;
+}
 
+#wrapper1, #wrapper2{
+	display: inline-block;
+	margin-bottom: 100px;
+}
+
+#wrapper2 textarea{
+	border: rgba(200, 200, 200, 0.5) solid thin;
+	margin-left:100px;
+	margin-top: 100px;
+
+}
+
+#createCourseBtn{
+	padding: 10px 0px;
+}
+
+/*create course*/
