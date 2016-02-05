@@ -62,13 +62,13 @@
 </div>
 
 
-                <form action="#" method="post" id="createCourse">
+                <form action="registercourse.php" method="post" id="createCourse">
                     <div id="wrapper1">
                         <input type="text" name="coursename" value="" class="form-field" placeholder=" Course Name"/> 
                         <br /><br /> 
-                        <input type="text" name="where" value="" class="form-field" placeholder=" Location"/> 
+                        <input type="text" name="location" value="" class="form-field" placeholder=" Location"/> 
                         <br /><br /> 
-                        <input type="text" name="when" value="" class="form-field" placeholder=" Time"/> 
+                        <input type="text" name="date" value="" class="form-field" placeholder=" Time"/> 
                         <br /><br /> 
                         <input type="text" name="number" value="" class="form-field" placeholder=" Number of people needed"/> 
                         <br /><br /> 
@@ -78,7 +78,7 @@
                     <textarea cols="50" rows="15" type="text" name="courseDesc" value="" placeholder=" Course Description"></textarea>
                     </div>
                     <br />
-                     <input type="submit" value="Register" class="button" class="button" id="createCourseBtn"/>
+                     <input type="submit" value="Register" class="button" id="createCourseBtn"/>
                 </form>
 
 <!-- content -->
