@@ -4,6 +4,7 @@ body{
 	margin: 0px;
 	font-family: 'Carme', sans-serif;
 /*	font-size: 1.1em;*/
+	line-height: 1.5em;
 
 }
 
@@ -458,6 +459,10 @@ textarea:focus, input:focus{
 
 .bio, .skills, .hobbies{
 	margin-bottom: 50px;
+}
+
+#see-all{
+	margin-top: 10px;
 }
 /*myprofile*/
 

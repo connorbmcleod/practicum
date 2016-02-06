@@ -117,7 +117,7 @@
 
             
 	<div class="header">
-		<div class="logo"><a href="index.php"><img src="images/logo.gif" width="100px"></a></div>
+		<div class="logo"><a href="index.php"><img src="images/logo.gif" width="70px"></a></div>
 <!-- 		<div id="title"><h1>weLearn</h1></div> -->
 	</div><!-- header end-->
 
@@ -172,6 +172,7 @@
         <div class="class-wrapper">
 
         </div>
+        <button class="button" id="see-all">See All</button>
     </div>
 </div>
 <!-- content -->
