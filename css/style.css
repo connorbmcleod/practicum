@@ -187,7 +187,7 @@ textarea:focus, input:focus{
 
 /*footer*/
 	.footer{
-		background-color: rgba(0, 0, 0, 0.7);
+		background-color: rgba(0, 0, 0, 0.9);
 		color: white;
 		bottom: 0;
 		position: absolute;
@@ -197,8 +197,16 @@ textarea:focus, input:focus{
 
 	}
 
+	.footer p{
+		color: white;
+	}
+
+	#index-footer p{
+		color: white;
+	}
+
 	#index-footer{
-		background-color: rgba(0, 0, 0, 0.7);
+		background-color: rgba(0, 0, 0, 0.9);
 		color: white;
 /*		bottom: 0;
 		position: absolute;*/
@@ -501,13 +509,32 @@ textarea:focus, input:focus{
 	margin-top: 100px;
 }
 
-#about-us-content h2{
-	margin-top: 50px;
+.join-team{
+	text-align: center;
+	margin: 100px 0px; 
 }
+
 
 /*About us page*/
 
 
 
+/*All courses page*/
+
+#course-page-search{
+	width: 60vw;
+	margin: 0 auto;
+	vertical-align: top;
+	padding: 10px 0px;
+}
 
 
+#all-courses-search{
+	text-align: center;
+	margin: 50px 0px;
+}
+
+#all-courses-pure-g{
+	text-align: center;
+}
+/*All courses page*/
