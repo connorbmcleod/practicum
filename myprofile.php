@@ -13,74 +13,17 @@
 
 <?php 
 
-    require("common.php"); 
-     
-    $submitted_email = ''; 
+    require("common.php");
+
+    if(empty($_SESSION['user'])) 
+        { 
+            header("Location: index.php"); 
+             
+            die("Redirecting to index.php"); 
+        } 
       
-    if(!empty($_POST)) 
-    { 
-        $query = " 
-            SELECT 
-                id,
-                firstname,
-                lastname,  
-                password, 
-                salt, 
-                email,
-                usertype 
-            FROM users 
-            WHERE 
-                email = :email 
-        "; 
-         
-        $query_params = array( 
-            ':email' => $_POST['email'] 
-        ); 
-         
-        try 
-        { 
-            $stmt = $db->prepare($query); 
-            $result = $stmt->execute($query_params); 
-        } 
-        catch(PDOException $ex) 
-        {  
-            die("Failed to run query: " . $ex->getMessage()); 
-        } 
-         
-        $login_ok = false; 
-         
-        $row = $stmt->fetch(); 
-        if($row) 
-        { 
-            $check_password = hash('sha256', $_POST['password'] . $row['salt']); 
-            for($round = 0; $round < 65536; $round++) 
-            { 
-                $check_password = hash('sha256', $check_password . $row['salt']); 
-            } 
-             
-            if($check_password === $row['password']) 
-            { 
-                $login_ok = true; 
-            } 
-        } 
-         
-        if($login_ok) 
-        { 
-            unset($row['salt']); 
-            unset($row['password']); 
-             
-            $_SESSION['user'] = $row; 
-             
-            header("Location: profile.php"); 
-            die("Redirecting to: profile.php"); 
-        } 
-        else 
-        { 
-            print("Login Failed."); 
-             
-            $submitted_email = htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8'); 
-        } 
-    } 
+    $firstname = $_SESSION['user']['firstname'];
+    $lastname = $_SESSION['user']['lastname'];
      
 ?>
             <div class="pure-menu pure-menu-horizontal" id="menu">
@@ -133,7 +76,7 @@
 
 <!-- content -->
 <div id="profile-name">
-    <h2><strong>Darya Shokouhi</strong></h2>
+    <h2><strong><?php echo $firstname . ' ' . $lastname; ?></strong></h2>
         <h5>Vancouver, BC</h5>
             <hr>
 </div>

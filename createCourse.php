@@ -10,6 +10,17 @@
 </head>
 <body>
 
+<?php 
+
+    require("common.php"); 
+     
+    
+   if($_SESSION['user']['usertype'] == 0){
+            header("Location: index.php"); 
+     };
+      
+?> 
+
 
             <div class="pure-menu pure-menu-horizontal" id="menu">
                 <ul class="pure-menu-list">
@@ -30,6 +41,7 @@
                         </ul>
                     </li>
                      <li class="pure-menu-item"><a href="#" class="pure-menu-link"> Contact us</a></li>
+                     <li class="pure-menu-item"><a href="#" class="pure-menu-link"></a></li>
                 </ul>
             </div> <!-- pure-menu end-->
 
@@ -39,28 +51,17 @@
 <!--        <div id="title"><h1>weLearn</h1></div> -->
     </div><!-- header end-->
 
-
-		<div class="nav">
-			<div class="login">
-				<form action="index.php" method="post" class="form">
-					<input id="email" name="email" type="text" placeholder="Email" value=""/>
-					<input id="password" name="password" type="password" placeholder="Password" value="">
-					<button type="submit" value="Login" class="button" id="login" name="login">Login</button>
-				</form>
-			<button class="button" id="signup" name="signup"><a href="registerPage.php">Sign up</a></button>
-			</div>
-
-        </div><!-- Nav end-->
 </div> <!-- header stripe end -->
 
 
 
 <!-- content -->
 
+
+
 <div class="page-header">
     <div class="page-title"><h2>Create Course</h2></div> 
 </div>
-
 
                 <form action="registercourse.php" method="post" id="createCourse">
                     <div id="wrapper1">
@@ -80,6 +81,13 @@
                     <br />
                      <input type="submit" value="Register" class="button" id="createCourseBtn"/>
                 </form>
+
+
+                <?php
+                    if($_SESSION['user']['usertype'] == 0){
+                        echo "i'm fat and a 0";
+                    };
+                ?>
 
 <!-- content -->
 
@@ -101,7 +109,7 @@
             </div>
 
              <div class="footer-col" id="footer-two">
-                <p>#555 Seymour st. | 604.1234567 | info@welearn.ca</p>
+                <p>#555 Seymour St. | 604.1234567 | info@welearn.ca</p>
                 <p>Copyright | 2016 | Design by BCIT</p>
              </div>
 

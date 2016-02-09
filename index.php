@@ -71,8 +71,8 @@
              
             $_SESSION['user'] = $row; 
              
-            header("Location: profile.php"); 
-            die("Redirecting to: profile.php"); 
+            header("Location: myprofile.php"); 
+            die("Redirecting to: myprofile.php"); 
         } 
         else 
         { 
