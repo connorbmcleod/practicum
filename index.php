@@ -85,33 +85,27 @@
 ?>
 
     <div class="header">
-        <div class="logo"><a href="index.php"><img src="images/logo.gif" width="70px"></a></div>
+        <div class="logo"><a href="index.php"><img src="images/logo.gif" width="50px"></a></div>
 
 
             <div class="pure-menu pure-menu-horizontal" id="menu">
                 <ul class="pure-menu-list">
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link"> Home</a></li>
-                    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                        <a href="#" id="menuLink1" class="pure-menu-link">Courses</a>
-                        <ul class="pure-menu-children">
-                            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Browse courses</a></li>
-                            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Request a course</a></li>
-                        </ul>
+                    <li class="pure-menu-item"><a href="index.php" class="pure-menu-link"> Home</a></li>
+                    <li class="pure-menu-item">
+                        <a href="allCourses.php" id="menuLink1" class="pure-menu-link">Courses</a>
                     </li>
                       <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
                         <a href="#" id="menuLink1" class="pure-menu-link">About us</a>
                         <ul class="pure-menu-children">
-                            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Who are we</a></li>
-                            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Our educators</a></li>
-                            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Our learners</a></li>
+                            <li class="pure-menu-item"><a href="aboutUs.php" class="pure-menu-link">Who are we</a></li>
+                            <li class="pure-menu-item"><a href="aboutEducators.php" class="pure-menu-link">Our educators</a></li>
+                            <li class="pure-menu-item"><a href="aboutLearners.php" class="pure-menu-link">Our learners</a></li>
                         </ul>
                     </li>
-                     <li class="pure-menu-item"><a href="#" class="pure-menu-link"> Contact us</a></li>
+                     <li class="pure-menu-item"><a href="contactUs.php" class="pure-menu-link"> Contact us</a></li>
                 </ul>
 
-
-            
-<!-- header end-->
+         </div> <!-- pure-menu end-->
 
 
 		<div class="nav">
@@ -121,34 +115,72 @@
 					<input id="password" name="password" type="password" placeholder="Password" value="">
 					<button type="submit" value="Login" class="button" id="login" name="login">Login</button>
 				</form>
-			<button class="button" id="signup" name="signup"><a href="registerPage.php">Sign up</a></button>
-			</div>
+			 <button class="button" id="signup" name="signup"><a href="registerPage.php">Sign up</a></button>
+		      </div>
         </div><!-- Nav end-->
 
+</div> <!-- Header end -->
+
+<!-- LOGGED IN HEADER -->
+    <div class="header-logged">
+        <div class="logo"><a href="index.php"><img src="images/logo.gif" width="50px"></a></div>
+
+
+            <div class="pure-menu pure-menu-horizontal" id="menu">
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item"><a href="index.php" class="pure-menu-link"> Home</a></li>
+                    <li class="pure-menu-item">
+                        <a href="allCourses.php" id="menuLink1" class="pure-menu-link">Courses</a>
+                    </li>
+                      <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                        <a href="#" id="menuLink1" class="pure-menu-link">About us</a>
+                        <ul class="pure-menu-children">
+                            <li class="pure-menu-item"><a href="aboutUs.php" class="pure-menu-link">Who are we</a></li>
+                            <li class="pure-menu-item"><a href="aboutEducators.php" class="pure-menu-link">Our educators</a></li>
+                            <li class="pure-menu-item"><a href="aboutLearners.php" class="pure-menu-link">Our learners</a></li>
+                        </ul>
+                    </li>
+                     <li class="pure-menu-item"><a href="contactUs.php" class="pure-menu-link"> Contact us</a></li>
+                </ul>
+
+         </div> <!-- pure-menu end-->
+
+    <div class="nav">
+        <button class="button" id="logout">Logout</button>
+        <img src="images/menu-arrow.png" width="40px">
+    </div>
+</div> <!-- Header end -->
+
+<!-- LOGGED IN HEADER -->
 
 <div class="hero">
-	<div class="hero-title"><h2>Meet new people, Learn new things</h2></div>
+	<div class="index-hero-title">Meet new people, Learn new things</div>
 	<div id="index-search">
-		<h3>Search for a course</h3>
 		<input type="search" placeholder=" Search.." id="search"><img src="images/search.png" width="30px"></input>
 	</div>
 </div>
-    </div>
-            </div> <!-- pure-menu end-->
+
+           
 <!-- CONTENT -->
 <div class="content" id="index-content">
     <div class="pure-g" id="not-logged">
-        <div class="pure-u-1 pure-u-md-1-3" id="index-col-1"> 
-            <img src="logo.png" width="300px">
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        <div class="pure-u-1 pure-u-md-1-3" id="index-col-1">
+            <a href="allcourses.php"> 
+                <img src="images/1.jpeg" width="300px">
+                <h3>Browse Courses</h3>
+            </a>
         </div>
         <div class="pure-u-1 pure-u-md-1-3" id="index-col-2">
-            <img src="logo.png" width="300px">
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <a href="allcourses.php">
+                <img src="images/2.jpeg" width="300px">
+                <h3>Create Account</h3>
+           </a>
         </div>
         <div class="pure-u-1 pure-u-md-1-3" id="index-col-3">
-            <img src="logo.png" width="300px">
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <a href="aboutUs.php">
+                <img src="images/3.jpeg" width="300px">
+                <h3>About Us</h3>
+            </a>
         </div>
     </div>
 
@@ -170,7 +202,7 @@
 <!-- CONTENT -->
 
 <!-- footer -->
-    <div id="index-footer">
+    <div class="footer">
             <div class="footer-col" id="footer-one">
                  <ul id="social-media">
                     <li><a href="#"><img src="images/facebook-square.png" width="30px"></a></li>

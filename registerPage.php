@@ -11,47 +11,77 @@
 <body>
 
 
+    <div class="header">
+        <div class="logo"><a href="index.php"><img src="images/logo.gif" width="50px"></a></div>
+
+
             <div class="pure-menu pure-menu-horizontal" id="menu">
                 <ul class="pure-menu-list">
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link"> Home</a></li>
-                    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                        <a href="#" id="menuLink1" class="pure-menu-link">Courses</a>
-                        <ul class="pure-menu-children">
-                            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Browse courses</a></li>
-                            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Request a course</a></li>
-                        </ul>
+                    <li class="pure-menu-item"><a href="index.php" class="pure-menu-link"> Home</a></li>
+                    <li class="pure-menu-item">
+                        <a href="allCourses.php" id="menuLink1" class="pure-menu-link">Courses</a>
                     </li>
                       <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
                         <a href="#" id="menuLink1" class="pure-menu-link">About us</a>
                         <ul class="pure-menu-children">
-                            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Who are we</a></li>
-                            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Our educators</a></li>
-                            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Our learners</a></li>
+                            <li class="pure-menu-item"><a href="aboutUs.php" class="pure-menu-link">Who are we</a></li>
+                            <li class="pure-menu-item"><a href="aboutEducators.php" class="pure-menu-link">Our educators</a></li>
+                            <li class="pure-menu-item"><a href="aboutLearners.php" class="pure-menu-link">Our learners</a></li>
                         </ul>
                     </li>
-                     <li class="pure-menu-item"><a href="#" class="pure-menu-link"> Contact us</a></li>
+                     <li class="pure-menu-item"><a href="contactUs.php" class="pure-menu-link"> Contact us</a></li>
                 </ul>
-            </div> <!-- pure-menu end-->
 
- <div id="header-stripe">           
-    <div class="header">
-        <div class="logo"><a href="index.php"><img src="images/logo.gif" width="100px"></a></div>
-<!--        <div id="title"><h1>weLearn</h1></div> -->
-    </div><!-- header end-->
+         </div> <!-- pure-menu end-->
 
 
-		<div class="nav">
-			<div class="login">
-				<form action="index.php" method="post" class="form">
-					<input id="email" name="email" type="text" placeholder="Email" value=""/>
-					<input id="password" name="password" type="password" placeholder="Password" value="">
-					<button type="submit" value="Login" class="button" id="login" name="login">Login</button>
-				</form>
-			<button class="button" id="signup" name="signup"><a href="registerPage.php">Sign up</a></button>
-			</div>
-
+        <div class="nav">
+            <div class="login">
+                <form action="index.php" method="post" class="form">
+                    <input id="email" name="email" type="text" placeholder="Email" value="<?php echo $submitted_email; ?>"/>
+                    <input id="password" name="password" type="password" placeholder="Password" value="">
+                    <button type="submit" value="Login" class="button" id="login" name="login">Login</button>
+                </form>
+             <button class="button" id="signup" name="signup"><a href="registerPage.php">Sign up</a></button>
+              </div>
         </div><!-- Nav end-->
-</div> <!-- header stripe end -->
+
+</div> <!-- Header end -->
+
+
+
+<!-- LOGGED IN HEADER -->
+    <div class="header-logged">
+        <div class="logo"><a href="index.php"><img src="images/logo.gif" width="50px"></a></div>
+
+
+            <div class="pure-menu pure-menu-horizontal" id="menu">
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item"><a href="index.php" class="pure-menu-link"> Home</a></li>
+                    <li class="pure-menu-item">
+                        <a href="allCourses.php" id="menuLink1" class="pure-menu-link">Courses</a>
+                    </li>
+                      <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                        <a href="#" id="menuLink1" class="pure-menu-link">About us</a>
+                        <ul class="pure-menu-children">
+                            <li class="pure-menu-item"><a href="aboutUs.php" class="pure-menu-link">Who are we</a></li>
+                            <li class="pure-menu-item"><a href="aboutEducators.php" class="pure-menu-link">Our educators</a></li>
+                            <li class="pure-menu-item"><a href="aboutLearners.php" class="pure-menu-link">Our learners</a></li>
+                        </ul>
+                    </li>
+                     <li class="pure-menu-item"><a href="contactUs.php" class="pure-menu-link"> Contact us</a></li>
+                </ul>
+
+         </div> <!-- pure-menu end-->
+
+    <div class="nav">
+        <button class="button" id="logout">Logout</button>
+        <img src="images/menu-arrow.png" width="40px">
+    </div>
+</div> <!-- Header end -->
+
+<!-- LOGGED IN HEADER -->
+
 <div class="page-header">
 	<div class="page-title"><h2>Register</h2></div>	
 </div>
@@ -70,6 +100,8 @@
                         <input type="text" name="email" value="" class="form-field" placeholder=" Email" autocomplete="off"/> 
                         <br /><br /> 
                         <input type="password" name="password" value="" class="form-field" placeholder=" Password" autocomplete="off"/> 
+                        <br /><br /> 
+                        <input type="password" name="password" value="" class="form-field" placeholder=" Confirm Password" autocomplete="off"/> 
                         <br /><br /> 
                         <input type="submit" value="Register" class="button" id="register2"/>
                     </div>
