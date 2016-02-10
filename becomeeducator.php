@@ -41,12 +41,12 @@ $userID = $_SESSION['user']['id'];
             die("Failed to run query: " . $ex->getMessage()); 
         }
 
-        $query = 'UPDATE users
+        $queryupdate = 'UPDATE users
 					SET usertype=1
 					WHERE id="$userID";';
         try 
         { 
-            $stmt = $db->prepare($query); 
+            $stmt = $db->prepare($queryupdate); 
             $result = $stmt->execute(); 
         } 
         catch(PDOException $ex) 
