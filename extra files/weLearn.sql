@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 05, 2016 at 10:22 PM
+-- Generation Time: Feb 10, 2016 at 11:28 PM
 -- Server version: 5.6.26
 -- PHP Version: 5.5.28
 
@@ -35,6 +35,18 @@ CREATE TABLE IF NOT EXISTS `courses` (
   `description` varchar(255) NOT NULL,
   `teacherID` int(11) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `educatorinfo`
+--
+
+CREATE TABLE IF NOT EXISTS `educatorinfo` (
+  `id` int(11) NOT NULL,
+  `bio` text NOT NULL,
+  `location` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -84,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `password`, `salt`, `email`, `usertype`) VALUES
-(4, 'The', 'Crew', 'd953a4b80246bf81419220f04672eb1ce253162705d1b389b56d82388efcab69', '4919692d7678f409', 'crew@gmail.com', 0);
+(4, 'The', 'Crew', 'd953a4b80246bf81419220f04672eb1ce253162705d1b389b56d82388efcab69', '4919692d7678f409', 'crew@gmail.com', 1);
 
 --
 -- Indexes for dumped tables
