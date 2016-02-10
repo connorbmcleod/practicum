@@ -84,6 +84,9 @@
      
 ?>
 
+<?php
+if(empty($_SESSION['user'])) : ?>
+
     <div class="header">
         <div class="logo"><a href="index.php"><img src="images/logo.gif" width="50px"></a></div>
 
@@ -121,6 +124,8 @@
 
 </div> <!-- Header end -->
 
+<?php else : ?>
+
 <!-- LOGGED IN HEADER -->
     <div class="header-logged">
         <div class="logo"><a href="index.php"><img src="images/logo.gif" width="50px"></a></div>
@@ -145,11 +150,17 @@
 
          </div> <!-- pure-menu end-->
 
-    <div class="nav">
-        <button class="button" id="logout">Logout</button>
-        <img src="images/menu-arrow.png" width="40px">
-    </div>
-</div> <!-- Header end -->
+        <div class="nav">
+            <p> <?php echo $_SESSION['user']['firstname']; ?> </p>
+            <form action="logout.php">
+                <button class="button" type="submit" id="logout">Logout</button>
+            </form>
+            <img src="images/menu-arrow.png" width="40px">
+        </div>
+    </div> <!-- Header end -->
+
+<?php endif; ?>
+
 
 <!-- LOGGED IN HEADER -->
 

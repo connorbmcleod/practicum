@@ -24,8 +24,38 @@
       
     $firstname = $_SESSION['user']['firstname'];
     $lastname = $_SESSION['user']['lastname'];
+
+    // $query = " 
+    //         SELECT 
+    //             id,
+    //             firstname,
+    //             lastname,  
+    //             password, 
+    //             salt, 
+    //             email,
+    //             usertype 
+    //         FROM userinfo 
+    //         WHERE 
+    //             email = :email 
+    //     "; 
+         
+    //     $query_params = array( 
+    //         ':email' => $_POST['email'] 
+    //     ); 
+         
+    //     try 
+    //     { 
+    //         $stmt = $db->prepare($query); 
+    //         $result = $stmt->execute($query_params); 
+    //     } 
+    //     catch(PDOException $ex) 
+    //     {  
+    //         die("Failed to run query: " . $ex->getMessage()); 
+    //     }
      
 ?>
+
+
     <div class="header">
         <div class="logo"><a href="index.php"><img src="images/logo.gif" width="50px"></a></div>
 
@@ -53,7 +83,7 @@
         <div class="nav">
             <div class="login">
                 <form action="index.php" method="post" class="form">
-                    <input id="email" name="email" type="text" placeholder="Email" value="<?php echo $submitted_email; ?>"/>
+                    <input id="email" name="email" type="text" placeholder="Email" value=""/>
                     <input id="password" name="password" type="password" placeholder="Password" value="">
                     <button type="submit" value="Login" class="button" id="login" name="login">Login</button>
                 </form>

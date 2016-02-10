@@ -3,26 +3,22 @@ require("common.php");
 
 $userID = $_SESSION['user']['id'];
 
-echo $userID;
     if(!empty($_POST)) 
     { 
-        echo $userID;
         if(empty($_POST['bio'])) 
             { 
                 die("Please enter your Bio."); 
-                 echo $userIDtest;
             }
 
         if(empty($_POST['location'])) 
             { 
                 die("Please enter your location"); 
-                echo $userID;
             }  
         
 
-        $query = 'UPDATE users
+        $query = "UPDATE users
                   SET usertype = 1
-                  WHERE id="$userID"';
+                  WHERE id='$userID'";
          
          
         $query_params = array( 

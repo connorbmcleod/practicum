@@ -41,9 +41,9 @@ $userID = $_SESSION['user']['id'];
             die("Failed to run query: " . $ex->getMessage()); 
         }
 
-        $queryupdate = 'UPDATE users
-					SET usertype=1
-					WHERE id="$userID";';
+        $queryupdate = "UPDATE users
+					    SET usertype=1
+					    WHERE id='$userID'";
         try 
         { 
             $stmt = $db->prepare($queryupdate); 
