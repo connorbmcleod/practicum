@@ -13,48 +13,81 @@
 
 <?php 
 
-    require("common.php");
-
-    if(empty($_SESSION['user'])) 
-        { 
-            header("Location: index.php"); 
-             
-            die("Redirecting to index.php"); 
-        } 
-      
-    $firstname = $_SESSION['user']['firstname'];
-    $lastname = $_SESSION['user']['lastname'];
-
-    // $query = " 
-    //         SELECT 
-    //             id,
-    //             firstname,
-    //             lastname,  
-    //             password, 
-    //             salt, 
-    //             email,
-    //             usertype 
-    //         FROM userinfo 
-    //         WHERE 
-    //             email = :email 
-    //     "; 
-         
-    //     $query_params = array( 
-    //         ':email' => $_POST['email'] 
-    //     ); 
-         
-    //     try 
-    //     { 
-    //         $stmt = $db->prepare($query); 
-    //         $result = $stmt->execute($query_params); 
-    //     } 
-    //     catch(PDOException $ex) 
-    //     {  
-    //         die("Failed to run query: " . $ex->getMessage()); 
-    //     }
+    require("common.php"); 
      
+    $submitted_email = ''; 
+      
+    if(!empty($_POST)) 
+    { 
+        $query = " 
+            SELECT 
+                id,
+                firstname,
+                lastname,  
+                password, 
+                salt, 
+                email,
+                usertype 
+            FROM users 
+            WHERE 
+                email = :email 
+        "; 
+         
+        $query_params = array( 
+            ':email' => $_POST['email'] 
+        ); 
+         
+        try 
+        { 
+            $stmt = $db->prepare($query); 
+            $result = $stmt->execute($query_params); 
+        } 
+        catch(PDOException $ex) 
+        {  
+            die("Failed to run query: " . $ex->getMessage()); 
+        } 
+         
+        $login_ok = false; 
+         
+        $row = $stmt->fetch(); 
+        if($row) 
+        { 
+            $check_password = hash('sha256', $_POST['password'] . $row['salt']); 
+            for($round = 0; $round < 65536; $round++) 
+            { 
+                $check_password = hash('sha256', $check_password . $row['salt']); 
+            } 
+             
+            if($check_password === $row['password']) 
+            { 
+                $login_ok = true; 
+            } 
+        } 
+         
+        if($login_ok) 
+        { 
+            unset($row['salt']); 
+            unset($row['password']); 
+             
+            $_SESSION['user'] = $row; 
+             
+            header("Location: myprofile.php"); 
+            die("Redirecting to: myprofile.php"); 
+        } 
+        else 
+        { 
+            print("Login Failed."); 
+             
+            $submitted_email = htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8'); 
+        } 
+    } 
+     
+     $firstname = $_SESSION['user']['firstname'];
+     $lastname = $_SESSION['user']['lastname'];
 ?>
 
+<?php
+if(empty($_SESSION['user'])) : ?>
 
     <div class="header">
         <div class="logo"><a href="index.php"><img src="images/logo.gif" width="50px"></a></div>
@@ -81,17 +114,12 @@
 
 
         <div class="nav">
-            <div class="login">
-                <form action="index.php" method="post" class="form">
-                    <input id="email" name="email" type="text" placeholder="Email" value=""/>
-                    <input id="password" name="password" type="password" placeholder="Password" value="">
-                    <button type="submit" value="Login" class="button" id="login" name="login">Login</button>
-                </form>
-             <button class="button" id="signup" name="signup"><a href="registerPage.php">Sign up</a></button>
-              </div>
+
         </div><!-- Nav end-->
 
 </div> <!-- Header end -->
+
+<?php else : ?>
 
 <!-- LOGGED IN HEADER -->
     <div class="header-logged">
@@ -117,17 +145,16 @@
 
          </div> <!-- pure-menu end-->
 
-    <div class="nav">
-        <button class="button" id="logout">Logout</button>
-        <img src="images/menu-arrow.png" width="40px">
-    </div>
-</div> <!-- Header end -->
+        <div class="nav">
+            <div id="welcome"><p> <?php echo $_SESSION['user']['firstname']; ?> </p></div>
+            <form id="logout-form" action="logout.php">
+                <button class="button" type="submit" id="logout">Logout</button>
+            </form>
+            <img src="images/menu-arrow.png" width="40px">
+        </div>
+    </div> <!-- Header end -->
 
-<!-- LOGGED IN HEADER -->
-
-    <div id="profile-search">
-        <input type="search" placeholder=" Search.." id="search"><img src="images/search.png" width="35px"></input>
-    </div>
+<?php endif; ?>
 
 
 <div class="hero" id="other-hero">
@@ -183,30 +210,23 @@
 <!-- footer -->
     <div id="index-footer">
             <div class="footer-col" id="footer-one">
-                 <ul id="social-media">
+            </div>
+
+             <div class="footer-col" id="footer-two">
+                 <p>#555 Seymour Street | info@welearn.ca</p>
+                <p>2016 | DACOKYE DESIGN</p>
+             </div>
+
+             <div class="footer-col" id="footer-three">
+                <ul id="social-media">
                     <li><a href="#"><img src="images/facebook-square.png" width="30px"></a></li>
                     <li><a href="#"><img src="images/instagram.png" width="30px"></a></li>
                     <li><a href="#"><img src="images/twitter.png" width="30px"></a></li>
                     <li><a href="#"><img src="images/googleplus-square.png" width="30px"></a></li>
                 </ul>
-
-       <!--      <div id="footer-buttons">
-                    <button class="button" id="browse-courses">Browse courses</button>
-                    <button class="button" id="request-courses">Request a course</button>
-                </div> -->
-                
-            </div>
-
-             <div class="footer-col" id="footer-two">
-                <p>#555 Seymour st. | 604.1234567 | info@welearn.ca</p>
-                <p>Copyright | 2016 | Design by BCIT</p>
-             </div>
-
-             <div class="footer-col" id="footer-three">
             </div>
 
         </div>
-
     </div>
 
 <!-- footer -->

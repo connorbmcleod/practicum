@@ -111,15 +111,15 @@ if(empty($_SESSION['user'])) : ?>
          </div> <!-- pure-menu end-->
 
 
-		<div class="nav">
-			<div class="login">
-				<form action="index.php" method="post" class="form">
-					<input id="email" name="email" type="text" placeholder="Email" value="<?php echo $submitted_email; ?>"/>
-					<input id="password" name="password" type="password" placeholder="Password" value="">
-					<button type="submit" value="Login" class="button" id="login" name="login">Login</button>
-				</form>
-			 <button class="button" id="signup" name="signup"><a href="registerPage.php">Sign up</a></button>
-		      </div>
+        <div class="nav">
+            <div class="login">
+                <form action="index.php" method="post" class="form">
+                    <input id="email" name="email" type="text" placeholder="Email" value="<?php echo $submitted_email; ?>"/>
+                    <input id="password" name="password" type="password" placeholder="Password" value="">
+                    <button type="submit" value="Login" class="button" id="login" name="login">Login</button>
+                </form>
+             <button class="button" id="signup" name="signup"><a href="registerPage.php">Sign up</a></button>
+              </div>
         </div><!-- Nav end-->
 
 </div> <!-- Header end -->
@@ -161,59 +161,37 @@ if(empty($_SESSION['user'])) : ?>
 
 <?php endif; ?>
 
-
-<!-- LOGGED IN HEADER -->
-
 <div class="hero">
-	<div class="index-hero-title">Meet new people, Learn new things</div>
-	<div id="index-search">
-		<input type="search" placeholder=" Search.." id="search"><img src="images/search.png" width="30px"></input>
-	</div>
-</div>
-
-           
-<!-- CONTENT -->
-<div class="content" id="index-content">
-    <div class="pure-g" id="not-logged">
-        <div class="pure-u-1 pure-u-md-1-3" id="index-col-1">
-            <a href="registerPage.php"> 
-                <img src="images/1.jpeg" width="300px">
-                <h3>Sign Up</h3>
-            </a>
-        </div>
-        <div class="pure-u-1 pure-u-md-1-3" id="index-col-2">
-            <a href="allcourses.php">
-                <img src="images/2.jpeg" width="300px">
-                <h3>View Courses</h3>
-           </a>
-        </div>
-        <div class="pure-u-1 pure-u-md-1-3" id="index-col-3">
-            <a href="aboutUs.php">
-                <img src="images/3.jpeg" width="300px">
-                <h3>Our Community</h3>
-            </a>
-        </div>
-    </div>
-
-
-
-    <div class="pure-g" id="logged-in">
-        <div class="pure-u-1 pure-u-md-1-2"> 
-            <img src="logo.png" width="300px">
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-        </div>
-        <div class="pure-u-1 pure-u-md-1-2">
-            <img src="logo.png" width="300px">
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-        </div>
-    </div>
+    <div class="hero-title">Browse Courses</div>
 </div>
 
 
-<!-- CONTENT -->
+<!-- content -->
+<div class="content" id="course-content">
+    <h1>Mushrooming 101</h1>
+    <div class="rating">
+        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+    </div>
+</div>
+
+<div class="col" id="course-left-col">
+    <h3>Educator</h3>
+        <p>Mike Hunt</p><br>
+    <h3>Time</h3>
+        <p>2pm-3pm</p><br>
+    <h3>Location</h3>
+        <p>The Bush</p><br>
+</div>
+<div class="col" id="course-right-col">
+    <h3>Description</h3>
+</div>
+<!-- content -->
+
+
+
 
 <!-- footer -->
-    <div class="footer">
+    <div id="index-footer">
             <div class="footer-col" id="footer-one">
             </div>
 

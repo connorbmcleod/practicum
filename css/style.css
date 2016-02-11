@@ -10,7 +10,7 @@ body{
 
 h1, h2, h3, h4, h5{
 	font-family: 'Roboto', sans-serif;
-	font-size: 2em;
+/*	font-size: 2em;*/
 	font-weight: 100;
 }
 
@@ -66,6 +66,8 @@ textarea:focus, input:focus{
 
 .pure-menu-horizontal{
 	width: 50%;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
 }
 
 .button{
@@ -97,6 +99,11 @@ textarea:focus, input:focus{
 	vertical-align: baseline;
 	background-color: rgba(0, 0, 0, 0.9);
 
+}
+
+.header-logged img{
+	display: inline-block;
+	margin-bottom: 15px;
 }
 
 .logo{
@@ -179,6 +186,16 @@ textarea:focus, input:focus{
 	color:white;
 }
 
+#welcome{
+	display: inline-block;
+	margin-right: 20px;
+}
+
+#logout-form{
+	display: inline-block;
+	margin-left: 20px;
+}
+
 .page-header{
 /*	background-color: #110E3F;*/
 	text-align: center;
@@ -210,6 +227,7 @@ textarea:focus, input:focus{
 		font-family: 'Carme', sans-serif;
 		height: 100px;
 
+
 	}
 
 	.footer p{
@@ -237,6 +255,7 @@ textarea:focus, input:focus{
 		text-align: center;
 		vertical-align: middle;
 	}
+
 
 	.footer li{
 /*		margin: 10px 20px;*/
@@ -284,8 +303,7 @@ textarea:focus, input:focus{
 
 /*index page*/
 .hero{
-	background: url('../images/bag-and-hands.jpg') center center no-repeat;
-	-webkit-filter: sepia(50%);
+	background: url('../images/bag-and-hands-2.jpg') center center no-repeat;
 	width: 100vw;
 	height: 40vh;
 	background-size: cover;
@@ -330,7 +348,7 @@ textarea:focus, input:focus{
 }
 
 #index-search{
-	color: yellow;
+/*	color: yellow;*/
 	font-size: 1em;
     position: relative;
     top: 30px;
@@ -359,6 +377,8 @@ textarea:focus, input:focus{
 }
 
 #index-col-1, #index-col-2, #index-col-3{
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
 
 }
 
@@ -497,7 +517,7 @@ textarea:focus, input:focus{
 
 .class-wrapper{
 	border: grey thin solid;
-	height: 500px;
+	height: 400px;
 	width: 300px;
 }
 
@@ -599,3 +619,34 @@ textarea:focus, input:focus{
 	margin-top: 200px;
 }
 /*Request Course page*/
+
+
+
+
+/*One course page*/
+
+#course-left-col{
+	display: inline-block;
+	vertical-align: top;
+	width: 40vw;
+	margin-left: 20px;
+	border: black thin solid;
+}
+
+#course-right-col{
+	display: inline-block;
+	width: 50vw;
+	margin:0px 20px;
+	border: black thin solid;
+	height: 50vh;
+}
+
+#course-content{
+	margin: 100px 0px;
+}
+/*One course page*/
+
+
+
+
+

@@ -71,8 +71,8 @@
              
             $_SESSION['user'] = $row; 
              
-            header("Location: profile.php"); 
-            die("Redirecting to: profile.php"); 
+            header("Location: myprofile.php"); 
+            die("Redirecting to: myprofile.php"); 
         } 
         else 
         { 
@@ -84,7 +84,8 @@
      
 ?>
 
-
+<?php
+if(empty($_SESSION['user'])) : ?>
 
     <div class="header">
         <div class="logo"><a href="index.php"><img src="images/logo.gif" width="50px"></a></div>
@@ -123,7 +124,7 @@
 
 </div> <!-- Header end -->
 
-
+<?php else : ?>
 
 <!-- LOGGED IN HEADER -->
     <div class="header-logged">
@@ -149,13 +150,16 @@
 
          </div> <!-- pure-menu end-->
 
-    <div class="nav">
-        <button class="button" id="logout">Logout</button>
-        <img src="images/menu-arrow.png" width="40px">
-    </div>
-</div> <!-- Header end -->
+        <div class="nav">
+            <div id="welcome"><p> <?php echo $_SESSION['user']['firstname']; ?> </p></div>
+            <form id="logout-form" action="logout.php">
+                <button class="button" type="submit" id="logout">Logout</button>
+            </form>
+            <img src="images/menu-arrow.png" width="40px">
+        </div>
+    </div> <!-- Header end -->
 
-<!-- LOGGED IN HEADER -->
+<?php endif; ?>
 
 
 <div class="hero">
@@ -200,28 +204,22 @@
 
 
 <!-- footer -->
-    <div id="index-footer">
+    <div class="footer">
             <div class="footer-col" id="footer-one">
-                 <ul id="social-media">
+            </div>
+
+             <div class="footer-col" id="footer-two">
+                 <p>#555 Seymour Street | info@welearn.ca</p>
+                <p>2016 | DACOKYE DESIGN</p>
+             </div>
+
+             <div class="footer-col" id="footer-three">
+                <ul id="social-media">
                     <li><a href="#"><img src="images/facebook-square.png" width="30px"></a></li>
                     <li><a href="#"><img src="images/instagram.png" width="30px"></a></li>
                     <li><a href="#"><img src="images/twitter.png" width="30px"></a></li>
                     <li><a href="#"><img src="images/googleplus-square.png" width="30px"></a></li>
                 </ul>
-
-       <!--      <div id="footer-buttons">
-                    <button class="button" id="browse-courses">Browse courses</button>
-                    <button class="button" id="request-courses">Request a course</button>
-                </div> -->
-                
-            </div>
-
-             <div class="footer-col" id="footer-two">
-                <p>#555 Seymour st. | 604.1234567 | info@welearn.ca</p>
-                <p>Copyright | 2016 | Design by BCIT</p>
-             </div>
-
-             <div class="footer-col" id="footer-three">
             </div>
 
         </div>
