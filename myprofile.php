@@ -14,76 +14,35 @@
 <?php 
 
     require("common.php"); 
-     
-    $submitted_email = ''; 
-      
-    if(!empty($_POST)) 
-    { 
+
+       $firstname = $_SESSION['user']['firstname'];
+       $lastname = $_SESSION['user']['lastname'];
+       $userID = $_SESSION['user']['id'];
+
         $query = " 
             SELECT 
-                id,
-                firstname,
-                lastname,  
-                password, 
-                salt, 
-                email,
-                usertype 
-            FROM users 
+                bio,
+                location 
+            FROM educatorinfo 
             WHERE 
-                email = :email 
+                id = 1 
         "; 
-         
-        $query_params = array( 
-            ':email' => $_POST['email'] 
-        ); 
          
         try 
         { 
             $stmt = $db->prepare($query); 
-            $result = $stmt->execute($query_params); 
+            $result = $stmt->execute(); 
         } 
         catch(PDOException $ex) 
         {  
             die("Failed to run query: " . $ex->getMessage()); 
         } 
          
-        $login_ok = false; 
-         
         $row = $stmt->fetch(); 
-        if($row) 
-        { 
-            $check_password = hash('sha256', $_POST['password'] . $row['salt']); 
-            for($round = 0; $round < 65536; $round++) 
-            { 
-                $check_password = hash('sha256', $check_password . $row['salt']); 
-            } 
              
-            if($check_password === $row['password']) 
-            { 
-                $login_ok = true; 
-            } 
-        } 
-         
-        if($login_ok) 
-        { 
-            unset($row['salt']); 
-            unset($row['password']); 
-             
-            $_SESSION['user'] = $row; 
-             
-            header("Location: userprofile.php"); 
-            die("Redirecting to: userprofile.php");  
-        } 
-        else 
-        { 
-            print("Login Failed."); 
-             
-            $submitted_email = htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8'); 
-        } 
-    } 
+            $_SESSION['userinfo'] = $row; 
      
-     $firstname = $_SESSION['user']['firstname'];
-     $lastname = $_SESSION['user']['lastname'];
+     
 ?>
 
 <?php
@@ -171,11 +130,7 @@ if(empty($_SESSION['user'])) : ?>
 <div class="left" id="profile-left">
         <div class="bio">
             <h3><strong>BIO</strong></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-        et augue interdum, facilisis leo consequat, posuere sem. Ut sed
-        leo vel tellus faucibus euismod. In et enim cursus, rhoncus libero
-        sed, ornare elit. Sed nec quam rutrum, interdum augue vitae, porttitor
-        purus. Aliquam et ipsum risus.</p>
+            <p><?php echo $_SESSION['userinfo']['bio']; ?></p>
         </div>
 
         <div class="hobbies">

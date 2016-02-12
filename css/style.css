@@ -222,7 +222,6 @@ textarea:focus, input:focus{
 		background-color: rgba(0, 0, 0, 0.9);
 		color: white;
 		bottom: 0;
-		position: absolute;
 		width: 100vw;
 		font-family: 'Carme', sans-serif;
 		height: 100px;
@@ -404,7 +403,7 @@ textarea:focus, input:focus{
 #logged-in{
 	margin: 0 auto;
 	text-align: center;
-	margin-top: 10vh;
+	margin-top: 15vh;
 }
 
 #logged-in a{
