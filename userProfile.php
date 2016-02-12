@@ -72,7 +72,7 @@
             $_SESSION['user'] = $row; 
              
             header("Location: userprofile.php"); 
-            die("Redirecting to: userprofile.php");  
+            die("Redirecting to: userprofile.php"); 
         } 
         else 
         { 
@@ -164,47 +164,68 @@ if(empty($_SESSION['user'])) : ?>
 <!-- content -->
 <div id="profile-name">
     <h2><strong><?php echo $firstname . ' ' . $lastname; ?></strong></h2>
-        <h5>Vancouver, BC</h5>
-            <hr>
 </div>
+        <hr>
 
-<div class="left" id="profile-left">
-        <div class="bio">
-            <h3><strong>BIO</strong></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-        et augue interdum, facilisis leo consequat, posuere sem. Ut sed
-        leo vel tellus faucibus euismod. In et enim cursus, rhoncus libero
-        sed, ornare elit. Sed nec quam rutrum, interdum augue vitae, porttitor
-        purus. Aliquam et ipsum risus.</p>
-        </div>
+<!--             <div class="upcoming-classes">
+                <h2><strong>Upcoming Classes</strong></h2>
+                <a href="">
+                    <div class="class" id="class-1">
+                        <h3><strong><a href="class.php">Mushrooming 101</a></strong></h3>
+                        <p>February 11th, 2016</p>
+                        <p>7pm-8pm</p>
+                        <p>The Bush</p>
+                    </div>
+                </a>
 
-        <div class="hobbies">
-            <h3><strong>HOBBIES</strong></h3>
-            <ul>
-                <li>This</li>
-                <li>That</li>
-                <li>And That</li>
-            </ul>
-        </div>
+                <a href="">
+                    <div class="class" id="class-2">
+                        <h3><strong>Advanced Rock climbing</strong></h3>
+                        <p>February 15th, 2016</p>
+                        <p>2pm-3pm</p>
+                        <p>The Rock</p>
+                    </div>
+                </a>
+                </div> -->
 
-        <div class="skills">
-            <h3><strong>SKILLS</strong></h3>
-            <ul>
-                <li>Mushrooming</li>
-                <li>Gardening</li>
-                <li>Hair Flipping</li>
-            </ul>
-        </div>
-</div>
-<div class="right" id="profile-right">
-    <div class="past-classes">
-        <h2> Upcoming Classes </h2>
-        <div class="class-wrapper">
 
-        </div>
-        <button class="button" id="see-all">See All</button>
-    </div>
-</div>
+            <div class="upcoming-classes">
+                <h2><strong>Upcoming classes</strong></h2>
+                    <div class="class" id="class-1">
+                        <h3><strong>Mushrooming 101</strong></h3>
+                        <p>February 11th, 2016</p>
+                        <p>7pm-8pm</p>
+                        <p>The Bush</p>
+                        <div class="profile-course-buttons">
+                            <a href="class.php"><button class="button" id="go-to-course">Course Description</button></a>
+                            <button class="button" id="drop-course">Drop Course</button>
+                        </div>
+                    </div>
+
+                    <div class="class" id="class-2">
+                        <h3><strong>Advanced Rock Climbing</strong></h3>
+                        <p>February 15th, 2016</p>
+                        <p>2pm-3pm</p>
+                        <p>The Rock</p>
+                        <div class="profile-course-buttons">
+                            <a href="class.php"><button class="button" id="go-to-course">Course Description</button></a>
+                            <button class="button" id="drop-course">Drop Course</button>
+                        </div>
+                    </div>
+             </div> <!-- End of upcoming classes -->
+
+
+
+                <div class="profile-buttons">
+                    <button class="button" id="sign-up-for-classes">Sign up for more classes</button>
+                </div>
+
+
+                <div class="profile-buttons">
+                    <button class="button" id="become-educator">Become an educator</button>
+                </div>
+
+
 <!-- content -->
 
 <!-- footer -->

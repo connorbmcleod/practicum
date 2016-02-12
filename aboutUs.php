@@ -71,8 +71,8 @@
              
             $_SESSION['user'] = $row; 
              
-            header("Location: myprofile.php"); 
-            die("Redirecting to: myprofile.php"); 
+            header("Location: userprofile.php"); 
+            die("Redirecting to: userprofile.php"); 
         } 
         else 
         { 
@@ -194,7 +194,7 @@ if(empty($_SESSION['user'])) : ?>
 </div>
     <div class="join-team">
                     <hr />
-        <h3>Interested in joining our team? Check out our available positions</h3>
+        <h3>Interested in joining our team? Check out our available positions.</h3>
             <button class="button" id="careers">Careers</button>
     </div>
 </div>
@@ -204,7 +204,7 @@ if(empty($_SESSION['user'])) : ?>
 
 
 <!-- footer -->
-    <div class="footer">
+    <div id="index-footer">
             <div class="footer-col" id="footer-one">
             </div>
 

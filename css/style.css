@@ -303,7 +303,7 @@ textarea:focus, input:focus{
 
 /*index page*/
 .hero{
-	background: url('../images/bag-and-hands-2.jpg') center center no-repeat;
+	background: url('../images/bag-and-hands.jpg') center center no-repeat;
 	width: 100vw;
 	height: 40vh;
 	background-size: cover;
@@ -400,6 +400,26 @@ textarea:focus, input:focus{
 #index-content a:hover{
 	color: black;
 }
+
+#logged-in{
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 10vh;
+}
+
+#logged-in a{
+		letter-spacing: 0.1em;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: grey;
+	font-size: 0.8em;
+}
+
+#logged-in a:hover{
+	color: black;
+}
+
+
 /*index page*/
 
 
@@ -649,4 +669,60 @@ textarea:focus, input:focus{
 
 
 
+/*User Profile Page*/
+
+.upcoming-classes{
+	margin-left: 20vw;
+	margin-top: 50px;
+}
+
+
+.class{
+	display: inline-block;
+	width: 30vw;
+	margin-left: 5vw;
+}
+
+#sign-up-for-classes{
+	margin-top: 100px;
+	padding: 10px 20px;
+	background-color: #0091C5;
+	border: thin solid #0091C5;
+	color: white; 
+}
+
+#sign-up-for-classes:hover{
+	color: #0091C5;
+	background-color: white;
+}
+
+#become-educator{
+	margin-bottom: 100px;
+	margin-top: 20px;
+	padding: 10px 33px;
+	background-color: #0091C5;
+	border: thin solid #0091C5;
+	color: white;  
+}
+
+#become-educator:hover{
+	color: #0091C5;
+	background-color: white;	
+}
+
+a #go-to-course, a #drop-course{
+	text-decoration: none;
+	color: black;
+}
+
+a #go-to-course:hover, a #drop-course:hover{
+	background-color: #110E3F;
+	border: #110E3F thin solid;
+	color:white;
+}
+
+.profile-buttons{
+	text-align: center;
+}
+/*User Profile Page*/
 
