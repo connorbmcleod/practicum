@@ -157,13 +157,14 @@ if(empty($_SESSION['user'])) : ?>
         <div class="class-wrapper">
 
         </div>
-        <button class="button" id="see-all">See All</button>
-    </div>
+            <button class="button" id="see-all">See All</button>
+        </div>
+        <a href="createcourse.php"></a><button class="button" id="create-course">Create a Course</button></a>
 </div>
 <!-- content -->
 
 <!-- footer -->
-    <div id="index-footer">
+    <div class="footer">
             <div class="footer-col" id="footer-one">
             </div>
 

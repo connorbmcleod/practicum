@@ -170,10 +170,23 @@ if(empty($_SESSION['user'])) : ?>
 
 
 <!-- content -->
+<div class="content-wrapper">
+    <h2>Our Educators</h2>
+        <p>Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.</p>
+    <h2>Wanna Become an Educator?</h2>
+        <p>Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.<br>
+        We have a few tips for you, if you are planning on becoming an educator. Here are links to the articles that are helpful:
+            <ul>
+                <li><a href="http://google.com">Article 1</a></li>
+                <li><a href="http://google.com">Article 2</a></li>
+                <li><a href="http://google.com">Article 3</a></li>
+            </ul>
+        </p>
 
-
-
-
+         <div class="profile-buttons">
+             <button class="button" id="become-educator">Become an educator</button>
+        </div>
+</div>
 <!-- content -->
 
 

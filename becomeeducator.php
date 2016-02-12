@@ -118,6 +118,8 @@ $userID = $_SESSION['user']['id'];
             ) VALUES ( 
                 :bio,
                 :location 
+            ) WHERE (
+                
             ) 
         "; 
          

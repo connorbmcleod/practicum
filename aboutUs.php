@@ -169,7 +169,7 @@ if(empty($_SESSION['user'])) : ?>
 
 
 <!-- content -->
-<div id="about-us-content">
+<div class="content-wrapper" id="about-us-content">
     <h2>Our Vision</h2>
         <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
     <h2>Our Mission</h2>

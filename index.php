@@ -118,7 +118,7 @@ if(empty($_SESSION['user'])) : ?>
 					<input id="password" name="password" type="password" placeholder="Password" value="">
 					<button type="submit" value="Login" class="button" id="login" name="login">Login</button>
 				</form>
-			 <button class="button" id="signup" name="signup"><a href="registerPage.php">Sign up</a></button>
+			 <a href="registerPage.php"><button class="button" id="signup" name="signup">Sign up</button></a>
 		      </div>
         </div><!-- Nav end-->
 
@@ -152,10 +152,17 @@ if(empty($_SESSION['user'])) : ?>
 
         <div class="nav">
             <div id="welcome"><p> <?php echo $_SESSION['user']['firstname']; ?> </p></div>
-            <form id="logout-form" action="logout.php">
-                <button class="button" type="submit" id="logout">Logout</button>
-            </form>
-            <img src="images/menu-arrow.png" width="40px">
+                <div class="dropdown">
+                  <button class="dropbtn"><img src="images/menu-arrow.png" width="30px"></button>
+                  <div class="dropdown-content">
+                    <a href="userprofile.php">My Profile</a>
+                    <a href="account.php">My Account</a>
+                    <a href="#"><form id="logout-form" action="logout.php">
+                <button type="submit" id="logout">Logout</button>
+            </form></a>
+                  </div>
+                </div>
+            
         </div>
     </div> <!-- Header end -->
 
@@ -215,6 +222,11 @@ if(empty($_SESSION['user'])) : ?>
     </div>
 <?php endif; ?>
 
+<!-- <div id="index-learn-more">
+    <h3><a href="aboutus.php">Learn more about weLEarn</a></h3>
+</div>
+ -->
+</div> <!-- end of content -->
 <!-- CONTENT -->
 
 <!-- footer -->
@@ -238,7 +250,7 @@ if(empty($_SESSION['user'])) : ?>
 
         </div>
 
-    </div>
+
 
 <!-- footer -->
 </body>
