@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 10, 2016 at 11:28 PM
+-- Generation Time: Feb 16, 2016 at 09:45 PM
 -- Server version: 5.6.26
 -- PHP Version: 5.5.28
 
@@ -31,10 +31,19 @@ CREATE TABLE IF NOT EXISTS `courses` (
   `coursename` varchar(255) NOT NULL,
   `location` varchar(255) NOT NULL,
   `date` varchar(255) NOT NULL,
+  `minimumpeople` int(4) NOT NULL,
   `maximumpeople` int(16) NOT NULL,
   `description` varchar(255) NOT NULL,
   `teacherID` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `courses`
+--
+
+INSERT INTO `courses` (`courseID`, `coursename`, `location`, `date`, `minimumpeople`, `maximumpeople`, `description`, `teacherID`) VALUES
+(2, 'Mushrooming 101', 'The Bush', '12:00', 2, 15, 'We love mushrooming, why don''t you come down and get high.', 4),
+(3, 'Hair Flipping 102', 'The Salon', '2AM', 1, 500, 'I WHIP MY HAIR BACK AND FORTH I WHIP MY HAIR BACK AND FORTH I WHIP MY HAIR BACK AND FORTH I WHIP MY HAIR BACK AND FORTH I WHIP MY HAIR BACK AND FORTH I WHIP MY HAIR BACK AND FORTH I WHIP MY HAIR BACK AND FORTH I WHIP MY HAIR BACK AND FORTH', 4);
 
 -- --------------------------------------------------------
 
@@ -48,20 +57,13 @@ CREATE TABLE IF NOT EXISTS `educatorinfo` (
   `location` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `educators`
+-- Dumping data for table `educatorinfo`
 --
 
-CREATE TABLE IF NOT EXISTS `educators` (
-  `id` int(11) NOT NULL,
-  `firstname` varchar(255) NOT NULL,
-  `lastname` varchar(255) NOT NULL,
-  `password` char(64) NOT NULL,
-  `salt` char(16) NOT NULL,
-  `email` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+INSERT INTO `educatorinfo` (`id`, `bio`, `location`) VALUES
+(0, 'Vancouver, BC', '4'),
+(4, 'This is the crew''s account yo, don''t mess with us. We killas', 'Vancouver, BC');
 
 -- --------------------------------------------------------
 
@@ -89,14 +91,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `salt` char(16) NOT NULL,
   `email` varchar(255) NOT NULL,
   `usertype` int(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `password`, `salt`, `email`, `usertype`) VALUES
-(4, 'The', 'Crew', 'd953a4b80246bf81419220f04672eb1ce253162705d1b389b56d82388efcab69', '4919692d7678f409', 'crew@gmail.com', 1);
+(4, 'The', 'Crew', 'd953a4b80246bf81419220f04672eb1ce253162705d1b389b56d82388efcab69', '4919692d7678f409', 'crew@gmail.com', 1),
+(5, 'Student', 'Person', '65721a74a17f2c72436d8c9909154b028aa372640ec4a9d39aec8922a4a6a572', '1032758c68beda27', 'student@gmail.com', 0);
 
 --
 -- Indexes for dumped tables
@@ -107,12 +110,6 @@ INSERT INTO `users` (`id`, `firstname`, `lastname`, `password`, `salt`, `email`,
 --
 ALTER TABLE `courses`
   ADD PRIMARY KEY (`courseID`);
-
---
--- Indexes for table `educators`
---
-ALTER TABLE `educators`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
@@ -128,17 +125,12 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `courseID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `educators`
---
-ALTER TABLE `educators`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `courseID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
