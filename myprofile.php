@@ -148,47 +148,48 @@ if(empty($_SESSION['user'])) : ?>
 <?php endif; ?>
 
 
-<div class="hero" id="other-hero">
-	<div class="hero-title"></div>
-</div>
+    <div class="hero" id="other-hero">
+    	<div class="hero-title"></div>
+    </div>
 
 <!-- content -->
 <div id="profile-name">
     <h2><strong><?php echo $firstname . ' ' . $lastname; ?></strong></h2>
-        <h5>Vancouver, BC</h5>
+        <h5><?php echo $_SESSION['userinfo']['location']?></h5>
             <hr>
 </div>
 
-<div class="left" id="profile-left">
-        <div class="bio">
-            <h3><strong>BIO</strong></h3>
-            <p><?php 
-            if(empty($_SESSION['userinfo']['bio'])){
-                echo "<a href='becomeeducator.php'><p>Fill Out Your Bio</p></a>";
-            }
-            else{
-            echo $_SESSION['userinfo']['bio'];
-            } ?></p>
-        </div>
+<div class="bio">
+    <h3><strong>BIO</strong></h3>
+    <p><?php 
+    if(empty($_SESSION['userinfo']['bio'])){
+        echo "<a href='becomeeducator.php'><p>Fill Out Your Bio</p></a>";
+    }
+    else{
+    echo $_SESSION['userinfo']['bio'];
+    } ?></p>
 </div>
-<div class="right" id="profile-right">
-    <div class="past-classes">
-        <h2> Upcoming Classes </h2>
-        <div class="class-wrapper">
 
-
-            <div class="allclasses">
-                <p><?php echo $_SESSION['courseinfo']['coursename']; ?></p>
-                <p><?php echo $_SESSION['courseinfo']['location']; ?></p>
-                <p><?php echo substr($_SESSION['courseinfo']['description'], 0, 100) . "..."; ?></p>
-            </div>
-
-
-        </div>
-            <button class="button" id="see-all">See All</button>
-        </div>
-        <a href="createcourse.php"><button class="button" id="create-course">Create a Course</button></a>
+<div id="pastclasses">
+    <h2>Past Classes</h2>
+    <div class="allclasses">
+        <p><?php echo $_SESSION['courseinfo']['coursename']; ?></p>
+        <p><?php echo $_SESSION['courseinfo']['location']; ?></p>
+        <p><?php echo substr($_SESSION['courseinfo']['description'], 0, 100) . "..."; ?></p>
+    </div>
 </div>
+
+<div id="upcomingclasses">
+    <h2> Upcoming Classes </h2>
+    <div class="allclasses">
+        <p><?php echo $_SESSION['courseinfo']['coursename']; ?></p>
+        <p><?php echo $_SESSION['courseinfo']['location']; ?></p>
+        <p><?php echo substr($_SESSION['courseinfo']['description'], 0, 100) . "..."; ?></p>
+    </div>
+    <button class="button" id="see-all">See All</button>
+    <a href="createcourse.php"><button class="button" id="create-course">Create a Course</button></a>
+</div>
+            
 <!-- content -->
 
 <!-- footer -->

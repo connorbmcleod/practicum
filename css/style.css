@@ -584,26 +584,7 @@ textarea:focus, input:focus{
 	padding: 1px;
 }
 
-
-.left, .right{
-	display: inline-block;
-}
-
-
-#profile-left{
-	margin-left: 50px;
-	width: 50vw;
-	margin-bottom: 30px;
-}
-
-#profile-right{
-	float: right;
-	width: 30vw;
-	margin-bottom: 30px;
-}
-
 .class-wrapper{
-	border: grey thin solid;
 	height: 400px;
 	width: 300px;
 }
@@ -634,6 +615,10 @@ textarea:focus, input:focus{
 
 #create-course{
 	margin: 10px 5vw;
+}
+
+#pastclasses, #upcomingclasses {
+	margin-left: 20px;
 }
 /*myprofile*/
 
