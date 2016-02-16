@@ -69,10 +69,14 @@
             unset($row['salt']); 
             unset($row['password']); 
              
-            $_SESSION['user'] = $row; 
-             
-            header("Location: myprofile.php"); 
-            die("Redirecting to: myprofile.php"); 
+            $_SESSION['user'] = $row;
+
+            if($_SESSION['user']['usertype'] == 1){ 
+                header("Location: myprofile.php"); 
+            }
+            else {
+                header("Location: userprofile.php");
+            }
         } 
         else 
         { 
@@ -156,10 +160,10 @@ if(empty($_SESSION['user'])) : ?>
                   <button class="dropbtn"><img src="images/menu-arrow.png" width="30px"></button>
                   <div class="dropdown-content">
                     <a href="userprofile.php">My Profile</a>
-                    <a href="account.php">My Account</a>
+                    <a href="edit_account.php">Edit Profile</a>
                     <a href="#"><form id="logout-form" action="logout.php">
-                <button type="submit" id="logout">Logout</button>
-            </form></a>
+                        <button type="submit" id="logout">Logout</button>
+                    </form></a>
                   </div>
                 </div>
             

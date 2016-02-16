@@ -15,17 +15,18 @@
 
     require("common.php"); 
 
+        if($_SESSION['user']['usertype'] == 0){
+            header("Location: userprofile.php");
+        }
+
        $firstname = $_SESSION['user']['firstname'];
        $lastname = $_SESSION['user']['lastname'];
        $userID = $_SESSION['user']['id'];
 
         $query = " 
-            SELECT 
-                bio,
-                location 
-            FROM educatorinfo 
+            SELECT * FROM educatorinfo 
             WHERE 
-                id = 1 
+                id = '$userID' 
         "; 
          
         try 
@@ -40,7 +41,31 @@
          
         $row = $stmt->fetch(); 
              
-            $_SESSION['userinfo'] = $row; 
+            $_SESSION['userinfo'] = $row;
+
+        $coursequery = " 
+            SELECT 
+                coursename,
+                location,
+                description 
+            FROM courses 
+            WHERE 
+                teacherID = '$userID' 
+        "; 
+         
+        try 
+        { 
+            $stmt = $db->prepare($coursequery); 
+            $result = $stmt->execute(); 
+        } 
+        catch(PDOException $ex) 
+        {  
+            die("Failed to run query: " . $ex->getMessage()); 
+        } 
+         
+        $row = $stmt->fetch(); 
+             
+            $_SESSION['courseinfo'] = $row;  
      
      
 ?>
@@ -106,10 +131,17 @@ if(empty($_SESSION['user'])) : ?>
 
         <div class="nav">
             <div id="welcome"><p> <?php echo $_SESSION['user']['firstname']; ?> </p></div>
-            <form id="logout-form" action="logout.php">
-                <button class="button" type="submit" id="logout">Logout</button>
-            </form>
-            <img src="images/menu-arrow.png" width="40px">
+                <div class="dropdown">
+                  <button class="dropbtn"><img src="images/menu-arrow.png" width="30px"></button>
+                  <div class="dropdown-content">
+                    <a href="userprofile.php">My Profile</a>
+                    <a href="edit_account.php">Edit Profile</a>
+                    <a href="#"><form id="logout-form" action="logout.php">
+                        <button type="submit" id="logout">Logout</button>
+                    </form></a>
+                  </div>
+                </div>
+            
         </div>
     </div> <!-- Header end -->
 
@@ -130,25 +162,13 @@ if(empty($_SESSION['user'])) : ?>
 <div class="left" id="profile-left">
         <div class="bio">
             <h3><strong>BIO</strong></h3>
-            <p><?php echo $_SESSION['userinfo']['bio']; ?></p>
-        </div>
-
-        <div class="hobbies">
-            <h3><strong>HOBBIES</strong></h3>
-            <ul>
-                <li>This</li>
-                <li>That</li>
-                <li>And That</li>
-            </ul>
-        </div>
-
-        <div class="skills">
-            <h3><strong>SKILLS</strong></h3>
-            <ul>
-                <li>Mushrooming</li>
-                <li>Gardening</li>
-                <li>Hair Flipping</li>
-            </ul>
+            <p><?php 
+            if(empty($_SESSION['userinfo']['bio'])){
+                echo "<a href='becomeeducator.php'><p>Fill Out Your Bio</p></a>";
+            }
+            else{
+            echo $_SESSION['userinfo']['bio'];
+            } ?></p>
         </div>
 </div>
 <div class="right" id="profile-right">
@@ -156,10 +176,18 @@ if(empty($_SESSION['user'])) : ?>
         <h2> Upcoming Classes </h2>
         <div class="class-wrapper">
 
+
+            <div class="allclasses">
+                <p><?php echo $_SESSION['courseinfo']['coursename']; ?></p>
+                <p><?php echo $_SESSION['courseinfo']['location']; ?></p>
+                <p><?php echo substr($_SESSION['courseinfo']['description'], 0, 100) . "..."; ?></p>
+            </div>
+
+
         </div>
             <button class="button" id="see-all">See All</button>
         </div>
-        <a href="createcourse.php"></a><button class="button" id="create-course">Create a Course</button></a>
+        <a href="createcourse.php"><button class="button" id="create-course">Create a Course</button></a>
 </div>
 <!-- content -->
 

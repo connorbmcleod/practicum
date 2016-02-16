@@ -84,10 +84,17 @@ if(empty($_SESSION['user'])) : ?>
 
         <div class="nav">
             <div id="welcome"><p> <?php echo $_SESSION['user']['firstname']; ?> </p></div>
-            <form id="logout-form" action="logout.php">
-                <button class="button" type="submit" id="logout">Logout</button>
-            </form>
-            <img src="images/menu-arrow.png" width="40px">
+                <div class="dropdown">
+                  <button class="dropbtn"><img src="images/menu-arrow.png" width="30px"></button>
+                  <div class="dropdown-content">
+                    <a href="userprofile.php">My Profile</a>
+                    <a href="edit_account.php">Edit Profile</a>
+                    <a href="#"><form id="logout-form" action="logout.php">
+                        <button type="submit" id="logout">Logout</button>
+                    </form></a>
+                  </div>
+                </div>
+            
         </div>
     </div> <!-- Header end -->
 
@@ -95,7 +102,6 @@ if(empty($_SESSION['user'])) : ?>
 
 
 <?php
-require("common.php");
 
 $userID = $_SESSION['user']['id'];
      
@@ -112,15 +118,15 @@ $userID = $_SESSION['user']['id'];
 	        }  
          
         $query = " 
-            INSERT INTO educatorinfo ( 
+            INSERT INTO educatorinfo (
+                id, 
                 bio,
                 location 
-            ) VALUES ( 
+            ) VALUES (
+                '$userID',  
                 :bio,
-                :location 
-            ) WHERE (
-                
-            ) 
+                :location
+            )
         "; 
          
          

@@ -1,6 +1,8 @@
 <?php 
 
     require("common.php"); 
+
+    $userID = $_SESSION['user']['id'];
      
     if(!empty($_POST)) 
     { 
@@ -19,9 +21,14 @@
             die("Please enter a date."); 
         } 
 
-        if(empty($_POST['number'])) 
+        if(empty($_POST['minnumber'])) 
         { 
-            die("Please enter the number of students."); 
+            die("Please enter the minimum number of students."); 
+        } 
+
+        if(empty($_POST['maxnumber'])) 
+        { 
+            die("Please enter the maximum number of students."); 
         } 
 
         if(empty($_POST['courseDesc'])) 
@@ -33,15 +40,19 @@
             INSERT INTO courses ( 
                 coursename,
                 location, 
-                date, 
+                date,
+                minimumpeople, 
                 maximumpeople, 
-                description 
+                description,
+                teacherID 
             ) VALUES ( 
                 :coursename,
                 :location, 
                 :date, 
-                :number, 
-                :courseDesc
+                :minnumber,
+                :maxnumber, 
+                :courseDesc,
+                '$userID'
             ) 
         "; 
          
@@ -50,7 +61,8 @@
             ':coursename' => $_POST['coursename'],
             ':location' => $_POST['location'], 
             ':date' => $_POST['date'],  
-            ':number' =>  $_POST['number'], 
+            ':minnumber' =>  $_POST['minnumber'],
+            ':maxnumber' =>  $_POST['maxnumber'], 
             ':courseDesc' => $_POST['courseDesc'] 
         ); 
          
@@ -64,7 +76,7 @@
             die("Failed to run query: " . $ex->getMessage()); 
         } 
          
-        header("Location: profile.php"); 
+        header("Location: myprofile.php"); 
          
         die("Redirecting to registercourse.php"); 
     } 

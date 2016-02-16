@@ -36,7 +36,7 @@
 
             $query = " 
                 SELECT 
-                    1 
+                    1
                 FROM users 
                 WHERE 
                     email = :email 
@@ -129,24 +129,12 @@
      
 ?> 
 
-            <header>
-                <img id="logo" src="assets/clean_clear_logo.png"/>
-                <button class="pure-button" id="loginButton">Login</button>
-                <div class="pure-menu pure-menu-horizontal" id="navMenu">
-                    <ul class="pure-menu-list">
-                        <li class="pure-menu-item"><a href="services.php" class="pure-menu-link menuItem">Our Services</a></li>
-                        <li class="pure-menu-item"><a href="#" class="pure-menu-link menuItem">Why Clean and Clear?</a></li>
-                        <li class="pure-menu-item"><a href="#" class="pure-menu-link menuItem">Contact Us</a></li>
-                    </ul>
-                </div>
-            </header>
-
             <div id="accountFormWrapper">
                 <div id="innerForm">
                     <h1>Edit Account</h1> 
                     <form action="edit_account.php" method="post"> 
-                        Username:<br /> 
-                        <b><?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?></b> 
+                        Name:<br /> 
+                        <b><?php echo $_SESSION['user']['firstname'] . " " . $_SESSION['user']['lastname']; ?></b> 
                         <br /><br />
                         Current Email:<br /> 
                         <b><?php echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); ?></b> 
