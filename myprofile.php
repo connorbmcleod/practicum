@@ -183,7 +183,7 @@ if(empty($_SESSION['user'])) : ?>
 
     <?php 
         if(!empty($_SESSION['courseinfo'])){ 
-            foreach ($_SESSION['courseinfo'] as $value) { ?>
+            foreach($_SESSION['courseinfo'] as $value) { ?>
                 <p><?php echo $_SESSION['courseinfo']['coursename']; ?></p>
             <?php }
             ?>

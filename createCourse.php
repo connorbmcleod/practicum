@@ -132,12 +132,6 @@ if(empty($_SESSION['user'])) : ?>
                 </form>
 
 
-                <?php
-                    if($_SESSION['user']['usertype'] == 0){
-                        echo "i'm fat and a 0";
-                    };
-                ?>
-
 <!-- content -->
 
 <!-- footer -->
