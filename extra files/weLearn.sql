@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 10, 2016 at 11:28 PM
+-- Generation Time: Feb 18, 2016 at 11:25 PM
 -- Server version: 5.6.26
 -- PHP Version: 5.5.28
 
@@ -31,10 +31,20 @@ CREATE TABLE IF NOT EXISTS `courses` (
   `coursename` varchar(255) NOT NULL,
   `location` varchar(255) NOT NULL,
   `date` varchar(255) NOT NULL,
+  `minimumpeople` int(11) NOT NULL,
   `maximumpeople` int(16) NOT NULL,
   `description` varchar(255) NOT NULL,
   `teacherID` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `courses`
+--
+
+INSERT INTO `courses` (`courseID`, `coursename`, `location`, `date`, `minimumpeople`, `maximumpeople`, `description`, `teacherID`) VALUES
+(2, 'Mushrooming 101', 'The Bush', '12:00', 1, 15, 'Mushrooming is fantastic excercise for your imagination. ', 4),
+(3, 'Hair Flipping 102', 'The Salon', '12:00', 1, 12, 'I WHIP MY HAIR BACK AND FORTH I WHIP MY HAIR BACK AND FORTH I WHIP MY HAIR BACK AND FORTH I WHIP MY HAIR BACK AND FORTH I WHIP MY HAIR BACK AND FORTH I WHIP MY HAIR BACK AND FORTH', 4),
+(4, 'Running 101', 'THe track', '2AM', 5, 10, 'RUN FOR DAYSSSSSSSSSSS', 4);
 
 -- --------------------------------------------------------
 
@@ -128,7 +138,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `courseID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `courseID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `educators`
 --
