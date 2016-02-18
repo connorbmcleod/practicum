@@ -158,6 +158,7 @@ $userID = $_SESSION['user']['id'];
             die("Failed to run query: " . $ex->getMessage()); 
         } 
 
+        $_SESSION['user']["usertype"] = 1;
         header("Location: myprofile.php");
     } 
      

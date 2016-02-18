@@ -102,8 +102,11 @@ if(empty($_SESSION['user'])) : ?>
 
 
 
-<div class="hero">
-    <div class="hero-title">Our Educators</div>
+<div class="hero hero_oureducators">
+    <div id="hero-wrap">
+        <div class="hero-title-upper border-bottom">Our</div> 
+        <div class="hero-title">Educators</div>
+    </div>
 </div>
 
 

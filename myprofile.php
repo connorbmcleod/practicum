@@ -148,16 +148,19 @@ if(empty($_SESSION['user'])) : ?>
 <?php endif; ?>
 
 
-    <div class="hero" id="other-hero">
-    	<div class="hero-title"></div>
+    <div class="hero hero_educator">
+    	<div id="hero-wrap">
+        <div class="hero-title-upper border-bottom"><?php echo $firstname ?></div> 
+        <div class="hero-title"><?php echo $lastname ?></div>
+    </div>
     </div>
 
 <!-- content -->
-<div id="profile-name">
+<!-- <div id="profile-name">
     <h2><strong><?php echo $firstname . ' ' . $lastname; ?></strong></h2>
         <h5><?php echo $_SESSION['userinfo']['location']?></h5>
             <hr>
-</div>
+</div> -->
 
 <div class="bio">
     <h3><strong>BIO</strong></h3>

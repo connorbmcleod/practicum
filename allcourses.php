@@ -100,8 +100,11 @@ if(empty($_SESSION['user'])) : ?>
 
 <?php endif; ?>
 
-<div class="hero">
-    <div class="hero-title">Browse Courses</div>
+<div class="hero hero_courses">
+    <div id="hero-wrap">
+        <div class="hero-title-upper border-bottom">Browse</div> 
+        <div class="hero-title">Courses</div>
+    </div>
 </div>
 
 

@@ -292,6 +292,7 @@ textarea:focus, input:focus{
 		bottom: 0;
 		width: 100vw;
 		font-family: 'Carme', sans-serif;
+		position: absolute;
 /*		height: 100px;*/
 
 
@@ -370,9 +371,49 @@ textarea:focus, input:focus{
 
 /*index page*/
 .hero{
-	background: url('../images/bag-and-hands.jpg') center center no-repeat;
+	
 	width: 100vw;
 	height: 40vh;
+	/*background-size: cover;*/
+}
+
+.hero_courses {
+	background: url('../images/hero_images/hero_course_resize.jpg') center center no-repeat;
+	background-size: cover;
+}
+
+.hero_index {
+	background: url('../images/hero_images/hero_index.jpg') center center no-repeat;
+	background-size: cover;
+}
+
+.hero_courses {
+	background: url('../images/hero_images/hero_course_resize.jpg') center center no-repeat;
+	background-size: cover;
+}
+
+.hero_about {
+	background: url('../images/hero_images/hero_about.jpg') center center no-repeat;
+	background-size: cover;
+}
+
+.hero_educator {
+	background: url('../images/hero_images/educatorbio_hero_resize.jpg') center center no-repeat;
+	background-size: cover;
+}
+
+.hero_contact {
+	background: url('../images/hero_images/hero_contact.jpg') center center no-repeat;
+	background-size: cover;
+}
+
+.hero_oureducators {
+	background: url('../images/hero_images/hero_oureducators.jpg') center center no-repeat;
+	background-size: cover;
+}
+
+.hero_ourlearners {
+	background: url('../images/hero_images/hero_ourlearners.jpg') center center no-repeat;
 	background-size: cover;
 }
 
@@ -400,16 +441,38 @@ textarea:focus, input:focus{
 
 }
 
+#hero-wrap {
+	padding-top: 180px;		
+	width: 600px;
+	margin: 0 auto;
+}
+
+.hero-title-upper{
+	color:white;
+	margin: 0 auto;
+	font-size: 25px;
+	line-height: 1.5em;
+	font-family: 'Quattrocento';
+	letter-spacing: 11px;
+	text-transform: uppercase;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.border-bottom {
+	border-bottom: 1px solid #d3d3d3;
+	/*#cccc00*/
+}
+
 .hero-title{
 	color:white;
 	margin: 0 auto;
-	padding-top: 100px;
-    position: relative;
-    top: 15%;
-    left: 5%;
-	width: 25vw;
-	font-size: 50px;
+	font-size: 60px;
 	line-height: 1.5em;
+	font-family: 'Quattrocento';
+	letter-spacing: 10px;
+	text-transform: uppercase;
+	text-align: center;
 /*	text-align: center;*/
 
 }
@@ -782,3 +845,12 @@ a #go-to-course:hover, a #drop-course:hover{
 }
 /*User Profile Page*/
 
+/* Edit Account Page*/
+
+#accountFormWrapper {
+	text-align: center;
+}
+
+
+
+/*Edit Account End */

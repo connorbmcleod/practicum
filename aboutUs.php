@@ -4,6 +4,10 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300|Roboto:400,700,300,700italic,300italic' rel='stylesheet' type='text/css'>
+
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/global.js"></script>
     <title></title>
@@ -47,7 +51,7 @@ if(empty($_SESSION['user'])) : ?>
         <div class="nav">
             <div class="login">
                 <form action="index.php" method="post" class="form">
-                    <input id="email" name="email" type="text" placeholder="Email" value="<?php echo $submitted_email; ?>"/>
+                    <input id="email" name="email" type="text" placeholder="Email" value=""/>
                     <input id="password" name="password" type="password" placeholder="Password" value="">
                     <button type="submit" value="Login" class="button" id="login" name="login">Login</button>
                 </form>
@@ -102,8 +106,11 @@ if(empty($_SESSION['user'])) : ?>
 <?php endif; ?>
 
 
-<div class="hero">
-    <div class="hero-title">About weLearn</div>
+<div class="hero hero_about">
+    <div id="hero-wrap">
+        <div class="hero-title-upper border-bottom">About</div> 
+        <div class="hero-title">weLearn</div>
+    </div>
 </div>
 
 
