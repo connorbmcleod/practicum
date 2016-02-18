@@ -159,6 +159,10 @@ textarea:focus, input:focus{
 
 }
 
+.register_header {
+	font-color: black;
+}
+
 .header-logged img{
 	display: inline-block;
 /*	margin-bottom: 15px;*/
@@ -410,6 +414,11 @@ textarea:focus, input:focus{
 
 .hero_ourlearners {
 	background: url('../images/hero_images/hero_ourlearners.jpg') center center no-repeat;
+	background-size: cover;
+}
+
+.hero_userprofile {
+	background: url('../images/hero_images/hero_userprofile.jpg') center center no-repeat;
 	background-size: cover;
 }
 

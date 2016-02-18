@@ -17,6 +17,8 @@
      
 ?>
 
+<div class="hero hero_contact">
+
 <?php
 if(empty($_SESSION['user'])) : ?>
 
@@ -102,7 +104,7 @@ if(empty($_SESSION['user'])) : ?>
 <?php endif; ?>
 
 
-<div class="hero hero_contact">
+
    <div id="hero-wrap">
         <div class="hero-title-upper border-bottom">Get in</div> 
         <div class="hero-title">touch</div>

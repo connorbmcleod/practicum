@@ -16,6 +16,8 @@
     require("common.php"); 
 ?>
 
+<div class="hero hero_oureducators">
+
 <?php
 if(empty($_SESSION['user'])) : ?>
 
@@ -102,7 +104,7 @@ if(empty($_SESSION['user'])) : ?>
 
 
 
-<div class="hero hero_oureducators">
+
     <div id="hero-wrap">
         <div class="hero-title-upper border-bottom">Our</div> 
         <div class="hero-title">Educators</div>

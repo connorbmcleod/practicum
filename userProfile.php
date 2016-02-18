@@ -23,6 +23,8 @@
      $lastname = $_SESSION['user']['lastname'];
 ?>
 
+<div class="hero hero_userprofile">
+
 <?php
 if(empty($_SESSION['user'])) : ?>
 
@@ -101,15 +103,18 @@ if(empty($_SESSION['user'])) : ?>
 <?php endif; ?>
 
 
-<div class="hero" id="other-hero">
-	<div class="hero-title"></div>
+
+	<div id="hero-wrap">
+        <div class="hero-title-upper border-bottom"><?php echo $firstname ?></div> 
+        <div class="hero-title"><?php echo $lastname ?></div>
+    </div>
 </div>
 
 <!-- content -->
-<div id="profile-name">
+<!-- <div id="profile-name">
     <h2><strong><?php echo $firstname . ' ' . $lastname; ?></strong></h2>
 </div>
-        <hr>
+        <hr> -->
 
 <!--             <div class="upcoming-classes">
                 <h2><strong>Upcoming Classes</strong></h2>

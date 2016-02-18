@@ -70,6 +70,8 @@
      
 ?>
 
+<div class="hero hero_educator">
+
 <?php
 if(empty($_SESSION['user'])) : ?>
 
@@ -148,8 +150,8 @@ if(empty($_SESSION['user'])) : ?>
 <?php endif; ?>
 
 
-    <div class="hero hero_educator">
-    	<div id="hero-wrap">
+    
+    <div id="hero-wrap">
         <div class="hero-title-upper border-bottom"><?php echo $firstname ?></div> 
         <div class="hero-title"><?php echo $lastname ?></div>
     </div>

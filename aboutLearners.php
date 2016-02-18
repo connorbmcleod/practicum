@@ -17,6 +17,8 @@
      
 ?>
 
+<div class="hero hero_ourlearners">
+
 <?php
 if(empty($_SESSION['user'])) : ?>
 
@@ -102,7 +104,7 @@ if(empty($_SESSION['user'])) : ?>
 
 
 
-<div class="hero hero_ourlearners">
+
     <div id="hero-wrap">
         <div class="hero-title-upper border-bottom">Our</div> 
         <div class="hero-title">Learners</div>
