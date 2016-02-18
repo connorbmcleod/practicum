@@ -156,11 +156,25 @@ textarea:focus, input:focus{
 	width: 100vw;
 	display: inline-block;
 	vertical-align: baseline;
-
+	height: 100px;
 }
 
-.register_header {
-	font-color: black;
+.header_line {
+	border-bottom: 1px solid black;
+}
+
+#form-header{
+	color: grey;
+}
+
+#form-children{
+	background-color: white;
+	border: 1px solid black;
+}
+
+#form-children a:hover{
+	color: black;
+	border-bottom: 1px dotted black;
 }
 
 .header-logged img{
@@ -198,9 +212,17 @@ textarea:focus, input:focus{
 
 .login input{
 	padding: 0px 0px;
+	margin: 10px 0px;
 }
 
-#login{
+.login{
+	display: none;
+	width: 200px;
+	text-align: center;
+	margin-top: 20px; 
+}
+
+#show-login{
 	border-radius: 5px;
 	padding: 2px 10px;
 	border: white solid thin;
@@ -208,7 +230,7 @@ textarea:focus, input:focus{
 	margin-right: 5px;
 }
 
-#login:hover{
+#show-login:hover{
 	background-color: white;
 	color: black;
 }
@@ -233,6 +255,7 @@ textarea:focus, input:focus{
 	padding: 5px 10px;
 	background-color: #0091C5;
 	color: white;
+	display: inline-block;
 }
 
 #signup:hover{
@@ -292,7 +315,6 @@ textarea:focus, input:focus{
 		bottom: 0;
 		width: 100vw;
 		font-family: 'Roboto', sans-serif;
-		position: absolute;
 /*		height: 100px;*/
 
 
@@ -447,7 +469,7 @@ textarea:focus, input:focus{
 }
 
 #hero-wrap {
-	padding-top: 180px;		
+	padding-top: 130px;		
 	width: 600px;
 	margin: 0 auto;
 }

@@ -17,3 +17,8 @@ $('#register2').click(function(){
 	$('#registerFormWrapper2').fadeOut();
 	$('#registerFormWrapper3').fadeIn();
 });
+
+$('#show-login').click(function(){
+	$('.login').toggle();
+	console.log('works');
+});

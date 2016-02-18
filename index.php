@@ -4,8 +4,6 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300|Roboto:400,700,300,700italic,300italic' rel='stylesheet' type='text/css'>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/global.js"></script>
     <title></title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -120,16 +118,16 @@ if(empty($_SESSION['user'])) : ?>
 
 
         <div class="nav">
+            <button id="show-login">Login</button>
             <div class="login">
                 <form action="index.php" method="post" class="form">
                     <input id="email" name="email" type="text" placeholder="Email" value="<?php echo $submitted_email; ?>"/>
                     <input id="password" name="password" type="password" placeholder="Password" value="">
                     <button type="submit" value="Login" class="button" id="login" name="login">Login</button>
                 </form>
-             <a href="registerPage.php"><button class="button" id="signup" name="signup">Sign up</button></a>
               </div>
         </div><!-- Nav end-->
-
+    <a href="registerPage.php"><button class="button" id="signup" name="signup">Sign up</button></a>
 </div> <!-- Header end -->
 
 <?php else : ?>
@@ -260,5 +258,7 @@ if(empty($_SESSION['user'])) : ?>
 
 
 <!-- footer -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/global.js"></script>
 </body>
 </html>
