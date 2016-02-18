@@ -63,11 +63,11 @@
             die("Failed to run query: " . $ex->getMessage()); 
         } 
          
-        $row = $stmt->fetch(); 
+        $rows = $stmt->fetchAll(); 
              
-            $_SESSION['courseinfo'] = $row;  
+            $_SESSION['courseinfo'] = $rows;  
      
-     
+        $count = count($_SESSION['courseinfo']);
 ?>
 
 <div class="hero hero_educator">
@@ -185,15 +185,16 @@ if(empty($_SESSION['user'])) : ?>
 
     <?php 
         if(!empty($_SESSION['courseinfo'])){ 
-            foreach($_SESSION['courseinfo'] as $value) { ?>
-                <p><?php echo $_SESSION['courseinfo']['coursename']; ?></p>
+            for($i = 0; $i < $count; $i++) { ?>
+                <div>
+                    <p><?php echo $_SESSION['courseinfo'][$i]['coursename']; ?></p>
+                    <p><?php echo $_SESSION['courseinfo'][$i]['location']; ?></p>
+                    <p><?php echo substr($_SESSION['courseinfo'][$i]['description'], 0, 100) . "..."; ?></p>
+                    <hr>
+                </div>
             <?php }
             ?>
-<!--         <p><?php echo $_SESSION['courseinfo']['coursename']; ?></p>
-        <p><?php echo $_SESSION['courseinfo']['location']; ?></p>
-        <p><?php echo substr($_SESSION['courseinfo']['description'], 0, 100) . "..."; ?></p> -->
 <?php } 
-print_r($_SESSION['courseinfo']); 
 ?>
     </div>
     <button class="button" id="see-all">See All</button>

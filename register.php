@@ -96,9 +96,9 @@
             die("Failed to run query: " . $ex->getMessage()); 
         } 
          
-        header("Location: index.php"); 
+        header("Location: thankyou.php"); 
          
-        die("Redirecting to index.php"); 
+        die("Redirecting to registerPage.php"); 
     } 
      
 ?> 
