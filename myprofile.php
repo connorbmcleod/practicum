@@ -246,8 +246,12 @@ if(empty($_SESSION['user'])) : ?>
 <?php } 
 ?>
     </div>
-    <button class="button" id="see-all">See All</button>
-    <a href="createcourse.php"><button class="button" id="create-course">Create a Course</button></a>
+    <?php 
+
+        if($_SESSION['user']['usertype'] == 1){ ?>
+            <a href="createcourse.php"><button class="button" id="create-course">Create a Course</button></a>
+        <?php }
+        ?>
 </div>
             
 <!-- content -->
