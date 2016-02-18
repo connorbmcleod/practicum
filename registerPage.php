@@ -47,7 +47,7 @@ if(empty($_SESSION['user'])) : ?>
         <div class="nav">
             <div class="login">
                 <form action="index.php" method="post" class="form">
-                    <input id="email" name="email" type="text" placeholder="Email" value="<?php echo $submitted_email; ?>"/>
+                    <input id="email" name="email" type="text" placeholder="Email" value=""/>
                     <input id="password" name="password" type="password" placeholder="Password" value="">
                     <button type="submit" value="Login" class="button" id="login" name="login">Login</button>
                 </form>
