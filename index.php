@@ -88,6 +88,10 @@
      
 ?>
 
+<!-- LOGGED IN HEADER -->
+
+<div class="hero hero_index">
+
 <?php
 if(empty($_SESSION['user'])) : ?>
 
@@ -115,15 +119,15 @@ if(empty($_SESSION['user'])) : ?>
          </div> <!-- pure-menu end-->
 
 
-		<div class="nav">
-			<div class="login">
-				<form action="index.php" method="post" class="form">
-					<input id="email" name="email" type="text" placeholder="Email" value="<?php echo $submitted_email; ?>"/>
-					<input id="password" name="password" type="password" placeholder="Password" value="">
-					<button type="submit" value="Login" class="button" id="login" name="login">Login</button>
-				</form>
-			 <a href="registerPage.php"><button class="button" id="signup" name="signup">Sign up</button></a>
-		      </div>
+        <div class="nav">
+            <div class="login">
+                <form action="index.php" method="post" class="form">
+                    <input id="email" name="email" type="text" placeholder="Email" value="<?php echo $submitted_email; ?>"/>
+                    <input id="password" name="password" type="password" placeholder="Password" value="">
+                    <button type="submit" value="Login" class="button" id="login" name="login">Login</button>
+                </form>
+             <a href="registerPage.php"><button class="button" id="signup" name="signup">Sign up</button></a>
+              </div>
         </div><!-- Nav end-->
 
 </div> <!-- Header end -->
@@ -172,10 +176,6 @@ if(empty($_SESSION['user'])) : ?>
 
 <?php endif; ?>
 
-
-<!-- LOGGED IN HEADER -->
-
-<div class="hero hero_index">
 	<div id="hero-wrap">
         <div class="hero-title-upper border-bottom">share your skills</div> 
         <div class="hero-title">welearn</div>

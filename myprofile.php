@@ -44,7 +44,7 @@
             $_SESSION['userinfo'] = $row;
 
         $coursequery = " 
-            SELECT 
+            SELECT
                 coursename,
                 location,
                 description 
@@ -175,19 +175,24 @@ if(empty($_SESSION['user'])) : ?>
 
 <div id="pastclasses">
     <h2>Past Classes</h2>
-    <div class="allclasses">
-        <p><?php echo $_SESSION['courseinfo']['coursename']; ?></p>
-        <p><?php echo $_SESSION['courseinfo']['location']; ?></p>
-        <p><?php echo substr($_SESSION['courseinfo']['description'], 0, 100) . "..."; ?></p>
-    </div>
 </div>
 
 <div id="upcomingclasses">
     <h2> Upcoming Classes </h2>
     <div class="allclasses">
-        <p><?php echo $_SESSION['courseinfo']['coursename']; ?></p>
+
+    <?php 
+        if(!empty($_SESSION['courseinfo'])){ 
+            foreach ($_SESSION['courseinfo'] as $value) { ?>
+                <p><?php echo $_SESSION['courseinfo']['coursename']; ?></p>
+            <?php }
+            ?>
+<!--         <p><?php echo $_SESSION['courseinfo']['coursename']; ?></p>
         <p><?php echo $_SESSION['courseinfo']['location']; ?></p>
-        <p><?php echo substr($_SESSION['courseinfo']['description'], 0, 100) . "..."; ?></p>
+        <p><?php echo substr($_SESSION['courseinfo']['description'], 0, 100) . "..."; ?></p> -->
+<?php } 
+print_r($_SESSION['courseinfo']); 
+?>
     </div>
     <button class="button" id="see-all">See All</button>
     <a href="createcourse.php"><button class="button" id="create-course">Create a Course</button></a>
