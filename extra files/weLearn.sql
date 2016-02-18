@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 18, 2016 at 11:25 PM
+-- Generation Time: Feb 19, 2016 at 12:28 AM
 -- Server version: 5.6.26
 -- PHP Version: 5.5.28
 
@@ -54,9 +54,18 @@ INSERT INTO `courses` (`courseID`, `coursename`, `location`, `date`, `minimumpeo
 
 CREATE TABLE IF NOT EXISTS `educatorinfo` (
   `id` int(11) NOT NULL,
+  `teacherfname` varchar(64) NOT NULL,
+  `teacherlname` varchar(64) NOT NULL,
   `bio` text NOT NULL,
   `location` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `educatorinfo`
+--
+
+INSERT INTO `educatorinfo` (`id`, `teacherfname`, `teacherlname`, `bio`, `location`) VALUES
+(4, 'The', 'Crew', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et augue interdum, facilisis leo consequat, posuere sem. Ut sed leo vel tellus faucibus euismod. In et enim cursus, rhoncus libero sed, ornare elit. Sed nec quam rutrum, interdum augue vitae, porttitor purus. Aliquam et ipsum risus.', 'Vancouver, BC');
 
 -- --------------------------------------------------------
 
@@ -99,14 +108,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `salt` char(16) NOT NULL,
   `email` varchar(255) NOT NULL,
   `usertype` int(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `password`, `salt`, `email`, `usertype`) VALUES
-(4, 'The', 'Crew', 'd953a4b80246bf81419220f04672eb1ce253162705d1b389b56d82388efcab69', '4919692d7678f409', 'crew@gmail.com', 1);
+(4, 'The', 'Crew', 'd953a4b80246bf81419220f04672eb1ce253162705d1b389b56d82388efcab69', '4919692d7678f409', 'crew@gmail.com', 1),
+(5, 'Student', 'Person', 'd388e678e4c1924a8c3c647e3eb1d4fe84fe7b84b9fababcb2984cde412f1208', '31247311762a8034', 'student@gmail.com', 0);
 
 --
 -- Indexes for dumped tables
@@ -148,7 +158,7 @@ ALTER TABLE `educators`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

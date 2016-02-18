@@ -104,6 +104,8 @@ if(empty($_SESSION['user'])) : ?>
 <?php
 
 $userID = $_SESSION['user']['id'];
+$teacherfirstname = $_SESSION['user']['firstname'];
+$teacherlastname = $_SESSION['user']['lastname'];
      
     if(!empty($_POST)) 
     { 
@@ -119,11 +121,15 @@ $userID = $_SESSION['user']['id'];
          
         $query = " 
             INSERT INTO educatorinfo (
-                id, 
+                id,
+                teacherfname,
+                teacherlname, 
                 bio,
                 location 
             ) VALUES (
-                '$userID',  
+                '$userID',
+                '$teacherfirstname',
+                '$teacherlastname',
                 :bio,
                 :location
             )

@@ -13,61 +13,110 @@
 
 <?php 
 
-    require("common.php"); 
+    require("common.php");
 
-        if($_SESSION['user']['usertype'] == 0){
-            header("Location: userprofile.php");
+    $firstname = $_SESSION['user']['firstname'];
+    $lastname = $_SESSION['user']['lastname'];
+    $userID = $_SESSION['user']['id'];
+
+        if($_SESSION['user']['usertype'] == 1){      
+
+            $query = " 
+                SELECT * FROM educatorinfo 
+                WHERE 
+                    id = '$userID' 
+            "; 
+             
+            try 
+            { 
+                $stmt = $db->prepare($query); 
+                $result = $stmt->execute(); 
+            } 
+            catch(PDOException $ex) 
+            {  
+                die("Failed to run query: " . $ex->getMessage()); 
+            } 
+             
+            $row = $stmt->fetch(); 
+                 
+                $_SESSION['userinfo'] = $row;
+
+            $coursequery = " 
+                SELECT
+                    coursename,
+                    location,
+                    description 
+                FROM courses 
+                WHERE 
+                    teacherID = '$userID' 
+            "; 
+             
+            try 
+            { 
+                $stmt = $db->prepare($coursequery); 
+                $result = $stmt->execute(); 
+            } 
+            catch(PDOException $ex) 
+            {  
+                die("Failed to run query: " . $ex->getMessage()); 
+            } 
+             
+            $rows = $stmt->fetchAll(); 
+                 
+                $_SESSION['courseinfo'] = $rows;  
+         
+            $count = count($_SESSION['courseinfo']);
         }
+        else {
+            $iduser = $_GET["id"];
 
-       $firstname = $_SESSION['user']['firstname'];
-       $lastname = $_SESSION['user']['lastname'];
-       $userID = $_SESSION['user']['id'];
-
-        $query = " 
-            SELECT * FROM educatorinfo 
-            WHERE 
-                id = '$userID' 
-        "; 
-         
-        try 
-        { 
-            $stmt = $db->prepare($query); 
-            $result = $stmt->execute(); 
-        } 
-        catch(PDOException $ex) 
-        {  
-            die("Failed to run query: " . $ex->getMessage()); 
-        } 
-         
-        $row = $stmt->fetch(); 
+            $query = " 
+                SELECT * FROM educatorinfo 
+                WHERE 
+                    id = '$iduser' 
+            "; 
              
-            $_SESSION['userinfo'] = $row;
-
-        $coursequery = " 
-            SELECT
-                coursename,
-                location,
-                description 
-            FROM courses 
-            WHERE 
-                teacherID = '$userID' 
-        "; 
-         
-        try 
-        { 
-            $stmt = $db->prepare($coursequery); 
-            $result = $stmt->execute(); 
-        } 
-        catch(PDOException $ex) 
-        {  
-            die("Failed to run query: " . $ex->getMessage()); 
-        } 
-         
-        $rows = $stmt->fetchAll(); 
+            try 
+            { 
+                $stmt = $db->prepare($query); 
+                $result = $stmt->execute(); 
+            } 
+            catch(PDOException $ex) 
+            {  
+                die("Failed to run query: " . $ex->getMessage()); 
+            } 
              
-            $_SESSION['courseinfo'] = $rows;  
-     
-        $count = count($_SESSION['courseinfo']);
+            $row = $stmt->fetch(); 
+                 
+                $_SESSION['userinfo'] = $row;
+
+            $coursequery = " 
+                SELECT
+                    coursename,
+                    location,
+                    description 
+                FROM courses 
+                WHERE 
+                    teacherID = '$iduser' 
+            "; 
+             
+            try 
+            { 
+                $stmt = $db->prepare($coursequery); 
+                $result = $stmt->execute(); 
+            } 
+            catch(PDOException $ex) 
+            {  
+                die("Failed to run query: " . $ex->getMessage()); 
+            } 
+             
+            $rows = $stmt->fetchAll(); 
+                 
+                $_SESSION['courseinfo'] = $rows;  
+         
+            $count = count($_SESSION['courseinfo']);
+
+        }
 ?>
 
 <div class="hero hero_educator">
@@ -152,8 +201,8 @@ if(empty($_SESSION['user'])) : ?>
 
     
     <div id="hero-wrap">
-        <div class="hero-title-upper border-bottom"><?php echo $firstname ?></div> 
-        <div class="hero-title"><?php echo $lastname ?></div>
+        <div class="hero-title-upper border-bottom"><?php echo $_SESSION['userinfo']['teacherfname'];?></div> 
+        <div class="hero-title"><?php echo $_SESSION['userinfo']['teacherlname']; ?></div>
     </div>
     </div>
 
