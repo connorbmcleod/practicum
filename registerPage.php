@@ -26,19 +26,19 @@ if(empty($_SESSION['user'])) : ?>
 
             <div class="pure-menu pure-menu-horizontal" id="menu">
                 <ul class="pure-menu-list">
-                    <li class="pure-menu-item"><a href="index.php" class="pure-menu-link"> Home</a></li>
+                    <li class="pure-menu-item"><a href="index.php" class="pure-menu-link" id="form-header"> Home</a></li>
                     <li class="pure-menu-item">
-                        <a href="allCourses.php" id="menuLink1" class="pure-menu-link">Courses</a>
+                        <a href="allCourses.php" class="pure-menu-link" id="form-header">Courses</a>
                     </li>
                       <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                        <a href="#" id="menuLink1" class="pure-menu-link">About us</a>
-                        <ul class="pure-menu-children">
+                        <a href="#" class="pure-menu-link" id="form-header">About us</a>
+                        <ul class="pure-menu-children" id="form-children">
                             <li class="pure-menu-item"><a href="aboutUs.php" class="pure-menu-link">Who are we</a></li>
                             <li class="pure-menu-item"><a href="aboutEducators.php" class="pure-menu-link">Our educators</a></li>
                             <li class="pure-menu-item"><a href="aboutLearners.php" class="pure-menu-link">Our learners</a></li>
                         </ul>
                     </li>
-                     <li class="pure-menu-item"><a href="contactUs.php" class="pure-menu-link"> Contact us</a></li>
+                     <li class="pure-menu-item"><a href="contactUs.php" class="pure-menu-link" id="form-header"> Contact us</a></li>
                 </ul>
 
          </div> <!-- pure-menu end-->
@@ -68,10 +68,10 @@ if(empty($_SESSION['user'])) : ?>
                 <ul class="pure-menu-list">
                     <li class="pure-menu-item"><a href="index.php" class="pure-menu-link"> Home</a></li>
                     <li class="pure-menu-item">
-                        <a href="allCourses.php" id="menuLink1" class="pure-menu-link">Courses</a>
+                        <a href="allCourses.php" class="pure-menu-link">Courses</a>
                     </li>
                       <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                        <a href="#" id="menuLink1" class="pure-menu-link">About us</a>
+                        <a href="#" class="pure-menu-link">About us</a>
                         <ul class="pure-menu-children">
                             <li class="pure-menu-item"><a href="aboutUs.php" class="pure-menu-link">Who are we</a></li>
                             <li class="pure-menu-item"><a href="aboutEducators.php" class="pure-menu-link">Our educators</a></li>

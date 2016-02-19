@@ -24,22 +24,25 @@ if(empty($_SESSION['user'])) : ?>
         <div class="logo"><a href="index.php"><img src="images/logo.gif" width="50px"></a></div>
 
 
+
             <div class="pure-menu pure-menu-horizontal" id="menu">
                 <ul class="pure-menu-list">
-                    <li class="pure-menu-item"><a href="index.php" class="pure-menu-link"> Home</a></li>
+                    <li class="pure-menu-item"><a href="index.php" class="pure-menu-link" id="form-header"> Home</a></li>
                     <li class="pure-menu-item">
-                        <a href="allCourses.php" id="menuLink1" class="pure-menu-link">Courses</a>
+                        <a href="allCourses.php" class="pure-menu-link" id="form-header">Courses</a>
                     </li>
                       <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                        <a href="#" id="menuLink1" class="pure-menu-link">About us</a>
-                        <ul class="pure-menu-children">
+                        <a href="#" class="pure-menu-link" id="form-header">About us</a>
+                        <ul class="pure-menu-children" id="form-children">
                             <li class="pure-menu-item"><a href="aboutUs.php" class="pure-menu-link">Who are we</a></li>
                             <li class="pure-menu-item"><a href="aboutEducators.php" class="pure-menu-link">Our educators</a></li>
                             <li class="pure-menu-item"><a href="aboutLearners.php" class="pure-menu-link">Our learners</a></li>
                         </ul>
                     </li>
-                     <li class="pure-menu-item"><a href="contactUs.php" class="pure-menu-link"> Contact us</a></li>
+                     <li class="pure-menu-item"><a href="contactUs.php" class="pure-menu-link" id="form-header"> Contact us</a></li>
                 </ul>
+
+
 
          </div> <!-- pure-menu end-->
 
@@ -60,25 +63,25 @@ if(empty($_SESSION['user'])) : ?>
 <?php else : ?>
 
 <!-- LOGGED IN HEADER -->
-    <div class="header-logged">
+    <div class="header-logged register-header">
         <div class="logo"><a href="index.php"><img src="images/logo.gif" width="50px"></a></div>
 
 
             <div class="pure-menu pure-menu-horizontal" id="menu">
                 <ul class="pure-menu-list">
-                    <li class="pure-menu-item"><a href="index.php" class="pure-menu-link"> Home</a></li>
+                    <li class="pure-menu-item"><a href="index.php" class="pure-menu-link" id="form-header"> Home</a></li>
                     <li class="pure-menu-item">
-                        <a href="allCourses.php" id="menuLink1" class="pure-menu-link">Courses</a>
+                        <a href="allCourses.php" class="pure-menu-link" id="form-header">Courses</a>
                     </li>
                       <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                        <a href="#" id="menuLink1" class="pure-menu-link">About us</a>
-                        <ul class="pure-menu-children">
+                        <a href="#" class="pure-menu-link" id="form-header">About us</a>
+                        <ul class="pure-menu-children" id="form-children">
                             <li class="pure-menu-item"><a href="aboutUs.php" class="pure-menu-link">Who are we</a></li>
                             <li class="pure-menu-item"><a href="aboutEducators.php" class="pure-menu-link">Our educators</a></li>
                             <li class="pure-menu-item"><a href="aboutLearners.php" class="pure-menu-link">Our learners</a></li>
                         </ul>
                     </li>
-                     <li class="pure-menu-item"><a href="contactUs.php" class="pure-menu-link"> Contact us</a></li>
+                     <li class="pure-menu-item"><a href="contactUs.php" class="pure-menu-link" id="form-header"> Contact us</a></li>
                 </ul>
 
          </div> <!-- pure-menu end-->
@@ -102,10 +105,10 @@ if(empty($_SESSION['user'])) : ?>
 <?php endif; ?>
 
 
-<div class="hero">
+<!-- <div class="hero">
     <div class="hero-title">Thank You!</div>
 </div>
-
+ -->
 
 
 <!-- content -->
@@ -117,7 +120,7 @@ if(empty($_SESSION['user'])) : ?>
 <!-- form -->
 <div class="content">
                 <form action="index.php" method="post" class="form">
-                    <input class="form-field" id="email" name="email" type="text" placeholder="Email" value="<?php echo $submitted_email; ?>"/>
+                    <input class="form-field" id="email" name="email" type="text" placeholder="Email" value=""/>
                     <input class="form-field" id="password" name="password" type="password" placeholder="Password" value=""><br />
                     <button type="submit" value="Login" class="button" id="login" name="login">Login</button>
                 </form>

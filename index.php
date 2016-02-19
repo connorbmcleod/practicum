@@ -119,6 +119,8 @@ if(empty($_SESSION['user'])) : ?>
 
         <div class="nav">
             <button id="show-login">Login</button>
+                <a href="registerPage.php"><button class="button" id="signup" name="signup">Sign up</button></a>
+
             <div class="login">
                 <form action="index.php" method="post" class="form">
                     <input id="email" name="email" type="text" placeholder="Email" value="<?php echo $submitted_email; ?>"/>
@@ -127,7 +129,6 @@ if(empty($_SESSION['user'])) : ?>
                 </form>
               </div>
         </div><!-- Nav end-->
-    <a href="registerPage.php"><button class="button" id="signup" name="signup">Sign up</button></a>
 </div> <!-- Header end -->
 
 <?php else : ?>
