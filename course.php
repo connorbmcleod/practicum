@@ -14,6 +14,53 @@
 <?php 
 
     require("common.php"); 
+    $courseid = $_GET["id"];
+
+    $query = " 
+            SELECT * 
+            FROM courses 
+            WHERE 
+                courseID = '$courseid'  
+            "; 
+             
+            try 
+            { 
+                $stmt = $db->prepare($query); 
+                $result = $stmt->execute(); 
+            } 
+            catch(PDOException $ex) 
+            {  
+                die("Failed to run query: " . $ex->getMessage()); 
+            } 
+             
+            $row = $stmt->fetch(); 
+                 
+                $_SESSION['coursepage'] = $row;
+
+            $teacherid = $_SESSION['coursepage']['teacherID'];
+
+    $query = " 
+            SELECT 
+                teacherfname,
+                teacherlname 
+            FROM educatorinfo 
+            WHERE 
+                id = '$teacherid'  
+            "; 
+             
+            try 
+            { 
+                $stmt = $db->prepare($query); 
+                $result = $stmt->execute(); 
+            } 
+            catch(PDOException $ex) 
+            {  
+                die("Failed to run query: " . $ex->getMessage()); 
+            } 
+             
+            $row = $stmt->fetch(); 
+                 
+                $_SESSION['teacher'] = $row;
      
 ?>
 
@@ -109,7 +156,7 @@ if(empty($_SESSION['user'])) : ?>
 
 <!-- content -->
 <div class="content" id="course-content">
-    <h1>Mushrooming 101</h1>
+    <h1><?php echo $_SESSION['coursepage']['coursename']; ?></h1>
     <div class="rating">
         <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
     </div>
@@ -117,14 +164,14 @@ if(empty($_SESSION['user'])) : ?>
 
 <div class="col" id="course-left-col">
     <h3>Educator</h3>
-        <p>Mike Hunt</p><br>
+        <p><?php echo $_SESSION['teacher']['teacherfname'] . ' ' . $_SESSION['teacher']['teacherlname']; ?></p><br>
     <h3>Time</h3>
-        <p>2pm-3pm</p><br>
+        <p><?php echo $_SESSION['coursepage']['date']; ?></p><br>
     <h3>Location</h3>
-        <p>The Bush</p><br>
+        <p><?php echo $_SESSION['coursepage']['location']; ?></p><br>
 </div>
 <div class="col" id="course-right-col">
-    <h3>Description</h3>
+    <h3><?php echo $_SESSION['coursepage']['description']; ?></h3>
 </div>
 <!-- content -->
 
