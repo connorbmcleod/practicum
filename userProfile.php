@@ -166,7 +166,7 @@ if(empty($_SESSION['user'])) : ?>
 
 
                 <div class="profile-buttons">
-                    <button class="button" id="sign-up-for-classes">Sign up for more classes</button>
+                    <a href="allcourses.php"><button class="button" id="sign-up-for-classes">Sign up for more classes</button></a>
                 </div>
 
 

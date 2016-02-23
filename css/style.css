@@ -845,6 +845,16 @@ textarea:focus, input:focus{
 #all-courses-pure-g{
 	text-align: center;
 }
+
+.test-wrapper {
+	width: 1250px;
+	margin: 0 auto;
+}
+.search_class {
+	width: 400px;
+	display: inline-block;
+	text-align: center;
+}
 /*All courses page*/
 
 

@@ -43,6 +43,7 @@
 
             $coursequery = " 
                 SELECT
+                    courseID,
                     coursename,
                     location,
                     description 
@@ -236,7 +237,7 @@ if(empty($_SESSION['user'])) : ?>
         if(!empty($_SESSION['courseinfo'])){ 
             for($i = 0; $i < $count; $i++) { ?>
                 <div>
-                    <p><?php echo $_SESSION['courseinfo'][$i]['coursename']; ?></p>
+                    <a href='http://localhost/practicum/course.php?id=<?php echo $_SESSION['courseinfo'][$i]['courseID']; ?>'<p><?php echo $_SESSION['courseinfo'][$i]['coursename']; ?></p></a>
                     <p><?php echo $_SESSION['courseinfo'][$i]['location']; ?></p>
                     <p><?php echo substr($_SESSION['courseinfo'][$i]['description'], 0, 100) . "..."; ?></p>
                     <hr>

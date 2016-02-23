@@ -164,7 +164,7 @@ if(empty($_SESSION['user'])) : ?>
 
 <div class="col" id="course-left-col">
     <h3>Educator</h3>
-        <p><?php echo $_SESSION['teacher']['teacherfname'] . ' ' . $_SESSION['teacher']['teacherlname']; ?></p><br>
+        <a href='http://localhost/practicum/myprofile.php?id=<?php echo $teacherid; ?>'<p><?php echo $_SESSION['teacher']['teacherfname'] . ' ' . $_SESSION['teacher']['teacherlname']; ?></p></a><br>
     <h3>Time</h3>
         <p><?php echo $_SESSION['coursepage']['date']; ?></p><br>
     <h3>Location</h3>

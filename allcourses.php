@@ -14,6 +14,30 @@
 <?php 
 
     require("common.php"); 
+
+    $query = " 
+                SELECT
+                    * 
+                FROM courses 
+                WHERE 
+                    completion = 0 
+            "; 
+             
+            try 
+            { 
+                $stmt = $db->prepare($query); 
+                $result = $stmt->execute(); 
+            } 
+            catch(PDOException $ex) 
+            {  
+                die("Failed to run query: " . $ex->getMessage()); 
+            } 
+             
+            $rows = $stmt->fetchAll(); 
+                 
+                $_SESSION['allcourses'] = $rows;
+
+                $count = count($_SESSION['allcourses']);
 ?>
 
 <div class="hero hero_courses">
@@ -118,8 +142,22 @@ if(empty($_SESSION['user'])) : ?>
     </input>
 </div>
 
-<div class="posted-courses">
-    
+<div class="test-wrapper">
+
+
+   <div class="test">
+       <?php 
+       if(!empty($_SESSION['allcourses'])){ 
+                for($i = 0; $i < $count; $i++) { ?>
+                   <div class="search_class">
+                        <a href='http://localhost/practicum/course.php?id=<?php echo $_SESSION['allcourses'][$i]['courseID']; ?>'
+                        <p><?php echo $_SESSION['allcourses'][$i]['coursename']; ?></p></a>
+                        <p><?php echo $_SESSION['allcourses'][$i]['location']; ?></p>
+                        <p><?php echo substr($_SESSION['allcourses'][$i]['description'], 0, 100) . "..."; ?></p>
+                   </div>
+        <?php }; }; ?>
+   </div>   
+
 
 </div>
 <!-- content -->
