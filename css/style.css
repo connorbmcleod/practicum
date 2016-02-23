@@ -104,6 +104,11 @@ textarea:focus, input:focus{
 	margin: 50px;
 }
 
+.educator-wrapper {
+	margin-bottom: 15vh;
+	margin-top: 10vh;
+}
+
 #menu {
 	margin: 0 auto;
 	width: 500px;
@@ -329,12 +334,10 @@ textarea:focus, input:focus{
 	.footer{
 		background-color: rgba(0, 0, 0, 0.9);
 		color: white;
-		bottom: 0;
 		width: 100vw;
 		font-family: 'Roboto', sans-serif;
-
-/*		height: 100px;*/
-
+		height: 100px;
+		bottom: 0;
 
 	}
 
@@ -462,6 +465,11 @@ textarea:focus, input:focus{
 	background-size: cover;
 }
 
+.herp_coursedesc {
+	background: url('../images/hero_images/hero_coursedesc.jpg') center center no-repeat;
+	background-size: cover;
+}
+
 #other-hero{
 	height: 300px;
 }
@@ -558,7 +566,7 @@ textarea:focus, input:focus{
 }
 
 #index-content{
-	margin: 10vh 0px;
+	margin: 15vh 0px;
 }
 
 #index-content img:hover{
@@ -669,6 +677,28 @@ textarea:focus, input:focus{
 	padding: 10px 0px;
 }
 
+#location_drop_menu {
+	display: none;
+	position: absolute;
+	background-color: white;
+	text-align: center;
+	width: 100px;
+}
+
+#location_drop {
+	text-align: left;
+	cursor: pointer;
+}
+
+#location {
+	width: 100%;
+	cursor: pointer;
+}
+
+#location:hover {
+	border-bottom: 1px dotted black;
+}
+
 /*create course*/
 
 
@@ -763,6 +793,24 @@ textarea:focus, input:focus{
 	text-align: left;
 }
 
+.vision_stmnt {
+	text-align: center;
+	font-size: 3.2em;
+	margin-top: 100px;
+	font-family: "Lobster Two";
+	line-height: 2em;
+	color: #bdbdbd;
+}
+
+.about_header {
+	font-size: 2em;
+}
+
+.about_paragraph {
+	width: 80%;
+	margin: 0 auto;                                                                                                                                         
+}
+
 #about-us-content h2{
 	margin-top: 100px;
 }
@@ -789,7 +837,9 @@ textarea:focus, input:focus{
 
 #all-courses-search{
 	text-align: center;
-	margin: 50px 0px;
+	/*margin: 50px 0px;*/
+	margin-top: 15vh;
+	margin-bottom: 30vh;
 }
 
 #all-courses-pure-g{
@@ -898,6 +948,8 @@ a #go-to-course:hover, a #drop-course:hover{
 	text-align: center;
 }
 
-
+.update_button {
+	background-color: #0091C5;
+}
 
 /*Edit Account End */

@@ -105,7 +105,6 @@ if(empty($_SESSION['user'])) : ?>
 <!-- content -->
 
 
-
 <div class="page-header">
     <div class="page-title"><h2>Create Course</h2></div> 
 </div>
@@ -114,7 +113,20 @@ if(empty($_SESSION['user'])) : ?>
                     <div id="wrapper1">
                         <input type="text" name="coursename" value="" class="form-field" placeholder=" Course Name"/> 
                         <br /><br /> 
-                        <input type="text" name="location" value="" class="form-field" placeholder=" Location"/> 
+                        <!-- <input type="text" name="location" value="" class="form-field" placeholder=" Location"/>  -->
+                        <div id="location_drop">
+                            <p>&nbsp;Choose a Location</p>
+                                <ul id="location_drop_menu">
+                                    <li id="location" value="Gibsons">Gibsons</li>
+                                    <li id="location" value="Lund">Lund</li>
+                                    <li id="location" value="Sechelt">Sechelt</li>
+                                </ul>
+
+
+                     <!-- Waiting for list of locations to finish -->
+
+                     
+                        </div>
                         <br /><br /> 
                         <input type="text" name="date" value="" class="form-field" placeholder=" Time"/> 
                         <br /><br /> 

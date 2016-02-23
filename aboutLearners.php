@@ -114,15 +114,15 @@ if(empty($_SESSION['user'])) : ?>
 
 
 <!-- content -->
-<div id="how-to">
+<div id="about-us-content">
     <div class="cols" id="who">
-        <p>Whoever you are, ay age you can do this</p>
+        <h2 class="about_header">Join Now</h2>
     </div>
 
     <div class="cols" id="how">
-        <p>You start by signing up with us</p>
+        <p class="about_paragraph learner_lines">You start by signing up with us</p>
            <button class="button" id="signup" name="signup"><a href="registerPage.php">Sign up</a></button>
-        <p>There are courses and stuff you can look up</p>
+        <p class="about_paragraph learner_lines">There are courses and stuff you can look up</p>
                 <div id="">
                     <input type="search" placeholder=" Search.." id="search"><img src="images/search.png" width="35px"></input>
                  </div>  

@@ -249,7 +249,7 @@ if(empty($_SESSION['user'])) : ?>
                         <input type="password" name="password" value="" /><br /> 
                         <i>(leave blank if you do not want to change your password)</i> 
                         <br /><br /> 
-                        <input type="submit" value="Update Account" /> 
+                        <input class="update_button type="submit" value="Update Account" /> 
                     </form>
                 </div>
             </div>

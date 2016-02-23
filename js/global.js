@@ -22,3 +22,11 @@ $('#show-login').click(function(){
 	$('.login').toggle();
 	console.log('works');
 });
+
+$("#location_drop").click(function() {
+	$("#location_drop_menu").toggle();
+});
+
+$("#location").click(function() {
+	$("#location_drop").append($("#location").value());
+});

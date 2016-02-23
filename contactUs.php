@@ -114,6 +114,14 @@ if(empty($_SESSION['user'])) : ?>
 
 <!-- content -->
 
+<div class="content-wrapper educator-wrapper">
+    <h2 class="about_header">This is where someone calls someone</h2>
+        <p class="about_paragraph">Not sure if it is a good idea to have a number to the admin.</p>
+    <h2 class="about_header">Find us on Social Media</h2>
+        <p class="about_paragraph">
+        </p>
+</div>
+
 <!-- content -->
 
 

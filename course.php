@@ -101,9 +101,10 @@ if(empty($_SESSION['user'])) : ?>
 
 <?php endif; ?>
 
-<div class="hero">
-    <div class="hero-title">Browse Courses</div>
-</div>
+ <div id="hero-wrap ">
+        <div class="hero-title-upper border-bottom">Our</div> 
+        <div class="hero-title">Learners</div>
+    </div>
 
 
 <!-- content -->
