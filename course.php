@@ -15,6 +15,7 @@
 
     require("common.php"); 
     $courseid = $_GET["id"];
+    $_SESSION['enrolment'] = $courseid;
 
     $query = " 
             SELECT * 
@@ -173,6 +174,10 @@ if(empty($_SESSION['user'])) : ?>
 <div class="col" id="course-right-col">
     <h3><?php echo $_SESSION['coursepage']['description']; ?></h3>
 </div>
+
+<form action="enrolment.php" method="post" class="form">
+    <button>Join Course</button>
+</form>
 <!-- content -->
 
 

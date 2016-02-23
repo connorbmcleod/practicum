@@ -38,6 +38,7 @@
                 $_SESSION['allcourses'] = $rows;
 
                 $count = count($_SESSION['allcourses']);
+
 ?>
 
 <div class="hero hero_courses">
@@ -153,7 +154,7 @@ if(empty($_SESSION['user'])) : ?>
                         <a href='http://localhost/practicum/course.php?id=<?php echo $_SESSION['allcourses'][$i]['courseID']; ?>'
                         <p><?php echo $_SESSION['allcourses'][$i]['coursename']; ?></p></a>
                         <p><?php echo $_SESSION['allcourses'][$i]['location']; ?></p>
-                        <p><?php echo substr($_SESSION['allcourses'][$i]['description'], 0, 100) . "..."; ?></p>
+                        <p><?php echo $_SESSION['allcourses'][$i]['date']; ?></p>
                    </div>
         <?php }; }; ?>
    </div>   
