@@ -50,5 +50,10 @@
                 die("Failed to run query: " . $ex->getMessage()); 
             } 
 
-            header("Location: userprofile.php"); 
+            if($_SESSION['user']['usertype'] == 0){
+                header("Location: userprofile.php"); 
+            }
+            else {
+                header("Location: myprofile.php?id=" . $_SESSION['user']['id']);
+            }
 ?> 

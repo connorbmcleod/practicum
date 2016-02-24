@@ -62,6 +62,26 @@
             $row = $stmt->fetch(); 
                  
                 $_SESSION['teacher'] = $row;
+
+    $query = " 
+            SELECT 
+                1 
+            FROM enrollments
+            WHERE 
+                courseID = '$courseid'
+        "; 
+                  
+        try 
+        { 
+            $stmt = $db->prepare($query); 
+            $result = $stmt->execute(); 
+        } 
+        catch(PDOException $ex) 
+        {   
+            die("Failed to run query: " . $ex->getMessage()); 
+        } 
+          
+        $truth = $stmt->fetch();  
      
 ?>
 
@@ -187,9 +207,27 @@ if(empty($_SESSION['user'])) : ?>
     <h3><?php echo $_SESSION['coursepage']['description']; ?></h3>
 </div>
 
-<form action="enrolment.php" method="post" class="form">
-    <button>Join Course</button>
-</form>
+<?php if(!empty($_SESSION['user'])){ 
+
+        if($truth) 
+        { ?>
+            <form action="dropcourse.php" method="post" class="form">
+                <button>Drop Course</button>
+            </form> 
+       <?php }
+
+       else { ?> 
+
+            <form action="enrolment.php" method="post" class="form">
+                <button>Join Course</button>
+            </form>
+
+
+        <?php }
+    }
+    if(empty($_SESSION['user'])) { ?>
+    <a href="registerPage.php"><button>Sign Up to Register</button></a>
+    <?php } ?>
 <!-- content -->
 
 

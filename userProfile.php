@@ -21,6 +21,57 @@
      
      $firstname = $_SESSION['user']['firstname'];
      $lastname = $_SESSION['user']['lastname'];
+     $userid = $_SESSION['user']['id'];
+
+     $coursequery = " 
+                SELECT
+                    courseID
+                FROM enrollments 
+                WHERE 
+                    studentID = '$userid' 
+            "; 
+             
+            try 
+            { 
+                $stmt = $db->prepare($coursequery); 
+                $result = $stmt->execute(); 
+            } 
+            catch(PDOException $ex) 
+            {  
+                die("Failed to run query: " . $ex->getMessage()); 
+            } 
+             
+            $rows = $stmt->fetchAll(); 
+                 
+                $_SESSION['studentcourses'] = $rows;
+
+    $studentcourses = $_SESSION['studentcourses'];
+
+        $coursequery = " 
+                SELECT
+                *
+                FROM courses
+                     INNER JOIN enrollments ON 
+                         enrollments.courseID = courses.courseID 
+                         AND enrollments.studentID = '$userid'
+                WHERE 1;
+                "; 
+             
+            try 
+            { 
+                $stmt = $db->prepare($coursequery); 
+                $result = $stmt->execute(); 
+            } 
+            catch(PDOException $ex) 
+            {  
+                die("Failed to run query: " . $ex->getMessage()); 
+            } 
+             
+            $row = $stmt->fetchAll(); 
+                 
+                $_SESSION['studentcourseinfo'] = $row;
+
+                $count = count($_SESSION['studentcourseinfo']);
 ?>
 
 <div class="hero hero_userprofile">
@@ -143,34 +194,30 @@ if(empty($_SESSION['user'])) : ?>
                     </div>
                 </a>
                 </div> -->
-
+                
 
             <div class="upcoming-classes">
                 <h2><strong>Upcoming classes</strong></h2>
-                    <div class="class" id="class-1">
-                        <h3><strong>Mushrooming 101</strong></h3>
-                        <p>February 11th, 2016</p>
-                        <p>7pm-8pm</p>
-                        <p>The Bush</p>
-                        <div class="profile-course-buttons">
-                            <a href="class.php"><button class="button" id="go-to-course">Course Description</button></a>
-                            <button class="button" id="drop-course">Drop Course</button>
-                        </div>
-                    </div>
 
-                    <div class="class" id="class-2">
-                        <h3><strong>Advanced Rock Climbing</strong></h3>
-                        <p>February 15th, 2016</p>
-                        <p>2pm-3pm</p>
-                        <p>The Rock</p>
-                        <div class="profile-course-buttons">
-                            <a href="class.php"><button class="button" id="go-to-course">Course Description</button></a>
-                            <button class="button" id="drop-course">Drop Course</button>
-                        </div>
-                    </div>
+                <?php
+                if(!empty($_SESSION['studentcourseinfo'])){ 
+                            for($i = 0; $i < $count; $i++) { ?>
+                                <div class="class">
+                                    <a href='http://localhost/practicum/course.php?id=<?php echo $_SESSION['studentcourseinfo'][$i]['courseID']; ?>'<h3><strong><?php echo $_SESSION['studentcourseinfo'][$i]['coursename']; ?></h3></strong></a>
+                                    <p><?php echo $_SESSION['studentcourseinfo'][$i]['location']; ?></p>
+                                    <p><?php echo $_SESSION['studentcourseinfo'][$i]['date']; ?></p>
+                                    <div class="profile-course-buttons">
+                                        
+                                        <button class="button" id="drop-course">Drop Course</button>
+                                    </div>
+                                </div>
+                            <?php }
+                            ?>
+                <?php } 
+                ?>
+
+                   
              </div> <!-- End of upcoming classes -->
-
-
 
                 <div class="profile-buttons">
                     <a href="allcourses.php"><button class="button" id="sign-up-for-classes">Sign up for more classes</button></a>
