@@ -201,7 +201,7 @@ textarea:focus, input:focus{
 
 .nav{
 	position: absolute;
-	top: 10;
+	top: 30;
 	right: 100;
 
 }
@@ -298,6 +298,7 @@ textarea:focus, input:focus{
 	display: inline-block;
 	margin-right: 20px;
 	vertical-align: top;
+	margin-top: 5px;
 }
 
 #welcome p{
