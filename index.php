@@ -70,7 +70,7 @@
             $_SESSION['user'] = $row;
 
             if($_SESSION['user']['usertype'] == 1){ 
-                header("Location: myprofile.php"); 
+                header("Location: myprofile.php?id=" . $_SESSION['user']['id']); 
             }
             else {
                 header("Location: userprofile.php");
@@ -159,7 +159,14 @@ if(empty($_SESSION['user'])) : ?>
          </div> <!-- pure-menu end-->
 
         <div class="nav">
-            <div id="welcome"><p> <?php echo $_SESSION['user']['firstname']; ?> </p></div>
+            <div id="welcome">
+                <?php if($_SESSION['user']['usertype'] == 1){ ?>
+                <a href='http://localhost/practicum/myprofile.php?id=<?php echo $_SESSION['user']['id']; ?>'<p> <?php echo $_SESSION['user']['firstname'] . ' ' . $_SESSION['user']['lastname']; ?> </p></a>
+            <?php }
+                else { ?>
+                    <a href='http://localhost/practicum/userprofile.php'><p> <?php echo $_SESSION['user']['firstname'] . ' ' . $_SESSION['user']['lastname']; ?> </p></a>
+                <?php } ?>
+            </div>
                 <div class="dropdown">
                   <button class="dropbtn"><img src="images/menu-arrow.png" width="30px"></button>
                   <div class="dropdown-content">
