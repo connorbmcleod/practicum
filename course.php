@@ -65,6 +65,8 @@
      
 ?>
 
+<div class="hero hero_courses">
+
 <?php
 if(empty($_SESSION['user'])) : ?>
 
@@ -145,15 +147,18 @@ if(empty($_SESSION['user'])) : ?>
                 </div>
             
         </div>
-    </div> <!-- Header end -->
+
 
 <?php endif; ?>
 
- <div id="hero-wrap ">
+ <div id="hero-wrap">
         <div class="hero-title-upper border-bottom">Our</div> 
         <div class="hero-title">Learners</div>
     </div>
 
+    </div> 
+
+</div><!-- Header end -->
 
 <!-- content -->
 <div class="content" id="course-content">
@@ -207,5 +212,7 @@ if(empty($_SESSION['user'])) : ?>
     </div>
 
 <!-- footer -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/global.js"></script>
 </body>
 </html>
