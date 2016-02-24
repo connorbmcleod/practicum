@@ -616,9 +616,8 @@ textarea:focus, input:focus{
 
 #registerForm1,
 #registerFormW2,
-#registerFormWrapper3
-{
-
+#registerFormWrapper3 {
+	height: 800px;
 	text-align: center;
 	width: 90vw;
 	margin: 0 auto;
@@ -759,6 +758,10 @@ textarea:focus, input:focus{
 #pastclasses, #upcomingclasses {
 	margin-left: 20px;
 }
+
+.profile_content {
+	height: 100%;
+}
 /*myprofile*/
 
 
@@ -778,6 +781,10 @@ textarea:focus, input:focus{
 
 .form-field{
 	margin-bottom: 40px;
+}
+
+.ty_content {
+	height: 700px;
 }
 /*Thank you page*/
 

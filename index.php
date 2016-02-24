@@ -78,7 +78,8 @@
         } 
         else 
         { 
-            print("Login Failed."); 
+            // print("Login Failed."); 
+            echo "<script type='text/javascript'>alert('Failed to log in');</script>";
              
             $submitted_email = htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8'); 
         } 

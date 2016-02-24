@@ -118,7 +118,7 @@ if(empty($_SESSION['user'])) : ?>
 
 
 <!-- form -->
-<div class="content">
+<div class="content ty_content">
                 <form action="index.php" method="post" class="form">
                     <input class="form-field" id="email" name="email" type="text" placeholder="Email" value=""/>
                     <input class="form-field" id="password" name="password" type="password" placeholder="Password" value=""><br />

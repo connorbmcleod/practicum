@@ -214,9 +214,11 @@ if(empty($_SESSION['user'])) : ?>
             <hr>
 </div> -->
 
+<div class="content-wrapper" id="about-us-content">
+
 <div class="bio">
-    <h3><strong>BIO</strong></h3>
-    <p><?php 
+    <h2 class="about_header">BIO</h2>
+    <p class="about_paragraph"><?php 
     if(empty($_SESSION['userinfo']['bio'])){
         echo "<a href='becomeeducator.php'><p>Fill Out Your Bio</p></a>";
     }
@@ -225,22 +227,21 @@ if(empty($_SESSION['user'])) : ?>
     } ?></p>
 </div>
 
-<div id="pastclasses">
-    <h2>Past Classes</h2>
-</div>
 
-<div id="upcomingclasses">
-    <h2> Upcoming Classes </h2>
+    <h2 class="about_header">Past Classes</h2>
+
+
+    <h2 class="about_header"> Upcoming Classes </h2>
     <div class="allclasses">
 
     <?php 
         if(!empty($_SESSION['courseinfo'])){ 
             for($i = 0; $i < $count; $i++) { ?>
-                <div>
+                <div class="search_class">
                     <a href='http://localhost/practicum/course.php?id=<?php echo $_SESSION['courseinfo'][$i]['courseID']; ?>'<p><?php echo $_SESSION['courseinfo'][$i]['coursename']; ?></p></a>
                     <p><?php echo $_SESSION['courseinfo'][$i]['location']; ?></p>
                     <p><?php echo substr($_SESSION['courseinfo'][$i]['description'], 0, 100) . "..."; ?></p>
-                    <hr>
+
                 </div>
             <?php }
             ?>
@@ -254,6 +255,8 @@ if(empty($_SESSION['user'])) : ?>
         <?php }
         ?>
 </div>
+
+
             
 <!-- content -->
 
