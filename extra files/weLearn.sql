@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 23, 2016 at 09:31 PM
+-- Generation Time: Feb 24, 2016 at 09:54 PM
 -- Server version: 5.6.26
 -- PHP Version: 5.5.28
 
@@ -80,7 +80,16 @@ CREATE TABLE IF NOT EXISTS `enrollments` (
   `id` int(11) NOT NULL,
   `courseID` int(11) NOT NULL,
   `studentID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `enrollments`
+--
+
+INSERT INTO `enrollments` (`id`, `courseID`, `studentID`) VALUES
+(2, 6, 4),
+(3, 7, 5),
+(4, 8, 5);
 
 -- --------------------------------------------------------
 
@@ -118,6 +127,12 @@ ALTER TABLE `courses`
   ADD PRIMARY KEY (`courseID`);
 
 --
+-- Indexes for table `enrollments`
+--
+ALTER TABLE `enrollments`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -132,6 +147,11 @@ ALTER TABLE `users`
 --
 ALTER TABLE `courses`
   MODIFY `courseID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT for table `enrollments`
+--
+ALTER TABLE `enrollments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `users`
 --
