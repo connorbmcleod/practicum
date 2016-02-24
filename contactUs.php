@@ -47,16 +47,17 @@ if(empty($_SESSION['user'])) : ?>
 
 
         <div class="nav">
+            <button id="show-login">Login</button>
+                <a href="registerPage.php"><button class="button" id="signup" name="signup">Sign up</button></a>
+
             <div class="login">
                 <form action="index.php" method="post" class="form">
-                    <input id="email" name="email" type="text" placeholder="Email" value="<?php echo $submitted_email; ?>"/>
+                    <input id="email" name="email" type="text" placeholder="Email" value=""/>
                     <input id="password" name="password" type="password" placeholder="Password" value="">
                     <button type="submit" value="Login" class="button" id="login" name="login">Login</button>
                 </form>
-             <button class="button" id="signup" name="signup"><a href="registerPage.php">Sign up</a></button>
               </div>
         </div><!-- Nav end-->
-
 </div> <!-- Header end -->
 
 <?php else : ?>
@@ -114,7 +115,7 @@ if(empty($_SESSION['user'])) : ?>
 
 <!-- content -->
 
-<div class="content-wrapper educator-wrapper">
+<div class="contact_wrapper" id="about-us-content">
     <h2 class="about_header">This is where someone calls someone</h2>
         <p class="about_paragraph">Not sure if it is a good idea to have a number to the admin.</p>
     <h2 class="about_header">Find us on Social Media</h2>
@@ -151,5 +152,8 @@ if(empty($_SESSION['user'])) : ?>
     </div>
 
 <!-- footer -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/global.js"></script>
 </body>
 </html>

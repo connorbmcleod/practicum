@@ -20,7 +20,7 @@ $('#register2').click(function(){
 
 $('#show-login').click(function(){
 	$('.login').toggle();
-	console.log('works');
+	// console.log('works');
 });
 
 $("#location_drop").click(function() {

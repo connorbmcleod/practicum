@@ -86,7 +86,7 @@
      
 ?>
 
-<!-- LOGGED IN HEADER -->
+<!-- NOT LOGGED IN HEADER -->
 
 <div class="hero hero_index">
 
