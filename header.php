@@ -2,7 +2,7 @@
 if(empty($_SESSION['user'])) : ?>
 
     <div class="header">
-        <div class="logo"><a href="index.php"><img src="images/logo.gif" width="50px"></a></div>
+        <div class="logo"><a href="index.php"><img src="images/weLearn-logo.png" width="150px"></a></div>
 
 
             <div class="pure-menu pure-menu-horizontal" id="menu">
@@ -26,8 +26,8 @@ if(empty($_SESSION['user'])) : ?>
 
 
         <div class="nav">
-            <button id="show-login">Login</button>
-                <a href="registerPage.php"><button class="button" id="signup" name="signup">Sign up</button></a>
+            <div id="show-login">Login</div>
+                <a href="registerPage.php"><div class="button" id="signup" name="signup">Sign up</div></a>
 
             <div class="login">
                 <form action="index.php" method="post" class="form">
@@ -43,7 +43,7 @@ if(empty($_SESSION['user'])) : ?>
 
 <!-- LOGGED IN HEADER -->
     <div class="header-logged">
-        <div class="logo"><a href="index.php"><img src="images/logo.gif" width="50px"></a></div>
+        <div class="logo"><a href="index.php"><img src="images/weLearn-logo.png" width="50px"></a></div>
 
 
             <div class="pure-menu pure-menu-horizontal" id="menu">

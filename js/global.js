@@ -30,3 +30,9 @@ $("#location_drop").click(function() {
 $("#location").click(function() {
 	$("#location_drop").append($("#location").value());
 });
+
+$('#register2').click(function(){
+	if($("#firstname").val == ""){
+		$("#firstname").css("border-bottom", "1px solid red")
+	};
+});

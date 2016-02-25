@@ -105,47 +105,52 @@
            
 <!-- CONTENT -->
 <div class="content" id="index-content">
-<?php
-if(empty($_SESSION['user'])) : ?>
-    <div class="pure-g" id="not-logged">
-        <div class="pure-u-1 pure-u-md-1-3" id="index-col-1">
-            <a href="registerPage.php"> 
-                <img src="images/1.jpeg" width="300px">
-                <h3>Sign Up</h3>
-            </a>
+        <div class="hr">
+            <hr>
         </div>
-        <div class="pure-u-1 pure-u-md-1-3" id="index-col-2">
-            <a href="allcourses.php">
-                <img src="images/2.jpeg" width="300px">
-                <h3>View Courses</h3>
-           </a>
-        </div>
-        <div class="pure-u-1 pure-u-md-1-3" id="index-col-3">
-            <a href="aboutUs.php">
-                <img src="images/3.jpeg" width="300px">
-                <h3>Our Community</h3>
-            </a>
-        </div>
-    </div>
+        <?php
+        if(empty($_SESSION['user'])) : ?>
+            <div class="pure-g" id="not-logged">
+                <div class="pure-u-1 pure-u-md-1-3" id="index-col-1">
+                    <a href="registerPage.php"> 
+                        <img src="images/1.jpeg" width="300px">
+                        <h3>Sign Up</h3>
+                    </a>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-3" id="index-col-2">
+                    <a href="allcourses.php">
+                        <img src="images/2.jpeg" width="300px">
+                        <h3>View Courses</h3>
+                   </a>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-3" id="index-col-3">
+                    <a href="aboutUs.php">
+                        <img src="images/3.jpeg" width="300px">
+                        <h3>Our Community</h3>
+                    </a>
+                </div>
+            </div>
 
 
-<?php else : ?>
-    <div class="pure-g" id="not-logged">
-        <div class="pure-u-1 pure-u-md-1-2" id="index-col-1">
-            <a href="userprofile.php"> 
-                <img src="images/4.jpeg" width="300px">
-                <h3>PROFILE</h3>
-            </a>
+        <?php else : ?>
+            <div class="pure-g" id="not-logged">
+                <div class="pure-u-1 pure-u-md-1-2" id="index-col-1">
+                    <a href="userprofile.php"> 
+                        <img src="images/4.jpeg" width="300px">
+                        <h3>PROFILE</h3>
+                    </a>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2" id="index-col-2">
+                    <a href="allcourses.php">
+                        <img src="images/5.jpeg" width="300px">
+                        <h3>VIEW COURSES</h3>
+                   </a>
+                </div>
+            </div>
+        <?php endif; ?>
+        <div class="hr">
+            <hr>
         </div>
-        <div class="pure-u-1 pure-u-md-1-2" id="index-col-2">
-            <a href="allcourses.php">
-                <img src="images/5.jpeg" width="300px">
-                <h3>VIEW COURSES</h3>
-           </a>
-        </div>
-    </div>
-<?php endif; ?>
-
 <!-- <div id="index-learn-more">
     <h3><a href="aboutus.php">Learn more about weLEarn</a></h3>
 </div>

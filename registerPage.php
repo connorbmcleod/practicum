@@ -116,18 +116,18 @@ if(empty($_SESSION['user'])) : ?>
 
                 <form action="register.php" method="post" id="registerForm1">
                     <div id="registerFormWrapper1">
-                        <input type="text" name="firstname" value="" class="form-field" placeholder=" First Name" autocomplete="off"/> 
+                        <input id="firstname" type="text" name="firstname" value="" class="form-field" placeholder=" First Name" autocomplete="off"/> 
                         <br /><br /> 
-                        <input type="text" name="lastname" value="" class="form-field" placeholder=" Last Name" autocomplete="off"/> 
+                        <input id="lastname" type="text" name="lastname" value="" class="form-field" placeholder=" Last Name" autocomplete="off"/> 
                         <br /><br /> 
                     </div> 
 
                     <div id="registerFormWrapper2">
-                        <input type="text" name="email" value="" class="form-field" placeholder=" Email" autocomplete="off"/> 
+                        <input id="email" type="text" name="email" value="" class="form-field" placeholder=" Email" autocomplete="off"/> 
                         <br /><br /> 
-                        <input type="password" name="password" value="" class="form-field" placeholder=" Password" autocomplete="off"/> 
+                        <input id="pswrd" type="password" name="password" value="" class="form-field" placeholder=" Password" autocomplete="off"/> 
                         <br /><br /> 
-                        <input type="password" name="password" value="" class="form-field" placeholder=" Confirm Password" autocomplete="off"/> 
+                        <input id="confirmpswrd" type="password" name="password" value="" class="form-field" placeholder=" Confirm Password" autocomplete="off"/> 
                         <br /><br /> 
                         <input type="submit" value="Register" class="button" id="register2"/>
                     </div>

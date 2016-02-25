@@ -42,6 +42,11 @@ textarea:focus, input:focus{
     outline: none;
 }
 
+#not-logged {
+	padding-top: 70px;
+	padding-bottom: 50px;
+}
+
 
 /*Dropdown arrow*/
 
@@ -135,10 +140,6 @@ textarea:focus, input:focus{
 }
 
 .button{
-	border-radius: 5px;
-	background-color: transparent;
-	border: black solid thin;
-	box-shadow: none;
 }
 
 .button:hover{
@@ -201,8 +202,8 @@ textarea:focus, input:focus{
 
 .nav{
 	position: absolute;
-	top: 30;
-	right: 100;
+	top: 32;
+	right: 50;
 
 }
 
@@ -239,22 +240,32 @@ textarea:focus, input:focus{
 }
 
 #login{
-	padding: 0px 10px;
-	margin-bottom: 40px;
-	margin-top: 40px;
+	padding: 5px 20px;
+	margin-bottom: 20px;
+	margin-top: 20px;border: none;
+	background-color: rgba(255,255,255,0);
+	border: 1px solid black;
+}
+
+#login:hover {
+	color: white;
+	background-color: rgba(0,0,0,0.8);
 }
 
 #show-login{
-	border-radius: 5px;
-	padding: 2px 10px;
-	border: white solid thin;
+	padding: 7px 20px;
+	background-color: rgba(0,0,0,0.5);
 	color: white;
 	margin-right: 5px;
+	text-align: center;
+	cursor: pointer;
+	display: inline;
 }
 
 #show-login:hover{
-	background-color: white;
-	color: black;
+	background-color: rgba(0,0,0,0);
+	color: white;
+	border: 1px white solid;
 }
 
 #logout{
@@ -273,16 +284,16 @@ textarea:focus, input:focus{
 }
 
 #signup{
-	border-radius: 5px;
 	padding: 5px 10px;
-	background-color: #0091C5;
+	background-color: rgba(0,0,100,0.5);
 	color: white;
 	display: inline-block;
 }
 
 #signup:hover{
-	color: black;
-	background-color: white;
+	background-color: rgba(0,0,0,0);
+	color: white;
+	border: 1px white solid;
 }
 
 #signup a:hover{
@@ -329,6 +340,7 @@ textarea:focus, input:focus{
 
 .form{
 	display: inline-block;
+	height: 150px;
 }
 
 /*footer*/
@@ -415,7 +427,6 @@ textarea:focus, input:focus{
 
 /*index page*/
 .hero{
-	
 	width: 100vw;
 	height: 500px;
 	/*background-size: cover;*/
@@ -567,7 +578,7 @@ textarea:focus, input:focus{
 }
 
 #index-content{
-	margin: 15vh 0px;
+	margin: 15vw 0;
 }
 
 #index-content img:hover{
@@ -589,6 +600,11 @@ textarea:focus, input:focus{
 	margin: 0 auto;
 	text-align: center;
 	margin-top: 15vh;
+}
+
+.hr {
+	width: 80%;
+	margin: 0 auto;
 }
 
 #logged-in a{
