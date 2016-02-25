@@ -95,7 +95,7 @@
 
 	<div id="hero-wrap">
         <div class="hero-title-upper border-bottom">share your skills</div> 
-        <div class="hero-title">welearn</div>
+        <div class="hero-title">weLearn</div>
     </div>
 	<!-- <div id="index-search">
 		<input type="search" placeholder=" Search for Classes" id="search"><img src="images/search.png" width="30px"></input>

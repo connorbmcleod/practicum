@@ -15,9 +15,12 @@
 
     require("common.php");
 
-    $firstname = $_SESSION['user']['firstname'];
-    $lastname = $_SESSION['user']['lastname'];
-    $userID = $_SESSION['user']['id'];
+    if(!empty($_SESSION['user'])){
+        $firstname = $_SESSION['user']['firstname'];
+        $lastname = $_SESSION['user']['lastname'];
+        $userID = $_SESSION['user']['id'];
+    }
+    
     $iduser = $_GET["id"];
 
 
@@ -124,11 +127,13 @@
     </div>
     <?php 
 
-        if($_SESSION['user']['usertype'] == 1){ ?>
-            <a href="createcourse.php"><button class="button" id="create-course">Create a Course</button></a>
-        <?php }
-        ?>
-</div>
+        if(!empty($_SESSION['user'])){
+            if($_SESSION['user']['usertype'] == 1){ ?>
+                <a href="createcourse.php"><button class="button" id="create-course">Create a Course</button></a>
+            <?php }
+        }
+            ?>
+    </div>
 
 
             
