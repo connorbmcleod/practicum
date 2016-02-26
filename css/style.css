@@ -15,7 +15,9 @@ h1, h2, h3, h4, h5{
 }
 
 p{
-	color: grey;
+	color: rgba(50, 50, 50);
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;  
 
 }
 
@@ -140,6 +142,7 @@ textarea:focus, input:focus{
 }
 
 .button{
+
 }
 
 .button:hover{
@@ -862,8 +865,8 @@ textarea:focus, input:focus{
 #all-courses-search{
 	text-align: center;
 	/*margin: 50px 0px;*/
-	margin-top: 5vh;
-	margin-bottom: 50px;
+	margin-top: 60px;
+	margin-bottom: 100px;
 }
 
 #all-courses-pure-g{
@@ -871,14 +874,87 @@ textarea:focus, input:focus{
 }
 
 .test-wrapper {
-	width: 1250px;
 	margin: 0 auto;
+
 }
 .search_class {
 	width: 400px;
 	display: inline-block;
 	text-align: center;
 	padding-bottom: 20px;
+}
+
+.course-wrapper{
+	margin-bottom: 40px;
+	margin-top: 40px;
+	margin-left: 70px;
+}
+
+.course-wrapper a {
+	display: inline-block;
+}
+
+/*.sexy-box {
+	padding-top: 20px;
+	padding-bottom: 50px;
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 50px; 
+	border: thin solid black;
+	position: relative;
+	color: white;
+	border-radius: 5px;
+}
+
+.sexy-box a {
+	text-decoration: none;
+
+}
+
+.sexy-box p{
+	color: black;
+
+}
+
+.class_header {
+	text-decoration: none;	
+	font-size: 1.7em;
+
+}
+
+.class_time {
+	font-size: 1em;
+	border: black thin solid;
+	background-color: #005625;  
+	width: 250px;
+	margin: 0 auto;
+	z-index: 10;
+	position: absolute;
+	bottom: -20px;
+	left: 35px;
+	border-radius: 5px;
+	padding: 10px 5px;
+}
+
+.sexy-box .class_time{
+	color: white;
+}*/
+
+.buh {
+	text-decoration: none;
+	font-size: 1.8em;
+	color: black;
+}
+
+.course_info p{
+	display: inline-block;
+	width: 100px;
+}
+
+.course_info {
+	width: 300px;
+	display: inline-block;
+	margin-left: 100px;
 }
 /*All courses page*/
 
@@ -898,22 +974,47 @@ textarea:focus, input:focus{
 
 #course-left-col{
 	display: inline-block;
+	background-color: #F5F5F5; 
 	vertical-align: top;
-	width: 40vw;
-	margin-left: 20px;
-	border: black thin solid;
+	width: 150px;
+	padding: 20px 5vh;
+	margin: 50px 5vw;
+	border-radius: 5px;
+	
 }
 
 #course-right-col{
 	display: inline-block;
-	width: 50vw;
-	margin:0px 20px;
-	border: black thin solid;
+	background-color: #F5F5F5; 
+	width: 450px;
+	padding: 20px 5vw;
+	margin-top: 50px; 
+	margin-right: 5vw;
 	height: 50vh;
+	border-radius: 10px;
+}
+
+#course-right-col p{
+	text-align: left;
 }
 
 #course-content{
-	margin: 100px 0px;
+	text-align: center;
+	margin: 80px 0px; 
+}
+
+#login-register-btn{
+	background-color: rgba(0, 47, 232, 0.8);
+	border: transparent thin solid;
+	color: white;
+	margin-top: 50px;
+	padding: 5px 10px;
+}
+
+#login-register-btn:hover{
+	background-color: transparent;
+	color: black;
+	border: black thin solid; 
 }
 /*One course page*/
 

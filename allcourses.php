@@ -60,18 +60,22 @@
 
     <div class="test-wrapper">
 
-       <div class="test">
            <?php 
            if(!empty($_SESSION['allcourses'])){ 
                     for($i = 0; $i < $count; $i++) { ?>
-                       <div class="search_class">
-                            <a href='http://localhost/practicum/course.php?id=<?php echo $_SESSION['allcourses'][$i]['courseID']; ?>'
-                            <p><?php echo $_SESSION['allcourses'][$i]['coursename']; ?></p></a>
-                            <p><?php echo $_SESSION['allcourses'][$i]['location']; ?></p>
-                            <p><?php echo $_SESSION['allcourses'][$i]['date']; ?></p>
-                       </div>
+
+                        <div class="course-wrapper">                                
+                                <a class="buh" href='http://localhost/practicum/course.php?id=<?php echo $_SESSION['allcourses'][$i]['courseID']; ?>'
+                                
+                                <p class="class_header"><?php echo $_SESSION['allcourses'][$i]['coursename']; ?></p></a>
+                                <div class="course_info">
+                                    <p><?php echo $_SESSION['allcourses'][$i]['location']; ?></p>
+                                    <p><?php echo $_SESSION['allcourses'][$i]['date']; ?></p>
+                                </div>
+                        </div>
+                        <hr>
             <?php }; }; ?>
-       </div>   
+    </div>   
 
 
     </div>

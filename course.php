@@ -98,12 +98,12 @@
     <!-- Header end -->
 
     <!-- content -->
-    <div class="content" id="course-content">
+    <div id="course-content">
         <h1><?php echo $_SESSION['coursepage']['coursename']; ?></h1>
         <div class="rating">
             <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
         </div>
-    </div>
+
 
     <div class="col" id="course-left-col">
         <h3>Educator</h3>
@@ -117,9 +117,10 @@
         <p><?php echo $_SESSION['coursepage']['location']; ?></p><br>
     </div>
     <div class="col" id="course-right-col">
-        <h3><?php echo $_SESSION['coursepage']['description']; ?></h3>
+        <p><?php echo $_SESSION['coursepage']['description']; ?></p>
     </div>
 
+<br>
     <?php 
 
         if(!empty($_SESSION['user'])){ 
@@ -142,9 +143,10 @@
 
         if(empty($_SESSION['user'])) { ?>
 
-        <a href="registerPage.php"><button>Sign Up to Register</button></a>
+        <a href="registerPage.php"><button id="login-register-btn">Sign In to Enroll</button></a>
 
         <?php } ?>
+    </div>
     <!-- content -->
 
 
