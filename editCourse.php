@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300|Roboto:400,700,300,700italic,300italic' rel='stylesheet' type='text/css'>
-    <title>Create Course</title>
+    <title>Edit Course</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -12,6 +12,30 @@
     <?php 
 
         require("common.php"); 
+        $courseid = $_GET["id"];
+
+        $query = " 
+                SELECT * 
+                FROM courses 
+                WHERE 
+                    courseID = '$courseid'  
+                "; 
+                 
+                try 
+                { 
+                    $stmt = $db->prepare($query); 
+                    $result = $stmt->execute(); 
+                } 
+                catch(PDOException $ex) 
+                {  
+                    die("Failed to run query: " . $ex->getMessage()); 
+                } 
+                 
+                $row = $stmt->fetch(); 
+                     
+                    $_SESSION['editcourse'] = $row;
+
+
          
     ?>
 
@@ -107,14 +131,14 @@
 
 
     <div class="page-header">
-        <div class="page-title"><h2>Create Course</h2></div> 
+        <div class="page-title"><h2>Edit Course</h2></div> 
     </div>
 
-        <form action="registercourse.php" method="post" id="createCourse">
+        <form action="courseEdit.php" method="post" id="createCourse">
             <div id="wrapper1">
-                <input id="coursename" type="text" name="coursename" value="" class="form-field" placeholder=" Course Name"/> 
+                <p> <?php echo $_SESSION['editcourse']['coursename'] ?> </p>
                 <br /><br /> 
-                <input id="location" type="text" name="location" value="" class="form-field" placeholder=" Location"/> 
+                <input id="location" type="text" name="location" value="<?php echo $_SESSION['editcourse']['location'] ?>" class="form-field" placeholder=" Location"/> 
 
 
 
@@ -133,27 +157,27 @@
              
                
                 <br /><br /> 
-                <input id="time" type="text" name="date" value="" class="form-field" placeholder=" Time"/> 
+                <input id="time" type="text" name="date" value="<?php echo $_SESSION['editcourse']['date'] ?>" class="form-field" placeholder=" Time"/> 
                 <br /><br /> 
-                <input id="minnumber" type="text" name="minnumber" value="" class="form-field" placeholder=" Minimum Number of Students"/> 
+                <input id="minnumber" type="text" name="minnumber" value="<?php echo $_SESSION['editcourse']['minimumpeople'] ?>" class="form-field" placeholder=" Minimum Number of Students"/> 
                 <br /><br />
-                <input id="maxnumber" type="text" name="maxnumber" value="" class="form-field" placeholder=" Maximum Number of Students"/> 
+                <input id="maxnumber" type="text" name="maxnumber" value="<?php echo $_SESSION['editcourse']['maximumpeople'] ?>" class="form-field" placeholder=" Maximum Number of Students"/> 
                 <br /><br /> 
 
 
             </div>
             <div id="wrapper2">
-            <textarea id="coursedesc" cols="50" rows="15" type="text" name="courseDesc" value="" placeholder=" Course Description"></textarea>
+                <textarea id="coursedesc" cols="50" rows="15" type="text" name="courseDesc" placeholder=" Course Description"><?php echo $_SESSION['editcourse']['description'] ?></textarea>
             </div>
-            <input type="text" name="objectiveone" value="" class="form-field" placeholder=" Learning Objective One"/> 
+            <input type="text" name="objectiveone" value="<?php echo $_SESSION['editcourse']['objective1'] ?>" class="form-field" placeholder=" Learning Objective One"/> 
             <br /><br />
-             <input type="text" name="objectivetwo" value="" class="form-field" placeholder=" Learning Objective Two"/> 
+             <input type="text" name="objectivetwo" value="<?php echo $_SESSION['editcourse']['objective2'] ?>" class="form-field" placeholder=" Learning Objective Two"/> 
             <br /><br /> 
-             <input type="text" name="objectivethree" value="" class="form-field" placeholder=" Learning Objective Three"/> 
+             <input type="text" name="objectivethree" value="<?php echo $_SESSION['editcourse']['objective3'] ?>" class="form-field" placeholder=" Learning Objective Three"/> 
             <br /><br /> 
-             <input type="text" name="objectivefour" value="" class="form-field" placeholder=" Learning Objective Four"/> 
+             <input type="text" name="objectivefour" value="<?php echo $_SESSION['editcourse']['objective4'] ?>" class="form-field" placeholder=" Learning Objective Four"/> 
             <br /><br /> 
-             <input type="text" name="objectivefive" value="" class="form-field" placeholder=" Learning Objective Five"/> 
+             <input type="text" name="objectivefive" value="<?php echo $_SESSION['editcourse']['objective5'] ?>" class="form-field" placeholder=" Learning Objective Five"/> 
             <br /><br /> 
             <br />
              <input onclick="" type="submit" value="Register" class="button" id="createCourseBtn"/>

@@ -46,6 +46,7 @@
 
             $coursequery = " 
                 SELECT
+                    courseID,
                     coursename,
                     location,
                     description 

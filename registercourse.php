@@ -44,6 +44,11 @@
                 minimumpeople, 
                 maximumpeople, 
                 description,
+                objective1,
+                objective2,
+                objective3,
+                objective4,
+                objective5,
                 teacherID 
             ) VALUES ( 
                 :coursename,
@@ -52,6 +57,11 @@
                 :minnumber,
                 :maxnumber, 
                 :courseDesc,
+                :objectiveone,
+                :objectivetwo,
+                :objectivethree,
+                :objectivefour,
+                :objectivefive,
                 '$userID'
             ) 
         "; 
@@ -63,7 +73,12 @@
             ':date' => $_POST['date'],  
             ':minnumber' =>  $_POST['minnumber'],
             ':maxnumber' =>  $_POST['maxnumber'], 
-            ':courseDesc' => $_POST['courseDesc'] 
+            ':courseDesc' => $_POST['courseDesc'],
+            ':objectiveone' => $_POST['objectiveone'],
+            ':objectivetwo' => $_POST['objectivetwo'],
+            ':objectivethree' => $_POST['objectivethree'],
+            ':objectivefour' => $_POST['objectivefour'],
+            ':objectivefive' => $_POST['objectivefive'],
         ); 
          
         try 

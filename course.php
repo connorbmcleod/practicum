@@ -139,13 +139,23 @@
                 </form>
 
             <?php }
+
+        if($teacherid == $_SESSION['user']['id']){ ?>
+        
+            <a href="editCourse.php?id=<?php echo $courseid ?>"><button id="login-register-btn">Edit Course Details</button></a>
+        
+        <?php } 
         }
 
         if(empty($_SESSION['user'])) { ?>
 
-        <a href="registerPage.php"><button id="login-register-btn">Sign In to Enroll</button></a>
+            <a href="registerPage.php"><button id="login-register-btn">Sign In to Enroll</button></a>
 
         <?php } ?>
+
+
+
+
     </div>
     <!-- content -->
 
