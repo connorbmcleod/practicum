@@ -77,8 +77,14 @@ if(empty($_SESSION['user'])) : ?>
                 <div class="dropdown">
                   <button class="dropbtn"><img src="images/menu-arrow.png" width="30px"></button>
                   <div class="dropdown-content">
+
+                  <?php if($_SESSION['user']['usertype'] == 1){?>
+                    <a href="myprofile.php?id=<?php echo $_SESSION['user']['id']?>">My Profile</a>
+                    <?php } 
+                        else if($_SESSION['user']['usertype'] == 0){?>
                     <a href="userprofile.php">My Profile</a>
-                    <a href="edit_account.php">Edit Profile</a>
+                    <?php } ?>
+                    <a href="edit_account.php">Edit Account</a>
                     <a href="#"><form id="logout-form" action="logout.php">
                         <button type="submit" id="logout">Logout</button>
                     </form></a>

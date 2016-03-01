@@ -20,6 +20,8 @@
 
     require("common.php"); 
      
+     $userid = $_SESSION['user']['id'];
+
     if(empty($_SESSION['user'])) 
     { 
         header("Location: login.php"); 
@@ -85,7 +87,6 @@
          
         $query_params = array( 
             ':email' => $_POST['email'], 
-            ':user_id' => $_SESSION['user']['id'], 
         ); 
           
         if($password !== null) 
@@ -110,7 +111,7 @@
          
         $query .= " 
             WHERE 
-                id = :user_id 
+                id = $userid
         "; 
          
         try 
@@ -125,9 +126,12 @@
          
         $_SESSION['user']['email'] = $_POST['email']; 
          
-        header("Location: private.php"); 
-         
-        die("Redirecting to private.php"); 
+        if($_SESSION['user']['usertype'] == 0){
+            header("Location: userprofile.php"); 
+        }
+        else{
+            header("Location: myprofile.php?id=$userid");
+        }
     } 
      
 ?> 
@@ -153,15 +157,13 @@
             <div id="accountFormWrapper" class="content-wrapper">
                 <div id="innerForm">
                     <h1>Edit Account</h1> 
-                    <form action="edit_account.php" method="post"> 
+                    <form action="edit_account.php" method="post" id="accountForm"> 
                         Name:<br /> 
-                        <b><?php echo $_SESSION['user']['firstname'] . " " . $_SESSION['user']['lastname']; ?></b> 
-                        <br /><br />
-                        Current Email:<br /> 
-                        <b><?php echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); ?></b> 
+                        <p> <?php echo $_SESSION['user']['firstname'] . " " . $_SESSION['user']['lastname']; ?></p> 
+                        <b></b> 
                         <br /><br />  
                         New E-Mail Address:<br /> 
-                        <input type="text" name="email" value="" />
+                        <input type="text" name="email" value="<?php echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); ?>" />
                         <br /><br /> 
                         New Password:<br /> 
                         <input type="password" name="password" value="" /><br /> 

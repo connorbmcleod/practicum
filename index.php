@@ -135,7 +135,12 @@
         <?php else : ?>
             <div class="pure-g" id="not-logged">
                 <div class="pure-u-1 pure-u-md-1-2" id="index-col-1">
+                    
+                <?php if($_SESSION['user']['usertype'] == 0){ ?>
                     <a href="userprofile.php"> 
+                <?php } else { ?>
+                    <a href="myprofile.php?id=<?php echo $_SESSION['user']['id'] ?>">
+                <?php } ?>
                         <img src="images/4.jpeg" width="300px">
                         <h3>PROFILE</h3>
                     </a>

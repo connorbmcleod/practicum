@@ -1088,6 +1088,10 @@ a #go-to-course:hover, a #drop-course:hover{
 	background-color: #0091C5;
 }
 
+#accountForm input{
+	text-align: center;
+}
+
 /*Edit Account End */
 
 /*CONTACT US PAGE*/
