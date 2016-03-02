@@ -21,12 +21,12 @@ p{
 
 }
 
-.content{
+.content {
 	margin:20px 0px;
 	text-align: center;
 }
 
-.pure-g{
+.pure-g {
 	font-family: 'Carme', sans-serif;
 }
 
@@ -328,7 +328,7 @@ textarea:focus, input:focus{
 /*	background-color: #110E3F;*/
 	text-align: center;
 	width: 100vw;
-	height: 200px;
+	height: 100px;
 }
 
 .page-title{
@@ -348,37 +348,46 @@ textarea:focus, input:focus{
 
 /*footer*/
 	.footer{
-		background-color: rgba(202, 202, 202, 0.9);
+		background-color: rgba(0, 0, 0, 0.9);
 		color: white;
 		width: 100vw;
-		height: 150px;
+		font-family: 'Roboto', sans-serif;
+		height: 100px;
 		bottom: 0;
 
 	}
 
-	#foot_title {
-		border-bottom: 1px solid grey;
-		width: 90%;
-		margin: 0 auto;
+	.footer p{
+		color: white;
 	}
 
-	#foot_welearn {
-		font-family: 'Carme', sans-serif;
-		font-size: 1.7em;
-		padding: 50px 0px 0px 30px;
-		width: 300px;
+	#index-footer p{
+		color: white;
 	}
 
-	#social_media_btns {
+	#index-footer{
+		background-color: rgba(0, 0, 0, 0.9);
+		color: white;
+/*		bottom: 0;
+		position: absolute;*/
+		width: 100vw;
+		font-family: 'Roboto', sans-serif;
+		height: 100px;
+
+	}
+
+	.footer-col{
 		display: inline-block;
+		width: 33vw;
+		text-align: center;
+		vertical-align: middle;
 	}
 
-	.sm {
-		display: inline-block;
-		width: 200px;
+
+	.footer li{
+/*		margin: 10px 20px;*/
+
 	}
-
-
 
 
 	#social-media li{
@@ -387,13 +396,32 @@ textarea:focus, input:focus{
 
 	#social-media{
 		margin-right: 30px;
-		position: absolute;
-		width: 200px;
-		right: 0;
 	}
 
+	#footer-one ul{
+		display: inline-block;
+	}
 
+	#footer-two{
+		text-align: center;
+	}
 
+	#footer-two h4{
+		margin: 0px;
+	}
+
+	#footer-buttons{
+		text-align: center;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+	
+	#browse-courses, #request-courses{
+		margin: 5px 0px;
+		padding: 0px 25px;
+		background-color: #F0F0F2;
+		border: #F0F0F2 solid thin;
+	}
 
 
 /*footer*/
@@ -553,7 +581,7 @@ textarea:focus, input:focus{
 }
 
 #index-content{
-	margin: 12vw 0;
+	margin: 15vw 0;
 }
 
 #index-content img:hover{
@@ -688,18 +716,6 @@ textarea:focus, input:focus{
 
 #location:hover {
 	border-bottom: 1px dotted black;
-}
-
-fieldset {
-	border: none;
-	text-align: left;
-	margin-top: none;
-	margin-bottom: none;
-}
-
-label {
-	color: #C7C7CD;
-	border-bottom: 1px solid #C7C7CD;
 }
 
 /*create course*/

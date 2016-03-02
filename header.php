@@ -43,7 +43,7 @@ if(empty($_SESSION['user'])) : ?>
 
 <!-- LOGGED IN HEADER -->
     <div class="header-logged">
-        <div class="logo"><a href="index.php"><img src="images/weLearn-logo.png" width="200px"></a></div>
+        <div class="logo"><a href="index.php"><img src="images/weLearn-logo.png" width="50px"></a></div>
 
 
             <div class="pure-menu pure-menu-horizontal" id="menu">

@@ -1,10 +1,4 @@
-// Form Validation Test //
-
-$('#coursename').blur(function(){
-	if(!$('#coursename').val()){
-		$('#coursename').css("border-bottom", "3px solid red");
-	};
-});
+// Course Creation Form Validation //
 
 $('#location').blur(function(){
 	$('#validatelocation').remove();
@@ -37,8 +31,6 @@ $('#minnumber').blur(function(){
 		$("#minnumber").after( "<p id='validatemnumber' class='validatemsg'>Please Enter A Minimum Number</p>" );
 	}
 	else if(isNaN($('#minnumber').val())){
-	};
-	if(isNaN($('#minnumber').val())){
 		$('#minnumber').css("border-bottom", "3px solid red");
 		$("#minnumber").after( "<p id='validatemnumber' class='validatemsg'>Please Enter A Real Number</p>" );
 	}
@@ -55,14 +47,10 @@ $('#maxnumber').blur(function(){
 		$("#maxnumber").after( "<p id='validatemaxnumber' class='validatemsg'>Please Enter A Maximum Number</p>" );
 	}
 	else if(isNaN($('#maxnumber').val())){
-	};
-	if(isNaN($('#maxnumber').val())){
 		$('#maxnumber').css("border-bottom", "3px solid red");
 		$("#maxnumber").after( "<p id='validatemaxnumber' class='validatemsg'>Please Enter A Valid Number</p>" );
 	}
 	else if(parseInt($('#maxnumber').val()) < parseInt($('#minnumber').val())){
-	};
-	if(parseInt($('#maxnumber').val()) < parseInt($('#minnumber').val())){
 		$('#maxnumber').css("border-bottom", "3px solid red");
 		$("#maxnumber").after( "<p id='validatemaxnumber' class='validatemsg'>Please Enter A Higher Number</p>" );
 	}
@@ -70,8 +58,6 @@ $('#maxnumber').blur(function(){
 		$('#maxnumber').css("border-bottom", "2px inset rgb(238, 238, 238)");
 		$('#validatemaxnumber').remove();
 	}
-		$('#minnumber').css("border-bottom", "3px solid red");
-	};
 });
 
 $('#coursedesc').blur(function(){
@@ -183,7 +169,6 @@ $(document).ready(function(){
 // register form
 
 $('#register2').click(function(){
-	console.log("whapp");
 	// $('#registerFormWrapper1').delay( 500 ).slideUp( 800 );
 	$('#registerFormWrapper3').slideDown(800);
 	$('#register1').css('visibility', 'hidden');
@@ -213,15 +198,3 @@ $('#register2').click(function(){
 		$("#firstname").css("border-bottom", "1px solid red")
 	};
 });
-
-// Datepicker
-
-  $(function() {
-    $("#datepicker").datepicker();
-  });
-
-// Timepicker
-
-	$(function() {
-		$("#time").selectmenu();
-	});
