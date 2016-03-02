@@ -49,8 +49,7 @@
                 objective3,
                 objective4,
                 objective5,
-                teacherID,
-                status 
+                teacherID 
             ) VALUES ( 
                 :coursename,
                 :location, 
@@ -63,8 +62,7 @@
                 :objectivethree,
                 :objectivefour,
                 :objectivefive,
-                '$userID',
-                '0'
+                '$userID'
             ) 
         "; 
          
@@ -93,7 +91,7 @@
             die("Failed to run query: " . $ex->getMessage()); 
         } 
          
-        header("Location: myprofile.php?=$_SESSION['user']['id']"); 
+        header("Location: myprofile.php"); 
          
         die("Redirecting to registercourse.php"); 
     } 

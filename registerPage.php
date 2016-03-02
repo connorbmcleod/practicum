@@ -4,7 +4,9 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300|Roboto:400,700,300,700italic,300italic' rel='stylesheet' type='text/css'>
-    <title>Register Page</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/global.js"></script>
+    <title></title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -118,7 +120,10 @@ if(empty($_SESSION['user'])) : ?>
                         <br /><br /> 
                         <input id="lastname" type="text" name="lastname" value="" class="form-field" placeholder=" Last Name" autocomplete="off"/> 
                         <br /><br /> 
-                        <input id="emails" type="text" name="email" value="" class="form-field" placeholder=" Email" autocomplete="off"/> 
+                    </div> 
+
+                    <div id="registerFormWrapper2">
+                        <input id="email" type="text" name="email" value="" class="form-field" placeholder=" Email" autocomplete="off"/> 
                         <br /><br /> 
                         <input id="pswrd" type="password" name="password" value="" class="form-field" placeholder=" Password" autocomplete="off"/> 
                         <br /><br /> 
@@ -135,26 +140,8 @@ if(empty($_SESSION['user'])) : ?>
 
 
 <!-- footer -->
-    <div class="footer">
-            <div class="footer-col" id="footer-one">
-            </div>
 
-             <div class="footer-col" id="footer-two">
-                 <p>#555 Seymour Street | info@welearn.ca</p>
-                <p>2016 | DACOKYE DESIGN</p>
-             </div>
-
-             <div class="footer-col" id="footer-three">
-                <ul id="social-media">
-                    <li><a href="#"><img src="images/facebook-square.png" width="30px"></a></li>
-                    <li><a href="#"><img src="images/instagram.png" width="30px"></a></li>
-                    <li><a href="#"><img src="images/twitter.png" width="30px"></a></li>
-                    <li><a href="#"><img src="images/googleplus-square.png" width="30px"></a></li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
+<?php include 'footer.php'; ?>
 
 <!-- footer -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
