@@ -4,9 +4,7 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300|Roboto:400,700,300,700italic,300italic' rel='stylesheet' type='text/css'>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/global.js"></script>
-    <title></title>
+    <title>Register Page</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -120,10 +118,7 @@ if(empty($_SESSION['user'])) : ?>
                         <br /><br /> 
                         <input id="lastname" type="text" name="lastname" value="" class="form-field" placeholder=" Last Name" autocomplete="off"/> 
                         <br /><br /> 
-                    </div> 
-
-                    <div id="registerFormWrapper2">
-                        <input id="email" type="text" name="email" value="" class="form-field" placeholder=" Email" autocomplete="off"/> 
+                        <input id="emails" type="text" name="email" value="" class="form-field" placeholder=" Email" autocomplete="off"/> 
                         <br /><br /> 
                         <input id="pswrd" type="password" name="password" value="" class="form-field" placeholder=" Password" autocomplete="off"/> 
                         <br /><br /> 

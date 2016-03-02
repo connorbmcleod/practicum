@@ -50,6 +50,97 @@
                 die("Failed to run query: " . $ex->getMessage()); 
             } 
 
+    $getquery = " 
+            SELECT
+                minimumpeople,
+                maximumpeople
+            FROM courses
+            WHERE courseID = '$enrolment'
+        ";
+
+    try 
+            { 
+                $stmt = $db->prepare($getquery); 
+                $result = $stmt->execute(); 
+            } 
+            catch(PDOException $ex) 
+            {  
+                die("Failed to run query: " . $ex->getMessage()); 
+            }
+
+            $row = $stmt->fetch(); 
+                     
+                    $_SESSION['number'] = $row;
+                    $minnumber = $_SESSION['number']['minimumpeople'];
+                    $maxnumber = $_SESSION['number']['maximumpeople'];
+
+
+    $countquery = " 
+                SELECT
+                    * 
+                FROM enrollments
+                WHERE 
+                    courseID = '$enrolment' 
+            "; 
+             
+            try 
+            { 
+                $stmt = $db->prepare($countquery); 
+                $result = $stmt->execute(); 
+            } 
+            catch(PDOException $ex) 
+            {  
+                die("Failed to run query: " . $ex->getMessage()); 
+            } 
+             
+            $rows = $stmt->fetchAll(); 
+                 
+                $_SESSION['countinfo'] = $rows;  
+         
+            $count = count($_SESSION['countinfo']);
+
+// Compares number of enrolments to max/min number
+
+            if($count >= $minnumber && $count < $maxnumber){
+                $rightquery = " 
+                    UPDATE courses
+                    SET 
+                        status = '1'
+                    WHERE
+                        courseID = '$enrolment'
+                "; 
+
+                try 
+                { 
+                    $stmt = $db->prepare($rightquery); 
+                    $result = $stmt->execute(); 
+                } 
+                catch(PDOException $ex) 
+                {  
+                    die("Failed to run query: " . $ex->getMessage()); 
+                } 
+            }
+
+            else if($count == $maxnumber){
+                $maxquery = " 
+                    UPDATE courses
+                    SET 
+                        status = '2'
+                    WHERE
+                        courseID = '$enrolment'
+                "; 
+
+                try 
+                { 
+                    $stmt = $db->prepare($maxquery); 
+                    $result = $stmt->execute(); 
+                } 
+                catch(PDOException $ex) 
+                {  
+                    die("Failed to run query: " . $ex->getMessage()); 
+                } 
+            }
+
             if($_SESSION['user']['usertype'] == 0){
                 header("Location: userprofile.php"); 
             }

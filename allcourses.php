@@ -72,6 +72,14 @@
                                     <p><?php echo $_SESSION['allcourses'][$i]['location']; ?></p>
                                     <p><?php echo $_SESSION['allcourses'][$i]['date']; ?></p>
                                 </div>
+                                <?php if($_SESSION['allcourses'][$i]['status'] == 0) {  ?>
+                                            <p>PENDING</p>
+                                    <?php }
+                                        else if($_SESSION['allcourses'][$i]['status'] == 1){ ?>
+                                            <p>ACTIVE</p>
+                                    <?php } else { ?>
+                                            <p>FULL</p>
+                                    <?php } ?>
                         </div>
                         <hr>
             <?php }; }; ?>
