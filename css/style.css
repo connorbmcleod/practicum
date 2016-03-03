@@ -371,81 +371,47 @@ textarea:focus, input:focus{
 }
 
 /*footer*/
-	.footer{
-		background-color: rgba(0, 0, 0, 0.9);
-		color: white;
-		width: 100vw;
-		font-family: 'Roboto', sans-serif;
-		height: 100px;
-		bottom: 0;
+.footer{
+	background-color: rgba(211, 211, 211, 0.9);
+	color: white;
+	width: 100vw;
+	font-family: 'Roboto', sans-serif;
+	height: 200px;
+}
 
-	}
+#foot_welearn {
+	width: 400px;
+	font-size: 2em;
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
 
-	.footer p{
-		color: white;
-	}
+/*#foot_codakye {
+	padding-top: 40px;
+}*/
 
-	#index-footer p{
-		color: white;
-	}
+.sm {
+	display: inline-block;
+	width: 150px;
+	position: relative;
+	padding-top: 20px;
+}
 
-	#index-footer{
-		background-color: rgba(0, 0, 0, 0.9);
-		color: white;
-/*		bottom: 0;
-		position: absolute;*/
-		width: 100vw;
-		font-family: 'Roboto', sans-serif;
-		height: 100px;
+.contact_foot {
+	right: 0;
+	position: relative;
+}
 
-	}
+#social_media_btns {
+	 width: 650px;
+	 margin-left: 100px;
+}
 
-	.footer-col{
-		display: inline-block;
-		width: 33vw;
-		text-align: center;
-		vertical-align: middle;
-	}
-
-
-	.footer li{
-/*		margin: 10px 20px;*/
-
-	}
-
-
-	#social-media li{
-		display: inline-block;
-	}
-
-	#social-media{
-		margin-right: 30px;
-	}
-
-	#footer-one ul{
-		display: inline-block;
-	}
-
-	#footer-two{
-		text-align: center;
-	}
-
-	#footer-two h4{
-		margin: 0px;
-	}
-
-	#footer-buttons{
-		text-align: center;
-		margin-right: 10px;
-		margin-left: 10px;
-	}
-	
-	#browse-courses, #request-courses{
-		margin: 5px 0px;
-		padding: 0px 25px;
-		background-color: #F0F0F2;
-		border: #F0F0F2 solid thin;
-	}
+#foot_title {
+	width: 90%;
+	border-bottom: 1px solid grey;
+	margin: 0 auto;	
+}
 
 
 /*footer*/
