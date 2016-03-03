@@ -36,11 +36,18 @@
         <p class="about_paragraph"></p>
     </div>
 
+    <form id='contact-form' action="send_form_email.php" method="post" target="_blank">
+        <input type="text" name="name" placeholder="NAME" id="name"><br>
+        <input type="email" name="email" placeholder="EMAIL" id="email"><br>
+        <textarea name="message" placeholder="TYPE YOUR MESSAGE HERE" id="message"></textarea><br>
+        <input type="submit" value="Submit" id="submit-button">
+    </form>
+
 <!-- content -->
 
 <!-- footer -->
 
-    <<?php include 'footer.php'; ?>
+    <?php include 'footer.php'; ?>
 
 <!-- footer -->
 
