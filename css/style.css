@@ -400,11 +400,16 @@ textarea:focus, input:focus{
 .contact_foot {
 	right: 0;
 	position: relative;
+	margin-left: 200px;
 }
 
 #social_media_btns {
-	 width: 650px;
+	 width: 100%;
 	 margin-left: 100px;
+}
+
+#social_media_btns a {
+	list-style-type: none;
 }
 
 #foot_title {

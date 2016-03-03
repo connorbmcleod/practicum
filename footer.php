@@ -1,4 +1,4 @@
-    <div class="footer">
+<div class="footer">
 
 <div id="foot_title">
     <h2 id="foot_welearn">WeLearn</h2>
@@ -6,7 +6,7 @@
             <p class="sm">Twitter</p>
             <p class="sm">Instagram</p>
             <p class="sm">Facebook</p>
-            <p class="sm contact_foot">Contact Us</p>
+            <a href="contactUs.php"><p class="sm contact_foot">Contact Us</p></a>
         </div>
 
 
