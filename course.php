@@ -107,7 +107,7 @@
 
     <div class="col" id="course-left-col">
         <h3>Educator</h3>
-        <a href='http://localhost/practicum/myprofile.php?id=<?php echo $teacherid; ?>'>
+        <a id="courseeducator" href='http://localhost/practicum/myprofile.php?id=<?php echo $teacherid; ?>'>
             <p><?php echo $_SESSION['teacher']['teacherfname'] . ' ' . $_SESSION['teacher']['teacherlname']; ?></p>
         </a>
         <br>
@@ -121,6 +121,8 @@
     </div>
 
 <br>
+
+    <div id="coursebuttons">
     <?php 
 
         if(!empty($_SESSION['user'])){ 
@@ -132,10 +134,10 @@
                 </form> 
            <?php }
 
-           else { ?> 
+           else if($_SESSION['user']['id'] != $teacherid) { ?> 
 
                 <form action="enrolment.php" method="post" class="form">
-                    <button>Join Course</button>
+                    <button id="joincourse">Join Course</button>
                 </form>
 
             <?php }
@@ -143,6 +145,7 @@
         if($teacherid == $_SESSION['user']['id']){ ?>
         
             <a href="editCourse.php?id=<?php echo $courseid ?>"><button id="login-register-btn">Edit Course Details</button></a>
+            <a href="delete-course.php?id=<?php echo $courseid ?>"><button id="course-delete-button">Delete Course</button></a>
         
         <?php } 
         }
@@ -153,7 +156,7 @@
 
         <?php } ?>
 
-
+    </div>
 
 
     </div>

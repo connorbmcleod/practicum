@@ -6,14 +6,8 @@
     <link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300|Roboto:400,700,300,700italic,300italic' rel='stylesheet' type='text/css'>
     <title>Create Course</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-
 </head>
 <body>
-
-
 
     <?php 
 
@@ -120,19 +114,7 @@
             <div id="wrapper1">
                 <input id="coursename" type="text" name="coursename" value="" class="form-field" placeholder=" Course Name"/> 
                 <br /><br /> 
-                <!-- <input id="location" type="text" name="location" value="" class="form-field" placeholder=" Location"/>  -->
-
-                            <fieldset>
-                                <label for="time">Select a Region</label>
-                                <select name="speed" id="speed">
-                                  <option>Gibsons</option>
-                                  <option>Roberts Creek</option>
-                                  <option>Sechelt</option>
-                                  <option>Pender Harbour</option>
-                                  <option>Gambier Harbour</option>
-                                  <option>Keats Island</option>
-                                </select>
-                            </fieldset>
+                <input id="location" type="text" name="location" value="" class="form-field" placeholder=" Location"/> 
 
 
 
@@ -151,44 +133,8 @@
              
                
                 <br /><br /> 
-                <input id="datepicker" type="text" name="date" value="" class="form-field" placeholder=" Date"/> 
+                <input id="time" type="text" name="date" value="" class="form-field" placeholder=" Time"/> 
                 <br /><br /> 
-
-
-                        <br /><br /> 
-
-                            <fieldset>
-                                <label for="time">Select a Time</label>
-                                <select name="speed" id="speed">
-                                  <option>12am</option>
-                                  <option>1am</option>
-                                  <option>2am</option>
-                                  <option>3am</option>
-                                  <option>4am</option>
-                                  <option>5am</option>
-                                  <option>6am</option>
-                                  <option>7am</option>
-                                  <option>8am</option>
-                                  <option>9am</option>
-                                  <option>10am</option>
-                                  <option>11am</option>
-                                  <option>12pm</option>
-                                  <option>1pm</option>
-                                  <option>2pm</option>
-                                  <option>3pm</option>
-                                  <option>4pm</option>
-                                  <option>5pm</option>
-                                  <option>6pm</option>
-                                  <option>7pm</option>
-                                  <option>8pm</option>
-                                  <option>9pm</option>
-                                  <option>10pm</option>
-                                  <option>11pm</option>
-                                </select>
-                            </fieldset>
-                        <br /><br /> 
-
-
                 <input id="minnumber" type="text" name="minnumber" value="" class="form-field" placeholder=" Minimum Number of Students"/> 
                 <br /><br />
                 <input id="maxnumber" type="text" name="maxnumber" value="" class="form-field" placeholder=" Maximum Number of Students"/> 
@@ -222,11 +168,7 @@
         <?php include 'footer.php'; ?>
 
     <!-- footer -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="js/global.js"></script>
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/global.js"></script>
 </body>
 </html>

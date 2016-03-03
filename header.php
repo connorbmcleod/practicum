@@ -2,7 +2,7 @@
 if(empty($_SESSION['user'])) : ?>
 
     <div class="header">
-        <div class="logo"><a href="index.php"><img src="images/weLearn-logo.png" width="200px"></a></div>
+        <div class="logo"><a href="index.php"><img src="images/weLearn-logo.png"></a></div>
 
 
             <div class="pure-menu pure-menu-horizontal" id="menu">
@@ -68,10 +68,10 @@ if(empty($_SESSION['user'])) : ?>
         <div class="nav">
             <div id="welcome">
                 <?php if($_SESSION['user']['usertype'] == 1){ ?>
-                <a href='http://localhost/practicum/myprofile.php?id=<?php echo $_SESSION['user']['id']; ?>'<p> <?php echo $_SESSION['user']['firstname'] . ' ' . $_SESSION['user']['lastname']; ?> </p></a>
+                <a href='http://localhost/practicum/myprofile.php?id=<?php echo $_SESSION['user']['id']; ?>'><p class="username"> <?php echo $_SESSION['user']['firstname'] . ' ' . $_SESSION['user']['lastname']; ?> </p></a>
             <?php }
                 else { ?>
-                    <a href='http://localhost/practicum/userprofile.php'><p> <?php echo $_SESSION['user']['firstname'] . ' ' . $_SESSION['user']['lastname']; ?> </p></a>
+                    <a href='http://localhost/practicum/userprofile.php'> <p class="username"> <?php echo $_SESSION['user']['firstname'] . ' ' . $_SESSION['user']['lastname']; ?> </p></a>
                 <?php } ?>
             </div>
                 <div class="dropdown">

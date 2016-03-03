@@ -118,12 +118,13 @@ textarea:focus, input:focus{
 
 #menu {
 	margin: 0 auto;
-	width: 500px;
+	width: 570px;
 }
 
 #menu li {
 	padding: 0px 20px;
 	padding-top: 10px;
+	letter-spacing: 3px;
 }
 
 #menu li:hover {
@@ -168,6 +169,22 @@ textarea:focus, input:focus{
 	height: 100px;
 }
 
+#welcome a {
+	text-decoration: none;
+}
+
+.username {
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	padding-bottom: 3px;
+}
+
+.username:hover {
+	border-bottom: 1px solid white;
+}
+
 .header_line {
 	border-bottom: 1px solid black;
 }
@@ -201,6 +218,10 @@ textarea:focus, input:focus{
 	margin-left: 20px;
 	position: absolute;
 	top:5px;
+}
+
+.logo img {
+	width: 200px;
 }
 
 .nav{
@@ -343,7 +364,6 @@ textarea:focus, input:focus{
 
 .form{
 	display: inline-block;
-	height: 150px;
 }
 
 /*footer*/
@@ -978,7 +998,7 @@ textarea:focus, input:focus{
 	vertical-align: top;
 	width: 150px;
 	padding: 20px 5vh;
-	margin: 50px 5vw;
+	margin: 50px 45px;
 	border-radius: 5px;
 	
 }
@@ -1003,6 +1023,10 @@ textarea:focus, input:focus{
 	margin: 80px 0px; 
 }
 
+#coursebuttons {
+	margin: 0 auto;
+}
+
 #login-register-btn{
 	background-color: rgba(0, 47, 232, 0.8);
 	border: transparent thin solid;
@@ -1015,6 +1039,31 @@ textarea:focus, input:focus{
 	background-color: transparent;
 	color: black;
 	border: black thin solid; 
+}
+
+#course-delete-button {
+	background-color: rgba(226, 31, 31, 0.8);
+	border: transparent thin solid;
+	color: white;
+	margin-top: 50px;
+	padding: 5px 10px;
+}
+
+#joincourse {
+	background-color: rgba(0, 165, 77, 0.8);
+	border: transparent thin solid;
+	color: white;
+	margin-top: 50px;
+	padding: 5px 10px;
+}
+
+#courseeducator {
+	text-decoration: none;
+	color: black;
+}
+
+#courseeducator:hover {
+	color: grey;
 }
 /*One course page*/
 
