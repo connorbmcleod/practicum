@@ -39,7 +39,8 @@
         $query = " 
             INSERT INTO courses ( 
                 coursename,
-                location, 
+                location,
+                time, 
                 date,
                 minimumpeople, 
                 maximumpeople, 
@@ -54,6 +55,7 @@
             ) VALUES ( 
                 :coursename,
                 :location, 
+                :time,
                 :date, 
                 :minnumber,
                 :maxnumber, 
@@ -71,7 +73,8 @@
          
         $query_params = array( 
             ':coursename' => $_POST['coursename'],
-            ':location' => $_POST['location'], 
+            ':location' => $_POST['location'],
+            ':time' => $_POST['time'],   
             ':date' => $_POST['date'],  
             ':minnumber' =>  $_POST['minnumber'],
             ':maxnumber' =>  $_POST['maxnumber'], 
@@ -93,7 +96,7 @@
             die("Failed to run query: " . $ex->getMessage()); 
         } 
          
-        header("Location: myprofile.php?=$_SESSION['user']['id']"); 
+        header("Location: myprofile.php?id=$userid"); 
          
         die("Redirecting to registercourse.php"); 
     } 

@@ -142,7 +142,7 @@
 
                             <fieldset>
                                 <label for="time">Select a Time</label>
-                                <select name="speed" id="speed">
+                                <select name="time" id="speed">
                                   <option>12am</option>
                                   <option>1am</option>
                                   <option>2am</option>
@@ -173,8 +173,8 @@
 
 
                             <fieldset>
-                                <label for="time">Select a Region</label>
-                                <select name="speed" id="speed">
+                                <label for="location">Select a Region</label>
+                                <select name="location" id="speed">
                                   <option>Gibsons</option>
                                   <option>Roberts Creek</option>
                                   <option>Sechelt</option>
