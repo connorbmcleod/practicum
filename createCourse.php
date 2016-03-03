@@ -6,8 +6,14 @@
     <link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300|Roboto:400,700,300,700italic,300italic' rel='stylesheet' type='text/css'>
     <title>Create Course</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
 </head>
 <body>
+
+
 
     <?php 
 
@@ -112,12 +118,11 @@
 
         <form action="registercourse.php" method="post" id="createCourse">
             <div id="wrapper1">
-                <input id="coursename" type="text" name="coursename" value="" class="form-field" placeholder=" Course Name"/> 
-                <br /><br /> 
-                <input id="location" type="text" name="location" value="" class="form-field" placeholder=" Location"/> 
+                <h3>Course Info</h3>
 
-
-
+                    <input id="coursename" type="text" name="coursename" value="" class="form-field" placeholder=" Course Name"/> 
+                    <br /><br /> 
+                <!-- <input id="location" type="text" name="location" value="" class="form-field" placeholder=" Location"/>  -->
 
             <!-- <div id="location_drop">
                     <p>&nbsp;Choose a Location</p>
@@ -130,34 +135,89 @@
                 </div> -->
              <!-- Waiting for list of locations to finish -->
 
-             
-               
-                <br /><br /> 
-                <input id="time" type="text" name="date" value="" class="form-field" placeholder=" Time"/> 
-                <br /><br /> 
+                <input id="datepicker" type="text" name="date" value="" class="form-field" placeholder=" Date"/> 
+
+
+                        <br /><br /> 
+
+                            <fieldset>
+                                <label for="time">Select a Time</label>
+                                <select name="speed" id="speed">
+                                  <option>12am</option>
+                                  <option>1am</option>
+                                  <option>2am</option>
+                                  <option>3am</option>
+                                  <option>4am</option>
+                                  <option>5am</option>
+                                  <option>6am</option>
+                                  <option>7am</option>
+                                  <option>8am</option>
+                                  <option>9am</option>
+                                  <option>10am</option>
+                                  <option>11am</option>
+                                  <option>12pm</option>
+                                  <option>1pm</option>
+                                  <option>2pm</option>
+                                  <option>3pm</option>
+                                  <option>4pm</option>
+                                  <option>5pm</option>
+                                  <option>6pm</option>
+                                  <option>7pm</option>
+                                  <option>8pm</option>
+                                  <option>9pm</option>
+                                  <option>10pm</option>
+                                  <option>11pm</option>
+                                </select>
+                            </fieldset>
+                        <br />
+
+
+                            <fieldset>
+                                <label for="time">Select a Region</label>
+                                <select name="speed" id="speed">
+                                  <option>Gibsons</option>
+                                  <option>Roberts Creek</option>
+                                  <option>Sechelt</option>
+                                  <option>Pender Harbour</option>
+                                  <option>Gambier Harbour</option>
+                                  <option>Keats Island</option>
+                                </select>
+                            </fieldset>
+                        <br />
+
+
                 <input id="minnumber" type="text" name="minnumber" value="" class="form-field" placeholder=" Minimum Number of Students"/> 
                 <br /><br />
                 <input id="maxnumber" type="text" name="maxnumber" value="" class="form-field" placeholder=" Maximum Number of Students"/> 
                 <br /><br /> 
-
-
             </div>
+
+
+
+
             <div id="wrapper2">
-            <textarea id="coursedesc" cols="50" rows="15" type="text" name="courseDesc" value="" placeholder=" Course Description"></textarea>
+                <h3>Learning Objectives</h3>
+                      <input type="text" name="objectiveone" value="" class="form-field" placeholder="1"/> 
+                      <br /><br />
+                       <input type="text" name="objectivetwo" value="" class="form-field" placeholder="2"/> 
+                      <br /><br /> 
+                       <input type="text" name="objectivethree" value="" class="form-field" placeholder="3"/> 
+                      <br /><br /> 
+                       <input type="text" name="objectivefour" value="" class="form-field" placeholder="4"/> 
+                      <br /><br /> 
+                       <input type="text" name="objectivefive" value="" class="form-field" placeholder="5"/> 
+                      <br /><br /> 
+                      <br />
             </div>
-            <input type="text" name="objectiveone" value="" class="form-field" placeholder=" Learning Objective One"/> 
-            <br /><br />
-             <input type="text" name="objectivetwo" value="" class="form-field" placeholder=" Learning Objective Two"/> 
-            <br /><br /> 
-             <input type="text" name="objectivethree" value="" class="form-field" placeholder=" Learning Objective Three"/> 
-            <br /><br /> 
-             <input type="text" name="objectivefour" value="" class="form-field" placeholder=" Learning Objective Four"/> 
-            <br /><br /> 
-             <input type="text" name="objectivefive" value="" class="form-field" placeholder=" Learning Objective Five"/> 
-            <br /><br /> 
-            <br />
-             <input onclick="" type="submit" value="Register" class="button" id="createCourseBtn"/>
 
+
+
+            <div id="wrapper3">
+                  <h3> Course Description</h3>
+                      <textarea id="coursedesc" cols="50" rows="15" type="text" name="courseDesc" value="" placeholder=""></textarea>
+            </div>
+
+                      <input onclick="" type="submit" value="Register" class="button" id="createCourseBtn"/>
         </form>
 
 
@@ -168,7 +228,11 @@
         <?php include 'footer.php'; ?>
 
     <!-- footer -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/global.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/global.js"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
 </body>
 </html>

@@ -73,23 +73,29 @@ textarea:focus, input:focus{
     position: absolute;
     left: -60px;
     top:30px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+/*    margin-left: 50px;*/
+	margin-bottom: 
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    color: black;
+    color: white;
     padding: 10px 12px;
     text-decoration: none;
     display: block;
     text-align: center;
-    border: thin grey solid;
+    border: thin rgba(0,0,0,0.5) solid;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+	color: black;
+}
+
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -99,10 +105,16 @@ textarea:focus, input:focus{
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: transparent;
+
 }
 
 .dropbtn img{
 	margin: 0px;
+	padding-bottom: 10px;
+}
+
+.dropdown-content #logout-form{
+	margin-bottom: 0px;
 }
 
 /*Dropdown arrow*/
@@ -118,13 +130,12 @@ textarea:focus, input:focus{
 
 #menu {
 	margin: 0 auto;
-	width: 570px;
+	width: 500px;
 }
 
 #menu li {
 	padding: 0px 20px;
 	padding-top: 10px;
-	letter-spacing: 3px;
 }
 
 #menu li:hover {
@@ -169,22 +180,6 @@ textarea:focus, input:focus{
 	height: 100px;
 }
 
-#welcome a {
-	text-decoration: none;
-}
-
-.username {
-	text-decoration: none;
-	color: white;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	padding-bottom: 3px;
-}
-
-.username:hover {
-	border-bottom: 1px solid white;
-}
-
 .header_line {
 	border-bottom: 1px solid black;
 }
@@ -220,14 +215,10 @@ textarea:focus, input:focus{
 	top:5px;
 }
 
-.logo img {
-	width: 200px;
-}
-
 .nav{
 	position: absolute;
 	top: 32;
-	right: 50;
+	right: 60;
 
 }
 
@@ -253,27 +244,31 @@ textarea:focus, input:focus{
 	display: none;
 	width: 200px;
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 10px;
+	margin-left: -60px;
 	padding-top: 20px;
-	padding-left: 10px;
-	padding-right: 10px;
-	background-color: rgba(255, 255, 255, 0.5);
+	padding-left: 30px;
+	padding-right: 30px;
+	background-color: rgba(0, 0, 0, 0.3);
 	border-radius: 5px;
 	position: absolute;
+	border: 1px solid black;
 /*	right: 30px;*/ 
 }
 
 #login{
-	padding: 5px 20px;
+	padding: 2px 30px;
 	margin-bottom: 20px;
-	margin-top: 20px;border: none;
-	background-color: rgba(255,255,255,0);
+	margin-top: 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: white;
 	border: 1px solid black;
 }
 
 #login:hover {
-	color: white;
-	background-color: rgba(0,0,0,0.8);
+	color: black;
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 #show-login{
@@ -284,6 +279,7 @@ textarea:focus, input:focus{
 	text-align: center;
 	cursor: pointer;
 	display: inline;
+	border: 1px solid rgba(0,0,0,0.5);
 }
 
 #show-login:hover{
@@ -312,6 +308,7 @@ textarea:focus, input:focus{
 	background-color: rgba(0,0,100,0.5);
 	color: white;
 	display: inline-block;
+	border: 1px solid rgba(0,0,100,0.5);
 }
 
 #signup:hover{
@@ -340,6 +337,12 @@ textarea:focus, input:focus{
 	margin: 0px 10px;
 }
 
+#welcome a{
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+
 #logout-form{
 	display: inline-block;
 /*	margin-left: 20px;*/
@@ -349,7 +352,7 @@ textarea:focus, input:focus{
 /*	background-color: #110E3F;*/
 	text-align: center;
 	width: 100vw;
-	height: 100px;
+	height: 200px;
 }
 
 .page-title{
@@ -364,6 +367,7 @@ textarea:focus, input:focus{
 
 .form{
 	display: inline-block;
+	height: 150px;
 }
 
 /*footer*/
@@ -675,6 +679,7 @@ textarea:focus, input:focus{
 	border-top:none;
 	border-left:none;
 	border-right:none;
+	border-bottom: #5E5E5E solid 1px; 
 	width: 50vw;
 }
 
@@ -697,23 +702,59 @@ textarea:focus, input:focus{
 
 #createCourse input{
 	margin: 10px 0px;
-	width: 30vw;
+	width: 300px;
 }
 
 #wrapper1, #wrapper2{
 	display: inline-block;
-	margin-bottom: 100px;
+	vertical-align: top;
+	
 }
 
-#wrapper2 textarea{
-	border: rgba(200, 200, 200, 0.5) solid thin;
-	margin-left:100px;
-	margin-top: 100px;
+#wrapper1 h3, #wrapper2 h3, #wrapper3 h3{
+	border: thin solid #2D2D2D;
+	margin-bottom: 50px;
+	padding: 5px 10px;
+	background-color: #2D2D2D;
+	color:white;
+}
+
+#wrapper3 h3{
+	width: 200px;
+	margin-left: 15vw;
+	margin-bottom: 40px;
+	margin-top: 50px; 
+}
+
+#wrapper1{
+	margin-right: 10vw;
+}
+
+#wrapper2{
+	margin-left: 0vw;
+}
+
+
+#wrapper1 fieldset{
+	border: none;
+	width: 300px;
+	text-align: left;
+}
+
+
+
+#wrapper3 textarea{
+	border: #5E5E5E solid 1px;
+	margin-bottom: 30px;
+	width: 70vw;
 
 }
 
 #createCourseBtn{
 	padding: 10px 0px;
+	background-color: #040F4F;
+	color: white;
+	border: none;
 }
 
 #location_drop_menu {
@@ -821,7 +862,37 @@ textarea:focus, input:focus{
 
 .form-field{
 	margin-bottom: 40px;
+	color: #5E5E5E;
 }
+
+/*PLACEHOLDER MAGIC*/
+
+::-webkit-input-placeholder {
+	color: #5E5E5E;
+	padding-bottom: 5px;
+}
+
+:-moz-placeholder {
+	color: #5E5E5E;
+	padding-bottom: 5px;
+}
+
+::-moz-placeholder {
+	color: #5E5E5E;
+	padding-bottom: 5px;
+}
+
+:-ms-input-placeholder {
+	color: #5E5E5E;
+	padding-bottom: 5px;
+}
+
+:placeholder-shown {
+	color: #5E5E5E;
+	padding-bottom: 5px;
+}
+
+/*PLACEHOLDER MAGIC*/
 
 .ty_content {
 	height: 700px;
@@ -998,7 +1069,7 @@ textarea:focus, input:focus{
 	vertical-align: top;
 	width: 150px;
 	padding: 20px 5vh;
-	margin: 50px 45px;
+	margin: 50px 5vw;
 	border-radius: 5px;
 	
 }
@@ -1023,10 +1094,6 @@ textarea:focus, input:focus{
 	margin: 80px 0px; 
 }
 
-#coursebuttons {
-	margin: 0 auto;
-}
-
 #login-register-btn{
 	background-color: rgba(0, 47, 232, 0.8);
 	border: transparent thin solid;
@@ -1039,31 +1106,6 @@ textarea:focus, input:focus{
 	background-color: transparent;
 	color: black;
 	border: black thin solid; 
-}
-
-#course-delete-button {
-	background-color: rgba(226, 31, 31, 0.8);
-	border: transparent thin solid;
-	color: white;
-	margin-top: 50px;
-	padding: 5px 10px;
-}
-
-#joincourse {
-	background-color: rgba(0, 165, 77, 0.8);
-	border: transparent thin solid;
-	color: white;
-	margin-top: 50px;
-	padding: 5px 10px;
-}
-
-#courseeducator {
-	text-decoration: none;
-	color: black;
-}
-
-#courseeducator:hover {
-	color: grey;
 }
 /*One course page*/
 
