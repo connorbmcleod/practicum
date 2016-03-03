@@ -72,6 +72,10 @@
             if($_SESSION['user']['usertype'] == 1){ 
                 header("Location: myprofile.php?id=" . $_SESSION['user']['id']); 
             }
+            else if($_SESSION['user']['usertype'] == 2) {
+                header("Location: admin-page.php");
+            }
+
             else {
                 header("Location: userprofile.php");
             }
@@ -156,6 +160,7 @@
         <div class="hr">
             <hr>
         </div>
+
 <!-- <div id="index-learn-more">
     <h3><a href="aboutus.php">Learn more about weLEarn</a></h3>
 </div>
