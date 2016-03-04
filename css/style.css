@@ -174,8 +174,8 @@ textarea:focus, input:focus{
 }
 
 .header, .header-logged{
-	width: 100vw;
-	display: inline-block;
+	width: 500px;
+	margin: 0 auto;
 	vertical-align: baseline;
 	height: 125px;
 }
@@ -478,7 +478,6 @@ textarea:focus, input:focus{
 
 /*index page*/
 .hero{
-	width: 100vw;
 	height: 500px;
 	/*background-size: cover;*/
 }

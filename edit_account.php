@@ -93,7 +93,27 @@
         { 
             $query_params[':password'] = $password; 
             $query_params[':salt'] = $salt; 
-        } 
+        }
+
+        $query = " 
+                SELECT bio FROM educatorinfo 
+                WHERE 
+                    id = '$userid' 
+            "; 
+             
+            try 
+            { 
+                $stmt = $db->prepare($query); 
+                $result = $stmt->execute(); 
+            } 
+            catch(PDOException $ex) 
+            {  
+                die("Failed to run query: " . $ex->getMessage()); 
+            } 
+             
+            $row = $stmt->fetch(); 
+                 
+                $_SESSION['userinfo'] = $row; 
          
         $query = " 
             UPDATE users 
@@ -125,7 +145,29 @@
         } 
          
         $_SESSION['user']['email'] = $_POST['email']; 
-         
+        
+        $query = " 
+            UPDATE educatorinfo 
+            SET 
+                bio = :biography
+            WHERE
+                id = $userid 
+        ";
+
+        $query_params = array( 
+            ':biography' => $_POST['biography'], 
+        ); 
+
+        try 
+        { 
+            $stmt = $db->prepare($query); 
+            $result = $stmt->execute($query_params); 
+        } 
+        catch(PDOException $ex) 
+        { 
+            die("Failed to run query: " . $ex->getMessage()); 
+        }
+
         if($_SESSION['user']['usertype'] == 0){
             header("Location: userprofile.php"); 
         }
@@ -169,6 +211,11 @@
                         <input type="password" name="password" value="" /><br /> 
                         <i>(leave blank if you do not want to change your password)</i> 
                         <br /><br />
+                        <?php
+                        if($_SESSION['user']['usertype'] == 1){ ?>
+                        Biography <br />
+                           <input type="textarea" name="biography" value="<?php echo $_SESSION['userinfo']['bio']; ?>" /> 
+                        <?php } ?>
                         </div>
                         <input class="update_button" type="submit" value="Update Account" /> 
                     </form>

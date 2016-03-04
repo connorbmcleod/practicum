@@ -1,9 +1,9 @@
 <?php
 if(empty($_SESSION['user'])) : ?>
+<div class="logo"><a href="index.php"><img src="images/weLearn-logo.png" width="200px"></a></div>
 
     <div class="header">
-        <div class="logo"><a href="index.php"><img src="images/weLearn-logo.png" width="200px"></a></div>
-
+        
 
             <div class="pure-menu pure-menu-horizontal" id="menu">
                 <ul class="pure-menu-list">
@@ -42,9 +42,9 @@ if(empty($_SESSION['user'])) : ?>
 <?php else : ?>
 
 <!-- LOGGED IN HEADER -->
+<div class="logo"><a href="index.php"><img src="images/weLearn-logo.png" width="200px"></a></div>
     <div class="header-logged">
-        <div class="logo"><a href="index.php"><img src="images/weLearn-logo.png" width="200px"></a></div>
-
+        
 
             <div class="pure-menu pure-menu-horizontal" id="menu">
                 <ul class="pure-menu-list">
