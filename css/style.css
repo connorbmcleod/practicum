@@ -1466,11 +1466,30 @@ a #go-to-course:hover, a #drop-course:hover{
 }
 
 #learners #signup{
-	background-color: rgba(0,0,100,1);
 	margin-bottom: 20px;
+}
+
+#signup {
+	background-color: rgba(0,0,100,1);
+	border: rgba(0,0,100,1) solid 1px;
+	color: white;
+	padding: 10px 25px;
+	font-size: 18px;
+	margin-top: 20px;	
+}
+
+#signup:hover {
+	background-color: transparent;
+	border: black 1px solid;
+	color: black;	
 }
 
 #learners{
 	margin-bottom: 50px;
+}
+
+.go-to-courses a {
+	color: inherit;
+	text-decoration: none;
 }
 /*LEARNER PAGE*/

@@ -38,7 +38,7 @@
             <button class="button" id="signup" name="signup">Sign up</button></a>
             <p class="about_paragraph learner_lines">As a learner, you get to browse the offered courses and register for them. Our courses are offered by individuals who have interest and experience in that field. Courses are 1-hour long. Each course requires a $15 register fee.</p>
             <p class="about_paragraph learner_lines">To begin, you can look up the courses in your local area.</p>
-                <button class="go-to-courses">Browse Courses</button>
+                <button class="go-to-courses"><a href="allCourses.php">Browse Courses</a></button>
             <div>
 
         </div>
