@@ -24,10 +24,8 @@
     <?php
 
     if(empty($_SESSION['user'])) : ?>
-
+        <div class="logo"><a href="index.php"><img src="images/weLearn-logo-black.png" width="200px"></a></div>
         <div class="header">
-            <div class="logo"><a href="index.php"><img src="images/weLearn-logo-black.png" width="200px"></a></div>
-
                 <div class="pure-menu pure-menu-horizontal" id="menu">
                     <ul class="pure-menu-list">
                         <li class="pure-menu-item"><a href="index.php" class="pure-menu-link" id="form-header">Home</a></li>
@@ -62,9 +60,8 @@
     <?php else : ?>
 
     <!-- LOGGED IN HEADER -->
+        <div class="logo"><a href="index.php"><img src="images/weLearn-logo-black.png" width="200px"></a></div>
         <div class="header-logged header_line">
-            <div class="logo"><a href="index.php"><img src="images/weLearn-logo-black.png" width="200px"></a></div>
-
                 <div class="pure-menu pure-menu-horizontal" id="menu">
                     <ul class="pure-menu-list">
                         <li class="pure-menu-item"><a href="index.php" class="pure-menu-link" id="form-header"> Home</a></li>
@@ -84,7 +81,7 @@
              </div> <!-- pure-menu end-->
 
             <div class="nav">
-                <div id="welcome">
+                <div id="welcome-2">
                     <?php if($_SESSION['user']['usertype'] == 1){ ?>
                     <a href='http://localhost/practicum/myprofile.php?id=<?php echo $_SESSION['user']['id']; ?>'<p> <?php echo $_SESSION['user']['firstname'] . ' ' . $_SESSION['user']['lastname']; ?> </p></a>
                 <?php }
@@ -93,7 +90,7 @@
                     <?php } ?>
                 </div>
                     <div class="dropdown">
-                      <button class="dropbtn"><img src="images/menu-arrow.png" width="30px"></button>
+                      <button class="dropbtn"><img id='darken' src="images/menu-arrow.png" width="30px"></button>
                       <div class="dropdown-content">
                         <a href="userprofile.php">My Profile</a>
                         <a href="edit_account.php">Edit Profile</a>

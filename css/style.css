@@ -49,6 +49,11 @@ textarea:focus, input:focus{
 	padding-bottom: 50px;
 }
 
+#darken {
+	-webkit-filter: brightness(30%); /* Chrome, Safari, Opera */
+    filter: brightness(30%);
+}
+
 
 /*Dropdown arrow*/
 
@@ -330,19 +335,36 @@ textarea:focus, input:focus{
 	color:white;
 }
 
-#welcome{
+#welcome {
 	display: inline-block;
 	margin-right: 20px;
 	vertical-align: top;
 	margin-top: 5px;
 }
 
-#welcome p{
+#welcome p {
 	margin: 0px 10px;
 }
 
-#welcome a{
+#welcome a {
 	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+#welcome-2 {
+	display: inline-block;
+	margin-right: 20px;
+	vertical-align: top;
+	margin-top: 5px;
+}
+
+#welcome-2 p{
+	margin: 0px 10px;
+}
+
+#welcome-2 a{
+	color: grey;
 	text-decoration: none;
 	font-size: 20px;
 }

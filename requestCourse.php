@@ -93,7 +93,7 @@ if(empty($_SESSION['user'])) : ?>
                 <?php } ?>
             </div>
                 <div class="dropdown">
-                  <button class="dropbtn"><img src="images/menu-arrow.png" width="30px"></button>
+                  <button class="dropbtn"><img id="darken" src="images/menu-arrow.png" width="30px"></button>
                   <div class="dropdown-content">
                     <a href="userprofile.php">My Profile</a>
                     <a href="edit_account.php">Edit Profile</a>
