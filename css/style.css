@@ -215,6 +215,10 @@ textarea:focus, input:focus{
 	top:5px;
 }
 
+.logo img {
+	width: 200px;
+}
+
 .nav{
 	position: absolute;
 	top: 32;
@@ -372,51 +376,63 @@ textarea:focus, input:focus{
 
 /*footer*/
 .footer{
-	background-color: rgba(211, 211, 211, 0.9);
-	color: white;
-	width: 100vw;
+	width: 90%;
 	font-family: 'Roboto', sans-serif;
-	height: 200px;
+	height: 150px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.footer hr {
+	background-color: #ededed;
 }
 
 #foot_welearn {
-	width: 400px;
-	font-size: 2em;
-	padding-top: 40px;
-	padding-bottom: 20px;
+	font-size: 1.4em;
 }
 
-/*#foot_codakye {
-	padding-top: 40px;
-}*/
 
-.sm {
+
+#foot_welearn a {
+	list-style-type: none;
+}
+
+#title_welearn {
+	color: grey;
+}
+
+
+#social_media {
+	width: 300px;
+	padding-top: 40px;
+	margin-left: 40px;
+}
+
+#social_media ul li {
 	display: inline-block;
-	width: 150px;
-	position: relative;
-	padding-top: 20px;
+	margin-left: 10px;
 }
+
+.we_rock {
+	margin-top: 60px;
+	font-size: 1.3em;
+	color: grey;
+	width: 300px;
+	float: right;
+	margin-right: 100px;
+	font-family: 'Carme';
+}
+
+
 
 .contact_foot {
 	right: 0;
 	position: relative;
 	margin-left: 200px;
+	margin-top: 40px;
 }
 
-#social_media_btns {
-	 width: 100%;
-	 margin-left: 100px;
-}
 
-#social_media_btns a {
-	list-style-type: none;
-}
-
-#foot_title {
-	width: 90%;
-	border-bottom: 1px solid grey;
-	margin: 0 auto;	
-}
 
 
 /*footer*/
@@ -1006,21 +1022,41 @@ textarea:focus, input:focus{
 	text-decoration: none;
 	font-size: 1.8em;
 	color: black;
+	width: 400px;
 }
 
 .course_info p{
 	display: inline-block;
-	width: 100px;
+	width: 200px;
 }
 
 .course_info {
-	width: 300px;
+	width: 450px;
 	display: inline-block;
 	margin-left: 100px;
 }
 /*All courses page*/
 
+	/* PENDING ACTIVE FULL*/
 
+.pending {
+	color: #4c4cff;
+}
+
+.active {
+	color: #00e500;
+}
+
+.full {
+	color: #cc0000;
+}
+
+.pending, .active, .full {
+	float: right;
+	margin-right: 60px;
+}
+
+	/*PENDING ACTIVE FULL*/
 
 /*Request Course page*/
 

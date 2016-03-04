@@ -73,12 +73,12 @@
                                     <p><?php echo $_SESSION['allcourses'][$i]['date']; ?></p>
                                 </div>
                                 <?php if($_SESSION['allcourses'][$i]['status'] == 0) {  ?>
-                                            <p>PENDING</p>
+                                             <p class="pending">PENDING</p>
                                     <?php }
                                         else if($_SESSION['allcourses'][$i]['status'] == 1){ ?>
-                                            <p>ACTIVE</p>
+                                            <p class="active">ACTIVE</p>
                                     <?php } else { ?>
-                                            <p>FULL</p>
+                                            <p class="full">FULL</p>
                                     <?php } ?>
                         </div>
                         <hr>
