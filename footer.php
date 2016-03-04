@@ -1,23 +1,25 @@
 <div class="footer">
-<hr>
-<div class="pure-g">
 
-<div class="pure-u-1-2" id="foot_left">
-    <div id="social_media">
-            <ul style="padding-left: 0px;">
-                <li><a href="#"><img src="images/facebook-square.png" width="30px"></a></li>
-                <li><a href="#"><img src="images/instagram.png" width="30px"></a></li>
-                <li><a href="#"><img src="images/twitter.png" width="30px"></a></li>
-            </ul>
+		<div class="footer-left">
+		    <div id="social_media">
+		            <ul class="soc">
+					    <li><a class="soc-twitter" href="#"></a></li>
+					    <li><a class="soc-instagram" href="#"></a></li>
+					    <li><a class="soc-linkedin" href="#"></a></li>
+					    <li><a class="soc-youtube" href="#"></a></li>
+					    <li><a class="soc-facebook soc-icon-last" href="#"></a></li>
+					</ul>
 
-    </div>
-</div>    
+		    </div>
+		</div>    
 
+		<div class="footer-middle">
+			<button id="footer-contact"><a href="allcourses.php">CONTACT US</a></button>
 
-<div class="pure-u-1-2">
-    <p class="we_rock">© Codakye Web Design 2016</p>
-</div>
+		</div>
 
-</div>
+		<div class="footer-right">
+		    <p class="we_rock">© Codakye Web Design 2016</p>
+		</div>
 
 </div>
