@@ -96,7 +96,7 @@
             die("Failed to run query: " . $ex->getMessage()); 
         } 
          
-        header("Location: myprofile.php?id=$userid"); 
+        header("Location: myprofile.php?id=$userID"); 
          
         die("Redirecting to registercourse.php"); 
     } 

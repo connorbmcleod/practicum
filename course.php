@@ -99,7 +99,6 @@
 
     <!-- content -->
     <div id="course-content">
-        <h1><?php echo $_SESSION['coursepage']['coursename']; ?></h1>
         <div class="rating">
             <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
         </div>

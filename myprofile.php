@@ -112,12 +112,13 @@
                     <?php 
                         if(!empty($_SESSION['courseinfo'])){ 
                             for($i = 0; $i < $count; $i++) { ?>
-                                <div class="search_class" id="profile-course-display">
-                                    <a href='http://localhost/practicum/course.php?id=<?php echo $_SESSION['courseinfo'][$i]['courseID']; ?>'<p><?php echo $_SESSION['courseinfo'][$i]['coursename']; ?></p></a>
-                                    <p><?php echo $_SESSION['courseinfo'][$i]['location']; ?></p>
-                                    <p><?php echo substr($_SESSION['courseinfo'][$i]['description'], 0, 100) . "..."; ?></p>
-
-                                </div>
+                                <a href='http://localhost/practicum/course.php?id=<?php echo $_SESSION['courseinfo'][$i]['courseID']; ?>'>
+                                    <div class="search_class" id="profile-course-display">
+                                        <p class="class_head"><?php echo $_SESSION['courseinfo'][$i]['coursename']; ?></p>
+                                        <p><?php echo $_SESSION['courseinfo'][$i]['location']; ?></p>
+                                        <p><?php echo substr($_SESSION['courseinfo'][$i]['description'], 0, 100) . "..."; ?></p>
+                                    </div>
+                                </a>
                             <?php }
                             ?>
                     <?php } 
@@ -133,7 +134,7 @@
                 <?php 
 
                     if(!empty($_SESSION['user'])){
-                        if($_SESSION['user']['usertype'] == 1){ ?>
+                        if($_SESSION['user']['id'] == $iduser){ ?>
                             <a href="createcourse.php"><button class="button" id="create-course">Create a Course</button></a>
                         <?php }
                     }
