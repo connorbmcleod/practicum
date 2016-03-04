@@ -823,13 +823,97 @@ textarea:focus, input:focus{
 	margin: 10px 5vw;
 }
 
-#pastclasses, #upcomingclasses {
-	margin-left: 20px;
+#myprofile-content{
+	text-align: center;
+}
+
+.pastClasses, .allClasses {
+	width: 350px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	margin: 0px 8vw;
+	margin-bottom: 30px;
+}
+
+.pastClasses h2, .allClasses h2{
+	border: black 1px solid;
+	color: black;
+	padding: 10px 10px;
+	font-size: 24px; 
 }
 
 .profile_content {
 	height: 100%;
 }
+
+.bio{
+	text-align: left;
+}
+
+.bio h2{
+	width: 50px;
+	background-color:;
+	border: black 1px solid;
+	color: black;
+	padding: 10px 20px;
+	font-size: 24px;
+	text-align: center;
+	margin-left: 8vw; 
+}
+
+.bio p{
+	width: 70vw;
+	background-color: #F0F0F0;
+	height: 200px;
+	margin-top: 20px;
+	margin-left: 8vw;
+	padding: 10px 20px;
+	text-align: left;
+}
+
+.createCourseDiv{
+	text-align: center;
+}
+
+#create-course{
+	background-color: rgba(0,0,100,1);
+	border: rgba(0,0,100,1) solid 1px;
+	color: white;
+	padding: 10px 25px;
+	font-size: 18px;
+}
+
+#create-course:hover{
+	background-color: transparent;
+	border: black 1px solid;
+	color: black;
+}
+
+#profile-course-display{
+	width: 300px;
+	display: inline-block;
+	text-align: center;
+	padding-bottom: 20px;
+	border: black thin dashed;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	text-align: left;
+	padding: 15px 20px; 
+}
+
+#profile-course-display a{
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 20px;
+	color: black;
+
+}
+
+#profile-course-display p{
+	color: #5E5E5E;
+}
+
 /*myprofile*/
 
 
@@ -917,7 +1001,7 @@ textarea:focus, input:focus{
 }
 
 #about-us-content h2{
-	margin-top: 100px;
+/*	margin-top: 100px;*/
 }
 
 .join-team{
@@ -960,6 +1044,9 @@ textarea:focus, input:focus{
 	display: inline-block;
 	text-align: center;
 	padding-bottom: 20px;
+	border: black thin dashed;
+	margin-bottom: 10px;
+	border-radius: 5px;
 }
 
 .course-wrapper{

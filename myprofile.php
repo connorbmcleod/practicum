@@ -53,6 +53,7 @@
                 FROM courses 
                 WHERE 
                     teacherID = '$iduser' 
+
             "; 
              
             try 
@@ -92,48 +93,52 @@
             <hr>
 </div> -->
 
-<div class="content-wrapper" id="about-us-content">
+<div class="content-wrapper" id="myprofile-content">
 
-<div class="bio">
-    <h2 class="about_header">BIO</h2>
-    <p class="about_paragraph"><?php 
-    if(empty($_SESSION['userinfo']['bio'])){
-        echo "<a href='becomeeducator.php'><p>Fill Out Your Bio</p></a>";
-    }
-    else{
-    echo $_SESSION['userinfo']['bio'];
-    } ?></p>
-</div>
-
-
-    <h2 class="about_header">Past Classes</h2>
-
-
-    <h2 class="about_header"> Upcoming Classes </h2>
-    <div class="allclasses">
-
-    <?php 
-        if(!empty($_SESSION['courseinfo'])){ 
-            for($i = 0; $i < $count; $i++) { ?>
-                <div class="search_class">
-                    <a href='http://localhost/practicum/course.php?id=<?php echo $_SESSION['courseinfo'][$i]['courseID']; ?>'<p><?php echo $_SESSION['courseinfo'][$i]['coursename']; ?></p></a>
-                    <p><?php echo $_SESSION['courseinfo'][$i]['location']; ?></p>
-                    <p><?php echo substr($_SESSION['courseinfo'][$i]['description'], 0, 100) . "..."; ?></p>
-
-                </div>
-            <?php }
-            ?>
-<?php } 
-?>
+    <div class="bio">
+        <h2 class="about_header">BIO</h2>
+            <p><?php 
+            if(empty($_SESSION['userinfo']['bio'])){
+                echo "<a href='becomeeducator.php'><p>Fill Out Your Bio</p></a>";
+            }
+            else{
+            echo $_SESSION['userinfo']['bio'];
+            } ?></p>
     </div>
-    <?php 
 
-        if(!empty($_SESSION['user'])){
-            if($_SESSION['user']['usertype'] == 1){ ?>
-                <a href="createcourse.php"><button class="button" id="create-course">Create a Course</button></a>
-            <?php }
-        }
-            ?>
+    
+            <div class="allClasses">
+                <h2 class="about_header"> Upcoming Classes </h2>
+                    <?php 
+                        if(!empty($_SESSION['courseinfo'])){ 
+                            for($i = 0; $i < $count; $i++) { ?>
+                                <div class="search_class" id="profile-course-display">
+                                    <a href='http://localhost/practicum/course.php?id=<?php echo $_SESSION['courseinfo'][$i]['courseID']; ?>'<p><?php echo $_SESSION['courseinfo'][$i]['coursename']; ?></p></a>
+                                    <p><?php echo $_SESSION['courseinfo'][$i]['location']; ?></p>
+                                    <p><?php echo substr($_SESSION['courseinfo'][$i]['description'], 0, 100) . "..."; ?></p>
+
+                                </div>
+                            <?php }
+                            ?>
+                    <?php } 
+                    ?>
+            </div>
+
+
+            <div class="pastClasses">
+                <h2 class="about_header">Past Classes</h2>
+            </div>
+
+            <div class="createCourseDiv">
+                <?php 
+
+                    if(!empty($_SESSION['user'])){
+                        if($_SESSION['user']['usertype'] == 1){ ?>
+                            <a href="createcourse.php"><button class="button" id="create-course">Create a Course</button></a>
+                        <?php }
+                    }
+                        ?>
+            </div>
     </div>
 
 
