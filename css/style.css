@@ -177,7 +177,7 @@ textarea:focus, input:focus{
 	width: 100vw;
 	display: inline-block;
 	vertical-align: baseline;
-	height: 100px;
+	height: 125px;
 }
 
 .header_line {
@@ -671,10 +671,17 @@ textarea:focus, input:focus{
 }
 
 #register1, #register2{
-	border:thin grey solid;
-	border-radius: 5px;
-	margin-top: 10px;
-	margin-bottom: 70px;
+	background-color: rgba(0,0,100,1);
+	border: rgba(0,0,100,1) solid 1px;
+	color: white;
+	padding: 10px 25px;
+	font-size: 18px;
+}
+
+#register1:hover, #register2:hover {
+	background-color: transparent;
+	border: black 1px solid;
+	color: black;	
 }
 /*register*/
 
@@ -738,10 +745,17 @@ textarea:focus, input:focus{
 }
 
 #createCourseBtn{
-	padding: 10px 0px;
-	background-color: #040F4F;
+	background-color: rgba(0,0,100,1);
+	border: rgba(0,0,100,1) solid 1px;
 	color: white;
-	border: none;
+	padding: 10px 25px;
+	font-size: 18px;
+}
+
+#createcoursebtn:hover {
+	background-color: transparent;
+	border: black 1px solid;
+	color: black;	
 }
 
 #location_drop_menu {
@@ -1189,17 +1203,47 @@ textarea:focus, input:focus{
 }
 
 #login-register-btn{
-	background-color: rgba(0, 47, 232, 0.8);
-	border: transparent thin solid;
+	background-color: rgba(0,0,100,1);
+	border: rgba(0,0,100,1) solid 1px;
 	color: white;
-	margin-top: 50px;
-	padding: 5px 10px;
+	padding: 10px 25px;
+	font-size: 18px;
+	margin-top: 70px;
 }
 
 #login-register-btn:hover{
 	background-color: transparent;
+	border: black 1px solid;
 	color: black;
-	border: black thin solid; 
+}
+
+#joincourse {
+	background-color: rgba(0,0,100,1);
+	border: rgba(0,0,100,1) solid 1px;
+	color: white;
+	padding: 10px 25px;
+	font-size: 18px;
+	margin: 70px 5vw;
+}
+
+#joincourse:hover {
+	background-color: transparent;
+	border: black 1px solid;
+	color: black;
+}
+
+#course-delete-button {
+	background-color: rgba(150,0,0,1);
+	border: rgba(0,0,100,1) solid 1px;
+	color: white;
+	padding: 10px 25px;
+	font-size: 18px;	
+}
+
+#course-delete-button:hover {
+	background-color: transparent;
+	border: black 1px solid;
+	color: black;	
 }
 /*One course page*/
 
@@ -1270,7 +1314,18 @@ a #go-to-course:hover, a #drop-course:hover{
 }
 
 .update_button {
-	background-color: #0091C5;
+	background-color: rgba(0,0,100,1);
+	border: rgba(0,0,100,1) solid 1px;
+	color: white;
+	padding: 10px 25px;
+	font-size: 18px;
+	width: 250px;
+}
+
+.update_button:hover {
+	background-color: transparent;
+	border: black 1px solid;
+	color: black;
 }
 
 #accountForm input{
