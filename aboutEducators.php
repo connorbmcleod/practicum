@@ -1,4 +1,4 @@
-<html>
+ <html>
 <head>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
@@ -27,15 +27,21 @@
     <!-- content -->
     <div class="content-wrapper educator-wrapper">
         <h2 class="about_header">Our Educators</h2>
-        <p class="about_paragraph">Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.</p>
+        <p class="about_paragraph">WeLearn educators are people in your community who have a passion for a subject and want to share that passion with others. If you have a skill that you want to share with others in your community then dont wait, begin teaching a class of your own.</p>
+        <p></p>
         <h2 class="about_header">Become an Educator</h2>
-        <p class="about_paragraph">Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.Lorem ipsum blah blah yes no partially ok.<br>
-        We have a few tips for you, if you are planning on becoming an educator. Here are links to the articles that are helpful:</p>
-        <ul>
-            <li><a href="http://google.com">Article 1</a></li>
-            <li><a href="http://google.com">Article 2</a></li>
-            <li><a href="http://google.com">Article 3</a></li>
+        <p class="about_paragraph">Setting up your own class is simple. As long as you are a member you can become an educator. Once becoming an educator, you can add and delete your own classes as well as add a bio to your profile and have it display for learners who may be interested in your class.</p> 
+        <p class="about_paragraph">Never taught before? Don't let that stop you. Below you will find referance material on how to effectively set-up and teach your course. </p>
+
+
+        <ul id="articles">
+            <li class="article1"><a href="http://www.adprima.com/tipson.htm" target="_blank">Tips on becoming a teacher</a></li>
+            <li class="article2"><a href="http://www.gophersport.com/blogentry/10-things-to-know-before-you-start-teaching" target="_blank">10 things to know before you start teaching</a></li>
+            <li class="article3"><a href="https://www.teachingchannel.org/videos/class-starting-teaching-strategy" target="_blank">"Do Now" Strategy</a></li>
+            <li class="article4"><a href="https://www.youtube.com/watch?v=wqe8C7dwViE" target="_blank">Why become a teacher</a></li>
+            <li class="article5"><a href="https://www.youtube.com/watch?v=VfK7tfDCSIk" target="_blank">Ways to be an excellent teacher</a></li>
         </ul>
+
 
          <div class="profile-buttons">
              <?php

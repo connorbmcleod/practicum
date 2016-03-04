@@ -1033,6 +1033,23 @@ textarea:focus, input:focus{
 /*About us page*/
 
 
+/*About Educators Page*/
+
+#articles {
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 70px;
+}
+
+.article1, .article2, .article3, .article4, .article5 {
+	width: 300px;
+	display: block;
+	margin-top: 50px;
+	text-decoration: underline;
+}
+
+/*About Educators Page*/
+
 
 /*All courses page*/
 
