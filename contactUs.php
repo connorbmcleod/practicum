@@ -30,19 +30,32 @@
 <!-- content -->
 
     <div class="contact_wrapper" id="about-us-content">
-        <h2 class="about_header">This is where someone calls someone</h2>
-        <p class="about_paragraph">Not sure if it is a good idea to have a number to the admin.</p>
-        <h2 class="about_header">Find us on Social Media</h2>
-        <p class="about_paragraph"></p>
+        <div class="general-inquiry">
+            <p><a href="mailto:info@welearn.ca">info@welearn.ca</a></p>
+            <br>
+                <p><strong>Address</strong></p>
+                    <p>#555 Seymour Street,
+                    Vancouver, BC, V9L0C8</p>
+        </div>
+
+
+        <div id="social_media_contact">
+                <ul style="padding-left: 0px;">
+                    <li><a href="#"><img src="images/facebook-square.png" width="60px"></a></li>
+                    <li><a href="#"><img src="images/instagram.png" width="60px"></a></li>
+                    <li><a href="#"><img src="images/twitter.png" width="60px"></a></li>
+                </ul>
+
+        </div>
+
+
+        <form id='contact-form' action="send_form_email.php" method="post" target="_blank">
+            <input type="text" name="name" placeholder="Full Name" id="name"><br>
+            <input type="email" name="email" placeholder="Email" id="email"><br>
+            <textarea name="message" placeholder="Message.." id="message"></textarea><br>
+            <input type="submit" value="Submit" id="submit-button">
+        </form>
     </div>
-
-    <form id='contact-form' action="send_form_email.php" method="post" target="_blank">
-        <input type="text" name="name" placeholder="NAME" id="name"><br>
-        <input type="email" name="email" placeholder="EMAIL" id="email"><br>
-        <textarea name="message" placeholder="TYPE YOUR MESSAGE HERE" id="message"></textarea><br>
-        <input type="submit" value="Submit" id="submit-button">
-    </form>
-
 <!-- content -->
 
 <!-- footer -->

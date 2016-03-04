@@ -27,20 +27,20 @@
 
 
     <!-- content -->
-    <div id="about-us-content">
-        <div class="cols" id="who">
-            <h2 class="about_header">Join Now</h2>
+    <div id="about-learners-content">
+        <div id="join">
+            <h2>Join Now</h2>
         </div>
 
-        <div class="cols" id="how">
-            <p class="about_paragraph learner_lines">You start by signing up with us</p>
-            <a href="registerPage.php"><button class="button" id="signup" name="signup">Sign up</button></a>
-            <p class="about_paragraph learner_lines">There are courses and stuff you can look up</p>
+        <div id="learners">
+            <p class="about_paragraph learner_lines">WeLearn offers a way for everyone in a community to share their skills and learn from eachother. Start now by signing up for free.</p>
+            <a href="registerPage.php">
+            <button class="button" id="signup" name="signup">Sign up</button></a>
+            <p class="about_paragraph learner_lines">As a learner, you get to browse the offered courses and register for them. Our courses are offered by individuals who have interest and experience in that field. Courses are 1-hour long. Each course requires a $15 register fee.</p>
+            <p class="about_paragraph learner_lines">To begin, you can look up the courses in your local area.</p>
+                <button class="go-to-courses">Browse Courses</button>
             <div>
-                <input type="search" placeholder=" Search.." id="search"><img src="images/search.png" width="35px"></input>
-            </div>  
-            <p>There's a small fee for each course and stuff</p>
-            <p>You can update courses on your profile</p>
+
         </div>
     </div>
 

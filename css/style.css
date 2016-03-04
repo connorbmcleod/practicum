@@ -854,7 +854,9 @@ textarea:focus, input:focus{
 	border: black 1px solid;
 	color: black;
 	padding: 10px 10px;
-	font-size: 24px; 
+	font-size: 24px;
+	border-right: none;
+	border-left: none; 
 }
 
 .profile_content {
@@ -873,12 +875,14 @@ textarea:focus, input:focus{
 	padding: 10px 20px;
 	font-size: 24px;
 	text-align: center;
-	margin-left: 8vw; 
+	margin-left: 8vw;
+	border-right: none;
+	border-left: none; 
 }
 
 .bio p{
 	width: 70vw;
-	background-color: #F0F0F0;
+	background-color: #F5F5F5;
 	height: 200px;
 	margin-top: 20px;
 	margin-left: 8vw;
@@ -896,6 +900,7 @@ textarea:focus, input:focus{
 	color: white;
 	padding: 10px 25px;
 	font-size: 18px;
+	margin-top: 20px;
 }
 
 #create-course:hover{
@@ -913,7 +918,8 @@ textarea:focus, input:focus{
 	margin-bottom: 10px;
 	border-radius: 5px;
 	text-align: left;
-	padding: 15px 20px; 
+	padding: 15px 20px;
+	background-color: #F5F5F5; 
 }
 
 #profile-course-display a{
@@ -1340,4 +1346,114 @@ a #go-to-course:hover, a #drop-course:hover{
 	height: 500px;
 }
 
+.general-inquiry{
+	border: #5E5E5E dashed 2px;
+	text-align: center;
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 100px;
+	padding: 20px;
+}
+
+.general-inquiry p a{
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 24px;
+	color: #2D2D2D;
+}
+
+.general-inquiry p strong{
+	font-weight: 700;
+	font-size: 18px;
+	text-decoration: underline;
+}
+
+#contact-form{
+	text-align: center;
+	margin-top: 50px;
+}
+
+#contact-form #name, #contact-form #email{
+	width: 400px;
+	margin-bottom: 10px;
+	padding: 10px 10px;
+}
+
+#contact-form textarea{
+	width: 400px;
+	margin-bottom: 10px;
+	padding: 10px 10px;
+}
+
+#submit-button{
+	background-color: rgba(0,0,100,1);
+	border: rgba(0,0,100,1) solid 1px;
+	color: white;
+	padding: 10px 25px;
+	font-size: 18px;
+	margin-top: 10px;
+	
+}
+
+#social_media_contact {
+	text-align: center;
+	margin-top: 50px;
+}
+
+#social_media_contact ul li {
+	display: inline-block;
+	margin-left: 10px;
+}
+
 /*CONTACT US END*/
+
+
+/*LEARNER PAGE*/
+
+.go-to-courses{
+	background-color: rgba(0,0,100,1);
+	border: rgba(0,0,100,1) solid 1px;
+	color: white;
+	padding: 10px 25px;
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+.go-to-courses:hover{
+	background-color: transparent;
+	border: black 1px solid;
+	color: black;
+}
+
+#join h2{
+	border: black 1px solid;
+	border-left: none;
+	border-right: none;
+	width: 140px;
+	padding: 10px 0px;
+}
+
+
+#about-learners-content{
+	text-align: center;
+	width: 80vw;
+	margin: 0 auto;
+	margin-bottom: 100px;
+	margin-top: 50px;
+}
+
+#about-learners-content p{
+	text-align: left;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+#learners #signup{
+	background-color: rgba(0,0,100,1);
+	margin-bottom: 20px;
+}
+
+#learners{
+	margin-bottom: 50px;
+}
+/*LEARNER PAGE*/
