@@ -90,7 +90,7 @@
         <?php include 'header.php'; ?>
 
         <div id="hero-wrap">
-            <div class="hero-title-upper border-bottom"><?php echo $_SESSION['coursepage']['coursename']; ?></div> 
+            <div class="hero-title border-bottom"><?php echo $_SESSION['coursepage']['coursename']; ?></div> 
             <div class="hero-title"></div>
         </div>
     </div> 
@@ -111,8 +111,10 @@
             <p><?php echo $_SESSION['teacher']['teacherfname'] . ' ' . $_SESSION['teacher']['teacherlname']; ?></p>
         </a>
         <br>
-        <h3>Time</h3>
+        <h3>Date</h3>
         <p><?php echo $_SESSION['coursepage']['date']; ?></p><br>
+        <h3>Time</h3>
+        <p><?php echo $_SESSION['coursepage']['time']; ?></p><br>
         <h3>Location</h3>
         <p><?php echo $_SESSION['coursepage']['location']; ?></p><br>
     </div>

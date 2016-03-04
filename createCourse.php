@@ -217,7 +217,7 @@
                       <textarea id="coursedesc" cols="50" rows="15" type="text" name="courseDesc" value="" placeholder=""></textarea>
             </div>
 
-                      <input onclick="" type="submit" value="Register" class="button" id="createCourseBtn"/>
+                      <a href="http://localhost/practicum/myprofile.php?id=<?php echo $_SESSION['user']['id']; ?>"><input onclick="" type="submit" value="Register" class="button" id="createCourseBtn"/></a>
         </form>
 
 

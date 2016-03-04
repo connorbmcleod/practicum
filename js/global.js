@@ -198,3 +198,9 @@ $('#register2').click(function(){
 		$("#firstname").css("border-bottom", "1px solid red")
 	};
 });
+
+// Datepicker
+
+  $(function() {
+    $("#datepicker").datepicker();
+  });

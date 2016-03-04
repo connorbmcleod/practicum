@@ -140,20 +140,6 @@
                 <br /><br /> 
                 <input id="location" type="text" name="location" value="<?php echo $_SESSION['editcourse']['location'] ?>" class="form-field" placeholder=" Location"/> 
 
-
-
-
-            <!-- <div id="location_drop">
-                    <p>&nbsp;Choose a Location</p>
-                        <ul id="location_drop_menu">
-                            <li id="location" value="Gibsons">Gibsons</li>
-                            <li id="location" value="Lund">Lund</li>
-                            <li id="location" value="Sechelt">Sechelt</li>
-                        </ul>
-
-                </div> -->
-             <!-- Waiting for list of locations to finish -->
-
              
                
                 <br /><br /> 
