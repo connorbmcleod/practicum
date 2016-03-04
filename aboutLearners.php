@@ -43,17 +43,20 @@
 
         </div>
     </div>
-
+</div>
 <!-- content -->
 
 
 <!-- footer -->
 
-   <?php include 'footer.php'; ?>
+
 
 <!-- footer -->
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/global.js"></script>
 </body>
+
+   <?php include 'footer.php'; ?>
+
 </html>

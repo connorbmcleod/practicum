@@ -14,7 +14,7 @@
 		</div>    
 
 <!-- 		<div class="footer-middle"> -->
-			<button id="footer-contact"><a href="allcourses.php">CONTACT US</a></button>
+			<button id="footer-contact"><a href="contactUs.php">CONTACT US</a></button>
 
 <!-- 		</div> -->
 
