@@ -114,29 +114,33 @@
                 </div> -->
                 
 
-            <div class="upcoming-classes">
-                <h2><strong>Upcoming classes</strong></h2>
 
+                
+            <div class="allClasses">
+                <h2 class="about_header">Upcoming classes</h2>
                 <?php
                 if(!empty($_SESSION['studentcourseinfo'])){ 
                             for($i = 0; $i < $count; $i++) { ?>
-                                <div class="class">
-                                    <a href='http://localhost/practicum/course.php?id=<?php echo $_SESSION['studentcourseinfo'][$i]['courseID']; ?>'<h3><strong><?php echo $_SESSION['studentcourseinfo'][$i]['coursename']; ?></h3></strong></a>
-                                    <p><?php echo $_SESSION['studentcourseinfo'][$i]['location']; ?></p>
-                                    <p><?php echo $_SESSION['studentcourseinfo'][$i]['date']; ?></p>
-                                    <div class="profile-course-buttons">
-                                        
-                                        <button class="button" id="drop-course">Drop Course</button>
+<div class="search_class" id="profile-course-display">  
+                                        <a href='http://localhost/practicum/course.php?id=<?php echo $_SESSION['studentcourseinfo'][$i]['courseID']; ?>'>
+                                            
+
+                                        <p class="class_head"><?php echo $_SESSION['studentcourseinfo'][$i]['coursename']; ?></p>
+                                        <p><?php echo $_SESSION['studentcourseinfo'][$i]['location']; ?></p>
+                                        <p><?php echo $_SESSION['studentcourseinfo'][$i]['date']; ?></p>
+                                        <div class="profile-course-buttons">
+                                            
+                                        </div>
+                                        </a>
                                     </div>
-                                </div>
                             <?php }
                             ?>
                 <?php } 
                 ?>
+             <!-- END OF ALL CLASSES -->
+       </div>            
 
-                   
-             </div> <!-- End of upcoming classes -->
-
+            <div id="button_container">
                 <div class="profile-buttons">
                     <a href="allcourses.php"><button class="button" id="sign-up-for-classes">Sign up for more classes</button></a>
                 </div>
@@ -145,15 +149,15 @@
                 <div class="profile-buttons">
                     <a href="becomeeducator.php"><button class="button" id="become-educator">Become an educator</button></a>
                 </div>
-
-
+            </div>
+    
 <!-- content -->
 
 <!-- footer -->
 
 <?php include 'footer.php'; ?>
 
-    </div>
+
 
 <!-- footer -->
 </body>

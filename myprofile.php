@@ -126,9 +126,6 @@
             </div>
 
 
-            <div class="pastClasses">
-                <h2 class="about_header">Past Classes</h2>
-            </div>
 
             <div class="createCourseDiv">
                 <?php 

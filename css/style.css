@@ -902,7 +902,7 @@ textarea:focus, input:focus{
 
 .pastClasses, .allClasses {
 	width: 350px;
-	display: inline-block;
+	/*display: inline-block;*/
 	vertical-align: top;
 	text-align: center;
 	margin: 0px 8vw;
@@ -999,6 +999,9 @@ textarea:focus, input:focus{
 	color: #5E5E5E;
 }
 
+#profile-course-display a {
+	text-decoration: none;
+}
 /*myprofile*/
 
 
@@ -1357,30 +1360,33 @@ textarea:focus, input:focus{
 }
 
 #sign-up-for-classes{
-	margin-top: 100px;
-	padding: 10px 20px;
-	background-color: #0091C5;
-	border: thin solid #0091C5;
-	color: white; 
+	background-color: rgba(0,0,100,1);
+	border: rgba(0,0,100,1) solid 1px;
+	color: white;
+	padding: 10px 25px;
+	font-size: 18px;
+	margin-bottom: 20px;
 }
 
 #sign-up-for-classes:hover{
-	color: #0091C5;
-	background-color: white;
+	background-color: transparent;
+	border: black 1px solid;
+	color: black;	
 }
 
 #become-educator{
-	margin-bottom: 100px;
-	margin-top: 20px;
-	padding: 10px 33px;
-	background-color: #0091C5;
-	border: thin solid #0091C5;
-	color: white;  
+	background-color: rgba(0,0,100,1);
+	border: rgba(0,0,100,1) solid 1px;
+	color: white;
+	padding: 10px 25px;
+	font-size: 18px; 
+	margin-bottom: 40px;
 }
 
 #become-educator:hover{
-	color: #0091C5;
-	background-color: white;	
+	background-color: transparent;
+	border: black 1px solid;
+	color: black;	
 }
 
 a #go-to-course, a #drop-course{
@@ -1397,6 +1403,12 @@ a #go-to-course:hover, a #drop-course:hover{
 .profile-buttons{
 	text-align: center;
 }
+
+#button_container {
+	width: 500px;
+	margin: 0 auto;
+}
+
 /*User Profile Page*/
 
 /* Edit Account Page*/
