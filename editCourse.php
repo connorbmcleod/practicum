@@ -102,7 +102,7 @@
              </div> <!-- pure-menu end-->
 
             <div class="nav">
-                <div id="welcome-2">
+                <div id="welcome">
                     <?php if($_SESSION['user']['usertype'] == 1){ ?>
                     <a href='http://localhost/practicum/myprofile.php?id=<?php echo $_SESSION['user']['id']; ?>'<p> <?php echo $_SESSION['user']['firstname'] . ' ' . $_SESSION['user']['lastname']; ?> </p></a>
                 <?php }
@@ -111,7 +111,7 @@
                     <?php } ?>
                 </div>
                     <div class="dropdown">
-                      <button class="dropbtn"><img id="darken" src="images/menu-arrow.png" width="30px"></button>
+                      <button class="dropbtn"><img src="images/menu-arrow.png" width="30px"></button>
                       <div class="dropdown-content">
                         <a href="userprofile.php">My Profile</a>
                         <a href="edit_account.php">Edit Profile</a>

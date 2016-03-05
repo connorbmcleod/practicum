@@ -21,7 +21,7 @@
 if(empty($_SESSION['user'])) : ?>
 
     <div class="header">
-        <div class="logo"><a href="index.php"><img src="images/logo.gif" width="50px"></a></div>
+        <div class="logo"><a href="index.php"><img src="images/weLearn-logo-black.png" width="200px"></a></div>
 
 
             <div class="pure-menu pure-menu-horizontal" id="menu">
@@ -61,7 +61,7 @@ if(empty($_SESSION['user'])) : ?>
 
 <!-- LOGGED IN HEADER -->
     <div class="header-logged">
-        <div class="logo"><a href="index.php"><img src="images/logo.gif" width="50px"></a></div>
+        <div class="logo"><a href="index.php"><img src="images/weLearn-logo-black.png" width="200px"></a></div>
 
 
             <div class="pure-menu pure-menu-horizontal" id="menu">
@@ -93,7 +93,7 @@ if(empty($_SESSION['user'])) : ?>
                 <?php } ?>
             </div>
                 <div class="dropdown">
-                  <button class="dropbtn"><img id="darken" src="images/menu-arrow.png" width="30px"></button>
+                  <button class="dropbtn"><img src="images/menu-arrow.png" width="30px"></button>
                   <div class="dropdown-content">
                     <a href="userprofile.php">My Profile</a>
                     <a href="edit_account.php">Edit Profile</a>
@@ -128,27 +128,8 @@ if(empty($_SESSION['user'])) : ?>
 <!-- content -->
 
 <!-- footer -->
-    <div class="footer">
-            <div class="footer-col" id="footer-one">
-            </div>
 
-             <div class="footer-col" id="footer-two">
-                 <p>#555 Seymour Street | info@welearn.ca</p>
-                <p>2016 | DACOKYE DESIGN</p>
-             </div>
-
-             <div class="footer-col" id="footer-three">
-                <ul id="social-media">
-                    <li><a href="#"><img src="images/facebook-square.png" width="30px"></a></li>
-                    <li><a href="#"><img src="images/instagram.png" width="30px"></a></li>
-                    <li><a href="#"><img src="images/twitter.png" width="30px"></a></li>
-                    <li><a href="#"><img src="images/googleplus-square.png" width="30px"></a></li>
-                </ul>
-            </div>
-
-        </div>
-
-    </div>
+<?php include 'footer.php'; ?>
 
 <!-- footer -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

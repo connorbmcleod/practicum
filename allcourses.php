@@ -81,7 +81,6 @@
                                             <p class="full">FULL</p>
                                     <?php } ?>
                         </div>
-                        <hr>
             <?php }; }; ?>
     </div>   
 
