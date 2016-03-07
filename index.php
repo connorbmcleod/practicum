@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300|Roboto:400,700,300,700italic,300italic' rel='stylesheet' type='text/css'>
-    <title></title>
+    <title>weLearn - Home</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>

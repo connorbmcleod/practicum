@@ -10,7 +10,7 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/global.js"></script>
-    <title></title>
+    <title>Edit Account</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
