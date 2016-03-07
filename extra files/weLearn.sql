@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 07, 2016 at 08:48 PM
+-- Generation Time: Feb 27, 2016 at 12:45 AM
 -- Server version: 5.6.26
 -- PHP Version: 5.5.28
 
@@ -31,19 +31,27 @@ CREATE TABLE IF NOT EXISTS `courses` (
   `coursename` varchar(255) NOT NULL,
   `location` varchar(255) NOT NULL,
   `date` varchar(255) NOT NULL,
-  `time` varchar(64) NOT NULL,
   `minimumpeople` int(11) NOT NULL,
   `maximumpeople` int(16) NOT NULL,
-  `description` varchar(2048) NOT NULL,
+  `description` varchar(255) NOT NULL,
   `objective1` varchar(1024) NOT NULL,
   `objective2` varchar(1024) NOT NULL,
   `objective3` varchar(1024) NOT NULL,
   `objective4` varchar(1024) NOT NULL,
   `objective5` varchar(1024) NOT NULL,
   `teacherID` int(11) NOT NULL,
-  `status` int(1) NOT NULL,
   `completion` int(1) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `courses`
+--
+
+INSERT INTO `courses` (`courseID`, `coursename`, `location`, `date`, `minimumpeople`, `maximumpeople`, `description`, `objective1`, `objective2`, `objective3`, `objective4`, `objective5`, `teacherID`, `completion`) VALUES
+(6, 'Mushrooming 101', 'The Bush', '12:00 am', 1, 12, 'COME MUSHROOMING  anytime for your imagination', '', '', '', '', '', 6, 0),
+(7, 'Hair Flipping 101', 'The Salon', '1:00AM', 1, 15, 'I WHIP MY HAIR BACK AND FORRTH', '', '', '', '', '', 4, 0),
+(8, 'asd;flkj', 'asfkj', 'sdflkj', 1, 154, 'asdf', '', '', '', '', '', 6, 0),
+(9, 'asdf', 'sdf', 'adsf', 1, 2, 'SDA', '', '', '', '', '', 4, 0);
 
 -- --------------------------------------------------------
 
@@ -55,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `educatorinfo` (
   `id` int(11) NOT NULL,
   `teacherfname` varchar(64) NOT NULL,
   `teacherlname` varchar(64) NOT NULL,
-  `bio` varchar(2048) NOT NULL,
+  `bio` text NOT NULL,
   `location` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
