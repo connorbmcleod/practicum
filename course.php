@@ -99,9 +99,6 @@
 
     <!-- content -->
     <div id="course-content">
-        <div class="rating">
-            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-        </div>
 
 
     <div class="col" id="course-left-col">
@@ -131,7 +128,7 @@
             if($truth) 
             { ?>
                 <form action="dropcourse.php" method="post" class="form">
-                    <button>Drop Course</button>
+                    <button id="course-delete-button">Drop Course</button>
                 </form> 
            <?php }
 

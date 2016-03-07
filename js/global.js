@@ -67,7 +67,7 @@ $('#coursedesc').blur(function(){
 		$("#coursedesc").after( "<p id='validatedesc' class='validatemsg'>Please Enter A Description</p>" );
 	}
 	else {
-		$('#coursedesc').css("border-bottom", "2px inset rgb(238, 238, 238)");
+		$('#coursedesc').css("border", "2px inset rgb(238, 238, 238)");
 		$('#validatedesc').remove();
 	}
 });
@@ -204,3 +204,20 @@ $('#register2').click(function(){
   $(function() {
     $("#datepicker").datepicker();
   });
+
+
+
+//Rating Star System//
+
+$('.ratings_stars').hover(
+    // Handles the mouseover
+    function() {
+        $(this).prevAll().andSelf().addClass('ratings_over');
+        $(this).nextAll().removeClass('ratings_vote'); 
+    },
+    // Handles the mouseout
+    function() {
+        $(this).prevAll().andSelf().removeClass('ratings_over');
+        set_votes($(this).parent());
+    }
+);
