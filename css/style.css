@@ -1062,6 +1062,7 @@ textarea:focus, input:focus{
 }
 
 .about_paragraph {
+	padding-bottom: 15px;
 	width: 80%;
 	margin: 0 auto;                                                                                                                                         
 }

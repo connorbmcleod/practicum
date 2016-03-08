@@ -34,31 +34,11 @@
     <div class="content-wrapper" id="about-us-content">
         <p class="vision_stmnt">"&thinsp;&thinsp;Bring a community together with knowledge .&thinsp;"</p>
         <h2 class="about_header">Our Mission</h2>
-        <p class="about_paragraph">We want to provide communities with an outlet for them to come together through learning from each other.
-        <br />
-        <br />
-        Everyone has something to share. We want to make a neighbourhood feel like a family. Provide a portal for people with common interest to come together, share their passion and grow with each other.</p>
-        <h2 class="about_header">Our Staff</h2>
+        <p class="about_paragraph">Welearn is a service that brings together neigbours to allow us to build our local educational capacity.</p>
+        <p class="about_paragraph">Welearn looks after many of the burdensome administrative task for educators and provides an easy interface for students in the community to select classes.</p>
+        <p class="about_paragraph">We believe each person in the community has a skills to share and that would benefit others, this service allows us to benefit from our neigbours knowledge and experience.</p>
+
             
-    <div class="pure-g">
-            <div class="pure-u-1 pure-u-md-1-3"> 
-                <img src="logo.png" width="300px" class="staff_img">
-            <h3 class="staff_name">Connor McLeod</h2>
-                <p class="about_paragraph">Back end Developer</p>
-            </div>
-            <div class="pure-u-1 pure-u-md-1-3">
-                <img src="logo.png" width="300px" class="staff_img">
-            <h3 class="staff_name">Darya Shokouhi</h2>
-                <p class="about_paragraph">Front End Developer</p>
-            </div>
-            <div class="pure-u-1 pure-u-md-1-3">
-                <img src="logo.png" width="300px" class="staff_img">
-            <h3 class="staff_name">Kyle Fedorchuk</h2>
-                <p class="about_paragraph">UI/UX Designer</p>
-
-            </div>
-
-    </div>
         <div class="join-team">
             <hr />
             <h3>Interested in joining our team? Check out our available positions.</h3>
