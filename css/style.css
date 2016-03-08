@@ -878,11 +878,10 @@ textarea:focus, input:focus{
 	text-align: center;
 }
 
-.pastClasses, .allClasses {
-	width: 350px;
+.allClasses {
 	/*display: inline-block;*/
 	vertical-align: top;
-	text-align: center;
+	text-align: left;
 	margin: 0px 8vw;
 	margin-bottom: 30px;
 }
@@ -911,10 +910,8 @@ textarea:focus, input:focus{
 	color: black;
 	padding: 10px 20px;
 	font-size: 24px;
-	text-align: center;
-	margin-left: 8vw;
 	border-right: none;
-	border-left: none; 
+	border-left: none;
 }
 
 .bio p{
@@ -949,14 +946,16 @@ textarea:focus, input:focus{
 #profile-course-display{
 	width: 300px;
 	display: inline-block;
-	text-align: center;
+	text-align: left;
 	padding-bottom: 20px;
 	border: black thin dashed;
-	margin-bottom: 10px;
+	margin: 10px 10px;
 	border-radius: 5px;
 	text-align: left;
 	padding: 15px 20px;
-	background-color: #F5F5F5; 
+	background-color: #F5F5F5;
+	vertical-align: top;
+
 }
 
 #profile-course-display:hover {
@@ -971,13 +970,24 @@ textarea:focus, input:focus{
 	color: black;
 }
 
+#profile-comment-display{
+	background-color: #FFFFF5;
+	padding: 10px 10px;
+	text-align: left;
+	display: inline-block;
+	width: 300px;
+	margin-left: 5vw;
+	vertical-align: top;
+	border: solid 1px #5E5E5E;
 
-
-#profile-course-display p{
-	color: #5E5E5E;
 }
 
-#profile-course-display a {
+#profile-comment-display p{
+	color: #5E5E5E;
+	font-size: 16px;
+}
+
+#profile-comment-display a {
 	text-decoration: none;
 }
 

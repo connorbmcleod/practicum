@@ -218,29 +218,29 @@
             </div>
     </div>
 
-    <div>
-
-        <p><?php 
-            if(!empty($_SESSION['teacherrate'])){ 
-                for($i = 0; $i < $counts; $i++) { ?>
-                        <div class="search_class" id="profile-course-display">
-                        <p>
-                        <?php for($e = 0; $e < $_SESSION['teacherrate'][$i]['rating']; $e++) { ?>
-                           &#9733 
-                        <?php } ?>
-                        </p>
-                            <p class="class_head"><?php echo $_SESSION['teacherrate'][$i]['comment']; ?></p>
-                        </div> <br/>
-                <?php }
-                ?>
-        <?php } ?>
-    </div> 
-
-    <?php if(!empty($_SESSION['user'])){
-        if($_SESSION['user']['id'] != $iduser){ ?>
-
-    <div id="ratingDiv">    
+    <div id="ratingDiv"> 
         <h1> COMMENTS </h1>
+            <p><?php 
+                if(!empty($_SESSION['teacherrate'])){ 
+                    for($i = 0; $i < $counts; $i++) { ?>
+                            <div class="search_class" id="profile-comment-display">
+                            <p>
+                            <?php for($e = 0; $e < $_SESSION['teacherrate'][$i]['rating']; $e++) { ?>
+                               &#9733 
+                            <?php } ?>
+                            </p>
+                                <p class="class_head"><?php echo $_SESSION['teacherrate'][$i]['comment']; ?></p>
+                            </div>
+                    <?php }
+                    ?>
+            <?php } ?>
+
+
+            <?php if(!empty($_SESSION['user'])){
+                if($_SESSION['user']['id'] != $iduser){ ?>
+
+   
+
             <form method="post">
                 <select name="rating" id="theStars">
                   <option value="1">&#9734</option>

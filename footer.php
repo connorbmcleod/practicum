@@ -15,6 +15,7 @@
 
 <!-- 		<div class="footer-middle"> -->
 			<button id="footer-contact"><a href="contactUs.php">CONTACT US</a></button>
+				
 
 <!-- 		</div> -->
 
