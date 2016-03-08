@@ -980,6 +980,27 @@ textarea:focus, input:focus{
 #profile-course-display a {
 	text-decoration: none;
 }
+
+#ratingDiv{
+	text-align: center;
+	padding: 50px 0px;
+	background-color: #F0F0F0;
+}
+
+#theStars{
+	margin-bottom: 30px;
+	width: 150px;
+}
+
+#ratingComment{
+	width:40vw;
+	height: 100px;
+	margin-bottom: 30px;
+}
+
+#ratingDiv h1{
+	margin-right: 80vw;
+}
 /*myprofile*/
 
 
@@ -1095,6 +1116,17 @@ textarea:focus, input:focus{
 	text-decoration: underline;
 }
 
+.steps {
+	list-style-type: decimal;
+}
+
+.steps ul {
+	margin-top: 10px;
+}
+
+.steps2 {
+	list-style-type: circle;
+}
 /*About Educators Page*/
 
 

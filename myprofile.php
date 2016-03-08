@@ -218,14 +218,10 @@
             </div>
     </div>
 
-    <hr>
-    <h1> COMMENTS </h1>
-    <?php if($_SESSION['user']['id'] != $iduser){ ?>
-
     <div>
 
         <p><?php 
-            if(!empty($_SESSION['courseinfo'])){ 
+            if(!empty($_SESSION['teacherrate'])){ 
                 for($i = 0; $i < $counts; $i++) { ?>
                         <div class="search_class" id="profile-course-display">
                         <p>
@@ -240,22 +236,27 @@
         <?php } ?>
     </div> 
 
-    <?php } ?>
+    <?php if(!empty($_SESSION['user'])){
+        if($_SESSION['user']['id'] != $iduser){ ?>
 
-    <form method="post">
-        <select name="rating" id="">
-          <option value="1">&#9734</option>
-          <option value="2">&#9734 &#9734</option>
-          <option value="3">&#9734 &#9734 &#9734</option>
-          <option value="4">&#9734 &#9734 &#9734 &#9734</option>
-          <option value="5">&#9734 &#9734 &#9734 &#9734 &#9734</option>
-        </select>
+    <div id="ratingDiv">    
+        <h1> COMMENTS </h1>
+            <form method="post">
+                <select name="rating" id="theStars">
+                  <option value="1">&#9734</option>
+                  <option value="2">&#9734 &#9734</option>
+                  <option value="3">&#9734 &#9734 &#9734</option>
+                  <option value="4">&#9734 &#9734 &#9734 &#9734</option>
+                  <option value="5">&#9734 &#9734 &#9734 &#9734 &#9734</option>
+                </select>
+                    <br>
+                <textarea name="comment" id="ratingComment"></textarea>
+                    <br>
+                <input onclick="" type="submit" value="Leave Rating" class="button" id=""/></a>
+            </form>
+    </div>
 
-        <textarea name="comment"></textarea>
-
-        <input onclick="" type="submit" value="Leave Rating" class="button" id=""/></a>
-    </form>
-
+    <?php } } ?>
 
 
 
