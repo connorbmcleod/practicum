@@ -144,30 +144,30 @@
 
                                 <label for="time">Select a Time</label>
                                   <select name="time" id="speed">
-                                    <option>12am</option>
-                                    <option>1am</option>
-                                    <option>2am</option>
-                                    <option>3am</option>
-                                    <option>4am</option>
-                                    <option>5am</option>
-                                    <option>6am</option>
-                                    <option>7am</option>
-                                    <option>8am</option>
-                                    <option>9am</option>
-                                    <option>10am</option>
-                                    <option>11am</option>
-                                    <option>12pm</option>
-                                    <option>1pm</option>
-                                    <option>2pm</option>
-                                    <option>3pm</option>
-                                    <option>4pm</option>
-                                    <option>5pm</option>
-                                    <option>6pm</option>
-                                    <option>7pm</option>
-                                    <option>8pm</option>
-                                    <option>9pm</option>
-                                    <option>10pm</option>
-                                    <option>11pm</option>
+                                    <option>12 AM</option>
+                                    <option>1 AM</option>
+                                    <option>2 AM</option>
+                                    <option>3 AM</option>
+                                    <option>4 AM</option>
+                                    <option>5 AM</option>
+                                    <option>6 AM</option>
+                                    <option>7 AM</option>
+                                    <option>8 AM</option>
+                                    <option>9 AM</option>
+                                    <option>10 AM</option>
+                                    <option>11 AM</option>
+                                    <option>12 PM</option>
+                                    <option>1 PM</option>
+                                    <option>2 PM</option>
+                                    <option>3 PM</option>
+                                    <option>4 PM</option>
+                                    <option>5 PM</option>
+                                    <option>6 PM</option>
+                                    <option>7 PM</option>
+                                    <option>8 PM</option>
+                                    <option>9 PM</option>
+                                    <option>10 PM</option>
+                                    <option>11 PM</option>
                                   </select>
 
                             </fieldset>
@@ -178,7 +178,8 @@
                             <fieldset>
                                 <label for="region">Select a Region</label>
                                 <select name="region" id="speed">
-                                  <option>Sunshine Coast</option>
+                                    <option></option>
+                                    <option>Sunshine Coast</option>
                                 </select>
                             </fieldset>
                         <br />
@@ -187,12 +188,13 @@
                             <fieldset>
                                 <label for="area">Select a Area</label>
                                 <select name="area" id="speed">
-                                  <option>Gibsons</option>
-                                  <option>Roberts Creek</option>
-                                  <option>Sechelt</option>
-                                  <option>Pender Harbour</option>
-                                  <option>Gambier Harbour</option>
-                                  <option>Keats Island</option>
+                                    <option></option>
+                                    <option>Gibsons</option>
+                                    <option>Roberts Creek</option>
+                                    <option>Sechelt</option>
+                                    <option>Pender Harbour</option>
+                                    <option>Gambier Harbour</option>
+                                    <option>Keats Island</option>
                                 </select>
                             </fieldset>
                         <br />
@@ -202,12 +204,12 @@
                             <fieldset>
                                 <label for="location">Select a Location</label>
                                 <select name="location" id="speed">
-                                  <option>Library</option>
-                                  <option>Coffee Shop</option>
-                                  <option></option>
-                                  <option>Town Hall</option>
-                                  <option>Ice Rink</option>
-                                  <option>The Bush</option>
+                                    <option></option>
+                                    <option>Library</option>
+                                    <option>Coffee Shop</option>
+                                    <option>Town Hall</option>
+                                    <option>Ice Rink</option>
+                                    <option>The Bush</option>
                                 </select>
                             </fieldset>
                         <br />
