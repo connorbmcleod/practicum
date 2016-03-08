@@ -27,11 +27,26 @@
     <!-- content -->
     <div class="content-wrapper educator-wrapper">
         <h2 class="about_header">Our Educators</h2>
-        <p class="about_paragraph">WeLearn educators are people in your community who have a passion for a subject and want to share that passion with others. If you have a skill that you want to share with others in your community then dont wait, begin teaching a class of your own.</p>
+        <p class="about_paragraph">Welearn is designed to allow neighbours to teach neighbours in a community.  Every person in every community has a knowledge, skill or ability that is valuable to others.  The welearn website provides a platform where community members can come together around learning.</p>
         <p></p>
-        <h2 class="about_header">Become an Educator</h2>
-        <p class="about_paragraph">Setting up your own class is simple. As long as you are a member you can become an educator. Once becoming an educator, you can add and delete your own classes as well as add a bio to your profile and have it display for learners who may be interested in your class.</p> 
-        <p class="about_paragraph">Never taught before? Don't let that stop you. Below you will find referance material on how to effectively set-up and teach your course. </p>
+        <h2 class="about_header">How It Works</h2>
+        <p class="about_paragraph">As an educator you can create any class that you would like to instruct.   If you have a unique knowledge, skill or ability that you would like to share with others, build it into a class! For every student that signs up to your class you will receive $12.</p> 
+
+        <ul class="steps">
+            <li>Complete your profile</li>
+            <li>Cerate a class</li>
+                <ul class="steps2">
+                    <li>Class title</li>
+                    <li>Brief description</li>
+                    <li>5 learning outcomes that students will learn over the course of the one hour class</li>
+                </ul>
+            <li>Decide how many student can attend the class</li>
+                <ul class="steps2">
+                    <li>Min = How many students needed until the class becomes active</li>
+                    <li>Max = How many students needed until the class becomes full</li>
+                </ul>
+            <li>Decide where the class will take place</li>
+        </ul>
 
 
         <ul id="articles">
