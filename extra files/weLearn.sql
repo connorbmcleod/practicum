@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.14
+-- version 4.5.2
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 08, 2016 at 01:19 AM
--- Server version: 5.6.26
--- PHP Version: 5.5.28
+-- Generation Time: Mar 08, 2016 at 06:55 AM
+-- Server version: 10.1.9-MariaDB
+-- PHP Version: 5.6.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,9 +26,11 @@ SET time_zone = "+00:00";
 -- Table structure for table `courses`
 --
 
-CREATE TABLE IF NOT EXISTS `courses` (
+CREATE TABLE `courses` (
   `courseID` int(11) NOT NULL,
   `coursename` varchar(255) NOT NULL,
+  `region` varchar(64) NOT NULL,
+  `area` varchar(64) NOT NULL,
   `location` varchar(255) NOT NULL,
   `date` varchar(255) NOT NULL,
   `time` varchar(64) NOT NULL,
@@ -43,14 +45,15 @@ CREATE TABLE IF NOT EXISTS `courses` (
   `teacherID` int(11) NOT NULL,
   `status` int(1) NOT NULL,
   `completion` int(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `courses`
 --
 
-INSERT INTO `courses` (`courseID`, `coursename`, `location`, `date`, `time`, `minimumpeople`, `maximumpeople`, `description`, `objective1`, `objective2`, `objective3`, `objective4`, `objective5`, `teacherID`, `status`, `completion`) VALUES
-(10, 'Mushrooming 101', 'Sechelt', '03/17/2016', '1pm', 1, 10, 'Have you always wondered about the hundreds of mushrooms you see every year, especially in the fall? Which ones are edible and which ones not? Did you know that many mushrooms that grow here on the coast have medicinal properties and have been used in Traditional Chinese Medicine for thousands of years? This workshop will give you a great introduction to identifying and foraging for wild mushrooms, as well as other uses such as making dyes for fabric and paper out of mushrooms  – Mushrooming 101 – presented by the Society For The Hunting Recognition & Observation of Mushrooms (SCSHROOM).', 'Identify Many Mushrooms', 'Pick Some Mushrooms', 'Taste the good mushrooms', 'Identify safe and dangerous mushrooms', '', 4, 1, 0);
+INSERT INTO `courses` (`courseID`, `coursename`, `region`, `area`, `location`, `date`, `time`, `minimumpeople`, `maximumpeople`, `description`, `objective1`, `objective2`, `objective3`, `objective4`, `objective5`, `teacherID`, `status`, `completion`) VALUES
+(10, 'Mushrooming 101', '', '', 'Sechelt', '03/17/2016', '1pm', 1, 10, 'Have you always wondered about the hundreds of mushrooms you see every year, especially in the fall? Which ones are edible and which ones not? Did you know that many mushrooms that grow here on the coast have medicinal properties and have been used in Traditional Chinese Medicine for thousands of years? This workshop will give you a great introduction to identifying and foraging for wild mushrooms, as well as other uses such as making dyes for fabric and paper out of mushrooms  – Mushrooming 101 – presented by the Society For The Hunting Recognition & Observation of Mushrooms (SCSHROOM).', 'Identify Many Mushrooms', 'Pick Some Mushrooms', 'Taste the good mushrooms', 'Identify safe and dangerous mushrooms', '', 4, 1, 0),
+(12, 'sdf', 'Sunshine Coast', 'Gibsons', 'Library', '03/10/2016', '12am', 1, 2, 'sdasd', '', '', '', '', '', 4, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -58,7 +61,7 @@ INSERT INTO `courses` (`courseID`, `coursename`, `location`, `date`, `time`, `mi
 -- Table structure for table `educatorinfo`
 --
 
-CREATE TABLE IF NOT EXISTS `educatorinfo` (
+CREATE TABLE `educatorinfo` (
   `id` int(11) NOT NULL,
   `teacherfname` varchar(64) NOT NULL,
   `teacherlname` varchar(64) NOT NULL,
@@ -80,7 +83,7 @@ INSERT INTO `educatorinfo` (`id`, `teacherfname`, `teacherlname`, `bio`, `locati
 -- Table structure for table `enrollments`
 --
 
-CREATE TABLE IF NOT EXISTS `enrollments` (
+CREATE TABLE `enrollments` (
   `id` int(11) NOT NULL,
   `courseID` int(11) NOT NULL,
   `studentID` int(11) NOT NULL
@@ -99,7 +102,7 @@ INSERT INTO `enrollments` (`id`, `courseID`, `studentID`) VALUES
 -- Table structure for table `locations`
 --
 
-CREATE TABLE IF NOT EXISTS `locations` (
+CREATE TABLE `locations` (
   `id` int(8) NOT NULL,
   `name` varchar(128) NOT NULL,
   `address` varchar(256) NOT NULL,
@@ -113,12 +116,12 @@ CREATE TABLE IF NOT EXISTS `locations` (
 -- Table structure for table `ratings`
 --
 
-CREATE TABLE IF NOT EXISTS `ratings` (
+CREATE TABLE `ratings` (
   `id` int(8) NOT NULL,
   `rating` int(1) NOT NULL,
   `comment` varchar(1024) NOT NULL,
   `teacherid` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `ratings`
@@ -134,7 +137,7 @@ INSERT INTO `ratings` (`id`, `rating`, `comment`, `teacherid`) VALUES
 -- Table structure for table `users`
 --
 
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `firstname` varchar(255) NOT NULL,
   `lastname` varchar(255) NOT NULL,
@@ -142,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `salt` char(16) NOT NULL,
   `email` varchar(255) NOT NULL,
   `usertype` int(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
@@ -189,7 +192,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `courseID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+  MODIFY `courseID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `locations`
 --
@@ -199,12 +202,12 @@ ALTER TABLE `locations`
 -- AUTO_INCREMENT for table `ratings`
 --
 ALTER TABLE `ratings`
-  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -69,7 +69,7 @@
                                 
                                 <p class="class_header"><?php echo $_SESSION['allcourses'][$i]['coursename']; ?></p></a>
                                 <div class="course_info">
-                                    <p><?php echo $_SESSION['allcourses'][$i]['location']; ?></p>
+                                    <p><?php echo $_SESSION['allcourses'][$i]['area']; ?></p>
                                     <p><?php echo $_SESSION['allcourses'][$i]['date']; ?></p>
                                 </div>
                                 <?php if($_SESSION['allcourses'][$i]['status'] == 0) {  ?>

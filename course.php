@@ -111,6 +111,10 @@
         <p><?php echo $_SESSION['coursepage']['date']; ?></p><br>
         <h3>Time</h3>
         <p><?php echo $_SESSION['coursepage']['time']; ?></p><br>
+        <h3>Region</h3>
+        <p><?php echo $_SESSION['coursepage']['region']; ?></p><br>
+        <h3>Area</h3>
+        <p><?php echo $_SESSION['coursepage']['area']; ?></p><br>
         <h3>Location</h3>
         <p><?php echo $_SESSION['coursepage']['location']; ?></p><br>
     </div>

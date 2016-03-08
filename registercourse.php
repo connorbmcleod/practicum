@@ -39,9 +39,11 @@
         $query = " 
             INSERT INTO courses ( 
                 coursename,
+                region,
+                area,
                 location,
-                time, 
-                date,
+                date, 
+                time,
                 minimumpeople, 
                 maximumpeople, 
                 description,
@@ -54,9 +56,11 @@
                 status 
             ) VALUES ( 
                 :coursename,
+                :region,
+                :area,
                 :location, 
-                :time,
-                :date, 
+                :date,
+                :time, 
                 :minnumber,
                 :maxnumber, 
                 :courseDesc,
@@ -73,6 +77,8 @@
          
         $query_params = array( 
             ':coursename' => $_POST['coursename'],
+            ':region' => $_POST['region'],
+            ':area' => $_POST['area'],
             ':location' => $_POST['location'],
             ':time' => $_POST['time'],   
             ':date' => $_POST['date'],  
