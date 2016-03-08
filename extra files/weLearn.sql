@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 07, 2016 at 11:07 PM
+-- Generation Time: Mar 08, 2016 at 01:19 AM
 -- Server version: 5.6.26
 -- PHP Version: 5.5.28
 
@@ -118,14 +118,15 @@ CREATE TABLE IF NOT EXISTS `ratings` (
   `rating` int(1) NOT NULL,
   `comment` varchar(1024) NOT NULL,
   `teacherid` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `ratings`
 --
 
 INSERT INTO `ratings` (`id`, `rating`, `comment`, `teacherid`) VALUES
-(1, 4, 'Great teacher, was a little late, hence the 4', 4);
+(1, 4, 'Great teacher, was a little late, hence the 4', 4),
+(9, 2, 'mehhhh', 4);
 
 -- --------------------------------------------------------
 
@@ -198,7 +199,7 @@ ALTER TABLE `locations`
 -- AUTO_INCREMENT for table `ratings`
 --
 ALTER TABLE `ratings`
-  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `users`
 --

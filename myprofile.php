@@ -72,6 +72,78 @@
          
             $count = count($_SESSION['courseinfo']);
 
+            $query = " 
+                SELECT * FROM ratings 
+                WHERE 
+                    teacherid = '$iduser' 
+            "; 
+             
+            try 
+            { 
+                $stmt = $db->prepare($query); 
+                $result = $stmt->execute(); 
+            } 
+            catch(PDOException $ex) 
+            {  
+                die("Failed to run query: " . $ex->getMessage()); 
+            } 
+             
+            $rows = $stmt->fetchAll(); 
+                 
+            $_SESSION['teacherrate'] = $rows;
+
+            $counts = count($_SESSION['teacherrate']);
+
+            if(isset($_POST['rating']) && isset($_POST['comment'])){
+                $query = " 
+                    INSERT INTO ratings (
+                        rating,
+                        comment,
+                        teacherid
+                    ) VALUES (
+                        :rating,
+                        :comment,
+                        $iduser
+                    ) 
+                "; 
+
+                $query_params = array( 
+                    ':rating' => $_POST['rating'],
+                    ':comment' => $_POST['comment'],
+                ); 
+             
+                try 
+                { 
+                    $stmt = $db->prepare($query); 
+                    $result = $stmt->execute($query_params); 
+                } 
+                catch(PDOException $ex) 
+                {  
+                    die("Failed to run query: " . $ex->getMessage()); 
+                } 
+
+                header("Refresh:0");
+        }
+
+            $query = " 
+                SELECT AVG(rating)
+                FROM ratings
+                WHERE teacherid = $iduser 
+            "; 
+             
+            try 
+            { 
+                $stmt = $db->prepare($query); 
+                $result = $stmt->execute(); 
+            } 
+            catch(PDOException $ex) 
+            {  
+                die("Failed to run query: " . $ex->getMessage()); 
+            } 
+             
+            $row = $stmt->fetch();
+            $average = round($row['AVG(rating)']);
+
 ?>
 
 <div class="hero hero_educator">
@@ -84,6 +156,13 @@
         <div class="hero-title-upper border-bottom"><?php echo $_SESSION['userinfo']['teacherfname'];?></div> 
         <div class="hero-title"><?php echo $_SESSION['userinfo']['teacherlname']; ?></div>
     </div>
+    </div>
+
+    <div id="rating">
+    <?php for($a = 0; $a < $average; $a++) { 
+            echo "&#9733";
+        } 
+        ?>
     </div>
 
 <!-- content -->
@@ -138,6 +217,46 @@
                         ?>
             </div>
     </div>
+
+    <hr>
+    <h1> COMMENTS </h1>
+    <?php if($_SESSION['user']['id'] != $iduser){ ?>
+
+    <div>
+
+        <p><?php 
+            if(!empty($_SESSION['courseinfo'])){ 
+                for($i = 0; $i < $counts; $i++) { ?>
+                        <div class="search_class" id="profile-course-display">
+                        <p>
+                        <?php for($e = 0; $e < $_SESSION['teacherrate'][$i]['rating']; $e++) { ?>
+                           &#9733 
+                        <?php } ?>
+                        </p>
+                            <p class="class_head"><?php echo $_SESSION['teacherrate'][$i]['comment']; ?></p>
+                        </div> <br/>
+                <?php }
+                ?>
+        <?php } ?>
+    </div> 
+
+    <?php } ?>
+
+    <form method="post">
+        <select name="rating" id="">
+          <option value="1">&#9734</option>
+          <option value="2">&#9734 &#9734</option>
+          <option value="3">&#9734 &#9734 &#9734</option>
+          <option value="4">&#9734 &#9734 &#9734 &#9734</option>
+          <option value="5">&#9734 &#9734 &#9734 &#9734 &#9734</option>
+        </select>
+
+        <textarea name="comment"></textarea>
+
+        <input onclick="" type="submit" value="Leave Rating" class="button" id=""/></a>
+    </form>
+
+
 
 
             
