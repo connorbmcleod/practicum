@@ -122,18 +122,40 @@
 
                     <input id="coursename" type="text" name="coursename" value="" class="form-field" placeholder=" Course Name"/> 
                     <br /><br /> 
-                <!-- <input id="location" type="text" name="location" value="" class="form-field" placeholder=" Location"/>  -->
 
-            <!-- <div id="location_drop">
-                    <p>&nbsp;Choose a Location</p>
-                        <ul id="location_drop_menu">
-                            <li id="location" value="Gibsons">Gibsons</li>
-                            <li id="location" value="Lund">Lund</li>
-                            <li id="location" value="Sechelt">Sechelt</li>
-                        </ul>
+                     <fieldset>
+                                <label for="category">Select a Category</label>
+                                <select name="category" id="speed">
+                                    <option></option>
+                                    <option>Art</option>
+                                    <option>Automotive</option>
+                                    <option>Beauty</option>
+                                    <option>Childcare/Development</option>
+                                    <option>Computers</option>
+                                    <option>Cooking</option>
+                                    <option>Crafts</option>
+                                    <option>Boating</option>
+                                    <option>Business</option>
+                                    <option>Dance</option>
+                                    <option>First-aid</option>
+                                    <option>Games</option>
+                                    <option>Gardening/Agriculture</option>
+                                    <option>Health/Wellness</option>
+                                    <option>History/Travel/Culture</option>
+                                    <option>Home Renovation/Maintenance</option>
+                                    <option>Languages</option>
+                                    <option>Martial Arts</option>
+                                    <option>Math</option>
+                                    <option>Music</option>
+                                    <option>Nature/Outdoors</option>
+                                    <option>Pets</option>
+                                    <option>Sciences</option>
+                                    <option>Social Sciences</option>
+                                    <option>Sports</option>
+                                </select>
+                            </fieldset>
+                        <br />
 
-                </div> -->
-             <!-- Waiting for list of locations to finish -->
 
                 <input id="datepicker" type="text" name="date" value="" class="form-field" placeholder=" Date"/> 
 
@@ -215,6 +237,8 @@
                         <br />
 
 
+
+
                 <input id="minnumber" type="text" name="minnumber" value="" class="form-field" placeholder=" Minimum Number of Students"/> 
                 <br /><br />
                 <input id="maxnumber" type="text" name="maxnumber" value="" class="form-field" placeholder=" Maximum Number of Students"/> 
@@ -247,9 +271,11 @@
             </div>
 
                       <a href="http://localhost/practicum/myprofile.php?id=<?php echo $_SESSION['user']['id']; ?>"><input onclick="" type="submit" value="Create" class="button" id="createCourseBtn"/></a>
-        </form>
+       
+                           
 
 
+</form>
     <!-- content -->
 
     <!-- footer -->
