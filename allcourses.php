@@ -13,7 +13,38 @@
 
         require("common.php"); 
 
+
+if (isset($_GET["category"])) {
+
+        $category = $_GET["category"];
+
         $query = " 
+                    SELECT
+                        * 
+                    FROM courses 
+                    WHERE 
+                        category = '$category' 
+                "; 
+                 
+                try 
+                { 
+                    $stmt = $db->prepare($query); 
+                    $result = $stmt->execute(); 
+                } 
+                catch(PDOException $ex) 
+                {  
+                    die("Failed to run query: " . $ex->getMessage()); 
+                }
+
+                $rows = $stmt->fetchAll();
+
+                    $_SESSION['allcourses'] = $rows;
+
+                    $count = count($_SESSION['allcourses']);
+    } 
+    else {
+
+       $query = " 
                     SELECT
                         * 
                     FROM courses 
@@ -37,6 +68,17 @@
 
                     $count = count($_SESSION['allcourses']);
 
+    }
+
+    if(isset($_POST["category"])){
+        $category = $_POST["category"];
+        if($category == ''){
+            header("Location: allcourses.php"); 
+        }
+        else{
+            header("Location: allcourses.php?category=$category"); 
+    }
+    }
     ?>
 
     <div class="hero hero_courses">
@@ -58,6 +100,45 @@
         </input>
     </div>
 
+    <form method="post">
+
+                     <fieldset>
+                                <label for="category">Select a Category</label>
+                                <select name="category" id="speed categories">
+                                    <option></option>
+                                    <option>Art</option>
+                                    <option>Automotive</option>
+                                    <option>Beauty</option>
+                                    <option>Childcare/Development</option>
+                                    <option>Computers</option>
+                                    <option>Cooking</option>
+                                    <option>Crafts</option>
+                                    <option>Boating</option>
+                                    <option>Business</option>
+                                    <option>Dance</option>
+                                    <option>First-aid</option>
+                                    <option>Games</option>
+                                    <option>Gardening/Agriculture</option>
+                                    <option>Health/Wellness</option>
+                                    <option>History/Travel/Culture</option>
+                                    <option>Home Renovation/Maintenance</option>
+                                    <option>Languages</option>
+                                    <option>Martial Arts</option>
+                                    <option>Math</option>
+                                    <option>Music</option>
+                                    <option>Nature/Outdoors</option>
+                                    <option>Pets</option>
+                                    <option>Sciences</option>
+                                    <option>Social Sciences</option>
+                                    <option>Sports</option>
+                                </select>
+                            </fieldset>
+                        <br />
+
+                        <button type="submit" id="filter">Filter</button>
+
+                 </form>
+
     <div class="test-wrapper">
 
            <?php 
@@ -69,7 +150,7 @@
                                 
                                 <p class="class_header"><?php echo $_SESSION['allcourses'][$i]['coursename']; ?></p></a>
                                 <div class="course_info">
-                                    <p><?php echo $_SESSION['allcourses'][$i]['area']; ?></p>
+                                    <p><?php echo $_SESSION['allcourses'][$i]['location']; ?></p>
                                     <p><?php echo $_SESSION['allcourses'][$i]['date']; ?></p>
                                 </div>
                                 <?php if($_SESSION['allcourses'][$i]['status'] == 0) {  ?>
@@ -93,11 +174,12 @@
 
 <!-- footer -->
 
-    <?php include 'footer.php'; ?>
+
 
 <!-- footer -->
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/global.js"></script>
 </body>
+    <?php include 'footer.php'; ?>
 </html>
