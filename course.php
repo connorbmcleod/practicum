@@ -16,6 +16,7 @@
         require("common.php"); 
         $courseid = $_GET["id"];
         $_SESSION['enrolment'] = $courseid;
+        $userid = $_SESSION['user']['id'];
 
         $query = " 
                 SELECT * 
@@ -65,10 +66,12 @@
 
         $query = " 
                 SELECT 
-                    1 
+                    1
                 FROM enrollments
                 WHERE 
                     courseID = '$courseid'
+                AND studentID = $userid
+
             "; 
                       
             try 
