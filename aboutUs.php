@@ -26,25 +26,27 @@
             <div class="hero-title-upper border-bottom">About</div> 
             <div class="hero-title">weLearn</div>
         </div>
+
     </div>
 
     <!-- content -->
     <!-- content -->
-
-    <div class="content-wrapper" id="about-us-content">
         <p class="vision_stmnt">"&thinsp;&thinsp;Bring a community together with knowledge .&thinsp;"</p>
-        <h2 class="about_header">Our Mission</h2>
+    <div class="content-wrapper">
+        
         <p class="about_paragraph">Welearn is a service that brings together neigbours to allow us to build our local educational capacity.</p>
         <p class="about_paragraph">Welearn looks after many of the burdensome administrative task for educators and provides an easy interface for students in the community to select classes.</p>
         <p class="about_paragraph">We believe each person in the community has a skills to share and that would benefit others, this service allows us to benefit from our neigbours knowledge and experience.</p>
 
             
+
+    </div>
+
         <div class="join-team">
             <hr />
             <h3>Interested in joining our team? Check out our available positions.</h3>
             <button class="button" id="careers">Careers</button>
         </div>
-    </div>
     <!-- content -->
 
 

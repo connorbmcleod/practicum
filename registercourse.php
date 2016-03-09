@@ -53,8 +53,7 @@
                 objective4,
                 objective5,
                 teacherID,
-                status,
-                category 
+                status 
             ) VALUES ( 
                 :coursename,
                 :region,
@@ -71,8 +70,7 @@
                 :objectivefour,
                 :objectivefive,
                 '$userID',
-                '0',
-                :category
+                '0'
             ) 
         "; 
          
@@ -92,7 +90,6 @@
             ':objectivethree' => $_POST['objectivethree'],
             ':objectivefour' => $_POST['objectivefour'],
             ':objectivefive' => $_POST['objectivefive'],
-            ':category' => $_POST['category']
         ); 
          
         try 

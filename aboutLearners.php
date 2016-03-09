@@ -27,7 +27,7 @@
 
 
     <!-- content -->
-    <div id="about-learners-content">
+    <div class="content-wrapper" id="about-learners-content">
         <div class="learner-headers">
             <h2>About Learners</h2>
         </div>
@@ -57,9 +57,9 @@
 
                                 6.      Go to your class and have a great time!<br>
 
-                                7.      Explore the site for your next class.<br>
-                                </p>
-                                To begin, you can sign up OR browse the courses in your local area.<br><br>                        
+                                7.      Explore the site for your next class.<br><br><br>  
+                               
+                                To begin, you can sign up OR browse the courses in your local area.</p>                     
                                     <a href="registerPage.php">
                                         <button class="button" id="signup" name="signup">Sign up</button>
                                     </a>

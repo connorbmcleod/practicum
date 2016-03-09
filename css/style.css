@@ -121,11 +121,12 @@ textarea:focus, input:focus{
 /*Dropdown arrow*/
 
 .content-wrapper {
-	margin: 50px;
+	margin: 100px;
+	max-width: 1100px;
 }
 
 .educator-wrapper {
-	margin-bottom: 15vh;
+	margin-bottom: 5vh;
 	margin-top: 10vh;
 }
 
@@ -1094,7 +1095,6 @@ textarea:focus, input:focus{
 /*About us page*/
 
 #about-us-content{
-	width: 80vw;
 	margin: 0 auto;
 	margin-bottom: 50px;
 	margin-top: 50px;
@@ -1104,19 +1104,24 @@ textarea:focus, input:focus{
 .vision_stmnt {
 	text-align: center;
 	font-size: 3.2em;
-	margin-top: 100px;
+	margin-top: 60px;
 	font-family: "Lobster Two";
-	line-height: 2em;
+	line-height: 1.8em;
 	color: #bdbdbd;
 }
 
-.about_header {
-	font-size: 2em;
+.educators_header h2{
+	border: black 1px solid;
+	border-left: none;
+	border-right: none;
+	width: 200px;
+	padding: 10px 0px;
+	margin-top: 50px;
 }
 
 .about_paragraph {
 	padding-bottom: 15px;
-	width: 80%;
+/*	width: 80%;*/
 	margin: 0 auto;                                                                                                                                         
 }
 
@@ -1136,15 +1141,24 @@ textarea:focus, input:focus{
 /*About Educators Page*/
 
 #articles {
-	width: 1000px;
-	margin: 0 auto;
-	margin-top: 70px;
+	padding-top: 10px;
+	padding-bottom: 50px;
+	text-align: center;
+	background-color: rgba(225,225,225,1);
+	margin-bottom: 0px;
+}
+
+#articles li{
+	text-decoration: none;
+}
+
+#articles li:hover{
+	font-size: 1.1em;
 }
 
 .article1, .article2, .article3, .article4, .article5 {
-	width: 300px;
 	display: block;
-	margin-top: 50px;
+	margin-top: 20px;
 	text-decoration: underline;
 }
 
@@ -1152,8 +1166,8 @@ textarea:focus, input:focus{
 	list-style-type: decimal;
 }
 
-.steps .steps2 ul {
-	margin-top: 20px;
+.steps ul {
+	margin-top: 10px;
 }
 
 .steps2 {
@@ -1492,7 +1506,7 @@ a #go-to-course:hover, a #drop-course:hover{
 	text-align: center;
 	width: 400px;
 	margin: 0 auto;
-	margin-top: 100px;
+	margin-top: 50px;
 	padding: 20px;
 }
 
@@ -1578,6 +1592,7 @@ a #go-to-course:hover, a #drop-course:hover{
 	width: 200px;
 	padding: 10px 0px;
 	margin-top: 40px;
+	margin-left: 50px;
 }
 
 #steps h2{
@@ -1587,11 +1602,11 @@ a #go-to-course:hover, a #drop-course:hover{
 	width: 100px;
 	padding: 10px 0px;
 	margin-top: 40px;
+	margin-left: 50px;
 }
 
 #about-learners-content{
 	text-align: center;
-	width: 80vw;
 	margin: 0 auto;
 	margin-bottom: 100px;
 	margin-top: 50px;
@@ -1767,3 +1782,77 @@ a #go-to-course:hover, a #drop-course:hover{
 */
 
 /*FONT FACE*/
+
+/*Tablet*/
+@media only screen and (min-width: 667px)
+				   and	(max-width: 768px) {
+	.hero-title{
+		font-size: 36px;
+	}
+
+	#hero-wrap{
+		width: 500px;
+	}
+
+	.vision_stmnt{
+		font-size: 2.5em;
+		line-height: 1.5em;
+		margin-top: 60px;
+	}
+
+}
+
+
+
+
+/*iPhone6*/
+@media only screen and (min-width: 375px) 
+  and (max-width: 667px) {
+  	p{
+  		text-align: justify;
+  	}
+
+ 	.hero-title{
+		font-size: 24px;
+	}
+
+	.hero-title-upper{
+		font-size: 18px;
+		letter-spacing: 7px;
+	}
+
+	#hero-wrap{
+		width: 300px;
+	}
+
+	.vision_stmnt{
+		font-size: 2em;
+		line-height: 1.2em;
+		margin-top: 40px;
+		margin-bottom: 50px;
+	}
+
+	.content-wrapper{
+		margin: 30px;
+	}
+
+	.about_paragraph{
+		width: 100%;
+	}
+
+	.general-inquiry p{
+		text-align: center;
+		font-size: 0.8em;
+	}
+
+	.general-inquiry{
+		width: 250px;
+		margin-top: 0px;
+	}
+
+	#contact-form #name, #contact-form #email, #contact-form textarea{
+		width: 300px;
+	}
+
+
+}
