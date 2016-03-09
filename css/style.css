@@ -5,7 +5,6 @@ body{
 	font-family: 'Carme', sans-serif;
 /*	font-size: 1.1em;*/
 	line-height: 1.5em;
-	width: 100%;
 
 }
 
@@ -391,11 +390,6 @@ textarea:focus, input:focus{
 	margin-bottom: 0px;
 }
 
-#footer-middle{
-	text-align: center;
-	display: inline-block;
-}
-
 .footer-left{
 	float: left;
 }
@@ -408,19 +402,11 @@ textarea:focus, input:focus{
 
 .footer button {
 	background-color: transparent;
-	border: none;	
+	border: white thin solid;
+	padding: 5px 10px;
 	color: white;
 	width: 200px;
-	margin-top: 22px;
-	font-size: 24px;
-}
-
-#footer-middle a{
-	text-decoration: none;
-	color: white;
-	border: white solid 1px;
-	margin-top: 0px;
-	padding: 5px 10px;
+	margin-top: 18px;
 	font-size: 24px;
 }
 
@@ -429,7 +415,7 @@ textarea:focus, input:focus{
 	text-decoration: none;
 }
 
-#footer-middle a:hover{
+.footer button a:hover{
 	color: rgba(255,255,255,0.7);
 }
 
@@ -900,14 +886,13 @@ textarea:focus, input:focus{
 	margin-bottom: 30px;
 }
 
-.allClasses h2{
+.pastClasses h2, .allClasses h2{
 	border: black 1px solid;
 	color: black;
 	padding: 10px 10px;
 	font-size: 24px;
 	border-right: none;
-	border-left: none;
-	width: 70vw;
+	border-left: none; 
 }
 
 .profile_content {
@@ -920,13 +905,13 @@ textarea:focus, input:focus{
 
 .bio h2{
 	width: 50px;
+	background-color:;
 	border: black 1px solid;
 	color: black;
 	padding: 10px 20px;
 	font-size: 24px;
 	border-right: none;
 	border-left: none;
-	margin-left: 8vw;
 }
 
 .bio p{
@@ -987,11 +972,11 @@ textarea:focus, input:focus{
 
 #profile-comment-display{
 	background-color: #FFFFF5;
-	padding: 20px 10px;
-	text-align: center;
+	padding: 10px 10px;
+	text-align: left;
 	display: inline-block;
 	width: 300px;
-	margin-left: 20px;
+	margin-left: 5vw;
 	vertical-align: top;
 	border: solid 1px #5E5E5E;
 
@@ -1010,13 +995,6 @@ textarea:focus, input:focus{
 	text-align: center;
 	padding: 50px 0px;
 	background-color: #F0F0F0;
-}
-
-#ratingAndComments{
-	text-align: left;
-	padding: 50px 50px;
-	background-color: #F0F0F0;
-	padding-bottom: 0px;
 }
 
 #theStars{
@@ -1571,23 +1549,14 @@ a #go-to-course:hover, a #drop-course:hover{
 	color: black;
 }
 
-.learner-headers h2{
+#join h2{
 	border: black 1px solid;
 	border-left: none;
 	border-right: none;
-	width: 200px;
+	width: 140px;
 	padding: 10px 0px;
-	margin-top: 40px;
 }
 
-#steps h2{
-	border: black 1px solid;
-	border-left: none;
-	border-right: none;
-	width: 100px;
-	padding: 10px 0px;
-	margin-top: 40px;
-}
 
 #about-learners-content{
 	text-align: center;
@@ -1629,10 +1598,6 @@ a #go-to-course:hover, a #drop-course:hover{
 .go-to-courses a {
 	color: inherit;
 	text-decoration: none;
-}
-
-.about_paragraph .learner_lines{
-	text-align: left;
 }
 /*LEARNER PAGE*/
 
