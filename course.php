@@ -107,8 +107,6 @@
             <p><?php echo $_SESSION['teacher']['teacherfname'] . ' ' . $_SESSION['teacher']['teacherlname']; ?></p>
         </a>
         <br>
-        <h3>Category</h3>
-        <p><?php echo $_SESSION['coursepage']['category']; ?></p><br>        
         <h3>Date</h3>
         <p><?php echo $_SESSION['coursepage']['date']; ?></p><br>
         <h3>Time</h3>

@@ -199,7 +199,6 @@ $('#register2').click(function(){
 	};
 });
 
-
 // Datepicker
 
   $(function() {
@@ -210,6 +209,4 @@ $('#register2').click(function(){
 
 // $("#speed").blur(function(){
 // 	if($('#speed').val() == 'Sunshine Coast')
-// });
-
-
+// })

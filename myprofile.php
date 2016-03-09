@@ -218,7 +218,7 @@
             </div>
     </div>
 
-    <div id="ratingDiv"> 
+     <div id="ratingAndComments">
         <h1> COMMENTS </h1>
             <p><?php 
                 if(!empty($_SESSION['teacherrate'])){ 
@@ -234,8 +234,9 @@
                     <?php }
                     ?>
             <?php } ?>
-
-
+    </div>
+    <div id="ratingDiv">
+        <h3>Rate This Insturctor</h3>
             <?php if(!empty($_SESSION['user'])){
                 if($_SESSION['user']['id'] != $iduser){ ?>
 

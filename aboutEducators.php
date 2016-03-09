@@ -38,19 +38,14 @@
                 <ul class="steps2">
                     <li>Class title</li>
                     <li>Brief description</li>
-                    <li>5 learning outcomes that students will learn over the course of the one hour class.</li>
+                    <li>5 learning outcomes that students will learn over the course of the one hour class</li>
                 </ul>
-            <li>Decide how many student can attend the class.</li>
+            <li>Decide how many student can attend the class</li>
                 <ul class="steps2">
                     <li>Min = How many students needed until the class becomes active</li>
                     <li>Max = How many students needed until the class becomes full</li>
                 </ul>
-            <li>Decide where the class will take place. A list of suggest places is provided, but the class can be held at any location you see fit.</li>
-            <li>Select a date and time for your class (you are responsible for any reservations required).</li>
-            <li>Once the class has become active, you will be notified. Be sure to check your spam folder as these notifications may be flagged.</li>
-            <li>Go to your class and have a great time teaching!</li>
-            <li>You will recieve payment upon class completion.</li>
-            <li>Create your next class.</li>
+            <li>Decide where the class will take place</li>
         </ul>
 
 
