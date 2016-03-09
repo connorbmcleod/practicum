@@ -13,6 +13,8 @@
 
         require("common.php"); 
 
+        $category = $_GET["category"];
+
         $query = " 
                     SELECT
                         * 
@@ -37,7 +39,36 @@
 
                     $count = count($_SESSION['allcourses']);
 
+
+
+if (){
+        $query = " 
+                    SELECT
+                        * 
+                    FROM courses 
+                    WHERE 
+                        category = '$category' 
+                "; 
+                 
+                try 
+                { 
+                    $stmt = $db->prepare($query); 
+                    $result = $stmt->execute(); 
+                } 
+                catch(PDOException $ex) 
+                {  
+                    die("Failed to run query: " . $ex->getMessage()); 
+                }
+
+                $rows = $stmt->fetchAll();
+
+                    $_SESSION['category'] = $rows;
+
+                    $count = count($_SESSION['category']);
+    }
     ?>
+
+
 
     <div class="hero hero_courses">
 
@@ -57,6 +88,41 @@
             <img src="images/search.png" width="43px">
         </input>
     </div>
+
+                     <fieldset>
+                                <label for="category">Select a Category</label>
+                                <select name="category" id="speed">
+                                    <option></option>
+                                    <option>Art</option>
+                                    <option>Automotive</option>
+                                    <option>Beauty</option>
+                                    <option>Childcare/Development</option>
+                                    <option>Computers</option>
+                                    <option>Cooking</option>
+                                    <option>Crafts</option>
+                                    <option>Boating</option>
+                                    <option>Business</option>
+                                    <option>Dance</option>
+                                    <option>First-aid</option>
+                                    <option>Games</option>
+                                    <option>Gardening/Agriculture</option>
+                                    <option>Health/Wellness</option>
+                                    <option>History/Travel/Culture</option>
+                                    <option>Home Renovation/Maintenance</option>
+                                    <option>Languages</option>
+                                    <option>Martial Arts</option>
+                                    <option>Math</option>
+                                    <option>Music</option>
+                                    <option>Nature/Outdoors</option>
+                                    <option>Pets</option>
+                                    <option>Sciences</option>
+                                    <option>Social Sciences</option>
+                                    <option>Sports</option>
+                                </select>
+                            </fieldset>
+                        <br />
+
+                        <button id="filter">Filter</button>
 
     <div class="test-wrapper">
 
