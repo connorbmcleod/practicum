@@ -207,6 +207,6 @@ $('#register2').click(function(){
 
 //Create Course Form Update //
 
-$("#speed").blur(function(){
-	if($('#speed').val() == 'Sunshine Coast')
-})
+// $("#speed").blur(function(){
+// 	if($('#speed').val() == 'Sunshine Coast')
+// })
