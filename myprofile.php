@@ -6,8 +6,9 @@
     <link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300|Roboto:400,700,300,700italic,300italic' rel='stylesheet' type='text/css'>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/global.js"></script>
-    <title>My Profile</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>WeLearn - My Profile</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="images/weLearn-logo-black.png" type="image/png" sizes="16x16 20x20">
 </head>
 <body>
 
@@ -156,15 +157,15 @@
         <div class="hero-title-upper border-bottom"><?php echo $_SESSION['userinfo']['teacherfname'];?></div> 
         <div class="hero-title"><?php echo $_SESSION['userinfo']['teacherlname']; ?></div>
     </div>
-    </div>
 
-    <div id="rating">
-    <?php for($a = 0; $a < $average; $a++) { 
-            echo "&#9733";
-        } 
-        ?>
-    </div>
 
+        <div id="overall-rating">
+        <?php for($a = 0; $a < $average; $a++) { 
+                echo "&#9733";
+            } 
+            ?>
+        </div>
+    </div>
 <!-- content -->
 <!-- <div id="profile-name">
     <h2><strong><?php echo $firstname . ' ' . $lastname; ?></strong></h2>
@@ -194,7 +195,7 @@
                                 <a href='http://localhost/practicum/course.php?id=<?php echo $_SESSION['courseinfo'][$i]['courseID']; ?>'>
                                     <div class="search_class" id="profile-course-display">
                                         <p class="class_head"><?php echo $_SESSION['courseinfo'][$i]['coursename']; ?></p>
-                                        <p><?php echo $_SESSION['courseinfo'][$i]['location']; ?></p>
+                                        <p><strong>Location: </strong><?php echo $_SESSION['courseinfo'][$i]['location']; ?></p>
                                         <p><?php echo substr($_SESSION['courseinfo'][$i]['description'], 0, 100) . "..."; ?></p>
                                     </div>
                                 </a>
@@ -218,44 +219,49 @@
             </div>
     </div>
 
-     <div id="ratingAndComments">
-        <h1> COMMENTS </h1>
-            <p><?php 
-                if(!empty($_SESSION['teacherrate'])){ 
-                    for($i = 0; $i < $counts; $i++) { ?>
-                            <div class="search_class" id="profile-comment-display">
-                            <p>
-                            <?php for($e = 0; $e < $_SESSION['teacherrate'][$i]['rating']; $e++) { ?>
-                               &#9733 
-                            <?php } ?>
-                            </p>
-                                <p class="class_head"><?php echo $_SESSION['teacherrate'][$i]['comment']; ?></p>
-                            </div>
-                    <?php }
-                    ?>
-            <?php } ?>
-    </div>
-    <div id="ratingDiv">
-        <h3>Rate This Insturctor</h3>
-            <?php if(!empty($_SESSION['user'])){
-                if($_SESSION['user']['id'] != $iduser){ ?>
+<div id="entireRating">
 
-   
+        <div id="ratingDiv">
+            <h2>Rate This Insturctor</h2>
+                <?php if(!empty($_SESSION['user'])){
+                    if($_SESSION['user']['id'] != $iduser){ ?>
 
-            <form method="post">
-                <select name="rating" id="theStars">
-                  <option value="1">&#9734</option>
-                  <option value="2">&#9734 &#9734</option>
-                  <option value="3">&#9734 &#9734 &#9734</option>
-                  <option value="4">&#9734 &#9734 &#9734 &#9734</option>
-                  <option value="5">&#9734 &#9734 &#9734 &#9734 &#9734</option>
-                </select>
-                    <br>
-                <textarea name="comment" id="ratingComment"></textarea>
-                    <br>
-                <input onclick="" type="submit" value="Leave Rating" class="button" id=""/></a>
-            </form>
-    </div>
+       
+
+                <form method="post">
+                    <select name="rating" id="theStars">
+                      <option value="1">&#9734</option>
+                      <option value="2">&#9734 &#9734</option>
+                      <option value="3">&#9734 &#9734 &#9734</option>
+                      <option value="4">&#9734 &#9734 &#9734 &#9734</option>
+                      <option value="5">&#9734 &#9734 &#9734 &#9734 &#9734</option>
+                    </select>
+                        <br>
+                    <textarea name="comment" id="ratingComment"></textarea>
+                        <br>
+                    <input onclick="" type="submit" value="Leave Rating" class="button" id=""/></a>
+                </form>
+        </div>
+
+         <div id="ratingAndComments">
+            <h2> COMMENTS </h2>
+                <p><?php 
+                    if(!empty($_SESSION['teacherrate'])){ 
+                        for($i = 0; $i < $counts; $i++) { ?>
+                                <div class="search_class" id="profile-comment-display">
+                                <p>
+                                <?php for($e = 0; $e < $_SESSION['teacherrate'][$i]['rating']; $e++) { ?>
+                                   &#9733 
+                                <?php } ?>
+                                </p>
+                                    <p class="class_head"><?php echo $_SESSION['teacherrate'][$i]['comment']; ?></p>
+                                </div>
+                                <br>
+                        <?php }
+                        ?>
+                <?php } ?>
+        </div>
+ </div>   
 
     <?php } } ?>
 

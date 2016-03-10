@@ -24,7 +24,7 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+ <link rel="icon" href="images/weLearn-logo-black.png" type="image/png" sizes="16x16 20x20">
 
 </head>
 <body>

@@ -6,8 +6,9 @@
     <link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300|Roboto:400,700,300,700italic,300italic' rel='stylesheet' type='text/css'>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/global.js"></script>
-    <title>Student Profile</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>WeLearn - Profile</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="images/weLearn-logo-black.png" type="image/png" sizes="16x16 20x20">
 </head>
 <body>
 

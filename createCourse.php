@@ -4,11 +4,12 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300|Roboto:400,700,300,700italic,300italic' rel='stylesheet' type='text/css'>
-    <title>Create Course</title>
+    <title>WeLearn - Create Course</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <link rel="stylesheet" href="/resources/demos/style.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="icon" href="images/weLearn-logo-black.png" type="image/png" sizes="16x16 20x20">
 
 </head>
 <body>

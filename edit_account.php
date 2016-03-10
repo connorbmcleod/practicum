@@ -10,8 +10,9 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/global.js"></script>
-    <title>Edit Account</title>
+    <title>WeLearn - Edit Account</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="icon" href="images/weLearn-logo-black.png" type="image/png" sizes="16x16 20x20">
 </head>
 <body>
 

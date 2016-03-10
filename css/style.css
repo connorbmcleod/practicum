@@ -896,9 +896,10 @@ textarea:focus, input:focus{
 .allClasses {
 	/*display: inline-block;*/
 	vertical-align: top;
-	text-align: left;
-	margin: 0px 8vw;
+	text-align: center;
+/*	margin: 0px 10vw;*/
 	margin-bottom: 30px;
+	margin-top: 50px;
 }
 
 .allClasses h2{
@@ -908,7 +909,6 @@ textarea:focus, input:focus{
 	font-size: 24px;
 	border-right: none;
 	border-left: none;
-	width: 70vw;
 }
 
 .profile_content {
@@ -927,17 +927,15 @@ textarea:focus, input:focus{
 	font-size: 24px;
 	border-right: none;
 	border-left: none;
-	margin-left: 8vw;
 }
 
 .bio p{
-	width: 70vw;
-	background-color: #F5F5F5;
+	background-color: #F1F1F1;
 	height: 200px;
 	margin-top: 20px;
-	margin-left: 8vw;
-	padding: 10px 20px;
+	padding: 20px 20px;
 	text-align: left;
+	border-radius: 5px;
 }
 
 .createCourseDiv{
@@ -960,14 +958,12 @@ textarea:focus, input:focus{
 }
 
 #profile-course-display{
-	width: 300px;
+	width: 400px;
 	display: inline-block;
-	text-align: left;
 	padding-bottom: 20px;
 	border: black thin dashed;
 	margin: 10px 10px;
 	border-radius: 5px;
-	text-align: left;
 	padding: 15px 20px;
 	background-color: #F5F5F5;
 	vertical-align: top;
@@ -990,8 +986,8 @@ textarea:focus, input:focus{
 	background-color: #FFFFF5;
 	padding: 20px 10px;
 	text-align: center;
-	display: inline-block;
-	width: 300px;
+/*	display: inline-block;*/
+	width: 400px;
 	margin-left: 20px;
 	vertical-align: top;
 	border: solid 1px #5E5E5E;
@@ -1007,17 +1003,44 @@ textarea:focus, input:focus{
 	text-decoration: none;
 }
 
+
+#overall-rating{
+	text-align: center;
+	font-size: 46px;
+	margin-top: 20px;
+	color: #E3CA32;
+}
+
+#entireRating{
+	background-color: #F0F0F0;
+	padding: 30px 3vw;
+	text-align: center;
+}
+
 #ratingDiv{
 	text-align: center;
-	padding: 50px 0px;
+	padding: 0px 5vw;
 	background-color: #F0F0F0;
+	display: inline-block;
+	height: 300px;
+	margin-bottom: 20px;
 }
 
 #ratingAndComments{
 	text-align: left;
-	padding: 50px 50px;
+	padding: 0px 5vw;
 	background-color: #F0F0F0;
 	padding-bottom: 0px;
+	display: inline-block;
+	height: 300px;
+	float: right;
+}
+
+#ratingAndComments h2{
+	width: 100px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 #theStars{
@@ -1026,13 +1049,14 @@ textarea:focus, input:focus{
 }
 
 #ratingComment{
-	width:40vw;
+	width:400px;
 	height: 100px;
 	margin-bottom: 30px;
 }
 
 #ratingDiv h1{
 	margin-right: 80vw;
+
 }
 /*myprofile*/
 
@@ -1041,8 +1065,8 @@ textarea:focus, input:focus{
 
 #thank-you{
 	text-align: center;
-	margin-top: 200px;
-	margin-bottom: 100px;
+	margin-top: 100px;
+	margin-bottom: 50px;
 }
 
 
@@ -1086,7 +1110,7 @@ textarea:focus, input:focus{
 /*PLACEHOLDER MAGIC*/
 
 .ty_content {
-	height: 700px;
+	height:500px;
 }
 /*Thank you page*/
 
@@ -1325,7 +1349,7 @@ textarea:focus, input:focus{
 
 #course-left-col{
 	display: inline-block;
-	background-color: #F5F5F5; 
+	background-color: #F1F1F1; 
 	vertical-align: top;
 	width: 150px;
 	padding: 20px 5vh;
@@ -1336,7 +1360,7 @@ textarea:focus, input:focus{
 
 #course-right-col{
 	display: inline-block;
-	background-color: #F5F5F5; 
+	background-color: #F1F1F1; 
 	width: 450px;
 	padding: 20px 5vw;
 	margin-top: 50px; 
@@ -1346,12 +1370,12 @@ textarea:focus, input:focus{
 }
 
 #course-right-col p{
-	text-align: left;
+	text-align: justify;
 }
 
 #course-content{
 	text-align: center;
-	margin: 80px 0px; 
+	margin: 50px 0px; 
 }
 
 #login-register-btn{
@@ -1386,7 +1410,7 @@ textarea:focus, input:focus{
 
 #course-delete-button {
 	background-color: rgba(150,0,0,1);
-	border: rgba(0,0,100,1) solid 1px;
+/*	border: rgba(0,0,100,1) solid 1px;*/
 	color: white;
 	padding: 10px 25px;
 	font-size: 18px;	
@@ -1783,6 +1807,43 @@ a #go-to-course:hover, a #drop-course:hover{
 
 /*FONT FACE*/
 
+@media only screen and (min-width: 768px)
+				   and	(max-width: 1210px) {
+
+	#ratingDiv{
+		padding: 0px;
+	}
+
+	#ratingAndComment{
+		padding: 0px;
+	}
+
+	#profile-comment-display{
+		width: 280px;
+	}
+
+	#ratingComment{
+	width:300px;
+	}
+
+	#myprofile-content{
+		margin: 5vw;
+	}
+
+}
+
+@media only screen and (min-width: 768px)
+				   and	(max-width: 1210px) {
+
+	#course-right-col{
+		width: 400px;
+	}
+
+	#course-left-col{
+		width: 90px;
+	}
+}
+
 /*Tablet*/
 @media only screen and (min-width: 667px)
 				   and	(max-width: 768px) {
@@ -1798,6 +1859,30 @@ a #go-to-course:hover, a #drop-course:hover{
 		font-size: 2.5em;
 		line-height: 1.5em;
 		margin-top: 60px;
+	}
+
+	#ratingAndComments{
+		float: none;
+	}
+
+	#entireRating{
+		text-align: center;
+	}
+
+	#myprofile-content{
+		margin: 5vw;
+	}
+
+	.allClasses{
+		text-align: center;
+	}
+
+	#course-right-col{
+		width: 300px;
+	}
+
+	#course-left-col{
+		width: 50px;
 	}
 
 }
@@ -1854,5 +1939,50 @@ a #go-to-course:hover, a #drop-course:hover{
 		width: 300px;
 	}
 
+
+	#ratingAndComments{
+		float: none;
+	}
+
+	#entireRating{
+		text-align: center;
+	}
+
+	#profile-comment-display{
+		width: 200px;
+	}
+
+	#ratingComment{
+	width:200px;
+	}
+
+	#myprofile-content{
+		margin: 5vw;
+	}
+
+	.allClasses{
+		text-align: center;
+	}
+
+	#profile-course-display{
+		width: 200px;
+	}
+
+	#course-right-col{
+		width: 300px;
+		margin-bottom: 100px;
+		padding: 20px 50px;
+
+	}
+
+	#course-left-col{
+		width: 150px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+
+	#course-left-col a, #course-left-col p{
+		display: inline-block;
+	}
 
 }

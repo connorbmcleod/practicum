@@ -6,8 +6,9 @@
     <link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300|Roboto:400,700,300,700italic,300italic' rel='stylesheet' type='text/css'>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/global.js"></script>
-    <title>Course Details</title>
+    <title>WeLearn</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="icon" href="images/weLearn-logo-black.png" type="image/png" sizes="16x16 20x20">
 </head>
 <body>
 
@@ -102,20 +103,20 @@
 
 
     <div class="col" id="course-left-col">
-        <h3>Educator</h3>
+        <h3><strong>Educator</strong></h3>
         <a id="courseeducator" href='http://localhost/practicum/myprofile.php?id=<?php echo $teacherid; ?>'>
             <p><?php echo $_SESSION['teacher']['teacherfname'] . ' ' . $_SESSION['teacher']['teacherlname']; ?></p>
         </a>
         <br>
-        <h3>Date</h3>
+        <h3><strong>Date</strong></h3>
         <p><?php echo $_SESSION['coursepage']['date']; ?></p><br>
-        <h3>Time</h3>
+        <h3><strong>Time</strong></h3>
         <p><?php echo $_SESSION['coursepage']['time']; ?></p><br>
-        <h3>Region</h3>
+        <h3><strong>Region</strong></h3>
         <p><?php echo $_SESSION['coursepage']['region']; ?></p><br>
-        <h3>Area</h3>
+        <h3><strong>Area</strong></h3>
         <p><?php echo $_SESSION['coursepage']['area']; ?></p><br>
-        <h3>Location</h3>
+        <h3><strong>Location</strong></h3>
         <p><?php echo $_SESSION['coursepage']['location']; ?></p><br>
     </div>
     <div class="col" id="course-right-col">
@@ -154,7 +155,7 @@
 
         if(empty($_SESSION['user'])) { ?>
 
-            <a href="registerPage.php"><button id="login-register-btn">Sign In to Enroll</button></a>
+            <a href="loginPage.php"><button id="login-register-btn">Sign In to Enroll</button></a>
 
         <?php } ?>
 

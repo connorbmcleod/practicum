@@ -6,8 +6,9 @@
     <link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300|Roboto:400,700,300,700italic,300italic' rel='stylesheet' type='text/css'>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/global.js"></script>
-    <title>Thank-you</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>WeLEarn - Thank You!</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="images/weLearn-logo-black.png" type="image/png" sizes="16x16 20x20">
 </head>
 <body>
 
@@ -143,27 +144,7 @@ if(empty($_SESSION['user'])) : ?>
 
 
 <!-- footer -->
-    <div class="footer">
-            <div class="footer-col" id="footer-one">
-            </div>
-
-             <div class="footer-col" id="footer-two">
-                 <p>#555 Seymour Street | info@welearn.ca</p>
-                <p>2016 | DACOKYE DESIGN</p>
-             </div>
-
-             <div class="footer-col" id="footer-three">
-                <ul id="social-media">
-                    <li><a href="#"><img src="images/facebook-square.png" width="30px"></a></li>
-                    <li><a href="#"><img src="images/instagram.png" width="30px"></a></li>
-                    <li><a href="#"><img src="images/twitter.png" width="30px"></a></li>
-                    <li><a href="#"><img src="images/googleplus-square.png" width="30px"></a></li>
-                </ul>
-            </div>
-
-        </div>
-
-    </div>
+<?php include 'footer.php'; ?>
 
 <!-- footer -->
 </body>
