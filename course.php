@@ -17,6 +17,7 @@
         require("common.php"); 
         $courseid = $_GET["id"];
         $_SESSION['enrolment'] = $courseid;
+        $userid = $_SESSION['user']['id'];
 
         $query = " 
                 SELECT * 
@@ -70,6 +71,8 @@
                 FROM enrollments
                 WHERE 
                     courseID = '$courseid'
+                AND
+                    studentID = $userid
             "; 
                       
             try 
@@ -148,6 +151,7 @@
         if($teacherid == $_SESSION['user']['id']){ ?>
         
             <a href="editCourse.php?id=<?php echo $courseid ?>"><button id="login-register-btn">Edit Course Details</button></a>
+            <a href="roster.php?id=<?php echo $courseid ?>"><button id="login-register-btn">View Roster</button></a>
             <a href="delete-course.php?id=<?php echo $courseid ?>"><button id="course-delete-button">Delete Course</button></a>
         
         <?php } 

@@ -10,7 +10,7 @@ if(empty($_SESSION['user'])) : ?>
                 <ul class="pure-menu-list">
                     <li class="pure-menu-item"><a href="index.php" class="pure-menu-link"> Home</a></li>
                     <li class="pure-menu-item">
-                        <a href="allCourses.php" id="menuLink1" class="pure-menu-link">Courses</a>
+                        <a href="allcourses.php" id="menuLink1" class="pure-menu-link">Courses</a>
                     </li>
                       <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
                         <a href="#" id="menuLink1" class="pure-menu-link">About us</a>
