@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.2
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Mar 08, 2016 at 06:55 AM
--- Server version: 10.1.9-MariaDB
--- PHP Version: 5.6.15
+-- Host: 127.0.0.1
+-- Generation Time: Mar 11, 2016 at 10:24 PM
+-- Server version: 10.1.10-MariaDB
+-- PHP Version: 5.6.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `weLearn`
+-- Database: `welearn`
 --
 
 -- --------------------------------------------------------
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `courses` (
   `courseID` int(11) NOT NULL,
   `coursename` varchar(255) NOT NULL,
+  `category` varchar(64) NOT NULL,
   `region` varchar(64) NOT NULL,
   `area` varchar(64) NOT NULL,
   `location` varchar(255) NOT NULL,
@@ -51,9 +52,9 @@ CREATE TABLE `courses` (
 -- Dumping data for table `courses`
 --
 
-INSERT INTO `courses` (`courseID`, `coursename`, `region`, `area`, `location`, `date`, `time`, `minimumpeople`, `maximumpeople`, `description`, `objective1`, `objective2`, `objective3`, `objective4`, `objective5`, `teacherID`, `status`, `completion`) VALUES
-(10, 'Mushrooming 101', '', '', 'Sechelt', '03/17/2016', '1pm', 1, 10, 'Have you always wondered about the hundreds of mushrooms you see every year, especially in the fall? Which ones are edible and which ones not? Did you know that many mushrooms that grow here on the coast have medicinal properties and have been used in Traditional Chinese Medicine for thousands of years? This workshop will give you a great introduction to identifying and foraging for wild mushrooms, as well as other uses such as making dyes for fabric and paper out of mushrooms  – Mushrooming 101 – presented by the Society For The Hunting Recognition & Observation of Mushrooms (SCSHROOM).', 'Identify Many Mushrooms', 'Pick Some Mushrooms', 'Taste the good mushrooms', 'Identify safe and dangerous mushrooms', '', 4, 1, 0),
-(12, 'sdf', 'Sunshine Coast', 'Gibsons', 'Library', '03/10/2016', '12am', 1, 2, 'sdasd', '', '', '', '', '', 4, 0, 0);
+INSERT INTO `courses` (`courseID`, `coursename`, `category`, `region`, `area`, `location`, `date`, `time`, `minimumpeople`, `maximumpeople`, `description`, `objective1`, `objective2`, `objective3`, `objective4`, `objective5`, `teacherID`, `status`, `completion`) VALUES
+(10, 'Mushrooming 101', '', '', '', 'Sechelt', '03/17/2016', '1pm', 1, 10, 'Have you always wondered about the hundreds of mushrooms you see every year, especially in the fall? Which ones are edible and which ones not? Did you know that many mushrooms that grow here on the coast have medicinal properties and have been used in Traditional Chinese Medicine for thousands of years? This workshop will give you a great introduction to identifying and foraging for wild mushrooms, as well as other uses such as making dyes for fabric and paper out of mushrooms  – Mushrooming 101 – presented by the Society For The Hunting Recognition & Observation of Mushrooms (SCSHROOM).', 'Identify Many Mushrooms', 'Pick Some Mushrooms', 'Taste the good mushrooms', 'Identify safe and dangerous mushrooms', '', 4, 1, 0),
+(12, 'sdf', '', 'Sunshine Coast', 'Gibsons', 'Library', '03/10/2016', '12am', 1, 2, 'sdasd', '', '', '', '', '', 4, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -94,7 +95,8 @@ CREATE TABLE `enrollments` (
 --
 
 INSERT INTO `enrollments` (`id`, `courseID`, `studentID`) VALUES
-(0, 10, 5);
+(0, 10, 5),
+(0, 12, 7);
 
 -- --------------------------------------------------------
 
@@ -154,7 +156,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `password`, `salt`, `email`, `usertype`) VALUES
 (4, 'The', 'Crew', 'd953a4b80246bf81419220f04672eb1ce253162705d1b389b56d82388efcab69', '4919692d7678f409', 'crew@gmail.com', 1),
 (5, 'Fake', 'Student', '9695db7fa807b0e530b32c021c1c28b398fc57450b649fa3cd0a72f3c52428d4', '2aa1db2b357583fe', 'student@gmail.com', 0),
-(6, 'Darya', 'Sh', 'fc43507b540a1b54397003529cb2a3e45bd5a291aab342dfbc820892a50dfabd', '45cfbe2c782ce7bc', 'darya@gmail.com', 1);
+(6, 'Darya', 'Sh', 'fc43507b540a1b54397003529cb2a3e45bd5a291aab342dfbc820892a50dfabd', '45cfbe2c782ce7bc', 'darya@gmail.com', 1),
+(7, 'Connor', 'McLeod', 'af26c62d47b6899d87479287b4c7f56c694f7567e281826c308b6a24f34008d4', '35c1449e615f763d', 'connorbmcleod@gmail.com', 0);
 
 --
 -- Indexes for dumped tables
@@ -207,7 +210,7 @@ ALTER TABLE `ratings`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

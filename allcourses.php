@@ -4,9 +4,8 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300|Roboto:400,700,300,700italic,300italic' rel='stylesheet' type='text/css'>
-    <title>WeLearn - Courses</title>
+    <title>Courses</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="icon" href="images/weLearn-logo-black.png" type="image/png" sizes="16x16 20x20">
 </head>
 <body>
 
@@ -14,7 +13,69 @@
 
         require("common.php"); 
 
+
+if (isset($_GET["category"])) {
+
+        $category = $_GET["category"];
+
         $query = " 
+                    SELECT
+                        * 
+                    FROM courses 
+                    WHERE 
+                        category = '$category' 
+                "; 
+                 
+                try 
+                { 
+                    $stmt = $db->prepare($query); 
+                    $result = $stmt->execute(); 
+                } 
+                catch(PDOException $ex) 
+                {  
+                    die("Failed to run query: " . $ex->getMessage()); 
+                }
+
+                $rows = $stmt->fetchAll();
+
+                    $_SESSION['allcourses'] = $rows;
+
+                    $count = count($_SESSION['allcourses']);
+    }
+    else if(isset($_GET["search"])){
+        $search = $_GET["search"];
+        $search = '%'.$search.'%';
+        $query = " 
+                    SELECT
+                        * 
+                    FROM courses 
+                    WHERE 
+                        lower(coursename) LIKE '$search'
+                    OR  lower(category) LIKE '$search'
+                    OR  lower(region) LIKE '$search'
+                    OR  lower(area) LIKE '$search'
+                    OR  lower(location) LIKE '$search'
+                "; 
+                 
+                try 
+                { 
+                    $stmt = $db->prepare($query); 
+                    $result = $stmt->execute(); 
+                } 
+                catch(PDOException $ex) 
+                {  
+                    die("Failed to run query: " . $ex->getMessage()); 
+                }
+
+                $rows = $stmt->fetchAll();
+
+                    $_SESSION['allcourses'] = $rows;
+
+                    $count = count($_SESSION['allcourses']);
+    } 
+    else {
+
+       $query = " 
                     SELECT
                         * 
                     FROM courses 
@@ -38,6 +99,27 @@
 
                     $count = count($_SESSION['allcourses']);
 
+    }
+
+    if(isset($_POST["category"])){
+        $category = $_POST["category"];
+        if($category == ''){
+            header("Location: allcourses.php"); 
+        }
+        else{
+            header("Location: allcourses.php?category=$category"); 
+        }
+    }
+
+    if(isset($_POST["search"])){
+        $search = strtolower($_POST["search"]);
+        if($search == ''){
+            header("Location: allcourses.php"); 
+        }
+        else{
+            header("Location: allcourses.php?search=$search"); 
+        }
+    }
     ?>
 
     <div class="hero hero_courses">
@@ -54,10 +136,51 @@
     <!-- content -->
     <div id="all-courses-search">
         <h2>Search for a course</h2>
-        <input type="search" placeholder=" Search.." id="course-page-search">
-            <img src="images/search.png" width="43px">
-        </input>
+            <form method="post">
+            <input type="search" placeholder=" Search.." name="search" id="course-page-search">
+            </input>
+            <button type="submit" id=""><img src="images/search.png" width="43px"></button>
+        </form>
     </div>
+
+    <form method="post">
+
+                     <fieldset>
+                                <label for="category">Filter By Category</label>
+                                <select name="category" id="speed categories">
+                                    <option></option>
+                                    <option>Art</option>
+                                    <option>Automotive</option>
+                                    <option>Beauty</option>
+                                    <option>Childcare/Development</option>
+                                    <option>Computers</option>
+                                    <option>Cooking</option>
+                                    <option>Crafts</option>
+                                    <option>Boating</option>
+                                    <option>Business</option>
+                                    <option>Dance</option>
+                                    <option>First-aid</option>
+                                    <option>Games</option>
+                                    <option>Gardening/Agriculture</option>
+                                    <option>Health/Wellness</option>
+                                    <option>History/Travel/Culture</option>
+                                    <option>Home Renovation/Maintenance</option>
+                                    <option>Languages</option>
+                                    <option>Martial Arts</option>
+                                    <option>Math</option>
+                                    <option>Music</option>
+                                    <option>Nature/Outdoors</option>
+                                    <option>Pets</option>
+                                    <option>Sciences</option>
+                                    <option>Social Sciences</option>
+                                    <option>Sports</option>
+                                </select>
+                            </fieldset>
+                        <br />
+
+                        <button type="submit" id="filter">Filter</button>
+
+                 </form>
 
     <div class="test-wrapper">
 
@@ -70,7 +193,7 @@
                                 
                                 <p class="class_header"><?php echo $_SESSION['allcourses'][$i]['coursename']; ?></p></a>
                                 <div class="course_info">
-                                    <p><?php echo $_SESSION['allcourses'][$i]['area']; ?></p>
+                                    <p><?php echo $_SESSION['allcourses'][$i]['location']; ?></p>
                                     <p><?php echo $_SESSION['allcourses'][$i]['date']; ?></p>
                                 </div>
                                 <?php if($_SESSION['allcourses'][$i]['status'] == 0) {  ?>
@@ -94,7 +217,15 @@
 
 <!-- footer -->
 
+
+
+<!-- footer -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/global.js"></script>
+</body>
     <?php include 'footer.php'; ?>
+</html>
 
 <!-- footer -->
 
