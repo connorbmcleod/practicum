@@ -28,7 +28,29 @@
         header("Location: login.php"); 
          
         die("Redirecting to login.php"); 
-    } 
+    }
+
+    $querybio = " 
+                SELECT 
+                    bio
+                FROM educatorinfo 
+                WHERE 
+                    id = $userid
+            "; 
+             
+            try 
+            { 
+                $stmt = $db->prepare($querybio); 
+                $result = $stmt->execute(); 
+            } 
+            catch(PDOException $ex) 
+            { 
+                die("Failed to run query: " . $ex->getMessage()); 
+            } 
+
+            $row = $stmt->fetch();
+
+            $_SESSION['biography'] = $row; 
      
     if(!empty($_POST)) 
     { 
@@ -125,28 +147,6 @@
             die("Failed to run query: " . $ex->getMessage()); 
         }
 
-        $querybio = " 
-                SELECT 
-                    bio
-                FROM educatorinfo 
-                WHERE 
-                    id = $userid
-            "; 
-             
-            try 
-            { 
-                $stmt = $db->prepare($querybio); 
-                $result = $stmt->execute(); 
-            } 
-            catch(PDOException $ex) 
-            { 
-                die("Failed to run query: " . $ex->getMessage()); 
-            } 
-
-            $row = $stmt->fetch();
-
-            $_SESSION['biography'] = $row;
-
        
        $query = " 
                 UPDATE educatorinfo 
@@ -184,7 +184,8 @@
 
 <div class="hero hero_about">
 
-<?php include 'header.php'; ?>
+<?php include 'header.php'; 
+?>
 
 
 
@@ -213,7 +214,7 @@
                         <br /><br />
                         <?php if($_SESSION['user']['usertype'] == 1){ ?>
                         New Bio:<br /> 
-                        <input type="text" name="biography" value="<?php echo $_SESSION['biography']['bio']; ?>" /><br /> 
+                        <input type="text" name="biography" value="<?php echo $_SESSION['biography']['bio'] ?>" /><br /> 
 
                         <?php } ?>
                         </div>
