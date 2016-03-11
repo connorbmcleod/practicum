@@ -4,6 +4,7 @@ if(empty($_SESSION['user'])) : ?>
     <div class="header">
         <div class="logo"><a href="index.php"><img src="images/weLearn-logo.png" width="200px"></a></div>
 
+<div id="big_head">
 
             <div class="pure-menu pure-menu-horizontal" id="menu">
                 <ul class="pure-menu-list">
@@ -27,7 +28,7 @@ if(empty($_SESSION['user'])) : ?>
 
         <div class="nav">
             <div id="show-login">Login</div>
-                <a href="registerPage.php"><div class="button" id="signup" name="signup">Sign up</div></a>
+                <a href="registerPage.php"><div class="button" id="signup_head" name="signup">Sign up</div></a>
 
             <div class="login">
                 <form action="index.php" method="post" class="form">
@@ -37,6 +38,45 @@ if(empty($_SESSION['user'])) : ?>
                 </form>
               </div>
         </div><!-- Nav end-->
+</div>
+
+
+<div id="little_head">
+    <div id="show_lhead">
+        <span class="da_button">&#9776;</span>   
+            <div id="lhead_content">
+                <ul class="kdropmenu">
+                     <li><a href="index.php"> Home</a></li>
+                     <li><a href="allCourses.php" id="menuLink1">Courses</a></li>
+                      <li>
+                        <a href="#" class="mini_open">About us</a>
+                        <ul class="mini_menu">
+                            <li><a href="aboutUs.php">Who are we</a></li>
+                            <li><a href="aboutEducators.php">Our educators</a></li>
+                            <li><a href="aboutLearners.php">Our learners</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contactUs.php"> Contact us</a></li>
+                </ul>
+
+            </div>
+            <div class="nav">
+            <div id="show-login">Login</div>
+                <a href="registerPage.php"><div class="button" id="signup_head" name="signup">Sign up</div></a>
+
+            <div class="login">
+                <form action="index.php" method="post" class="form">
+                    <input id="email" name="email" type="text" placeholder="Email" value=""/>
+                    <input id="password" name="password" type="password" placeholder="Password" value="">
+                    <button type="submit" value="Login" class="button" id="login" name="login">Login</button>
+                </form>
+              </div>
+        </div><!-- Nav end-->
+    </div>
+
+</div>
+
+
 </div> <!-- Header end -->
 
 <?php else : ?>

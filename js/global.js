@@ -209,4 +209,20 @@ $('#register2').click(function(){
 
 // $("#speed").blur(function(){
 // 	if($('#speed').val() == 'Sunshine Coast')
-// })
+// 
+
+
+// HEADER STUFF
+
+$(".da_button").click(function() {
+	$("#lhead_content").toggle();
+	// if($("#show_lhead").css("background-color")=="transparent") {
+	// 	$("#show_lhead").css("background-color", "white");
+	// }else{
+	// 	$("#show_lhead").css("background-color", "transparent");
+	// }
+});
+
+$(".mini_open").click(function() {
+	$(".mini_menu").toggle();
+});
