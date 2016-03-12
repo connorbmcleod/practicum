@@ -21,7 +21,7 @@
 
         $query = " 
                 SELECT * 
-                FROM courses 
+                FROM courses
                 WHERE 
                     courseID = '$courseid'  
                 "; 
@@ -70,9 +70,9 @@
                     1 
                 FROM enrollments
                 WHERE 
-                    courseID = '$courseid'
-                AND
-                    studentID = $userid
+                        courseID = '$courseid'
+                    AND
+                        studentID = $userid
             "; 
                       
             try 

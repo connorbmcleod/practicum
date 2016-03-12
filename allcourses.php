@@ -13,8 +13,7 @@
 
         require("common.php"); 
 
-
-if (isset($_GET["category"])) {
+        if (isset($_GET["category"])) {
 
         $category = $_GET["category"];
 
@@ -45,16 +44,17 @@ if (isset($_GET["category"])) {
     else if(isset($_GET["search"])){
         $search = $_GET["search"];
         $search = '%'.$search.'%';
+
         $query = " 
                     SELECT
                         * 
                     FROM courses 
-                    WHERE 
+                    WHERE
                         lower(coursename) LIKE '$search'
-                    OR  lower(category) LIKE '$search'
-                    OR  lower(region) LIKE '$search'
-                    OR  lower(area) LIKE '$search'
-                    OR  lower(location) LIKE '$search'
+                        OR  lower(category) LIKE '$search'
+                        OR  lower(region) LIKE '$search'
+                        OR  lower(area) LIKE '$search'
+                        OR  lower(location) LIKE '$search'
                 "; 
                  
                 try 
@@ -136,7 +136,7 @@ if (isset($_GET["category"])) {
     <!-- content -->
     <div id="all-courses-search">
         <h2>Search for a course</h2>
-            <form method="post">
+        <form method="post">
             <input type="search" placeholder=" Search.." name="search" id="course-page-search">
             </input>
             <button type="submit" id=""><img src="images/search.png" width="43px"></button>
@@ -223,13 +223,6 @@ if (isset($_GET["category"])) {
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/global.js"></script>
-</body>
+</body>    
     <?php include 'footer.php'; ?>
-</html>
-
-<!-- footer -->
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/global.js"></script>
-</body>
 </html>

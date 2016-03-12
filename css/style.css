@@ -182,15 +182,15 @@ textarea:focus, input:focus{
 	height: 125px;
 }
 
-#menuLink1 {
-	cursor: hand;
-	cursor: pointer;
-}
-
 #little_head {
 	display: none;
 	margin: 0 auto;
 	color: black;
+}
+
+#menuLink1 {
+	cursor: pointer;
+	cursor: hand;
 }
 
 .header_line {
@@ -527,7 +527,6 @@ textarea:focus, input:focus{
 
 .hero_courses {
 	background: url('../images/hero_images/hero-courses.jpg') center center no-repeat;
-	background-size: cover;
 }
 
 .hero_index {
@@ -1054,7 +1053,7 @@ textarea:focus, input:focus{
 	background-color: #F0F0F0;
 	padding-bottom: 0px;
 	display: inline-block;
-	height: 300px;
+	/*height: 300px;*/
 	float: right;
 }
 
@@ -1322,6 +1321,10 @@ textarea:focus, input:focus{
 	font-size: 1.8em;
 	color: black;
 	width: 400px;
+}
+
+.buh p {
+	font-size: 16px;
 }
 
 .course_info p{
@@ -1726,7 +1729,8 @@ a #go-to-course:hover, a #drop-course:hover{
 
 .soc {
     overflow:hidden;
-    margin:0; padding:0;
+    margin:0; 
+    padding:0;
     list-style:none;
 }
 

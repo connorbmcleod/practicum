@@ -41,7 +41,7 @@
 
 
         <div id="social_media_contact">
-                <ul class="soc">
+               <ul class="soc">
                         <li><a class="soc-twitter" href='#'></a></li>
                         <li><a class="soc-instagram" href="#"></a></li>
                         <li><a class="soc-linkedin" href="#"></a></li>

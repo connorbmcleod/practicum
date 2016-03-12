@@ -227,15 +227,15 @@
 
             <div id="wrapper2">
                 <h3>Learning Objectives</h3>
-                      <input type="text" name="objectiveone" value="" class="form-field" placeholder="1"/> 
+                      <input id="objectiveone" type="text" name="objectiveone" value="" class="form-field" placeholder="1"/> 
                       <br /><br />
-                       <input type="text" name="objectivetwo" value="" class="form-field" placeholder="2"/> 
+                       <input id="objectivetwo" type="text" name="objectivetwo" value="" class="form-field" placeholder="2"/> 
                       <br /><br /> 
-                       <input type="text" name="objectivethree" value="" class="form-field" placeholder="3"/> 
+                       <input id="objectivethree" type="text" name="objectivethree" value="" class="form-field" placeholder="3"/> 
                       <br /><br /> 
-                       <input type="text" name="objectivefour" value="" class="form-field" placeholder="4"/> 
+                       <input id="objectivefour" type="text" name="objectivefour" value="" class="form-field" placeholder="4"/> 
                       <br /><br /> 
-                       <input type="text" name="objectivefive" value="" class="form-field" placeholder="5"/> 
+                       <input id="objectivefive" type="text" name="objectivefive" value="" class="form-field" placeholder="5"/> 
                       <br /><br /> 
                       <br />
             </div>

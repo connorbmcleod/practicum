@@ -99,6 +99,7 @@
 <?php include 'header.php'; ?>
 
 <gcse:search></gcse:search>
+
 	<div id="hero-wrap">
         <div class="hero-title-upper border-bottom">share your skills</div> 
         <div class="hero-title">weLearn</div>
