@@ -27,7 +27,7 @@
     if(empty($_SESSION['user'])) : ?>
 
         <div class="header">
-            <div class="logo"><a href="index.php"><img src="images/weLearn-logo-black.png" width="200px"></a></div>
+            <div class="logo"><a href="index.php"><img src="images/weLearn-logo.png" width="200px"></a></div>
 
                 <div class="pure-menu pure-menu-horizontal" id="menu">
                     <ul class="pure-menu-list">
@@ -64,7 +64,7 @@
 
     <!-- LOGGED IN HEADER -->
         <div class="header-logged header_line">
-            <div class="logo"><a href="index.php"><img src="images/weLearn-logo-black.png" width="200px"></a></div>
+            <div class="logo"><a href="index.php"><img src="images/weLearn-logo.png" width="200px"></a></div>
 
                 <div class="pure-menu pure-menu-horizontal" id="menu">
                     <ul class="pure-menu-list">
@@ -227,15 +227,15 @@
 
             <div id="wrapper2">
                 <h3>Learning Objectives</h3>
-                      <input id="objectiveone" type="text" name="objectiveone" value="" class="form-field" placeholder="1"/> 
+                      <input type="text" name="objectiveone" value="" class="form-field" placeholder="1"/> 
                       <br /><br />
-                       <input id="objectivetwo" type="text" name="objectivetwo" value="" class="form-field" placeholder="2"/> 
+                       <input type="text" name="objectivetwo" value="" class="form-field" placeholder="2"/> 
                       <br /><br /> 
-                       <input id="objectivethree" type="text" name="objectivethree" value="" class="form-field" placeholder="3"/> 
+                       <input type="text" name="objectivethree" value="" class="form-field" placeholder="3"/> 
                       <br /><br /> 
-                       <input id="objectivefour" type="text" name="objectivefour" value="" class="form-field" placeholder="4"/> 
+                       <input type="text" name="objectivefour" value="" class="form-field" placeholder="4"/> 
                       <br /><br /> 
-                       <input id="objectivefive" type="text" name="objectivefive" value="" class="form-field" placeholder="5"/> 
+                       <input type="text" name="objectivefive" value="" class="form-field" placeholder="5"/> 
                       <br /><br /> 
                       <br />
             </div>

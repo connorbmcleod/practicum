@@ -30,7 +30,8 @@
         die("Redirecting to login.php"); 
     }
 
-    $querybio = " 
+
+     $querybio = " 
                 SELECT 
                     bio
                 FROM educatorinfo 
@@ -50,7 +51,8 @@
 
             $row = $stmt->fetch();
 
-            $_SESSION['biography'] = $row; 
+            $_SESSION['biography'] = $row;
+             
      
     if(!empty($_POST)) 
     { 
@@ -148,6 +150,8 @@
         }
 
        
+
+       
        $query = " 
                 UPDATE educatorinfo 
                 SET bio = :biography 
@@ -184,8 +188,7 @@
 
 <div class="hero hero_about">
 
-<?php include 'header.php'; 
-?>
+<?php include 'header.php'; ?>
 
 
 
@@ -196,25 +199,24 @@
 </div>
 
 
-
+        <h1 id="edit-account-title">Edit Account</h1> 
             <div id="accountFormWrapper" class="content-wrapper">
                 <div id="innerForm">
-                    <h1>Edit Account</h1> 
                     <form action="edit_account.php" method="post" id="accountForm"> 
-                        Name:<br /> 
+                        <p><strong>Name:</strong></p>
                         <p> <?php echo $_SESSION['user']['firstname'] . " " . $_SESSION['user']['lastname']; ?></p> 
                         <b></b> 
                         <br /><br />  
-                        New E-Mail Address:<br /> 
+                        <p><strong>New E-Mail Address:</strong></p>
                         <input type="text" name="email" value="<?php echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); ?>" />
                         <br /><br /> 
-                        New Password:<br /> 
-                        <input type="password" name="password" value="" /><br /> 
+                        <p><strong>New Password:</strong></p>
+                        <input type="password" name="password" value="" />
                         <i>(leave blank if you do not want to change your password)</i> 
                         <br /><br />
                         <?php if($_SESSION['user']['usertype'] == 1){ ?>
-                        New Bio:<br /> 
-                        <input type="text" name="biography" value="<?php echo $_SESSION['biography']['bio'] ?>" /><br /> 
+                        <p><strong>New Bio:</strong></p>
+                        <input type="text" name="biography" value="<?php echo $_SESSION['biography']['bio']; ?>" /><br /> 
 
                         <?php } ?>
                         </div>

@@ -8,7 +8,6 @@
     <script src="js/global.js"></script>
     <title>WeLearn - Profile</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/kylestyle.css">
     <link rel="icon" href="images/weLearn-logo-black.png" type="image/png" sizes="16x16 20x20">
 </head>
 <body>
@@ -87,30 +86,56 @@
         <div class="hero-title"><?php echo $lastname ?></div>
     </div>
 </div>
+
+<!-- content -->
+<!-- <div id="profile-name">
+    <h2><strong><?php echo $firstname . ' ' . $lastname; ?></strong></h2>
+</div>
+        <hr> -->
+
+<!--             <div class="upcoming-classes">
+                <h2><strong>Upcoming Classes</strong></h2>
+                <a href="">
+                    <div class="class" id="class-1">
+                        <h3><strong><a href="class.php">Mushrooming 101</a></strong></h3>
+                        <p>February 11th, 2016</p>
+                        <p>7pm-8pm</p>
+                        <p>The Bush</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="class" id="class-2">
+                        <h3><strong>Advanced Rock climbing</strong></h3>
+                        <p>February 15th, 2016</p>
+                        <p>2pm-3pm</p>
+                        <p>The Rock</p>
+                    </div>
+                </a>
+                </div> -->
                 
 
 
                 
-    <div class="test-wrapper content-wrapper">
-            <div class="educators_header">
-                <h2>Upcoming classes</h2>
-            </div>    
+            <div class="allClasses">
+                <h2 class="about_header">Upcoming classes</h2>
                 <?php
                 if(!empty($_SESSION['studentcourseinfo'])){ 
                             for($i = 0; $i < $count; $i++) { ?>
-<div class="course-wrapper">  
-                                        <a class="buh" href='http://localhost/practicum/course.php?id=<?php echo $_SESSION['studentcourseinfo'][$i]['courseID']; ?>'
+<div class="search_class" id="profile-course-display">  
+                                        <a href='http://localhost/practicum/course.php?id=<?php echo $_SESSION['studentcourseinfo'][$i]['courseID']; ?>'>
                                             
 
-                                        <p class="class_header"><?php echo $_SESSION['studentcourseinfo'][$i]['coursename']; ?></p></a>
-                                        <div class="course_info">
+                                        <p class="class_head"><?php echo $_SESSION['studentcourseinfo'][$i]['coursename']; ?></p>
                                         <p><?php echo $_SESSION['studentcourseinfo'][$i]['location']; ?></p>
                                         <p><?php echo $_SESSION['studentcourseinfo'][$i]['date']; ?></p>
+                                        <div class="profile-course-buttons">
+                                            
                                         </div>
-                                    
+                                        </a>
+                                    </div>
                             <?php }
                             ?>
-                            </div>
                 <?php } 
                 ?>
              <!-- END OF ALL CLASSES -->

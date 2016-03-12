@@ -180,17 +180,18 @@ textarea:focus, input:focus{
 	display: inline-block;
 	vertical-align: baseline;
 	height: 125px;
+
+}
+
+#menuLink1 {
+	cursor: hand;
+	cursor: pointer;
 }
 
 #little_head {
 	display: none;
 	margin: 0 auto;
 	color: black;
-}
-
-#menuLink1 {
-	cursor: pointer;
-	cursor: hand;
 }
 
 .header_line {
@@ -222,8 +223,8 @@ textarea:focus, input:focus{
 
 .logo{
 	display: inline-block;
-	margin-top: 10px;
-	margin-left: 20px;
+	margin-top: 0px;
+	margin-left: 15px;
 	position: absolute;
 	top:5px;
 }
@@ -234,13 +235,13 @@ textarea:focus, input:focus{
 
 .nav{
 	position: absolute;
-	top: 32;
+	top: 35;
 	right: 60;
 	margin-top: 7;
 }
 
 .pure-menu-list{
-	margin-top: 30px;
+	margin-top: 45px;
 }
 
 .pure-menu-item{
@@ -449,7 +450,7 @@ textarea:focus, input:focus{
 	border: white solid 1px;
 	margin-top: 0px;
 	padding: 5px 10px;
-	font-size: 24px;
+	font-size: 18px;
 }
 
 .footer button a{
@@ -527,6 +528,7 @@ textarea:focus, input:focus{
 
 .hero_courses {
 	background: url('../images/hero_images/hero-courses.jpg') center center no-repeat;
+	background-size: cover;
 }
 
 .hero_index {
@@ -665,7 +667,7 @@ textarea:focus, input:focus{
 }
 
 #index-content{
-	margin: 15vw 0;
+	margin: 100px 0;
 }
 
 #index-content img:hover{
@@ -760,7 +762,7 @@ textarea:focus, input:focus{
 
 
 
-/*create course*/
+/*create course and Edit course*/
 #createCourse{
 	margin: 0 auto;
 	text-align: center;
@@ -814,6 +816,7 @@ textarea:focus, input:focus{
 	border: #5E5E5E solid 1px;
 	margin-bottom: 30px;
 	width: 70vw;
+	padding: 10px;
 
 }
 
@@ -823,6 +826,7 @@ textarea:focus, input:focus{
 	color: white;
 	padding: 10px 25px;
 	font-size: 18px;
+
 }
 
 #createcoursebtn:hover {
@@ -853,7 +857,22 @@ textarea:focus, input:focus{
 	border-bottom: 1px dotted black;
 }
 
-/*create course*/
+.edit-course-title h2{
+	font-size: 2em;
+	margin-left: 8vw;
+	margin-top: 70px;
+	margin-bottom: 70px;
+	border: black solid 1px;
+	border-right: none;
+	border-left: none;
+	padding: 10px 5px;
+	width: 200px;
+}
+
+#coursedesc{
+	padding: 10px 20px;
+}
+/*create course and edit course*/
 
 
 /*myprofile*/
@@ -1053,7 +1072,7 @@ textarea:focus, input:focus{
 	background-color: #F0F0F0;
 	padding-bottom: 0px;
 	display: inline-block;
-	/*height: 300px;*/
+	height: 300px;
 	float: right;
 }
 
@@ -1099,6 +1118,7 @@ textarea:focus, input:focus{
 .form-field{
 	margin-bottom: 40px;
 	color: #5E5E5E;
+	padding: 0px 5px;
 }
 
 /*PLACEHOLDER MAGIC*/
@@ -1153,6 +1173,11 @@ textarea:focus, input:focus{
 	font-family: "Lobster Two";
 	line-height: 1.8em;
 	color: #bdbdbd;
+}
+
+
+.educators_header{
+	text-align: center;
 }
 
 .educators_header h2{
@@ -1321,10 +1346,6 @@ textarea:focus, input:focus{
 	font-size: 1.8em;
 	color: black;
 	width: 400px;
-}
-
-.buh p {
-	font-size: 16px;
 }
 
 .course_info p{
@@ -1521,6 +1542,9 @@ a #go-to-course:hover, a #drop-course:hover{
 
 #accountFormWrapper {
 	text-align: center;
+	width: 60vw;
+/*	max-width: 800px;*/
+	margin: 0 auto;
 }
 
 .update_button {
@@ -1530,6 +1554,8 @@ a #go-to-course:hover, a #drop-course:hover{
 	padding: 10px 25px;
 	font-size: 18px;
 	width: 250px;
+	margin: 30px 0px;
+	margin-bottom: 100px;
 }
 
 .update_button:hover {
@@ -1540,6 +1566,19 @@ a #go-to-course:hover, a #drop-course:hover{
 
 #accountForm input{
 	text-align: center;
+}
+
+
+#edit-account-title{
+	margin-left: 8vw;
+	border: black solid 1px;
+	width: 180px;
+	border-right: none;
+	border-left: none;
+	padding: 10px 5px;
+	margin-top: 50px;
+	margin-bottom: 50px; 
+
 }
 
 /*Edit Account End */
@@ -1641,7 +1680,7 @@ a #go-to-course:hover, a #drop-course:hover{
 	width: 200px;
 	padding: 10px 0px;
 	margin-top: 40px;
-	margin-left: 50px;
+/*	margin-left: 50px;*/
 }
 
 #steps h2{
@@ -1651,7 +1690,7 @@ a #go-to-course:hover, a #drop-course:hover{
 	width: 100px;
 	padding: 10px 0px;
 	margin-top: 40px;
-	margin-left: 50px;
+/*	margin-left: 50px;*/
 }
 
 #about-learners-content{
@@ -1729,8 +1768,7 @@ a #go-to-course:hover, a #drop-course:hover{
 
 .soc {
     overflow:hidden;
-    margin:0; 
-    padding:0;
+    margin:0; padding:0;
     list-style:none;
 }
 
@@ -1833,6 +1871,36 @@ a #go-to-course:hover, a #drop-course:hover{
 	#menu {
 		text-align: center;
 	}
+
+	#about-learners-content{
+		margin-left: 5vw;
+		margin-right: 5vw;
+	}
+
+
+	/*Footer*/
+	#social_media ul li{
+		margin-left: 0px;
+	}
+
+	.footer button{
+		width: 150px;
+	}
+
+	#footer-middle a{
+		font-size: 16px;
+	}
+
+	.footer-right{
+		margin-right: 20px;
+		font-size: 14px;
+	}
+
+	.footer-left, .footer-middle, .footer-right{
+		width: 30vw;
+	}
+
+	/*Footer*/
 }
 
 @media only screen and (min-width: 768px)
@@ -1840,6 +1908,10 @@ a #go-to-course:hover, a #drop-course:hover{
 
 	.nav {
 		font-size: 10px;
+	}
+
+	.footer button{
+		width: 140px;
 	}
 }
 
@@ -1866,6 +1938,11 @@ a #go-to-course:hover, a #drop-course:hover{
 		margin: 5vw;
 	}
 
+	#about-learners-content{
+		margin-left: 5vw;
+		margin-right: 5vw;
+	}
+
 }
 
 @media only screen and (min-width: 768px)
@@ -1877,6 +1954,11 @@ a #go-to-course:hover, a #drop-course:hover{
 
 	#course-left-col{
 		width: 90px;
+	}
+
+	#about-learners-content{
+		margin-left: 5vw;
+		margin-right: 5vw;
 	}
 }
 
@@ -1919,6 +2001,11 @@ a #go-to-course:hover, a #drop-course:hover{
 
 	#course-left-col{
 		width: 50px;
+	}
+
+	#about-learners-content{
+		margin-left: 5vw;
+		margin-right: 5vw;
 	}
 }
 
@@ -2002,7 +2089,7 @@ a #go-to-course:hover, a #drop-course:hover{
 
 
 /*iPhone6*/
-@media only screen and (min-width: 375px) 
+@media only screen and (min-width: 350px) 
   and (max-width: 667px) {
   	p{
   		text-align: justify;
@@ -2096,4 +2183,35 @@ a #go-to-course:hover, a #drop-course:hover{
 		display: inline-block;
 	}
 
+	.responsive-wrapper{
+		text-align: center;
+	}
+
+	#wrapper1, #wrapper2 {
+		width: 350px;
+		margin: 0 auto;
+	}
+
+	#wrapper1 h3, #wrapper2 h3{
+		width: 300px;
+		margin: 0 auto;
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+
+	#coursedesc{
+		width: 350px;
+	}
+
+	.edit-course-title h2{
+		margin: 0 auto;
+		width: 200px;
+		margin-top: 50px;
+		margin-bottom: 20px;
+	}
+
+	#about-learners-content{
+		margin-left: 5vw;
+		margin-right: 5vw;
+	}
 }

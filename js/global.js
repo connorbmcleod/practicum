@@ -72,62 +72,6 @@ $('#coursedesc').blur(function(){
 	}
 });
 
-$("#firstname").focus(function() {
-	$("#firstname").css('border-bottom', '2px solid black');
-});
-
-$("#lastname").focus(function() {
-	$("#lastname").css('border-bottom', '2px solid black');
-});
-
-$("#emails").focus(function() {
-	$("#emails").css('border-bottom', '2px solid black');
-});
-
-$("#pswrd").focus(function() {
-	$("#pswrd").css('border-bottom', '2px solid black');
-});
-
-$("#firstname").focus(function() {
-	$("#firstname").css('border-bottom', '2px solid black');
-});
-
-$("#confirmpswrd").focus(function() {
-	$("#confirmpswrd").css('border-bottom', '2px solid black');
-});
-
-// $("#coursename").focus(function() {
-// 	$("#coursename").css('border-bottom', '2px solid black');
-// });
-
-// $("#minnumber").focus(function() {
-// 	$("#minnumber").css('border-bottom', '2px solid black');
-// });
-
-// $("#maxnumber").focus(function() {
-// 	$("#maxnumber").css('border-bottom', '2px solid black');
-// });
-
-// $("#objectiveone").focus(function() {
-// 	$("#objectiveone").css('border-bottom', '2px solid black');
-// });
-
-// $("#objectivetwo").focus(function() {
-// 	$("#objectivetwo").css('border-bottom', '2px solid black');
-// });
-
-// $("#objectivethree").focus(function() {
-// 	$("#objectivethree").css('border-bottom', '2px solid black');
-// });
-
-// $("#objectivefour").focus(function() {
-// 	$("#objectivefour").css('border-bottom', '2px solid black');
-// });
-
-// $("#objectivefive").focus(function() {
-// 	$("#objectivefive").css('border-bottom', '2px solid black');
-// });
-
 
 // User Registration Form Validation //
 var firstname = false;

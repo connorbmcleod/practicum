@@ -8,7 +8,6 @@
     <script src="js/global.js"></script>
     <title>WeLearn - My Profile</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/kylestyle.css">
     <link rel="icon" href="images/weLearn-logo-black.png" type="image/png" sizes="16x16 20x20">
 </head>
 <body>
@@ -177,7 +176,7 @@
 <div class="content-wrapper" id="myprofile-content">
 
     <div class="bio">
-        
+        <h2 class="about_header">BIO</h2>
             <p><?php 
             if(empty($_SESSION['userinfo']['bio'])){
                 echo "<a href='becomeeducator.php'><p>Fill Out Your Bio</p></a>";
@@ -221,9 +220,9 @@
     </div>
 
 <div id="entireRating">
-         <h2>Rate This Instructor</h2>
+
         <div id="ratingDiv">
-            
+            <h2>Rate This Insturctor</h2>
                 <?php if(!empty($_SESSION['user'])){
                     if($_SESSION['user']['id'] != $iduser){ ?>
 
@@ -245,28 +244,24 @@
         </div>
 
          <div id="ratingAndComments">
-
-            <h2> Comments </h2>
-                <div id="scrollbox">
-                    <p><?php 
-                        if(!empty($_SESSION['teacherrate'])){ 
-                            for($i = 0; $i < $counts; $i++) { ?>
-                                    <div class="search_class" id="profile-comment-display">
-                                    <p>
-                                    <?php for($e = 0; $e < $_SESSION['teacherrate'][$i]['rating']; $e++) { ?>
-                                       &#9733 
-                                    <?php } ?>
-                                    </p>
-                                        <p class="class_head"><?php echo $_SESSION['teacherrate'][$i]['comment']; ?></p>
-                                    </div>
-                                    <br>
-                            <?php }
-                            ?>
-                    <?php } ?>
-                </div>
+            <h2> COMMENTS </h2>
+                <p><?php 
+                    if(!empty($_SESSION['teacherrate'])){ 
+                        for($i = 0; $i < $counts; $i++) { ?>
+                                <div class="search_class" id="profile-comment-display">
+                                <p>
+                                <?php for($e = 0; $e < $_SESSION['teacherrate'][$i]['rating']; $e++) { ?>
+                                   &#9733 
+                                <?php } ?>
+                                </p>
+                                    <p class="class_head"><?php echo $_SESSION['teacherrate'][$i]['comment']; ?></p>
+                                </div>
+                                <br>
+                        <?php }
+                        ?>
+                <?php } ?>
         </div>
-</div>  
-
+ </div>   
 
     <?php } } ?>
 
@@ -281,5 +276,4 @@
 
 <!-- footer -->
 </body>
-
 </html>

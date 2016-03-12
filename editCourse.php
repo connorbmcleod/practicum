@@ -45,7 +45,7 @@
     if(empty($_SESSION['user'])) : ?>
 
         <div class="header">
-            <div class="logo"><a href="index.php"><img src="images/logo.gif" width="50px"></a></div>
+            <div class="logo"><a href="index.php"><img src="images/weLearn-logo-black.png" width="200px"></a></div>
 
                 <div class="pure-menu pure-menu-horizontal" id="menu">
                     <ul class="pure-menu-list">
@@ -82,7 +82,7 @@
 
     <!-- LOGGED IN HEADER -->
         <div class="header-logged header_line">
-            <div class="logo"><a href="index.php"><img src="images/logo.gif" width="50px"></a></div>
+            <div class="logo"><a href="index.php"><img src="images/weLearn-logo-black.png" width="200px"></a></div>
 
                 <div class="pure-menu pure-menu-horizontal" id="menu">
                     <ul class="pure-menu-list">
@@ -126,19 +126,17 @@
         </div> <!-- Header end -->
 
     <?php endif; ?>
-
-
     <!-- content -->
 
 
-    <div class="page-header">
-        <div class="page-title"><h2>Edit Course</h2></div> 
-    </div>
+<div class="responsive-wrapper">
+        <div class="edit-course-title"><h2>Edit Course</h2></div> 
+
 
         <form action="courseEdit.php" method="post" id="createCourse">
             <div id="wrapper1">
-                <p> <?php echo $_SESSION['editcourse']['coursename'] ?> </p>
-                <br /><br /> 
+                <h3><strong> <?php echo $_SESSION['editcourse']['coursename'] ?> </strong></h3>
+
                 <input id="location" type="text" name="location" value="<?php echo $_SESSION['editcourse']['location'] ?>" class="form-field" placeholder=" Location"/> 
 
              
@@ -152,11 +150,9 @@
                 <br /><br /> 
 
 
-            </div>
-            <div id="wrapper2">
-                <textarea id="coursedesc" cols="50" rows="15" type="text" name="courseDesc" placeholder=" Course Description"><?php echo $_SESSION['editcourse']['description'] ?></textarea>
-            </div>
-            <input type="text" name="objectiveone" value="<?php echo $_SESSION['editcourse']['objective1'] ?>" class="form-field" placeholder=" Learning Objective One"/> 
+                <h3> Learning Objectives </h3>
+
+                <input type="text" name="objectiveone" value="<?php echo $_SESSION['editcourse']['objective1'] ?>" class="form-field" placeholder=" Learning Objective One"/> 
             <br /><br />
              <input type="text" name="objectivetwo" value="<?php echo $_SESSION['editcourse']['objective2'] ?>" class="form-field" placeholder=" Learning Objective Two"/> 
             <br /><br /> 
@@ -165,13 +161,21 @@
              <input type="text" name="objectivefour" value="<?php echo $_SESSION['editcourse']['objective4'] ?>" class="form-field" placeholder=" Learning Objective Four"/> 
             <br /><br /> 
              <input type="text" name="objectivefive" value="<?php echo $_SESSION['editcourse']['objective5'] ?>" class="form-field" placeholder=" Learning Objective Five"/> 
+
+            </div>
+            <div id="wrapper2">
+            <h3> Course Descrption </h3>
+                <textarea id="coursedesc" cols="50" rows="15" type="text" name="courseDesc" placeholder=" Course Description"><?php echo $_SESSION['editcourse']['description'] ?></textarea>
+                <br />
+
+            </div>
             <br /><br /> 
             <br />
-             <input onclick="" type="submit" value="Register" class="button" id="createCourseBtn"/>
+             <input onclick="" type="submit" value="Update" class="button" id="createCourseBtn"/>
 
         </form>
 
-
+</div>
     <!-- content -->
 
     <!-- footer -->
