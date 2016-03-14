@@ -17,7 +17,10 @@
         require("common.php"); 
         $courseid = $_GET["id"];
         $_SESSION['enrolment'] = $courseid;
-        $userid = $_SESSION['user']['id'];
+
+        if(isset($_SESSION['user'])){
+            $userid = $_SESSION['user']['id'];
+        }
 
         $query = " 
                 SELECT * 
@@ -65,6 +68,7 @@
                      
                     $_SESSION['teacher'] = $row;
 
+        if(isset($_SESSION['user'])){
         $query = " 
                 SELECT 
                     1 
@@ -85,7 +89,8 @@
                 die("Failed to run query: " . $ex->getMessage()); 
             } 
               
-            $truth = $stmt->fetch();  
+            $truth = $stmt->fetch();
+        }  
          
     ?>
 

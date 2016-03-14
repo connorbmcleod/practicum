@@ -227,12 +227,12 @@
 
 <div id="entireRating">
 
-        <div id="ratingDiv">
+        
             
                 <?php if(!empty($_SESSION['user'])){
-                    if($_SESSION['user']['id'] != $iduser){ ?>
+                        if($_SESSION['user']['id'] != $iduser){ ?>
 
-       
+        <div id="ratingDiv">
 
                 <form method="post">
                     <select name="rating" id="theStars">
@@ -249,8 +249,10 @@
                 </form>
         </div>
 
+        <?php } } ?>
+
          <div id="ratingAndComments">
-         <h2>Rate This Insturctor</h2>
+         <h2>Rate This Instructor</h2>
             <h2> COMMENTS </h2>
                 <p><?php 
                     if(!empty($_SESSION['teacherrate'])){ 
@@ -268,16 +270,9 @@
                         ?>
                 <?php } ?>
         </div>
- </div>   
+ </div>  
+ </div> 
 
-    <?php } } ?>
-
-</div>
-</div>
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
             
 <!-- content -->
 
