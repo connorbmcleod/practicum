@@ -6,6 +6,7 @@
     <link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300|Roboto:400,700,300,700italic,300italic' rel='stylesheet' type='text/css'>
     <title>Courses</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/kylestyle.css">
 </head>
 <body>
 
@@ -134,20 +135,11 @@ if (isset($_GET["category"])) {
 
 
     <!-- content -->
-    <div id="all-courses-search">
-        <h2>Search for a course</h2>
-            <form method="post">
-            <input type="search" placeholder=" Search.." name="search" id="course-page-search">
-            </input>
-            <button type="submit" id=""><img src="images/search.png" width="43px"></button>
-        </form>
-    </div>
-
     <form method="post">
 
                      <fieldset>
                                 <label for="category">Filter By Category</label>
-                                <select name="category" id="speed categories">
+                                <select name="category" id="speed">
                                     <option></option>
                                     <option>Art</option>
                                     <option>Automotive</option>
@@ -175,12 +167,20 @@ if (isset($_GET["category"])) {
                                     <option>Social Sciences</option>
                                     <option>Sports</option>
                                 </select>
-                            </fieldset>
-                        <br />
 
-                        <button type="submit" id="filter">Filter</button>
-
+                                <button type="submit" id="filter">Filter</button>
+                            <button id="reset-courses"><a href="http://localhost/practicum/allcourses.php">Reset</a></button>
+                        </fieldset>
                  </form>
+
+
+                <div id="all-courses-search">
+                        <form method="post">
+                        <input type="search" placeholder=" Search.." name="search" id="course-page-search">
+                        </input>
+                        <button type="submit" id="search-button"><img src="images/search.png" width="43px"></button>
+                    </form>
+                </div>
 
     <div class="test-wrapper">
 
