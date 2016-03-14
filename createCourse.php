@@ -125,13 +125,44 @@
                     <br /><br /> 
 
 
+
+
                 <input id="datepicker" type="text" name="date" value="" class="form-field" placeholder=" Date"/> 
 
 
                         <br /><br /> 
 
                             <fieldset>
-
+                                <label for="category">Select a Category</label>
+                                <select name="category" id="speed categories">
+                                    <option></option>
+                                    <option>Art</option>
+                                    <option>Automotive</option>
+                                    <option>Beauty</option>
+                                    <option>Childcare/Development</option>
+                                    <option>Computers</option>
+                                    <option>Cooking</option>
+                                    <option>Crafts</option>
+                                    <option>Boating</option>
+                                    <option>Business</option>
+                                    <option>Dance</option>
+                                    <option>First-aid</option>
+                                    <option>Games</option>
+                                    <option>Gardening/Agriculture</option>
+                                    <option>Health/Wellness</option>
+                                    <option>History/Travel/Culture</option>
+                                    <option>Home Renovation/Maintenance</option>
+                                    <option>Languages</option>
+                                    <option>Martial Arts</option>
+                                    <option>Math</option>
+                                    <option>Music</option>
+                                    <option>Nature/Outdoors</option>
+                                    <option>Pets</option>
+                                    <option>Sciences</option>
+                                    <option>Social Sciences</option>
+                                    <option>Sports</option>
+                                </select>
+                                <br />
                                 <label for="time">Select a Time</label>
                                   <select name="time" id="speed">
                                     <option>12 AM</option>

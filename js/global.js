@@ -12,11 +12,23 @@ $('#location').blur(function(){
 	};
 });
 
+$('#categories').blur(function(){
+	$('#validatecategory').remove();
+	if(!$('#categories').val()){
+		$('#categories').css("border-bottom", "3px solid red");
+		$("#categories").after( "<p id='validatecategory' class='validatetime'>Please Enter A Location</p>" );
+	}
+	else{
+		$('#categories').css("border-bottom", "2px inset rgb(238, 238, 238)");
+		$('#validatecategory').remove();
+	};
+});
+
 $('#time').blur(function(){
 	$('#validatetime').remove();
 	if(!$('#time').val()){
 		$('#time').css("border-bottom", "3px solid red");
-		$("#time").after( "<p id='validatelocation' class='validatetime'>Please Enter A Location</p>" );
+		$("#time").after( "<p id='validatetime' class='validatetime'>Please Enter A Location</p>" );
 	}
 	else{
 		$('#time').css("border-bottom", "2px inset rgb(238, 238, 238)");

@@ -223,6 +223,8 @@
             </div>
     </div>
 
+
+
 <div id="entireRating">
 
         <div id="ratingDiv">
@@ -272,6 +274,10 @@
 
 </div>
 </div>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
             
 <!-- content -->
 
