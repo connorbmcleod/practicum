@@ -27,7 +27,7 @@
     if(empty($_SESSION['user'])) : ?>
 
         <div class="header">
-            <div class="logo"><a href="index.php"><img src="images/weLearn-logo.png" width="200px"></a></div>
+            <div class="logo"><a href="index.php"><img src="images/weLearn-logo-black.png" width="200px"></a></div>
 
                 <div class="pure-menu pure-menu-horizontal" id="menu">
                     <ul class="pure-menu-list">
@@ -64,7 +64,7 @@
 
     <!-- LOGGED IN HEADER -->
         <div class="header-logged header_line">
-            <div class="logo"><a href="index.php"><img src="images/weLearn-logo.png" width="200px"></a></div>
+            <div class="logo"><a href="index.php"><img src="images/weLearn-logo-black.png" width="200px"></a></div>
 
                 <div class="pure-menu pure-menu-horizontal" id="menu">
                     <ul class="pure-menu-list">
@@ -123,18 +123,7 @@
 
                     <input id="coursename" type="text" name="coursename" value="" class="form-field" placeholder=" Course Name"/> 
                     <br /><br /> 
-                <!-- <input id="location" type="text" name="location" value="" class="form-field" placeholder=" Location"/>  -->
 
-            <!-- <div id="location_drop">
-                    <p>&nbsp;Choose a Location</p>
-                        <ul id="location_drop_menu">
-                            <li id="location" value="Gibsons">Gibsons</li>
-                            <li id="location" value="Lund">Lund</li>
-                            <li id="location" value="Sechelt">Sechelt</li>
-                        </ul>
-
-                </div> -->
-             <!-- Waiting for list of locations to finish -->
 
                 <input id="datepicker" type="text" name="date" value="" class="form-field" placeholder=" Date"/> 
 

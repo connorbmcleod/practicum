@@ -414,6 +414,16 @@ textarea:focus, input:focus{
 	margin-bottom: 0px;
 }
 
+.footer-tiny {
+	display: none;
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+	height: 70px;
+	text-align: center;
+	background-color: rgba(0,0,0,1);
+	margin-bottom: 0px;
+}
+
 .footer-right, .footer-left{
 	display: inline-block;
 	height: 50px;
@@ -423,6 +433,12 @@ textarea:focus, input:focus{
 #footer-middle{
 	text-align: center;
 	display: inline-block;
+}
+
+#footer-middle-small {
+	width: 100px;
+	text-align: center;
+	display: none;
 }
 
 .footer-left{
@@ -439,9 +455,18 @@ textarea:focus, input:focus{
 	background-color: transparent;
 	border: none;	
 	color: white;
-	width: 200px;
+	width: 150px;
 	margin-top: 22px;
-	font-size: 24px;
+	font-size: 18px;
+}
+
+.footer-tiny button {
+	background-color: transparent;
+	border: none;	
+	color: white;
+	width: 150px;
+	margin-top: 22px;
+	font-size: 12px;
 }
 
 #footer-middle a{
@@ -453,7 +478,29 @@ textarea:focus, input:focus{
 	font-size: 18px;
 }
 
+#footer-middle-small a{
+	text-decoration: none;
+	color: white;
+	border: white solid 1px;
+	margin-top: 0px;
+	padding: 5px 10px;
+	font-size: 12px;
+}
+
+#button_constrain a {
+	text-decoration: none;
+	color: white;
+	border: white solid 1px;
+	margin-top: 0px;
+	padding: 5px 10px;
+}
+
 .footer button a{
+	color: white;
+	text-decoration: none;
+}
+
+.footer-tiny button a{
 	color: white;
 	text-decoration: none;
 }
@@ -464,8 +511,8 @@ textarea:focus, input:focus{
 
 .footer-right{
 	float: right;
-	margin-right: 40px;
-	margin-top: 15px;
+	margin-right: 15px;
+	margin-top: 10px;
 }
 
 /*.footer hr {
@@ -488,8 +535,11 @@ textarea:focus, input:focus{
 
 
 #social_media {
-	width: 300px;
 	margin-top: 20px;
+}
+
+#social_media_small {
+	display: none;
 }
 
 #social_media ul li {
@@ -503,7 +553,15 @@ textarea:focus, input:focus{
 	font-family: 'Carme';
 }
 
+.we_rock_logo {
+	display: none;
+	width: 50px;
+}
 
+.we_rock_logo:hover {
+	cursor: hand;
+	cursor: pointer;
+}
 
 .contact_foot {
 	right: 0;
@@ -1236,12 +1294,16 @@ textarea:focus, input:focus{
 	list-style-type: decimal;
 }
 
-.steps ul {
+.steps li{
 	margin-top: 10px;
 }
 
 .steps2 {
 	list-style-type: circle;
+}
+
+.steps2 li {
+	margin-top: 5px;
 }
 /*About Educators Page*/
 
@@ -1884,7 +1946,13 @@ a #go-to-course:hover, a #drop-course:hover{
 	}
 
 	.footer button{
-		width: 150px;
+		width: 100px;
+		font-size: 16px;
+	}
+
+	.footer-tiny button{
+		width: 100px;
+		font-size: 12px;
 	}
 
 	#footer-middle a{
@@ -1911,7 +1979,15 @@ a #go-to-course:hover, a #drop-course:hover{
 	}
 
 	.footer button{
-		width: 140px;
+		width: 100px;
+	}
+
+	.footer-tiny button{
+		width: 100px;
+	}
+
+	#footer-middle-small {
+		width: 200px;
 	}
 }
 
@@ -2083,6 +2159,28 @@ a #go-to-course:hover, a #drop-course:hover{
 	z-index: 0;
 }
 
+.we_rock {
+	display: none;
+}
+
+.we_rock_logo {
+	display: inline-block;
+	width: 50px;
+}
+
+#footer-middle {
+	display: none;
+}
+
+#footer-middle-small {
+	width: 250px;
+	display: inline-block;
+}
+
+#footer-middle-small button{
+	width: 75px;
+}
+
 }
 
 
@@ -2214,4 +2312,102 @@ a #go-to-course:hover, a #drop-course:hover{
 		margin-left: 5vw;
 		margin-right: 5vw;
 	}
+
+
+	#social_media ul li{
+		margin-left: 0;
+	}
+
+	.soc-small {
+		width: 150px;
+	}
+
+	#social-media-small {
+		width: 100px;
+	}
+
+	.footer-left-small {
+		width: 150px;
+		margin-left: 15px;
+	}
+
+	#footer-middle-small {
+		width: 160px;
+	}
+
+	.footer-right {
+		width: 50px;
+		margin-right: 15px;
+	}
+
+	.footer .soc li a {
+		font-size: 12px;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+	}
+
+	.footer-tiny .soc li a {
+		font-size: 12px;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+	}
+
+
+
+}
+
+@media only screen and (max-width: 405px) {
+
+	.footer {
+		display: none;
+	}
+
+	.footer-tiny {
+		display: inline-block;
+		background-color: black;
+		width: 100%;
+		height: 70px;
+		text-align: left;
+	}
+
+	.footer-left-small {
+		width: 250px;
+		margin-left: 25px;
+	}
+
+	.footer-right {
+		width: 85px;
+	}
+
+	.footer-tiny button {
+		margin-top: 0;
+		display: inline-block;
+	}
+
+	#button_constrain {
+		display: inline-block;
+	}
+
+	#social_media {
+		margin-top: 10px;
+	}
+
+	#footer-contact {
+		width: 75px;
+	}
+
+	#footer-faq {
+		width: 75px;
+	}
+
+	.soc-small {
+		margin-left: 5px;
+	}
+
+	.we_rock_logo {
+		margin-right: 40px;
+	}
+
 }

@@ -37,19 +37,24 @@
             <p class="about_paragraph">As an educator you can create any class that you would like to instruct.   If you have a unique knowledge, skill or ability that you would like to share with others, build it into a class! For every student that signs up to your class you will receive $12.</p> 
 
         <ul class="steps">
-            <p>1. Complete your profile<br>
-            2. Create a class</p>
+            <li>Complete your profile</li>
+            <li>Create a class</li>
                 <ul class="steps2">
                     <li>Class title</li>
                     <li>Brief description</li>
                     <li>5 learning outcomes that students will learn over the course of the one hour class</li>
-                </ul><br>
-            <p>3. Decide how many student can attend the class</p>
+                </ul>
+            <li>Decide how many student can attend the class.</p>
                 <ul class="steps2">
-                    <li>Min = How many students needed until the class becomes active</li>
-                    <li>Max = How many students needed until the class becomes full</li>
-                </ul><br>
-            <p>4. Decide where the class will take place</p>
+                    <li>Min = How many students needed until the class becomes active.</li>
+                    <li>Max = How many students needed until the class becomes full.</li>
+                </ul>
+            <li>Decide where the class will take place. A list of suggest places is provided, but the class can be held at any location you see fit.</li>
+            <li>Select a date and time for your class (you are responsible for any reservations required).</li>
+            <li>Once the class has become active, you will be notified. Be sure to check your spam folder as these notifications may be flagged.</li>
+            <li>Go to your class and have a great time teaching!</li>
+            <li>You will recieve payment upon class completion.</li>
+            <li>Create your next class.</li></p>
         </ul>
         <br><br>
 

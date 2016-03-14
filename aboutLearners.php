@@ -28,23 +28,23 @@
 
 
     <!-- content -->
-    <div class="content-wrapper" id="about-learners-content">
-        <div class="learner-headers">
+    <div class="content-wrapper educator-wrapper">
+        <div class="educators_header">
             <h2>About Learners</h2>
         </div>
 
         <div id="learners">
-            <p class="about_paragraph learner_lines">Welearn is designed to allow neighbours to teach neighbours in a community.  Every person in every community has a knowledge, skill or ability that is valuable to others.  The welearn website provides a platform where community members can come together around learning.</p>
-            <div class="learner-headers">
+            <p class="about_paragraph">Welearn is designed to allow neighbours to teach neighbours in a community.  Every person in every community has a knowledge, skill or ability that is valuable to others.  The welearn website provides a platform where community members can come together around learning.</p>
+            <div class="educators_header">
                 <h2>How it works</h2>
             </div>
-                     <p class="about_paragraph learner_lines">As a student you can browse the classes that are being offered in your community. If you find one that interest you, you can sign up.  Once there is sufficient enrolment the class becomes active and is provided to the students.  Each class is 1 hour in length and costs $15.</p>
+                     <p class="about_paragraph">As a student you can browse the classes that are being offered in your community. If you find one that interest you, you can sign up.  Once there is sufficient enrolment the class becomes active and is provided to the students.  Each class is 1 hour in length and costs $15.</p>
 
 
-                            <div id="steps">
+
                                 <h2>Steps</h2>
                             </div>  
-                                <p class="about_paragraph learner_lines">
+                                <p class="educators_header">
             
                                 1.      Complete your profile.<br>
 

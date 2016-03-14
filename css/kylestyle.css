@@ -1,0 +1,33 @@
+.allClasses {
+	width: 250px;
+	text-align: left;
+	margin-left: 100;
+}
+
+.allCalsses h2 {
+	padding: 10px 0px;
+}
+
+.test-wrapper {
+	margin: 100px;
+}
+
+#entireRating {
+	height: 100%;
+}
+
+#ratingAndComments h2 {
+	width: 300px;
+	text-align: center;
+	font-size: 1.3em;
+}
+
+#scrollbox {
+	width: 370px;
+	height: 300px;
+	overflow-y: scroll;
+}
+
+#profile-comment-display {
+	width: 300px;
+}
