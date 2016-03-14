@@ -154,8 +154,10 @@
 
     
     <div id="hero-wrap">
-        <div class="hero-title-upper border-bottom"><?php echo $_SESSION['userinfo']['teacherfname'];?></div> 
-        <div class="hero-title"><?php echo $_SESSION['userinfo']['teacherlname']; ?></div>
+        <div class="hero-title-upper border-bottom"><?php echo $_SESSION['userinfo']['teacherfname'];?>
+        </div> 
+        <div class="hero-title"><?php echo $_SESSION['userinfo']['teacherlname']; ?>
+        </div>
     </div>
 
 
@@ -188,7 +190,8 @@
 
     
             <div class="allClasses">
-                <h2 class="about_header"> Upcoming Classes </h2>
+                <h2 class="about_header about-myprofile"> Upcoming Classes </h2>
+                <div class ="little-space">
                     <?php 
                         if(!empty($_SESSION['courseinfo'])){ 
                             for($i = 0; $i < $count; $i++) { ?>
@@ -203,6 +206,7 @@
                             ?>
                     <?php } 
                     ?>
+                </div>
             </div>
 
 
@@ -222,7 +226,7 @@
 <div id="entireRating">
 
         <div id="ratingDiv">
-            <h2>Rate This Insturctor</h2>
+            
                 <?php if(!empty($_SESSION['user'])){
                     if($_SESSION['user']['id'] != $iduser){ ?>
 
@@ -244,6 +248,7 @@
         </div>
 
          <div id="ratingAndComments">
+         <h2>Rate This Insturctor</h2>
             <h2> COMMENTS </h2>
                 <p><?php 
                     if(!empty($_SESSION['teacherrate'])){ 
@@ -265,15 +270,15 @@
 
     <?php } } ?>
 
-
-
+</div>
+</div>
             
 <!-- content -->
 
-<!-- footer -->
-    
+<!-- footer --> 
 <?php include 'footer.php'; ?>
-
 <!-- footer -->
 </body>
+
+
 </html>
