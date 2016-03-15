@@ -149,9 +149,9 @@
 
 <div class="hero hero_educator">
 
-<?php include 'header.php'; ?>
+        <?php include 'header.php'; ?>
 
-</div>
+
    
     <div id="hero-wrap">
         <div class="hero-title-upper border-bottom"><?php echo $_SESSION['userinfo']['teacherfname'];?>
@@ -159,7 +159,7 @@
         <div class="hero-title"><?php echo $_SESSION['userinfo']['teacherlname']; ?>
         </div>
     </div>
-
+</div>
 
         <div id="overall-rating">
             <?php for($a = 0; $a < $average; $a++) { 
@@ -275,6 +275,8 @@
 <!-- footer --> 
 <?php include 'footer.php'; ?>
 <!-- footer -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/global.js"></script
 </body>
 
 

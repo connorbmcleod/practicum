@@ -77,7 +77,7 @@
 
 <div class="hero hero_userprofile">
 
-<?php include 'header.php'; ?>
+        <?php include 'header.php'; ?>
 
 
 
@@ -87,35 +87,8 @@
     </div>
 </div>
 
-<!-- content -->
-<!-- <div id="profile-name">
-    <h2><strong><?php echo $firstname . ' ' . $lastname; ?></strong></h2>
-</div>
-        <hr> -->
 
-<!--             <div class="upcoming-classes">
-                <h2><strong>Upcoming Classes</strong></h2>
-                <a href="">
-                    <div class="class" id="class-1">
-                        <h3><strong><a href="class.php">Mushrooming 101</a></strong></h3>
-                        <p>February 11th, 2016</p>
-                        <p>7pm-8pm</p>
-                        <p>The Bush</p>
-                    </div>
-                </a>
-
-                <a href="">
-                    <div class="class" id="class-2">
-                        <h3><strong>Advanced Rock climbing</strong></h3>
-                        <p>February 15th, 2016</p>
-                        <p>2pm-3pm</p>
-                        <p>The Rock</p>
-                    </div>
-                </a>
-                </div> -->
                 
-
-
                 
             <div class="allClasses">
                 <h2 class="about_header">Upcoming classes</h2>
@@ -161,5 +134,7 @@
 
 
 <!-- footer -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/global.js"></script
 </body>
 </html>

@@ -203,6 +203,10 @@ textarea:focus, input:focus{
 	color: grey;
 }
 
+.form-header{
+	color: grey;
+}
+
 #form-children{
 	background-color: white;
 	border: 1px solid black;
@@ -400,12 +404,25 @@ textarea:focus, input:focus{
 	margin-top: 5px;
 }
 
+#welcome2{
+	display: inline-block;
+	margin-right: 20px;
+	vertical-align: top;
+	margin-top: 5px;
+}
+
 #welcome p{
 	margin: 0px 10px;
 }
 
 #welcome a{
 	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+#welcome2 a{
+	color: grey;
 	text-decoration: none;
 	font-size: 20px;
 }
@@ -968,6 +985,10 @@ textarea:focus, input:focus{
 
 #coursedesc{
 	padding: 10px 20px;
+}
+
+.name_color {
+	color: darkslategrey;
 }
 /*create course and edit course*/
 
@@ -2266,6 +2287,8 @@ a #go-to-course:hover, a #drop-course:hover{
 		left: 0px;
 	}
 
+
+
 }
 
 
@@ -2391,7 +2414,7 @@ a #go-to-course:hover, a #drop-course:hover{
 	.edit-course-title h2{
 		margin: 0 auto;
 		width: 200px;
-		margin-top: 50px;
+		margin-top: 80px;
 		margin-bottom: 20px;
 	}
 
