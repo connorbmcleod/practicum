@@ -8,9 +8,6 @@
 	padding: 10px 0px;
 }
 
-.test-wrapper {
-	margin: 100px;
-}
 
 #entireRating {
 	height: 100%;
@@ -56,7 +53,7 @@
 }
 
 #speed{
-	margin: 0px 20px;
+	margin: 20px 20px;
 	height: 20px;
 }
 
@@ -138,7 +135,7 @@ fieldset label{
 		margin-left: 0px;
 	}
 
-	.active{
+	.active, .pending, .full{
 		float: none;
 		margin-right: 0px;
 	}
@@ -157,7 +154,8 @@ fieldset label{
 	}
 
 	.course_info{
-
+		width: 200px;
+		margin-left:0px;
 	}
 
 	.course_info p{
@@ -166,13 +164,18 @@ fieldset label{
 		margin-left: 0px;
 	}
 
-	.active{
+	.active, .pending, .full{
 		float: none;
 		margin-right: 0px;
 	}
 
 	.test-wrapper{
 		text-align: center;
+		margin: 50px;
+	}
+
+	.buh{
+		font-size: 1.2em;
 	}
 
   }

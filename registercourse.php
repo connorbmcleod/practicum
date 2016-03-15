@@ -39,7 +39,6 @@
         $query = " 
             INSERT INTO courses ( 
                 coursename,
-                category,
                 region,
                 area,
                 location,
@@ -57,7 +56,6 @@
                 status 
             ) VALUES ( 
                 :coursename,
-                :category,
                 :region,
                 :area,
                 :location, 
@@ -79,7 +77,6 @@
          
         $query_params = array( 
             ':coursename' => $_POST['coursename'],
-            ':category' => $_POST['category'],
             ':region' => $_POST['region'],
             ':area' => $_POST['area'],
             ':location' => $_POST['location'],

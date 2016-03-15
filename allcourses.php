@@ -134,7 +134,6 @@ if (isset($_GET["category"])) {
     </div>
 
 
-    <!-- content -->
     <form method="post">
 
                      <fieldset>
@@ -167,14 +166,13 @@ if (isset($_GET["category"])) {
                                     <option>Social Sciences</option>
                                     <option>Sports</option>
                                 </select>
-
-                                <button type="submit" id="filter">Filter</button>
+                            <button type="submit" id="filter">Filter</button>
                             <button id="reset-courses"><a href="http://localhost/practicum/allcourses.php">Reset</a></button>
                         </fieldset>
+
                  </form>
 
-
-                <div id="all-courses-search">
+                 <div id="all-courses-search">
                         <form method="post">
                         <input type="search" placeholder=" Search.." name="search" id="course-page-search">
                         </input>
@@ -182,7 +180,7 @@ if (isset($_GET["category"])) {
                     </form>
                 </div>
 
-    <div class="test-wrapper">
+        <div class="test-wrapper">
 
            <?php 
            if(!empty($_SESSION['allcourses'])){ 
@@ -206,10 +204,10 @@ if (isset($_GET["category"])) {
                                     <?php } ?>
                         </div>
             <?php }; }; ?>
-    </div>   
+        </div>   
 
 
-    </div>
+</div>
     <!-- content -->
 
 

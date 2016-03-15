@@ -17,10 +17,7 @@
         require("common.php"); 
         $courseid = $_GET["id"];
         $_SESSION['enrolment'] = $courseid;
-
-        if(isset($_SESSION['user'])){
-            $userid = $_SESSION['user']['id'];
-        }
+        $userid = $_SESSION['user']['id'];
 
         $query = " 
                 SELECT * 
@@ -68,7 +65,6 @@
                      
                     $_SESSION['teacher'] = $row;
 
-        if(isset($_SESSION['user'])){
         $query = " 
                 SELECT 
                     1 
@@ -89,8 +85,7 @@
                 die("Failed to run query: " . $ex->getMessage()); 
             } 
               
-            $truth = $stmt->fetch();
-        }  
+            $truth = $stmt->fetch();  
          
     ?>
 
@@ -108,14 +103,7 @@
 
     <!-- content -->
     <div id="course-content">
-    <?php if($_SESSION['coursepage']['status'] == 0) {  ?>
-                                             <p class="pending">PENDING</p>
-                                    <?php }
-                                        else if($_SESSION['coursepage']['status'] == 1){ ?>
-                                            <p class="active">ACTIVE</p>
-                                    <?php } else { ?>
-                                            <p class="full">FULL</p>
-                                    <?php } ?>
+
 
     <div class="col" id="course-left-col">
         <h3><strong>Educator</strong></h3>
@@ -152,7 +140,7 @@
                 </form> 
            <?php }
 
-           else if($_SESSION['user']['id'] != $teacherid && $_SESSION['coursepage']['status'] != '2') { ?> 
+           else if($_SESSION['user']['id'] != $teacherid) { ?> 
 
                 <form action="enrolment.php" method="post" class="form">
                     <button id="joincourse">Join Course</button>

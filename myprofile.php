@@ -151,8 +151,8 @@
 
 <?php include 'header.php'; ?>
 
-
-    
+</div>
+   
     <div id="hero-wrap">
         <div class="hero-title-upper border-bottom"><?php echo $_SESSION['userinfo']['teacherfname'];?>
         </div> 
@@ -162,18 +162,13 @@
 
 
         <div id="overall-rating">
-        <?php for($a = 0; $a < $average; $a++) { 
-                echo "&#9733";
-            } 
-            ?>
+            <?php for($a = 0; $a < $average; $a++) { 
+                    echo "&#9733";
+                } 
+                ?>
         </div>
-    </div>
+
 <!-- content -->
-<!-- <div id="profile-name">
-    <h2><strong><?php echo $firstname . ' ' . $lastname; ?></strong></h2>
-        <h5><?php echo $_SESSION['userinfo']['location']?></h5>
-            <hr>
-</div> -->
 
 <div class="content-wrapper" id="myprofile-content">
 
@@ -221,18 +216,18 @@
                     }
                         ?>
             </div>
-    </div>
+</div>
 
 
 
-<div id="entireRating">
-
-        
             
                 <?php if(!empty($_SESSION['user'])){
-                        if($_SESSION['user']['id'] != $iduser){ ?>
+                    if($_SESSION['user']['id'] != $iduser){ ?>
 
-        <div id="ratingDiv">
+        <div id="entireRating">
+
+                <div id="ratingDiv">
+       
 
                 <form method="post">
                     <select name="rating" id="theStars">
@@ -249,10 +244,8 @@
                 </form>
         </div>
 
-        <?php } } ?>
-
          <div id="ratingAndComments">
-         <h2>Rate This Instructor</h2>
+         <h2>Rate This Insturctor</h2>
             <h2> COMMENTS </h2>
                 <p><?php 
                     if(!empty($_SESSION['teacherrate'])){ 
@@ -270,9 +263,12 @@
                         ?>
                 <?php } ?>
         </div>
- </div>  
- </div> 
+ </div>   
 
+    <?php } } ?>
+
+</div>
+</div>
             
 <!-- content -->
 

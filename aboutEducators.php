@@ -60,7 +60,7 @@
 
        
 
-
+        </div> 
          <div class="profile-buttons">
              <?php
 
@@ -74,7 +74,7 @@
                 }
             ?>
         </div>
-    </div> 
+    
 
 
     <ul id="articles">

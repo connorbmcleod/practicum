@@ -35,16 +35,18 @@
 
         <div id="learners">
             <p class="about_paragraph">Welearn is designed to allow neighbours to teach neighbours in a community.  Every person in every community has a knowledge, skill or ability that is valuable to others.  The welearn website provides a platform where community members can come together around learning.</p>
+
+
             <div class="educators_header">
                 <h2>How it works</h2>
             </div>
                      <p class="about_paragraph">As a student you can browse the classes that are being offered in your community. If you find one that interest you, you can sign up.  Once there is sufficient enrolment the class becomes active and is provided to the students.  Each class is 1 hour in length and costs $15.</p>
 
 
-
+                            <div class="educators_header">
                                 <h2>Steps</h2>
-                            </div>  
-                                <p class="educators_header">
+                            </div> 
+                                <p>
             
                                 1.      Complete your profile.<br>
 
@@ -61,15 +63,16 @@
                                 7.      Explore the site for your next class.<br><br><br>  
                                
                                 To begin, you can sign up OR browse the courses in your local area.</p>                     
+                                    
+    </div>
+</div>
+
+                                <div id="learners-buttons">
                                     <a href="registerPage.php">
                                         <button class="button" id="signup" name="signup">Sign up</button>
                                     </a>
-                <button class="go-to-courses"><a href="allCourses.php">Browse Courses</a></button>
-            <div>
-
-        </div>
-    </div>
-</div>
+                                    <button class="go-to-courses"><a href="allCourses.php">Browse Courses</a></button>
+                                </div>
 <!-- content -->
 
 

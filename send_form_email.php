@@ -70,10 +70,14 @@ $headers = 'From: '.$email."\r\n".
 @mail($email_to, $email_subject, $email_message, $headers);  
 ?>
  
- 
-Thank you for contacting us. We will be in touch with you very soon.
- 
-<script type="text/javascript"> setTimeout("window.close();", 3000); </script> 
+<div class="thank-you-div">
+    <h2>Thank you for contacting us. We will be in touch with you very soon.<br>
+        You will be redirected shortly...</h2>
+</div>
+
+
+<script type="text/javascript"> setTimeout("window.close();", 3000); </script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <?php
  
 }
