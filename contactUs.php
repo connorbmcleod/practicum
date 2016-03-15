@@ -35,8 +35,8 @@
             <p><a href="mailto:info@welearn.ca">info@welearn.ca</a></p>
             <br>
                 <p><strong>Address</strong></p>
-                    <p>#555 Seymour Street,
-                    Vancouver, BC, V9L0C8</p>
+                    <p>#470 Elphinstone Avenue,
+                        Gibsons, BC, Canada V0N1V1</p>
         </div>
 
 

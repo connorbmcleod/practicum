@@ -15,7 +15,7 @@ if(empty($_SESSION['user'])) : ?>
                       <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
                         <span id="menuLink1" class="pure-menu-link">About us</span>
                         <ul class="pure-menu-children">
-                            <li class="pure-menu-item"><a href="aboutUs.php" class="pure-menu-link">Who are we</a></li>
+                            <li class="pure-menu-item"><a href="aboutUs.php" class="pure-menu-link">Who We Are</a></li>
                             <li class="pure-menu-item"><a href="aboutEducators.php" class="pure-menu-link">Our educators</a></li>
                             <li class="pure-menu-item"><a href="aboutLearners.php" class="pure-menu-link">Our learners</a></li>
                         </ul>
@@ -51,7 +51,7 @@ if(empty($_SESSION['user'])) : ?>
                       <li>
                         <a href="#" class="mini_open">About us</a>
                         <ul class="mini_menu">
-                            <li><a href="aboutUs.php">Who are we</a></li>
+                            <li><a href="aboutUs.php">Who We Are</a></li>
                             <li><a href="aboutEducators.php">Our educators</a></li>
                             <li><a href="aboutLearners.php">Our learners</a></li>
                         </ul>
@@ -100,7 +100,7 @@ if(empty($_SESSION['user'])) : ?>
                       <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
                         <span id="menuLink1" class="pure-menu-link">About us</span>
                         <ul class="pure-menu-children">
-                            <li class="pure-menu-item"><a href="aboutUs.php" class="pure-menu-link">Who are we</a></li>
+                            <li class="pure-menu-item"><a href="aboutUs.php" class="pure-menu-link">Who We Are</a></li>
                             <li class="pure-menu-item"><a href="aboutEducators.php" class="pure-menu-link">Our educators</a></li>
                             <li class="pure-menu-item"><a href="aboutLearners.php" class="pure-menu-link">Our learners</a></li>
                         </ul>
@@ -152,7 +152,7 @@ if(empty($_SESSION['user'])) : ?>
                       <li>
                         <a href="#" class="mini_open">About us</a>
                         <ul class="mini_menu">
-                            <li><a href="aboutUs.php">Who are we</a></li>
+                            <li><a href="aboutUs.php">Who We Are</a></li>
                             <li><a href="aboutEducators.php">Our educators</a></li>
                             <li><a href="aboutLearners.php">Our learners</a></li>
                         </ul>

@@ -34,7 +34,7 @@
         <div  class="educators_header">
             <h2>How It Works</h2>
         </div>
-            <p class="about_paragraph">As an educator you can create any class that you would like to instruct.   If you have a unique knowledge, skill or ability that you would like to share with others, build it into a class! For every student that signs up to your class you will receive $12.</p> 
+            <p class="about_paragraph">As an educator you can create any class that you would like to instruct.   If you have a unique knowledge, skill or ability that you would like to share with others, build it into a class!</p> 
 
         <ul class="steps">
             <li>Complete your profile</li>

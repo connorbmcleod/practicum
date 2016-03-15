@@ -20,24 +20,21 @@
     ?>
 
     <div class="hero hero_about">
-
         <?php include 'header.php'; ?>
 
         <div id="hero-wrap">
             <div class="hero-title-upper border-bottom">About</div> 
             <div class="hero-title">weLearn</div>
         </div>
-
     </div>
 
     <!-- content -->
     <!-- content -->
         <p class="vision_stmnt">"&thinsp;&thinsp;Bring a community together with knowledge .&thinsp;"</p>
+
     <div class="content-wrapper">
         
-        <p class="about_paragraph">Welearn is a service that brings together neigbours to allow us to build our local educational capacity.</p>
-        <p class="about_paragraph">Welearn looks after many of the burdensome administrative task for educators and provides an easy interface for students in the community to select classes.</p>
-        <p class="about_paragraph">We believe each person in the community has a skills to share and that would benefit others, this service allows us to benefit from our neigbours knowledge and experience.</p>
+        <p class="about_paragraph">WeLearn recognizes that everyone in the community has a skills or knowledge that is valued by others and can be shared. The WeLearn portal makes teaching and learning easy and social.  The service looks after the business, marketing and administration aspects of delivering a class, and allows you to focus on what you love most – sharing your knowledge.</p>
 
             
 

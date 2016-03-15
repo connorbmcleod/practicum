@@ -6,6 +6,7 @@ body{
 /*	font-size: 1.1em;*/
 	line-height: 1.5em;
 	width: 100%;
+	min-height: 300px;
 
 }
 
@@ -130,7 +131,7 @@ textarea:focus, input:focus{
 
 .educator-wrapper {
 	margin-bottom: 5vh;
-	margin-top: 10vh;
+	margin-top: 50px;
 }
 
 #menu {
@@ -654,7 +655,7 @@ textarea:focus, input:focus{
 }
 
 .hero_courses {
-	background: url('../images/hero_images/hero-courses.jpg') center center no-repeat;
+	background: url('https://source.unsplash.com/random') center center no-repeat;
 	background-size: cover;
 }
 
@@ -762,24 +763,6 @@ textarea:focus, input:focus{
 
 }
 
-#index-search{
-/*	color: yellow;*/
-	font-size: 1em;
-    position: relative;
-    top: 30px;
-/*    left: 30%;*/
-    text-align: center;
-}
-
-#index-search input{
-	height: 25px;
-	width: 30vw;
-}
-
-#index-search img{
-	vertical-align: top;
-}
-
 #registerFormWrapper {
 	background-color: white;
 	padding: 25px;
@@ -798,7 +781,13 @@ textarea:focus, input:focus{
 }
 
 #index-content{
-	margin: 150px 0;
+	margin-bottom: 0px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#index-content p{
+	margin-bottom: 50px;
 }
 
 #index-content img:hover{
@@ -894,6 +883,13 @@ textarea:focus, input:focus{
 
 
 /*create course and Edit course*/
+
+#ccourse {
+  		margin-top: 100px;
+  		font-size: 1.2em;
+  	}
+
+  	
 #createCourse{
 	margin: 0 auto;
 	text-align: center;
@@ -1325,6 +1321,16 @@ textarea:focus, input:focus{
 	color: #bdbdbd;
 }
 
+.vision_stmnt_index{
+	text-align: center;
+	font-size: 3.2em;
+	margin-bottom: 30px;
+	margin-top: 50px;
+	font-family: "Lobster Two";
+	line-height: 1.8em;
+	color: #bdbdbd;
+}
+
 
 .educators_header{
 	text-align: center;
@@ -1349,9 +1355,14 @@ textarea:focus, input:focus{
 /*	margin-top: 100px;*/
 }
 
+.join-team h3{
+	margin-bottom: 50px;
+	margin-top: 50px; 
+}
+
 .join-team{
 	text-align: center;
-	margin: 100px 0px; 
+	margin-bottom: 50px;	
 }
 
 
@@ -1372,7 +1383,7 @@ textarea:focus, input:focus{
 	text-decoration: none;
 }
 
-#articles li:hover{
+#articles li:hover a{
 	font-size: 1.1em;
 }
 
@@ -1381,6 +1392,7 @@ textarea:focus, input:focus{
 	margin-top: 20px;
 	text-decoration: underline;
 }
+
 
 .steps {
 	list-style-type: decimal;
@@ -1909,8 +1921,21 @@ a #go-to-course:hover, a #drop-course:hover{
 /*LEARNER PAGE*/
 
 
+/*FAQ PAGE*/
+#faq-content p{
+	margin-bottom: 20px;
+}
+
+#faq-content strong{
+	font-size: 1.2em;
+}
+
+/*FAQ PAGE*/
+
+
 
 /*Rating page */
+
 
 
 
@@ -2032,6 +2057,14 @@ a #go-to-course:hover, a #drop-course:hover{
 
 @media only screen and (min-width: 768px)
 				   and	(max-width: 1024px) {
+	#index-content p{
+  		margin-left: 100px;
+  		margin-right: 100px;
+  	}
+
+  	#vision_stmnt{
+  		margin-left: 50px;
+  	}
 
 	.pure-menu-item {
 		font-size: 13px;
@@ -2199,6 +2232,8 @@ a #go-to-course:hover, a #drop-course:hover{
 		top:11vh;
 
 	}
+
+	
 }
 
 
@@ -2304,6 +2339,11 @@ a #go-to-course:hover, a #drop-course:hover{
 		left: 0px;
 	}
 
+	#index-content p{
+  		margin-left: 50px;
+  		margin-right: 50px;
+  	}
+
 
 
 }
@@ -2316,6 +2356,11 @@ a #go-to-course:hover, a #drop-course:hover{
   and (max-width: 667px) {
   	p{
   		text-align: justify;
+  	}
+
+  	#index-content p{
+  		margin-left: 50px;
+  		margin-right: 50px;
   	}
 
   	#ccourse {
@@ -2593,10 +2638,16 @@ a #go-to-course:hover, a #drop-course:hover{
 	}
 
 	.vision_stmnt {
-		width: 337px;
 		margin: 0 auto;
 		margin-top: 30px;
+		font-size: 1.4em;
 	}
 
+	.join-team h3{
+		margin-left: 50px;
+		margin-right: 50px;
+		margin-top: 50px;
+
+	}
 
 }

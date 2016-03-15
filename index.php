@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Carme|Work+Sans:400,700,300|Roboto:400,700,300,700italic,300italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
     <title>WeLearn</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/kylestyle.css">
@@ -112,7 +113,17 @@
 
            
 <!-- CONTENT -->
-<div class="content" id="index-content">
+<div class="content-wrapper" id="index-content">
+       <p class="vision_stmnt">"&thinsp;&thinsp;Bring a community together with knowledge .&thinsp;"</p>
+            <p>Welearn is a service that brings together neigbours to allow us to build our local educational 
+                capacity.
+                Welearn looks after many of the burdensome administrative task for educators and provides an 
+                easy interface for students in the community to select classes.
+                We believe each person in the community has a skills to share and that would benefit others, 
+                this service allows us to benefit from our neigbours knowledge and experience.<br>
+                To teach or take a class in your community, please complete a profile by clicking on the SIGN UP link 
+                below.</p>
+
         <div class="hr">
             <hr>
         </div>
@@ -161,9 +172,9 @@
                 </div>
             </div>
         <?php endif; ?>
-        <div class="hr">
+<!--         <div class="hr">
             <hr>
-        </div>
+        </div> -->
 
 <!-- <div id="index-learn-more">
     <h3><a href="aboutus.php">Learn more about weLEarn</a></h3>
