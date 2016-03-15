@@ -30,7 +30,7 @@
 <!-- 		</div> -->
 
 		<div class="footer-right">
-		    <p class="we_rock">© Codakye Web Design 2016</p>
+		    <p class="we_rock">&#169; Codakye Web Design 2016</p>
 
 		    <img class="we_rock_logo" src="images/codakye-logo.png">
 		</div>
@@ -65,7 +65,7 @@
 		</div>
 
 		<div class="footer-right">
-		    <p class="we_rock">© Codakye Web Design 2016</p>
+		    <p class="we_rock">&#169; Codakye Web Design 2016</p>
 
 		    <img class="we_rock_logo" src="images/codakye-logo.png">
 		</div>

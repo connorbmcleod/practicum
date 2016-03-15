@@ -28,7 +28,7 @@ if(empty($_SESSION['user'])) : ?>
 
         <div class="nav">
             <div id="show-login">Login</div>
-                <a href="registerPage.php"><div class="button" id="signup_head" name="signup">Sign up</div></a>
+                <div class="button" id="signup_head" name="signup"><a href="registerPage.php">Sign up</a></div>
         </div>
             <div class="login">
                 <form action="index.php" method="post" class="form">

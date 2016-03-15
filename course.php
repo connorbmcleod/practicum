@@ -86,6 +86,34 @@
             } 
               
             $truth = $stmt->fetch();  
+
+
+            // MIN PEEPS
+
+            $query = " 
+                SELECT 
+                    * 
+                FROM enrollments
+                WHERE 
+                    courseID = '$courseid'
+                
+            "; 
+                      
+            try 
+            { 
+                $stmt = $db->prepare($query); 
+                $result = $stmt->execute(); 
+            } 
+            catch(PDOException $ex) 
+            {   
+                die("Failed to run query: " . $ex->getMessage()); 
+            } 
+              
+            $peeps = $stmt->fetchAll(); 
+
+            $coont = count($peeps);
+
+            echo $coont;
          
     ?>
 
@@ -113,6 +141,8 @@
         <br>
         <h3><strong>Date</strong></h3>
         <p><?php echo $_SESSION['coursepage']['date']; ?></p><br>
+        <h3><strong>Category</strong></h3>
+        <p><?php echo $_SESSION['coursepage']['category']; ?></p><br>
         <h3><strong>Time</strong></h3>
         <p><?php echo $_SESSION['coursepage']['time']; ?></p><br>
         <h3><strong>Region</strong></h3>
@@ -121,6 +151,21 @@
         <p><?php echo $_SESSION['coursepage']['area']; ?></p><br>
         <h3><strong>Location</strong></h3>
         <p><?php echo $_SESSION['coursepage']['location']; ?></p><br>
+
+
+        <?php if($coont < $_SESSION['coursepage']['minimumpeople']) {?>
+        <h3><strong>Students Needed</strong></h3>
+        <p><?php 
+
+            
+        echo $coont . '/' . $_SESSION['coursepage']['minimumpeople']?></p>
+        <?php } ?>
+
+
+
+
+        <!-- <h3><strong>Maximum Students</strong></h3>
+        <p><?php echo $_SESSION['coursepage']['maximumpeople']; ?></p><br> -->
     </div>
     <div class="col" id="course-right-col">
         <p><?php echo $_SESSION['coursepage']['description']; ?></p>

@@ -193,6 +193,7 @@ if (isset($_GET["category"])) {
                                 <div class="course_info">
                                     <p><?php echo $_SESSION['allcourses'][$i]['location']; ?></p>
                                     <p><?php echo $_SESSION['allcourses'][$i]['date']; ?></p>
+                                    
                                 </div>
                                 <?php if($_SESSION['allcourses'][$i]['status'] == 0) {  ?>
                                              <p class="pending">PENDING</p>
