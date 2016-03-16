@@ -22,6 +22,8 @@ p{
 
 }
 
+
+
 .content {
 	margin:20px 0px;
 	text-align: center;
@@ -780,7 +782,12 @@ textarea:focus, input:focus{
 }
 
 #index-content{
-	margin: 150px 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#index-content p{
+	margin-bottom: 50px;
 }
 
 #index-content img:hover{
@@ -884,6 +891,7 @@ textarea:focus, input:focus{
 #createCourse{
 	margin: 0 auto;
 	text-align: center;
+	margin-bottom: 50px;
 
 }
 
@@ -999,10 +1007,19 @@ textarea:focus, input:focus{
 
 /*myprofile*/
 
+#course-left-col a:visited{
+	color: black;
+	text-decoration: none;
+}
+
+#courseeducator{
+	text-decoration: none;
+}
+
 #scrolly {
 	width: 400px;
 	height: 200px;
-	overflow: scroll;
+	overflow-y: scroll;
 }
 
 #profile-search{
@@ -1074,6 +1091,7 @@ textarea:focus, input:focus{
 /*	margin: 0px 10vw;*/
 	margin-bottom: 30px;
 	margin-top: 50px;
+	min-height: 600px;
 }
 
 .allClasses h2{
@@ -1083,6 +1101,9 @@ textarea:focus, input:focus{
 	font-size: 24px;
 	border-right: none;
 	border-left: none;
+	width: 300px;
+	margin: 0 auto;
+	margin-bottom: 50px;
 }
 
 .little-space {
@@ -1105,7 +1126,7 @@ textarea:focus, input:focus{
 	border-right: none;
 	border-left: none;
 	margin-bottom: 0px;
-	margin-top: 200px;
+	margin-top: 150px;
 	background-color: darkslategrey;
 
 }
@@ -1152,9 +1173,15 @@ textarea:focus, input:focus{
 
 }
 
+#profile-course-display a{
+	text-decoration: none;
+}
+
+
 #profile-course-display:hover {
 	border: black solid 1px;
 	cursor: pointer;
+	background-color: white;
 }
 
 .class_head {
@@ -1194,7 +1221,7 @@ textarea:focus, input:focus{
 }
 
 #entireRating{
-	background-color: #F0F0F0;
+	background-color: darkslategrey;
 	padding: 30px 3vw;
 	text-align: center;
 }
@@ -1202,20 +1229,24 @@ textarea:focus, input:focus{
 #ratingDiv{
 	text-align: center;
 	padding: 0px 5vw;
-	background-color: #F0F0F0;
+	background-color: darkslategrey;
 	display: inline-block;
 	height: 300px;
 	margin-bottom: 20px;
 }
 
+#ratingDiv h2 {
+	color: white;
+}
+
 #ratingAndComments{
-	text-align: left;
+	text-align: center;
 	padding: 0px 5vw;
-	background-color: #F0F0F0;
+	background-color: darkslategrey;
 	padding-bottom: 0px;
 	display: inline-block;
 	height: 300px;
-	float: right;
+
 }
 
 #ratingAndComments h2{
@@ -1223,6 +1254,7 @@ textarea:focus, input:focus{
 	margin: 0 auto;
 	margin-bottom: 20px;
 	margin-top: 20px;
+	color: white;
 }
 
 #theStars{
@@ -1378,8 +1410,8 @@ textarea:focus, input:focus{
 	text-decoration: none;
 }
 
-#articles li:hover{
-	
+#articles li a:hover{
+	font-size: 1em;
 }
 
 .article1, .article2, .article3, .article4, .article5 {
@@ -1436,6 +1468,14 @@ textarea:focus, input:focus{
 	border: black thin dashed;
 	margin-bottom: 10px;
 	border-radius: 5px;
+}
+
+.search_class p{
+	color: black;
+}
+
+.button-holder{
+	text-align: center;
 }
 
 .course-wrapper{
@@ -1685,6 +1725,15 @@ textarea:focus, input:focus{
 	color: black;	
 }
 
+#become-educator-content{
+	text-align: center;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 200px;
+	margin-bottom: 100px;
+	min-height: 800px;
+}
+
 a #go-to-course, a #drop-course{
 	text-decoration: none;
 	color: black;
@@ -1698,6 +1747,7 @@ a #go-to-course:hover, a #drop-course:hover{
 
 .profile-buttons{
 	text-align: center;
+	display: inline-block;
 }
 
 #button_container {
@@ -2233,6 +2283,10 @@ a #go-to-course:hover, a #drop-course:hover{
 	display: none;
 }
 
+#become-educator-content{
+	min-height: 400px;
+}
+
 #little_head {
 	display: block;
 	margin: 0 auto;
@@ -2343,7 +2397,23 @@ a #go-to-course:hover, a #drop-course:hover{
   		margin-left: 50px;
   		margin-right: 50px;
   	}
-  	
+
+  	#become-educator-content{
+	min-height: 300px;
+	}
+
+  	#scrolly {
+  		width: auto;
+  	}
+
+  	.profile-buttons{
+  		width: 100%;
+  	}
+
+  	#button_container{
+  		width: auto;
+  	}
+
   	p{
   		text-align: justify;
   	}

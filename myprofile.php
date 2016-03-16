@@ -228,7 +228,7 @@
 
                 <div id="ratingDiv">
        
-
+         <h2>Rate This Instructor</h2>
                 <form method="post">
                     <select name="rating" id="theStars">
                       <option value="1">&#9734</option>
@@ -246,10 +246,10 @@
 
     
          <div id="ratingAndComments">
-         <h2>Rate This Instructor</h2>
+
             <h2> COMMENTS </h2>
         <div id="scrolly">
-                <p><?php 
+                <?php 
                     if(!empty($_SESSION['teacherrate'])){ 
                         for($i = 0; $i < $counts; $i++) { ?>
                                 <div class="search_class" id="profile-comment-display">

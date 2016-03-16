@@ -6,7 +6,6 @@ $courseid = $_SESSION['editcourse']['courseID'];
 $query = " 
             UPDATE courses
             SET 
-                coursename = :coursename,
                 location = :location, 
                 date = :date,
                 minimumpeople = :minnumber, 
@@ -16,14 +15,13 @@ $query = "
                 objective2 = :objectivetwo,
                 objective3 = :objectivethree,
                 objective4 = :objectivefour,
-                objective5 = :objectivefive,
+                objective5 = :objectivefive
             WHERE
             	courseID = $courseid
         "; 
          
          
         $query_params = array( 
-            ':coursename' => $_POST['coursename'],
             ':location' => $_POST['location'], 
             ':date' => $_POST['date'],  
             ':minnumber' =>  $_POST['minnumber'],
@@ -33,7 +31,7 @@ $query = "
             ':objectivetwo' => $_POST['objectivetwo'],
             ':objectivethree' => $_POST['objectivethree'],
             ':objectivefour' => $_POST['objectivefour'],
-            ':objectivefive' => $_POST['objectivefive'],
+            ':objectivefive' => $_POST['objectivefive']
         ); 
          
         try 

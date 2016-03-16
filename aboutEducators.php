@@ -61,7 +61,7 @@
        
 
         </div> 
-         <div class="profile-buttons">
+         <div class="button-holder">
              <?php
 
                 if(empty($_SESSION['user'])){
