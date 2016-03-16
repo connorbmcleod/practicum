@@ -17,7 +17,9 @@
         require("common.php"); 
         $courseid = $_GET["id"];
         $_SESSION['enrolment'] = $courseid;
-        $userid = $_SESSION['user']['id'];
+        if(isset($_SESSION['user'])){
+            $userid = $_SESSION['user']['id'];
+        }
 
         $query = " 
                 SELECT * 
@@ -65,6 +67,8 @@
                      
                     $_SESSION['teacher'] = $row;
 
+
+    if(isset($_SESSION['user'])){
         $query = " 
                 SELECT 
                     1 
@@ -86,7 +90,7 @@
             } 
               
             $truth = $stmt->fetch();  
-
+    }
 
             // MIN PEEPS
 
@@ -113,7 +117,6 @@
 
             $coont = count($peeps);
 
-            echo $coont;
          
     ?>
 
@@ -157,9 +160,12 @@
         <h3><strong>Students Needed</strong></h3>
         <p><?php 
 
+        $coont = $_SESSION['coursepage']['minimumpeople'] - $coont;
             
-        echo $coont . '/' . $_SESSION['coursepage']['minimumpeople']?></p>
+        echo $coont ?></p>
         <?php } ?>
+
+
 
 
 

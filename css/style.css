@@ -6,7 +6,6 @@ body{
 /*	font-size: 1.1em;*/
 	line-height: 1.5em;
 	width: 100%;
-	min-height: 300px;
 
 }
 
@@ -131,7 +130,7 @@ textarea:focus, input:focus{
 
 .educator-wrapper {
 	margin-bottom: 5vh;
-	margin-top: 50px;
+	margin-top: 10vh;
 }
 
 #menu {
@@ -178,7 +177,7 @@ textarea:focus, input:focus{
 }
 
 .header, .header-logged{
-	width: 100vw;
+	width: 100%;
 	display: inline-block;
 	vertical-align: baseline;
 	height: 125px;
@@ -649,13 +648,13 @@ textarea:focus, input:focus{
 
 /*index page*/
 .hero{
-	width: 100vw;
+	width: 100%;
 	height: 500px;
 	/*background-size: cover;*/
 }
 
 .hero_courses {
-	background: url('https://source.unsplash.com/random') center center no-repeat;
+	background: url('../images/hero_images/hero-courses.jpg') center center no-repeat;
 	background-size: cover;
 }
 
@@ -781,13 +780,7 @@ textarea:focus, input:focus{
 }
 
 #index-content{
-	margin-bottom: 0px;
-	text-align: center;
-	margin: 0 auto;
-}
-
-#index-content p{
-	margin-bottom: 50px;
+	margin: 150px 0;
 }
 
 #index-content img:hover{
@@ -873,6 +866,11 @@ textarea:focus, input:focus{
 	font-size: 18px;
 }
 
+#ccourse {
+  		margin-top: 100px;
+  		font-size: 1.2em;
+  	}
+
 #register1:hover, #register2:hover {
 	background-color: transparent;
 	border: black 1px solid;
@@ -883,13 +881,6 @@ textarea:focus, input:focus{
 
 
 /*create course and Edit course*/
-
-#ccourse {
-  		margin-top: 100px;
-  		font-size: 1.2em;
-  	}
-
-  	
 #createCourse{
 	margin: 0 auto;
 	text-align: center;
@@ -1008,6 +999,11 @@ textarea:focus, input:focus{
 
 /*myprofile*/
 
+#scrolly {
+	width: 400px;
+	height: 200px;
+	overflow: scroll;
+}
 
 #profile-search{
 	float: right;
@@ -1173,7 +1169,7 @@ textarea:focus, input:focus{
 	padding: 20px 10px;
 	text-align: center;
 /*	display: inline-block;*/
-	width: 400px;
+	width: 340px;
 	margin-left: 20px;
 	vertical-align: top;
 	border: solid 1px #5E5E5E;
@@ -1321,6 +1317,11 @@ textarea:focus, input:focus{
 	color: #bdbdbd;
 }
 
+
+.educators_header{
+	text-align: center;
+}
+
 .vision_stmnt_index{
 	text-align: center;
 	font-size: 3.2em;
@@ -1329,11 +1330,6 @@ textarea:focus, input:focus{
 	font-family: "Lobster Two";
 	line-height: 1.8em;
 	color: #bdbdbd;
-}
-
-
-.educators_header{
-	text-align: center;
 }
 
 .educators_header h2{
@@ -1355,16 +1351,15 @@ textarea:focus, input:focus{
 /*	margin-top: 100px;*/
 }
 
+.join-team{
+	text-align: center;
+	margin: 100px 0px; 
+}
+
 .join-team h3{
 	margin-bottom: 50px;
 	margin-top: 50px; 
 }
-
-.join-team{
-	text-align: center;
-	margin-bottom: 50px;	
-}
-
 
 /*About us page*/
 
@@ -1383,8 +1378,8 @@ textarea:focus, input:focus{
 	text-decoration: none;
 }
 
-#articles li:hover a{
-	font-size: 1.1em;
+#articles li:hover{
+	
 }
 
 .article1, .article2, .article3, .article4, .article5 {
@@ -1392,7 +1387,6 @@ textarea:focus, input:focus{
 	margin-top: 20px;
 	text-decoration: underline;
 }
-
 
 .steps {
 	list-style-type: decimal;
@@ -1435,7 +1429,7 @@ textarea:focus, input:focus{
 
 
 .search_class {
-	width: 400px;
+	width: 150px;
 	display: inline-block;
 	text-align: center;
 	padding-bottom: 20px;
@@ -1921,6 +1915,9 @@ a #go-to-course:hover, a #drop-course:hover{
 /*LEARNER PAGE*/
 
 
+
+/*Rating page */
+
 /*FAQ PAGE*/
 #faq-content p{
 	margin-bottom: 20px;
@@ -1931,13 +1928,6 @@ a #go-to-course:hover, a #drop-course:hover{
 }
 
 /*FAQ PAGE*/
-
-
-
-/*Rating page */
-
-
-
 
 /*Social Icons*/
 
@@ -2057,14 +2047,6 @@ a #go-to-course:hover, a #drop-course:hover{
 
 @media only screen and (min-width: 768px)
 				   and	(max-width: 1024px) {
-	#index-content p{
-  		margin-left: 100px;
-  		margin-right: 100px;
-  	}
-
-  	#vision_stmnt{
-  		margin-left: 50px;
-  	}
 
 	.pure-menu-item {
 		font-size: 13px;
@@ -2073,6 +2055,16 @@ a #go-to-course:hover, a #drop-course:hover{
 	.nav {
 		right: 10;
 	}
+
+	
+	#index-content p{
+  		margin-left: 100px;
+  		margin-right: 100px;
+  	}
+
+  	#vision_stmnt{
+  		margin-left: 50px;
+  	}
 
 	#menu {
 		text-align: center;
@@ -2232,8 +2224,6 @@ a #go-to-course:hover, a #drop-course:hover{
 		top:11vh;
 
 	}
-
-	
 }
 
 
@@ -2339,11 +2329,6 @@ a #go-to-course:hover, a #drop-course:hover{
 		left: 0px;
 	}
 
-	#index-content p{
-  		margin-left: 50px;
-  		margin-right: 50px;
-  	}
-
 
 
 }
@@ -2354,13 +2339,13 @@ a #go-to-course:hover, a #drop-course:hover{
 /*iPhone6*/
 @media only screen and (min-width: 320px) 
   and (max-width: 667px) {
-  	p{
-  		text-align: justify;
-  	}
-
   	#index-content p{
   		margin-left: 50px;
   		margin-right: 50px;
+  	}
+  	
+  	p{
+  		text-align: justify;
   	}
 
   	#ccourse {
@@ -2638,9 +2623,9 @@ a #go-to-course:hover, a #drop-course:hover{
 	}
 
 	.vision_stmnt {
+		width: 337px;
 		margin: 0 auto;
 		margin-top: 30px;
-		font-size: 1.4em;
 	}
 
 	.join-team h3{
@@ -2649,5 +2634,4 @@ a #go-to-course:hover, a #drop-course:hover{
 		margin-top: 50px;
 
 	}
-
 }

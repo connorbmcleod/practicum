@@ -178,4 +178,8 @@ fieldset label{
 		font-size: 1.2em;
 	}
 
+	#no-jobs {
+		margin-top: 30px;
+	}
+
   }

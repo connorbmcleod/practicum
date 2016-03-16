@@ -244,9 +244,11 @@
                 </form>
         </div>
 
+    
          <div id="ratingAndComments">
-         <h2>Rate This Insturctor</h2>
+         <h2>Rate This Instructor</h2>
             <h2> COMMENTS </h2>
+        <div id="scrolly">
                 <p><?php 
                     if(!empty($_SESSION['teacherrate'])){ 
                         for($i = 0; $i < $counts; $i++) { ?>
@@ -263,6 +265,7 @@
                         ?>
                 <?php } ?>
         </div>
+    </div>
  </div>   
 
     <?php } } ?>
